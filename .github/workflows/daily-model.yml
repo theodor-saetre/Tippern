@@ -1,0 +1,37 @@
+name: Daglig modell
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC ≈ 07:00/08:00 norsk tid, hver dag
+  workflow_dispatch: {}    # lar deg kjøre manuelt fra Actions-fanen
+
+permissions:
+  contents: write          # trengs for å committe data/today.json
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Sjekk resultater for tidligere kamper
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: node scripts/check-results.js
+
+      - name: Bygg modell
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: node scripts/build-model.js
+
+      - name: Commit oppdatert data
+        run: |
+          git config user.name  "kampanalyse-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/today.json data/archive/
+          git commit -m "Daglig modell $(date -u +%Y-%m-%d)" || echo "Ingen endring"
+          git push

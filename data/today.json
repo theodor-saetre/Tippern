@@ -1,0 +1,14 @@
+{
+  "generatedAt": "2026-08-13T11:31:19.243Z",
+  "date": "2026-08-13",
+  "fixtures": [],
+  "coupon": {
+    "dagensSpill": null,
+    "gambler": {
+      "legs": [],
+      "combinedOdds": 1,
+      "combinedProb": 1,
+      "hitRate": 1
+    }
+  }
+}

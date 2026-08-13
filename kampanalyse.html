@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kampanalyse</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+  :root {
+    --pitch:#0a1f14; --pitch-line:#16311f; --panel:#11271a; --panel-hi:#163420;
+    --chalk:#eef4ec; --chalk-dim:#8ba894; --flare:#d3f85a; --flare-dim:#a4c73f;
+    --warn:#f5a623; --cool:#4aa3d4; --edge:#23492f;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Archivo',sans-serif; background:var(--pitch);
+    background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+    background-size:44px 44px; color:var(--chalk); min-height:100vh; padding:20px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1080px; margin:0 auto; }
+  header { display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid var(--edge); padding-bottom:16px; margin-bottom:6px; flex-wrap:wrap; gap:8px; }
+  header h1 { font-size:clamp(28px,5vw,44px); font-weight:900; letter-spacing:-0.03em; text-transform:uppercase; line-height:0.9; }
+  header h1 .accent { color:var(--flare); }
+  header .sub { font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); text-transform:uppercase; letter-spacing:0.08em; }
+  .demo-tag { display:inline-block; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--warn); border:1px solid var(--warn); border-radius:3px; padding:3px 8px; margin:14px 0 24px; letter-spacing:0.05em; }
+  .match-select { display:flex; gap:8px; margin-bottom:22px; flex-wrap:wrap; }
+  .match-select button { font-family:'Spline Sans Mono',monospace; font-size:12px; background:var(--panel); color:var(--chalk-dim); border:1px solid var(--edge); border-radius:4px; padding:8px 12px; cursor:pointer; transition:all 0.15s; }
+  .match-select button:hover { border-color:var(--flare-dim); color:var(--chalk); }
+  .match-select button.active { background:var(--flare); color:var(--pitch); border-color:var(--flare); font-weight:600; }
+  .scoreboard { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:24px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; margin-bottom:16px; }
+  .team-head { text-align:center; }
+  .team-head .badge { width:54px; height:54px; border-radius:50%; margin:0 auto 10px; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:20px; border:2px solid var(--edge); }
+  .team-head .name { font-weight:700; font-size:18px; letter-spacing:-0.01em; }
+  .team-head .venue { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); text-transform:uppercase; margin-top:3px; }
+  .vs { font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); text-align:center; }
+  .vs .kickoff { display:block; color:var(--flare); font-size:11px; margin-top:4px; }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  @media (max-width:760px){ .grid{ grid-template-columns:1fr; } }
+  .card { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:18px; }
+  .card.full { grid-column:1/-1; }
+  .card h2 { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--chalk-dim); margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+  .card h2::before { content:''; width:6px; height:6px; background:var(--flare); border-radius:50%; }
+  .form-row { display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--pitch-line); }
+  .form-row:last-child { border-bottom:none; }
+  .form-row .lbl { font-size:14px; font-weight:600; }
+  .form-row .lbl small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:10px; color:var(--chalk-dim); text-transform:uppercase; }
+  .form-pills { display:flex; gap:5px; }
+  .pill { width:26px; height:26px; border-radius:5px; display:flex; align-items:center; justify-content:center; font-family:'Spline Sans Mono',monospace; font-size:12px; font-weight:600; color:var(--pitch); position:relative; }
+  .pill.W { background:var(--flare); }
+  .pill.D { background:var(--chalk-dim); }
+  .pill.L { background:#d4574a; color:var(--chalk); }
+  .pill.recent::after { content:''; position:absolute; bottom:-4px; left:50%; transform:translateX(-50%); width:4px; height:2px; background:var(--flare); border-radius:1px; }
+  .stat-line { margin-bottom:15px; }
+  .stat-line:last-child { margin-bottom:0; }
+  .stat-line .top { display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px; }
+  .stat-line .top .v { font-family:'Spline Sans Mono',monospace; font-weight:600; }
+  .bar-track { display:flex; height:8px; border-radius:4px; overflow:hidden; background:var(--pitch-line); }
+  .bar-a { background:var(--flare); }
+  .bar-b { background:var(--cool); }
+  .legend { display:flex; gap:16px; margin-top:4px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); }
+  .legend span { display:flex; align-items:center; gap:5px; }
+  .legend .dot { width:8px; height:8px; border-radius:2px; }
+  .legend .dot.a { background:var(--flare); }
+  .legend .dot.b { background:var(--cool); }
+  .h2h-row { display:grid; grid-template-columns:70px 1fr 70px; align-items:center; gap:10px; padding:8px 0; border-bottom:1px solid var(--pitch-line); font-size:13px; }
+  .h2h-row:last-child { border-bottom:none; }
+  .h2h-row .date { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); }
+  .h2h-row .result { text-align:center; font-family:'Spline Sans Mono',monospace; font-weight:600; }
+  .h2h-row .comp { text-align:right; font-size:11px; color:var(--chalk-dim); }
+  .rating-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:560px){ .rating-grid{ grid-template-columns:1fr; } }
+  .rteam { border:1px solid var(--edge); border-radius:8px; padding:14px; }
+  .rteam .rname { font-weight:700; font-size:15px; margin-bottom:3px; }
+  .rteam .rvenue { font-family:'Spline Sans Mono',monospace; font-size:10px; color:var(--chalk-dim); text-transform:uppercase; margin-bottom:12px; }
+  .rmetric { margin-bottom:11px; }
+  .rmetric:last-child { margin-bottom:0; }
+  .rmetric .rtop { display:flex; justify-content:space-between; font-size:12px; margin-bottom:5px; }
+  .rmetric .rtop .rval { font-family:'Spline Sans Mono',monospace; font-weight:600; }
+  .rmetric .rtop .rval.strong { color:var(--flare); }
+  .rmetric .rtop .rval.weak { color:#d4574a; }
+  .rbar { height:6px; background:var(--pitch-line); border-radius:3px; overflow:hidden; }
+  .rbar > div { height:100%; }
+  .xg-block { text-align:center; }
+  .xg-block .num { font-family:'Spline Sans Mono',monospace; font-size:40px; font-weight:600; color:var(--flare); line-height:1; }
+  .xg-block .cap { font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--chalk-dim); margin-top:6px; }
+  .model-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  @media (max-width:560px){ .model-grid{ grid-template-columns:1fr; } }
+  .prob-table { margin-top:20px; }
+  .prob-table .prow { display:grid; grid-template-columns:1fr auto 90px; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--pitch-line); }
+  .prob-table .prow:last-child { border-bottom:none; }
+  .prob-table .market { font-size:14px; font-weight:600; }
+  .prob-table .market small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); margin-top:2px; }
+  .prob-table .modelprob { font-family:'Spline Sans Mono',monospace; font-size:18px; font-weight:600; }
+  .prob-table .fairodds { text-align:right; font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); }
+  .prob-table .fairodds b { color:var(--flare); font-size:15px; }
+  .value-tag { display:inline-block; margin-left:6px; font-size:10px; font-weight:700; color:var(--pitch); background:var(--flare); border-radius:3px; padding:1px 5px; vertical-align:middle; }
+  .fun-header { margin:30px 0 14px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--flare); }
+  .fun-header span { color:var(--chalk-dim); font-weight:400; letter-spacing:0.05em; text-transform:none; }
+  .card.pick { border-color:var(--flare-dim); background:linear-gradient(160deg,var(--panel-hi),var(--panel)); }
+  .card.gambler { border-color:var(--warn); background:linear-gradient(160deg,rgba(245,166,35,0.08),var(--panel)); }
+  .pick-title { font-size:15px; font-weight:900; text-transform:uppercase; letter-spacing:0.04em; margin-bottom:4px; }
+  .pick .pick-title { color:var(--flare); }
+  .gambler .pick-title { color:var(--warn); }
+  .pick-sub { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); margin-bottom:16px; }
+  .selrow { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--pitch-line); font-size:14px; }
+  .selrow:last-of-type { border-bottom:none; }
+  .selrow .sname { font-weight:600; }
+  .selrow .sname small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); }
+  .selrow .sodds { font-family:'Spline Sans Mono',monospace; font-weight:600; color:var(--chalk); }
+  .bigline { display:flex; justify-content:space-between; align-items:center; margin-top:16px; padding-top:14px; border-top:2px solid var(--edge); }
+  .bigline .lab { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--chalk-dim); }
+  .bigline .odds { font-family:'Spline Sans Mono',monospace; font-size:30px; font-weight:600; }
+  .pick .bigline .odds { color:var(--flare); }
+  .gambler .bigline .odds { color:var(--warn); }
+  .chance { margin-top:12px; font-family:'Spline Sans Mono',monospace; font-size:13px; text-align:center; padding:9px; border-radius:6px; background:var(--pitch-line); color:var(--chalk-dim); }
+  .chance b { color:var(--chalk); }
+  .chance.warn b { color:var(--warn); }
+  .disclaimer { margin-top:26px; padding:16px 18px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12.5px; line-height:1.55; color:#d8c9a8; }
+  .disclaimer b { color:var(--warn); }
+  footer { margin-top:22px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); text-align:center; line-height:1.6; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kamp<span class="accent">analyse</span></h1>
+    <div class="sub">Pre-match · tidsvektet form · hjemme/borte · styrkejustert modell</div>
+  </header>
+  <div class="demo-tag" id="statusTag">● Laster data …</div>
+  <div class="match-select" id="matchSelect"></div>
+  <div class="scoreboard" id="scoreboard"></div>
+  <div class="grid">
+    <div class="card" id="formCard"></div>
+    <div class="card" id="h2hCard"></div>
+    <div class="card full" id="ratingCard"></div>
+    <div class="card full" id="goalsCard"></div>
+    <div class="card full" id="modelCard"></div>
+  </div>
+  <div class="fun-header">Kveldens kupong <span>— intern moro, ærlige tall</span></div>
+  <div class="grid">
+    <div class="card pick" id="dagensCard"></div>
+    <div class="card gambler" id="gamblerCard"></div>
+  </div>
+  <div class="disclaimer">
+    <b>Til underholdning.</b> Modellen er styrkejustert (Dixon-Coles-prinsipp) og bruker nå tidsvektet form over siste 10 kamper pluss egen hjemme-/borteform. «Dagens spill» velger beste spill i odds-vinduet 1,70–2,50. Fortsatt bare ett datapunkt — bookmakeren har som regel en bedre modell og en innebygd margin. Spill kun for penger du tåler å tape.
+  </div>
+  <footer>
+    Live-kilde: football-data.org (gratis) · Odds: The Odds API (gratis kvote)<br>
+    Analyse- og tidssparingsverktøy — ingen automatiske spill, du legger alt selv.
+  </footer>
+</div>
+<script>
+// Frontend er nå "dum" — all regning (ratinger, Poisson, kupong) skjer server-side
+// i build-model.js / lib/*, og skrives til data/today.json. Her leser vi bare og rendrer.
+
+const COMP_NAMES = { PL:"Premier League", SA:"Serie A", PD:"La Liga", BL1:"Bundesliga", FL1:"Ligue 1", CL:"Champions League" };
+const DAYS = ["Søn","Man","Tir","Ons","Tor","Fre","Lør"];
+
+const fmtPct = p => p==null ? "—" : (p*100).toFixed(0)+"%";
+const fmtOdds = o => (o==null || !isFinite(o)) ? "—" : o.toFixed(2);
+const fmtKickoff = iso => {
+  const d = new Date(iso);
+  const hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
+  return `${DAYS[d.getDay()]} ${hh}:${mm}`;
+};
+
+let DATA = null;
+let activeId = null;
+
+async function load(){
+  const tag = document.getElementById('statusTag');
+  try {
+    const res = await fetch('data/today.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    DATA = await res.json();
+  } catch (err) {
+    tag.textContent = '● Fant ikke data/today.json — kjør scripts/build-model.js først';
+    console.error('Klarte ikke laste data/today.json', err);
+    return;
+  }
+
+  if (!DATA.fixtures || DATA.fixtures.length === 0) {
+    tag.textContent = `● Ingen kamper i dag (oppdatert ${new Date(DATA.generatedAt).toLocaleString('no-NO')})`;
+    document.getElementById('matchSelect').innerHTML = '';
+    ['scoreboard','formCard','h2hCard','ratingCard','goalsCard','modelCard','dagensCard','gamblerCard'].forEach(id=>{
+      document.getElementById(id).innerHTML = '';
+    });
+    return;
+  }
+
+  tag.textContent = `● Live — oppdatert ${new Date(DATA.generatedAt).toLocaleString('no-NO')}`;
+  DATA.fixtures.sort((a,b)=> new Date(a.kickoff) - new Date(b.kickoff));
+  render(DATA.fixtures[0].id);
+  renderCoupon();
+}
+
+function render(id){
+  activeId = id;
+  const f = DATA.fixtures.find(x=>x.id===id);
+
+  document.getElementById('matchSelect').innerHTML = DATA.fixtures.map(x=>
+    `<button class="${x.id===id?'active':''}" onclick="render(${x.id})">${x.label}</button>`
+  ).join('');
+
+  document.getElementById('scoreboard').innerHTML = `
+    <div class="team-head"><div class="badge">${f.homeName.slice(0,3).toUpperCase()}</div><div class="name">${f.homeName}</div><div class="venue">Hjemme</div></div>
+    <div class="vs">VS<span class="kickoff">${fmtKickoff(f.kickoff)} · ${COMP_NAMES[f.competition] || f.competition}</span></div>
+    <div class="team-head"><div class="badge">${f.awayName.slice(0,3).toUpperCase()}</div><div class="name">${f.awayName}</div><div class="venue">Borte</div></div>`;
+
+  // Form-kuler — siste 5 kamper (uavhengig av venue), nyeste sist
+  function pills(form){
+    return (form||[]).map((m,i,arr)=>`<div class="pill ${m.r} ${i===arr.length-1?'recent':''}">${m.r}</div>`).join('');
+  }
+  document.getElementById('formCard').innerHTML = `
+    <h2>Form — siste 5 (◦ = nyest, veier mest)</h2>
+    <div class="form-row"><span class="lbl">${f.homeName}</span><div class="form-pills">${pills(f.formH)}</div></div>
+    <div class="form-row"><span class="lbl">${f.awayName}</span><div class="form-pills">${pills(f.formA)}</div></div>`;
+
+  document.getElementById('h2hCard').innerHTML = `
+    <h2>Innbyrdes</h2>
+    <div style="font-family:'Spline Sans Mono',monospace;font-size:12px;color:var(--chalk-dim);padding:8px 0;">
+      Ikke hentet i denne versjonen — krever egen kall mot football-data.org pr kamp.</div>`;
+
+  function ratingTeam(name, blend, venueLabel){
+    const atkW = Math.min(100,(blend.atk/1.8)*100);
+    const defQuality = Math.min(100,((1.6-blend.def)/(1.6-0.6))*100);
+    const atkCls = blend.atk>=1.3?'strong':(blend.atk<=0.85?'weak':'');
+    const defCls = blend.def<=0.9?'strong':(blend.def>=1.25?'weak':'');
+    return `<div class="rteam">
+      <div class="rname">${name}</div><div class="rvenue">${venueLabel} · tidsvektet siste 10</div>
+      <div class="rmetric"><div class="rtop"><span>Angrepsstyrke</span><span class="rval ${atkCls}">${blend.atk.toFixed(2)}×</span></div><div class="rbar"><div style="width:${atkW}%;background:var(--flare)"></div></div></div>
+      <div class="rmetric"><div class="rtop"><span>Forsvarsstyrke</span><span class="rval ${defCls}">${blend.def.toFixed(2)}×</span></div><div class="rbar"><div style="width:${defQuality}%;background:var(--cool)"></div></div></div>
+    </div>`;
+  }
+  document.getElementById('ratingCard').innerHTML = `
+    <h2>Styrkerating — tidsvektet + venue-justert</h2>
+    <div class="rating-grid">${ratingTeam(f.homeName,f.blendH,'Hjemme')}${ratingTeam(f.awayName,f.blendA,'Borte')}</div>
+    <div style="font-family:'Spline Sans Mono',monospace;font-size:11px;color:var(--chalk-dim);margin-top:12px;line-height:1.5;">
+      Bruker 60% venue-spesifikk form + 40% totalform, tidsvektet så nyeste kamp teller mest.<br>Forsvar: <b>lavere er bedre</b>.</div>`;
+
+  const LEAGUE_HOME_AVG = 1.55, LEAGUE_AWAY_AVG = 1.20; // speiler lib/ratings.js
+  const hGF = f.blendH.atk*LEAGUE_HOME_AVG, aGF = f.blendA.atk*LEAGUE_AWAY_AVG;
+  const hGA = f.blendH.def*LEAGUE_AWAY_AVG, aGA = f.blendA.def*LEAGUE_HOME_AVG;
+  function bar(label,a,b){
+    const total=a+b||1, wa=(a/total*100).toFixed(0), wb=(b/total*100).toFixed(0);
+    return `<div class="stat-line"><div class="top"><span>${label}</span><span class="v">${a.toFixed(2)} · ${b.toFixed(2)}</span></div>
+      <div class="bar-track"><div class="bar-a" style="width:${wa}%"></div><div class="bar-b" style="width:${wb}%"></div></div></div>`;
+  }
+  document.getElementById('goalsCard').innerHTML = `
+    <h2>Forventet målprofil (venue-justert)</h2>
+    ${bar("Scorer typisk pr kamp",hGF,aGF)}
+    ${bar("Slipper inn typisk pr kamp",hGA,aGA)}
+    <div class="legend"><span><span class="dot a"></span>${f.homeName} (hjemme)</span><span><span class="dot b"></span>${f.awayName} (borte)</span></div>`;
+
+  const m = f.markets, fo = f.fairOdds, live = f.odds;
+  function prow(market,sub,prob,fair,liveOdds){
+    // Verdi = bookmaker betaler mer enn modellens "rimelige" pris.
+    // Bare et signal om at MODELLEN mener det er verdi — ikke en garanti.
+    const edge = (liveOdds && fair) ? (liveOdds/fair - 1) * 100 : null;
+    const valueTag = (edge !== null && edge > 0) ? `<span class="value-tag">+${edge.toFixed(0)}%</span>` : '';
+    const liveCell = live ? `<div class="fairodds">bookmaker<br><b>${fmtOdds(liveOdds)}</b>${valueTag}</div>` : '';
+    return `<div class="prow" style="${live?'grid-template-columns:1fr auto 90px 90px;':''}">
+      <div class="market">${market}<small>${sub}</small></div>
+      <div class="modelprob">${fmtPct(prob)}</div>
+      <div class="fairodds">rimelig<br><b>${fmtOdds(fair)}</b></div>${liveCell}</div>`;
+  }
+  document.getElementById('modelCard').innerHTML = `
+    <h2>Modell — styrkejustert forventet mål (Poisson)${live?' · ferske odds hentet':''}</h2>
+    <div class="model-grid">
+      <div class="xg-block"><div class="num">${f.lambdaH.toFixed(2)}</div><div class="cap">${f.homeName} forventet mål</div></div>
+      <div class="xg-block"><div class="num">${f.lambdaA.toFixed(2)}</div><div class="cap">${f.awayName} forventet mål</div></div>
+    </div>
+    <div class="prob-table">
+      ${prow("Double chance",`${f.homeName} eller uavgjort`,m.dcHD,fo.dcHD,live&&live.dcHD)}
+      ${prow("Double chance",`${f.awayName} eller uavgjort`,m.dcAD,fo.dcAD,live&&live.dcAD)}
+      ${prow("Over 1,5 mål","totalt",m.o15,fo.o15,live&&live.o15)}
+      ${prow("Over 2,5 mål","totalt",m.o25,fo.o25,live&&live.o25)}
+      ${prow("Under 3,5 mål","totalt",m.u35,fo.u35,live&&live.u35)}
+      ${prow("Under 4,5 mål","totalt",m.u45,fo.u45,live&&live.u45)}
+      ${prow("Begge lag scorer","ja",m.btts,fo.btts,null)}
+    </div>`;
+}
+
+function renderCoupon(){
+  const c = DATA.coupon || {};
+  const best = c.dagensSpill;
+  document.getElementById('dagensCard').innerHTML = best ? `
+    <div class="pick-title">⭐ Dagens spill</div>
+    <div class="pick-sub">Modellens beste spill i odds 1,70–2,50</div>
+    <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
+    <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>
+    <div class="chance">Rimelig odds <b>${fmtOdds(best.odds)}</b> — finn bookmaker over dette for verdi</div>`
+    : `<div class="pick-title">⭐ Dagens spill</div><div class="pick-sub">Ingen spill i vinduet 1,70–2,50 i dag</div>`;
+
+  const g = c.gambler;
+  document.getElementById('gamblerCard').innerHTML = g && g.legs && g.legs.length ? `
+    <div class="pick-title">🎲 The Gambler</div>
+    <div class="pick-sub">Kveldens ville langskudd — 10+ i odds</div>
+    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtOdds(l.odds)}</span></div>`).join('')}
+    <div class="bigline"><span class="lab">Samlet odds</span><span class="odds">${g.combinedOdds.toFixed(1)}</span></div>
+    <div class="chance warn">Ekte sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
+    : `<div class="pick-title">🎲 The Gambler</div><div class="pick-sub">Ikke nok kamper i dag til en combo</div>`;
+}
+
+load();
+</script>
+</body>
+</html>

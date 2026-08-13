@@ -1,0 +1,11 @@
+{
+  "name": "kampanalyse",
+  "version": "1.0.0",
+  "description": "Fotball pre-match analyse med tidsvektet Poisson-modell",
+  "scripts": {
+    "test": "node scripts/test-model.js",
+    "build": "node scripts/build-model.js",
+    "odds": "node scripts/fetch-odds.js"
+  },
+  "license": "MIT"
+}
