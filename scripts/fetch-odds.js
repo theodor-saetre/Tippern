@@ -48,28 +48,41 @@ async function main() {
     return;
   }
 
-  // Hent odds pr liga som har kamper i vinduet (samler kall → færre requests)
-  const compsNeeded = [...new Set(due.map((f) => f.competition))];
-  for (const comp of compsNeeded) {
-    const sport = SPORT_KEYS[comp];
-    const url = `https://api.the-odds-api.com/v4/sports/${sport}/odds/?regions=eu&markets=h2h,totals&oddsFormat=decimal&apiKey=${KEY}`;
-    const res = await fetch(url);
-    if (!res.ok) { console.error(`Odds ${res.status} for ${comp}`); continue; }
-    const events = await res.json();
-
-    // TODO: match hvert 'event' mot riktig fixture (på lagnavn/tid) og plukk
-    // beste odds for markedene dine (double chance kan avledes, totals gir over/under).
-    // Behold forrige odds i f.oddsHistory for å vise bevegelse.
+  if (MODE === 'morning') {
+    // Billig oversikt: ett kall pr liga (h2h+totals), uansett hvor mange kamper.
+    // Ikke BTTS her - det krever ett kall PR KAMP (se prekickoff under), og vi vil
+    // ikke brenne kvote på det tidlig på dagen når tallene uansett blir oppdatert igjen.
+    const compsNeeded = [...new Set(due.map((f) => f.competition))];
+    for (const comp of compsNeeded) {
+      const sport = SPORT_KEYS[comp];
+      const url = `https://api.the-odds-api.com/v4/sports/${sport}/odds/?regions=eu&markets=h2h,totals&oddsFormat=decimal&apiKey=${KEY}`;
+      const res = await fetch(url);
+      if (!res.ok) { console.error(`Odds ${res.status} for ${comp}`); continue; }
+      const events = await res.json();
+      for (const f of due) {
+        const ev = matchEvent(events, f);
+        if (!ev) continue;
+        applyFreshOdds(db, f, extractOdds(ev));
+      }
+    }
+  } else {
+    // Prekickoff: ett kall PR KAMP (events-lista er gratis, selve odds-kallet
+    // koster ~3 kreditter for h2h+totals+btts kombinert). Trygt fordi vi bare
+    // følger 2 ligaer, og dette skjer kun én gang pr kamp (låses etterpå).
+    const eventsCache = new Map(); // sport -> events-liste (gratis å hente, men ingen vits å hente flere ganger)
     for (const f of due) {
-      const ev = matchEvent(events, f);
+      const sport = SPORT_KEYS[f.competition];
+      if (!eventsCache.has(sport)) {
+        const res = await fetch(`https://api.the-odds-api.com/v4/sports/${sport}/events?apiKey=${KEY}`);
+        eventsCache.set(sport, res.ok ? await res.json() : []);
+      }
+      const ev = matchEvent(eventsCache.get(sport), f);
       if (!ev) continue;
-      const fresh = extractOdds(ev); // { dcHD, o25, u35, ... }
-      f.oddsHistory = f.oddsHistory || [];
-      if (f.odds) f.oddsHistory.push({ at: db.oddsUpdatedAt, odds: f.odds });
-      f.odds = fresh;
-      // Bare den siste, ferske hentingen rett før avspark låser kampen — morgen-
-      // hentingen skal ikke hindre prekickoff-jobben i å oppdatere den senere.
-      if (MODE !== 'morning') f.oddsLocked = true;
+      const res = await fetch(`https://api.the-odds-api.com/v4/sports/${sport}/events/${ev.id}/odds?regions=eu&markets=h2h,totals,btts&oddsFormat=decimal&apiKey=${KEY}`);
+      if (!res.ok) { console.error(`Odds ${res.status} for ${f.label}`); continue; }
+      const fullEvent = await res.json();
+      applyFreshOdds(db, f, extractOdds(fullEvent));
+      f.oddsLocked = true; // hentet ferskt rett før avspark → ikke brenn kvote igjen
     }
   }
 
@@ -92,6 +105,14 @@ async function main() {
 
 // --- hjelpere ---
 
+// Legger fersk odds inn på fixture, og flytter forrige verdi til oddsHistory
+// (ekte oddsbevegelse mellom morgen-henting og prekickoff-henting).
+function applyFreshOdds(db, f, fresh) {
+  f.oddsHistory = f.oddsHistory || [];
+  if (f.odds) f.oddsHistory.push({ at: db.oddsUpdatedAt, odds: f.odds });
+  f.odds = fresh;
+}
+
 // Markedsnøkkel → hvordan lage samme lesbare tekst som lib/coupon.js bruker,
 // og hvilket felt i f.markets som har modellens sannsynlighet for det spillet.
 const DAGENS_SPILL_MARKETS = {
@@ -101,6 +122,7 @@ const DAGENS_SPILL_MARKETS = {
   o25:  () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
   u35:  () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
   u45:  () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
+  btts: () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
 
 // Plukker beste spill i odds-vinduet 1,70-2,50 basert på EKTE, hentede bookmakerodds
@@ -153,6 +175,7 @@ function matchEvent(events, fixture) {
 
 function extractOdds(ev) {
   let bestHome = null, bestDraw = null, bestAway = null;
+  let bestBttsYes = null;
   const totals = {}; // point (f.eks. 2.5) -> { over, under }
 
   for (const bk of ev.bookmakers || []) {
@@ -168,6 +191,10 @@ function extractOdds(ev) {
           const t = (totals[o.point] = totals[o.point] || {});
           if (o.name === 'Over') t.over = t.over ? Math.max(t.over, o.price) : o.price;
           if (o.name === 'Under') t.under = t.under ? Math.max(t.under, o.price) : o.price;
+        }
+      } else if (mkt.key === 'btts') {
+        for (const o of mkt.outcomes) {
+          if (o.name === 'Yes') bestBttsYes = bestBttsYes === null ? o.price : Math.max(bestBttsYes, o.price);
         }
       }
     }
@@ -185,6 +212,7 @@ function extractOdds(ev) {
     o25: line(2.5).over ?? null,
     u35: line(3.5).under ?? null,
     u45: line(4.5).under ?? null,
+    btts: bestBttsYes,
   };
 }
 

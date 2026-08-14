@@ -305,11 +305,8 @@ function render(id){
 // Vis ferske bookmaker-odds + verdi-tag ved siden av spillet, hvis hentet — ellers
 // en tydelig "ikke hentet ennå"-note, så 1,79 aldri kan misforstås som ekte pris.
 function liveNote(pickLine){
-  // The Odds API sitt gratis-endepunkt støtter ikke BTTS som eget marked i det hele
-  // tatt (ikke bare "ikke ennå") - ikke antyd at det kommer nærmere kampstart.
-  if (pickLine.market === 'BTTS') {
-    return `<div class="pick-sub" style="margin:6px 0 0;">Begge lag scorer-odds er ikke tilgjengelig via gratis-APIet</div>`;
-  }
+  // BTTS hentes kun i prekickoff-runden (eget, dyrere kall pr kamp) - ikke i
+  // morgen-oversikten. Så den kan vise "ikke hentet ennå" lenger enn andre markeder.
   const live = liveOddsFor(pickLine);
   if (live == null) return `<div class="pick-sub" style="margin:6px 0 0;">Ingen ferske bookmakerodds hentet ennå (~90 min før avspark)</div>`;
   const edge = (live/pickLine.odds - 1) * 100;

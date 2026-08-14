@@ -14,8 +14,10 @@ const { buildCoupon } = require('../lib/coupon');
 const API = 'https://api.football-data.org/v4';
 const KEY = process.env.FOOTBALL_DATA_KEY;
 
-// Ligaene du følger (football-data competition codes)
-const COMPETITIONS = ['PL', 'SA', 'PD', 'BL1', 'FL1', 'CL']; // PL, Serie A, La Liga, Bundesliga, Ligue 1, CL
+// Ligaene du følger (football-data competition codes). Begrenset til 2 ligaer
+// slik at vi har råd til å hente BTTS-odds pr kamp også (se fetch-odds.js) uten
+// å sprenge gratiskvoten på The Odds API.
+const COMPETITIONS = ['PL', 'PD']; // Premier League, La Liga
 
 // Gratisplanen tillater ca. 10 kall/minutt — vent litt mellom hvert kall
 // så vi ikke får 429 (rate limit) midt i en kjøring med mange kamper.

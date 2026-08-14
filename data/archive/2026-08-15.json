@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T15:27:21.929Z",
+  "generatedAt": "2026-08-14T17:34:26.452Z",
   "date": "2026-08-15",
   "fixtures": [
     {
@@ -120,7 +120,8 @@
         "o15": 1.75,
         "o25": 3.15,
         "u35": null,
-        "u45": null
+        "u45": null,
+        "btts": null
       },
       "oddsHistory": []
     },
@@ -240,9 +241,10 @@
         "dcHD": 1.39,
         "dcAD": 1.72,
         "o15": null,
-        "o25": 2.38,
+        "o25": 2.4,
         "u35": null,
-        "u45": null
+        "u45": null,
+        "btts": null
       },
       "oddsHistory": []
     }
@@ -285,5 +287,5 @@
       "hitRate": 41
     }
   },
-  "oddsUpdatedAt": "2026-08-14T15:58:01.268Z"
+  "oddsUpdatedAt": "2026-08-14T17:35:01.403Z"
 }
