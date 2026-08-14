@@ -73,6 +73,11 @@ async function main() {
     }
   }
 
+  // "Dagens spill" fra build-model.js er valgt ut fra modellens EGEN rimelige odds
+  // (sirkulært — forteller ingenting om ekte verdi). Nå som vi har ferske bookmaker-
+  // odds, plukker vi heller det beste spillet basert på EKTE priser i vinduet.
+  recomputeDagensSpillFromLiveOdds(db);
+
   db.oddsUpdatedAt = new Date().toISOString();
   fs.writeFileSync(dataPath, JSON.stringify(db, null, 2));
 
@@ -86,6 +91,37 @@ async function main() {
 }
 
 // --- hjelpere ---
+
+// Markedsnøkkel → hvordan lage samme lesbare tekst som lib/coupon.js bruker,
+// og hvilket felt i f.markets som har modellens sannsynlighet for det spillet.
+const DAGENS_SPILL_MARKETS = {
+  dcHD: (f) => ({ pick: `${f.homeName} eller uavgjort`, market: 'Double chance' }),
+  dcAD: (f) => ({ pick: `${f.awayName} eller uavgjort`, market: 'Double chance' }),
+  o15:  () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
+  o25:  () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
+  u35:  () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
+  u45:  () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
+};
+
+// Plukker beste spill i odds-vinduet 1,70-2,50 basert på EKTE, hentede bookmakerodds
+// (ikke modellens egne). Lar forrige (modell-baserte) forslag stå urørt hvis ingen
+// kamper med ferske odds havner i vinduet ennå.
+function recomputeDagensSpillFromLiveOdds(db) {
+  const candidates = [];
+  for (const f of db.fixtures) {
+    if (!f.odds) continue;
+    for (const key of Object.keys(DAGENS_SPILL_MARKETS)) {
+      const odds = f.odds[key];
+      if (odds == null || odds < 1.70 || odds > 2.50) continue;
+      const p = f.markets[key];
+      candidates.push({ match: f.label, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true });
+    }
+  }
+  if (candidates.length === 0) return;
+  candidates.sort((a, b) => b.p - a.p);
+  db.coupon = db.coupon || {};
+  db.coupon.dagensSpill = candidates[0];
+}
 
 // Gjør lagnavn sammenlignbare: små bokstaver, uten aksenter/klubbtillegg/tegnsetting.
 function normalizeName(name) {

@@ -238,7 +238,7 @@
       },
       "odds": {
         "dcHD": 1.39,
-        "dcAD": 1.71,
+        "dcAD": 1.72,
         "o15": null,
         "o25": 2.38,
         "u35": null,
@@ -250,10 +250,11 @@
   "coupon": {
     "dagensSpill": {
       "match": "SEV–RAY",
-      "pick": "Sevilla FC eller uavgjort",
+      "pick": "Rayo Vallecano eller uavgjort",
       "market": "Double chance",
-      "p": 0.5589081924266541,
-      "odds": 1.7892026160114491
+      "p": 0.7669298149631305,
+      "odds": 1.72,
+      "liveOdds": true
     },
     "gambler": {
       "legs": [
@@ -284,5 +285,5 @@
       "hitRate": 41
     }
   },
-  "oddsUpdatedAt": "2026-08-14T15:44:31.893Z"
+  "oddsUpdatedAt": "2026-08-14T15:58:01.268Z"
 }

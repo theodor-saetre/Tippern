@@ -305,6 +305,11 @@ function render(id){
 // Vis ferske bookmaker-odds + verdi-tag ved siden av spillet, hvis hentet — ellers
 // en tydelig "ikke hentet ennå"-note, så 1,79 aldri kan misforstås som ekte pris.
 function liveNote(pickLine){
+  // The Odds API sitt gratis-endepunkt støtter ikke BTTS som eget marked i det hele
+  // tatt (ikke bare "ikke ennå") - ikke antyd at det kommer nærmere kampstart.
+  if (pickLine.market === 'BTTS') {
+    return `<div class="pick-sub" style="margin:6px 0 0;">Begge lag scorer-odds er ikke tilgjengelig via gratis-APIet</div>`;
+  }
   const live = liveOddsFor(pickLine);
   if (live == null) return `<div class="pick-sub" style="margin:6px 0 0;">Ingen ferske bookmakerodds hentet ennå (~90 min før avspark)</div>`;
   const edge = (live/pickLine.odds - 1) * 100;
@@ -312,16 +317,30 @@ function liveNote(pickLine){
   return `<div class="chance">Bookmaker akkurat nå: <b>${fmtOdds(live)}</b>${valueTag}</div>`;
 }
 
+// Bygger innholdet i "Dagens spill"-kortet. `best.liveOdds` er true når
+// fetch-odds.js har plukket spillet ut fra EKTE bookmakerodds i vinduet
+// (se recomputeDagensSpillFromLiveOdds i fetch-odds.js) - ellers er det
+// fortsatt bare modellens egen gjetning fra i morges.
+function dagensSpillBody(best){
+  const row = `<div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
+    <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>`;
+
+  if (best.liveOdds) {
+    return `<div class="pick-sub">Bookmakerodds i vinduet 1,70–2,50 — ekte pris, ikke modellgjetning</div>
+      ${row}
+      <div class="chance">Modellens egen rimelige odds her: <b>${fmtOdds(1/best.p)}</b></div>`;
+  }
+  return `<div class="pick-sub">Modellens beste spill i odds 1,70–2,50</div>
+    ${row}
+    <div class="chance">Modellens rimelige odds <b>${fmtOdds(best.odds)}</b> — ikke en ekte pris, se under</div>
+    ${liveNote(best)}`;
+}
+
 function renderCoupon(){
   const c = DATA.coupon || {};
   const best = c.dagensSpill;
-  document.getElementById('dagensCard').innerHTML = best ? `
-    <div class="pick-title">⭐ Dagens spill</div>
-    <div class="pick-sub">Modellens beste spill i odds 1,70–2,50</div>
-    <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
-    <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>
-    <div class="chance">Modellens rimelige odds <b>${fmtOdds(best.odds)}</b> — ikke en ekte pris, se under</div>
-    ${liveNote(best)}`
+  document.getElementById('dagensCard').innerHTML = best
+    ? `<div class="pick-title">⭐ Dagens spill</div>${dagensSpillBody(best)}`
     : `<div class="pick-title">⭐ Dagens spill</div><div class="pick-sub">Ingen spill i vinduet 1,70–2,50 i dag</div>`;
 
   const g = c.gambler;
