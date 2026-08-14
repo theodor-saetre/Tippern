@@ -93,10 +93,25 @@ async function main() {
     return formCache.get(key);
   }
 
+  // Hent kamper i dag → 21 dager frem for hver liga (ETT kall pr liga uansett vindu-
+  // størrelse, så det koster ikke noe ekstra). Er det ingen kamper i dag (typisk i
+  // sommerpausen/landslagspause), viser vi heller NESTE dato med kamper, så appen
+  // aldri bare står tom — den "ligger der" helt til sesongen faktisk starter.
+  const lookaheadTo = new Date(Date.now() + 21 * 24 * 3600 * 1000).toISOString().slice(0, 10);
+  const byComp = new Map(); // comp -> alle kamper i vinduet
+  const allDates = [];
   for (const comp of COMPETITIONS) {
-    // Dagens kamper i denne ligaen
-    const data = await fdFetch(`/competitions/${comp}/matches?dateFrom=${today}&dateTo=${today}`);
-    for (const mt of data.matches) {
+    const data = await fdFetch(`/competitions/${comp}/matches?dateFrom=${today}&dateTo=${lookaheadTo}`);
+    byComp.set(comp, data.matches);
+    data.matches.forEach((mt) => allDates.push(mt.utcDate.slice(0, 10)));
+  }
+
+  // Nærmeste dato med kamper i minst én liga — er det kamper i dag, blir det i dag.
+  const matchDate = allDates.length ? allDates.sort()[0] : today;
+
+  for (const comp of COMPETITIONS) {
+    const data = byComp.get(comp).filter((mt) => mt.utcDate.slice(0, 10) === matchDate);
+    for (const mt of data) {
       const home = await cachedTeamForm(mt.homeTeam.id, comp);
       const away = await cachedTeamForm(mt.awayTeam.id, comp);
 
@@ -145,18 +160,21 @@ async function main() {
   }
 
   const coupon = buildCoupon(fixtures);
-  const out = { generatedAt: new Date().toISOString(), date: today, fixtures, coupon };
+  // `date` er datoen kampene faktisk spilles (kan være frem i tid) — check-results.js
+  // bruker denne til å vite når den skal sjekke resultatet, så den må stemme med ekte kampdato.
+  const out = { generatedAt: new Date().toISOString(), date: matchDate, fixtures, coupon };
 
   const outPath = path.join(__dirname, '..', 'data', 'today.json');
   fs.writeFileSync(outPath, JSON.stringify(out, null, 2));
 
-  // Permanent arkiv (aldri overskrevet av morgendagens kjøring) — datagrunnlag
-  // for senere analyse av om modellen faktisk slår bookmakeren over tid.
+  // Permanent arkiv (aldri overskrevet av morgendagens kjøring, men OPPDATERES fram til
+  // kampdagen selv om vi allerede har forhåndsvist runden — ratingene blir mer presise
+  // jo nærmere avspark vi kommer). Datagrunnlag for senere analyse av modellen.
   const archiveDir = path.join(__dirname, '..', 'data', 'archive');
   fs.mkdirSync(archiveDir, { recursive: true });
-  fs.writeFileSync(path.join(archiveDir, `${today}.json`), JSON.stringify(out, null, 2));
+  fs.writeFileSync(path.join(archiveDir, `${matchDate}.json`), JSON.stringify(out, null, 2));
 
-  console.log(`Skrev ${fixtures.length} kamper til data/today.json (+ arkiv)`);
+  console.log(`Skrev ${fixtures.length} kamper for ${matchDate} til data/today.json (+ arkiv)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
