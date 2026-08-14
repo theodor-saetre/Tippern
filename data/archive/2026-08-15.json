@@ -7,7 +7,7 @@
       "label": "ALA–GET",
       "homeName": "Alavés",
       "awayName": "Getafe",
-      "kickoff": "2026-08-15T17:30:00Z",
+      "kickoff": "2026-08-14T16:34:54.555Z",
       "competition": "PD",
       "lambdaH": 0.6481921987411373,
       "lambdaA": 0.5486016189622162,
@@ -114,7 +114,15 @@
         "u45": 1.007721834621174,
         "btts": 4.9649008970681825
       },
-      "odds": null
+      "odds": {
+        "dcHD": 1.33,
+        "dcAD": 1.68,
+        "o15": 1.75,
+        "o25": 3.15,
+        "u35": null,
+        "u45": null
+      },
+      "oddsHistory": []
     },
     {
       "id": 564633,
@@ -228,7 +236,15 @@
         "u45": 1.033913376199027,
         "btts": 3.0801530812094327
       },
-      "odds": null
+      "odds": {
+        "dcHD": 1.39,
+        "dcAD": 1.71,
+        "o15": null,
+        "o25": 2.38,
+        "u35": null,
+        "u45": null
+      },
+      "oddsHistory": []
     }
   ],
   "coupon": {
@@ -267,5 +283,6 @@
       "combinedProb": 0.024354446886239747,
       "hitRate": 41
     }
-  }
+  },
+  "oddsUpdatedAt": "2026-08-14T15:45:02.057Z"
 }

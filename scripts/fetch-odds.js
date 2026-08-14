@@ -1,15 +1,20 @@
 // scripts/fetch-odds.js
-// Henter ferske odds ~1 time før avspark for kamper i data/today.json.
-// Kun for kamper som nærmer seg → sparer API-kvote. Kjør ofte (se workflow),
-// scriptet hopper selv over kamper som ikke er innenfor vinduet ennå.
+// To modus:
+//  - "morgen" (ODDS_MODE=morning, kjøres én gang i daily-model.yml): henter odds for
+//    ALLE dagens kamper med én gang, så du får en oversikt tidlig på dagen.
+//  - "prekickoff" (standard, kjøres jevnlig i match-odds.yml): oppdaterer med de
+//    ferskeste tallene ~1t før avspark og låser kampen (ikke brenn kvote igjen).
+// Uansett modus lagres forrige verdi i f.oddsHistory, så du får ekte oddsbevegelse
+// mellom morgen-hentingen og den siste, ferske hentingen før avspark.
 //
-// SKJELETT — fyll inn mapping fra The Odds API-respons til markedene dine.
 // Kjør lokalt med:  ODDS_API_KEY=xxx node scripts/fetch-odds.js
+//              eller ODDS_API_KEY=xxx ODDS_MODE=morning node scripts/fetch-odds.js
 
 const fs = require('fs');
 const path = require('path');
 
 const KEY = process.env.ODDS_API_KEY;
+const MODE = process.env.ODDS_MODE === 'morning' ? 'morning' : 'prekickoff';
 const LEAD_MINUTES = 90;   // hent når kamp er ≤ 90 min unna
 const MIN_MINUTES = 20;    // ...men ikke helt inn til avspark
 
@@ -30,14 +35,16 @@ async function main() {
   const db = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
   const now = Date.now();
 
-  // Hvilke kamper er innenfor vinduet akkurat nå?
+  // Morgen-modus: alle dagens kamper som ikke har odds ennå, uansett hvor lenge til avspark.
+  // Prekickoff-modus (standard): bare kamper ~1t unna avspark, og ikke allerede låst.
   const due = db.fixtures.filter((f) => {
+    if (MODE === 'morning') return !f.odds;
     const mins = (new Date(f.kickoff).getTime() - now) / 60000;
     return mins <= LEAD_MINUTES && mins >= MIN_MINUTES && !f.oddsLocked;
   });
 
   if (due.length === 0) {
-    console.log('Ingen kamper i odds-vinduet akkurat nå.');
+    console.log(MODE === 'morning' ? 'Alle kamper har allerede odds.' : 'Ingen kamper i odds-vinduet akkurat nå.');
     return;
   }
 
@@ -60,7 +67,9 @@ async function main() {
       f.oddsHistory = f.oddsHistory || [];
       if (f.odds) f.oddsHistory.push({ at: db.oddsUpdatedAt, odds: f.odds });
       f.odds = fresh;
-      f.oddsLocked = true; // hentet én gang i vinduet → ikke brenn kvote igjen
+      // Bare den siste, ferske hentingen rett før avspark låser kampen — morgen-
+      // hentingen skal ikke hindre prekickoff-jobben i å oppdatere den senere.
+      if (MODE !== 'morning') f.oddsLocked = true;
     }
   }
 
@@ -73,7 +82,7 @@ async function main() {
     fs.writeFileSync(archivePath, JSON.stringify(db, null, 2));
   }
 
-  console.log(`Oppdaterte odds for ${due.length} kamp(er).`);
+  console.log(`[${MODE}] Oppdaterte odds for ${due.length} kamp(er).`);
 }
 
 // --- hjelpere ---
