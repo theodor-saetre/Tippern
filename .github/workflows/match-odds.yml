@@ -2,9 +2,10 @@ name: Odds før kamp
 
 on:
   schedule:
-    # Hver halvtime i typisk kamp-vindu (12–23 UTC). Scriptet henter selv
-    # bare for kamper som er ~1t unna avspark, så de fleste kjøringer gjør ingenting.
-    - cron: '*/30 12-23 * * *'
+    # Hver halvtime i typisk kamp-vindu (9-23 UTC - dekker tidlige lørdagskamper
+    # kl 12:30 britisk tid, som er kl 11:30 UTC). Scriptet henter selv bare for
+    # kamper som er ~1t unna avspark, så de fleste kjøringer gjør ingenting.
+    - cron: '*/30 9-23 * * *'
   workflow_dispatch: {}
 
 permissions:

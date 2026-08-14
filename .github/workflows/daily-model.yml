@@ -2,7 +2,9 @@ name: Daglig modell
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # 06:00 UTC ≈ 07:00/08:00 norsk tid, hver dag
+    - cron: '0 5 * * *'   # 05:00 UTC = 07:00 norsk sommertid (CEST). Om vinteren (CET)
+                           # blir dette 06:00 lokalt - GitHub Actions cron kjenner ikke
+                           # sommertid, så det driver ±1t i vintersesongen.
   workflow_dispatch: {}    # lar deg kjøre manuelt fra Actions-fanen
 
 permissions:
