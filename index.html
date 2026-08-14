@@ -162,6 +162,29 @@ const fmtKickoff = iso => {
   return `${DAYS[d.getDay()]} ${hh}:${mm}`;
 };
 
+// Kupongen (lib/coupon.js, testet, urørt) gir bare lesbar tekst tilbake — ikke hvilken
+// markedsnøkkel spillet kom fra. Tolker det heller her ut fra de faste tekstmalene,
+// slik at vi kan slå opp ferske bookmaker-odds for akkurat det spillet.
+function inferKey(pick, market, homeName){
+  if (market === 'Double chance') return pick.startsWith(homeName) ? 'dcHD' : 'dcAD';
+  if (market === 'BTTS') return 'btts';
+  if (market === 'Full tid') return pick.startsWith(homeName) ? 'pHome' : 'pAway';
+  if (market === 'Totalt') {
+    if (pick.includes('1,5')) return 'o15';
+    if (pick.includes('2,5')) return 'o25';
+    if (pick.includes('3,5')) return pick.startsWith('Over') ? 'o35' : 'u35';
+    if (pick.includes('4,5')) return 'u45';
+  }
+  return null;
+}
+// Finn ferske bookmaker-odds for et kupongspill, hvis hentet ennå.
+function liveOddsFor(pickLine){
+  const f = DATA.fixtures.find(x => x.label === pickLine.match);
+  if (!f || !f.odds) return null;
+  const key = inferKey(pickLine.pick, pickLine.market, f.homeName);
+  return key ? f.odds[key] ?? null : null;
+}
+
 let DATA = null;
 let activeId = null;
 
@@ -279,6 +302,16 @@ function render(id){
     </div>`;
 }
 
+// Vis ferske bookmaker-odds + verdi-tag ved siden av spillet, hvis hentet — ellers
+// en tydelig "ikke hentet ennå"-note, så 1,79 aldri kan misforstås som ekte pris.
+function liveNote(pickLine){
+  const live = liveOddsFor(pickLine);
+  if (live == null) return `<div class="pick-sub" style="margin:6px 0 0;">Ingen ferske bookmakerodds hentet ennå (~90 min før avspark)</div>`;
+  const edge = (live/pickLine.odds - 1) * 100;
+  const valueTag = edge > 0 ? `<span class="value-tag">+${edge.toFixed(0)}%</span>` : '';
+  return `<div class="chance">Bookmaker akkurat nå: <b>${fmtOdds(live)}</b>${valueTag}</div>`;
+}
+
 function renderCoupon(){
   const c = DATA.coupon || {};
   const best = c.dagensSpill;
@@ -287,15 +320,16 @@ function renderCoupon(){
     <div class="pick-sub">Modellens beste spill i odds 1,70–2,50</div>
     <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
     <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>
-    <div class="chance">Rimelig odds <b>${fmtOdds(best.odds)}</b> — finn bookmaker over dette for verdi</div>`
+    <div class="chance">Modellens rimelige odds <b>${fmtOdds(best.odds)}</b> — ikke en ekte pris, se under</div>
+    ${liveNote(best)}`
     : `<div class="pick-title">⭐ Dagens spill</div><div class="pick-sub">Ingen spill i vinduet 1,70–2,50 i dag</div>`;
 
   const g = c.gambler;
   document.getElementById('gamblerCard').innerHTML = g && g.legs && g.legs.length ? `
     <div class="pick-title">🎲 The Gambler</div>
     <div class="pick-sub">Kveldens ville langskudd — 10+ i odds</div>
-    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtOdds(l.odds)}</span></div>`).join('')}
-    <div class="bigline"><span class="lab">Samlet odds</span><span class="odds">${g.combinedOdds.toFixed(1)}</span></div>
+    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtOdds(l.odds)}</span></div>${liveNote(l)}`).join('')}
+    <div class="bigline"><span class="lab">Samlet odds (modell)</span><span class="odds">${g.combinedOdds.toFixed(1)}</span></div>
     <div class="chance warn">Ekte sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
     : `<div class="pick-title">🎲 The Gambler</div><div class="pick-sub">Ikke nok kamper i dag til en combo</div>`;
 }
