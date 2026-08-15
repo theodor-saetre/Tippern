@@ -253,14 +253,28 @@
       },
       "odds": {
         "dcHD": 1.41,
-        "dcAD": 1.68,
+        "dcAD": 1.63,
         "o15": null,
-        "o25": 2.4,
+        "o25": 2.52,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.06
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-15T16:08:34.445Z",
+          "odds": {
+            "dcHD": 1.41,
+            "dcAD": 1.68,
+            "o15": null,
+            "o25": 2.4,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -301,5 +315,5 @@
       "hitRate": 41
     }
   },
-  "oddsUpdatedAt": "2026-08-15T16:08:34.445Z"
+  "oddsUpdatedAt": "2026-08-15T18:09:19.374Z"
 }
