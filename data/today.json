@@ -115,15 +115,29 @@
         "btts": 4.9649008970681825
       },
       "odds": {
-        "dcHD": 1.33,
-        "dcAD": 1.68,
-        "o15": 1.75,
-        "o25": 3.05,
+        "dcHD": 1.35,
+        "dcAD": 1.65,
+        "o15": 1.79,
+        "o25": 3.15,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.56
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-15T05:14:39.985Z",
+          "odds": {
+            "dcHD": 1.33,
+            "dcAD": 1.68,
+            "o15": 1.75,
+            "o25": 3.05,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564633,
@@ -255,7 +269,7 @@
       "pick": "Over 1,5 mål",
       "market": "Totalt",
       "p": 0.3362136051052149,
-      "odds": 1.75,
+      "odds": 1.79,
       "liveOdds": true
     },
     "gambler": {
@@ -287,5 +301,5 @@
       "hitRate": 41
     }
   },
-  "oddsUpdatedAt": "2026-08-15T05:14:39.985Z"
+  "oddsUpdatedAt": "2026-08-15T16:08:34.445Z"
 }
