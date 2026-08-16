@@ -26,10 +26,15 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: node scripts/fetch-odds.js
 
-      - name: Commit oppdaterte odds
+      - name: Sjekk dagens resultater (samme dag, ~2t20min etter avspark)
+        env:
+          FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
+        run: node scripts/check-results.js
+
+      - name: Commit oppdaterte odds/resultater
         run: |
           git config user.name  "kampanalyse-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/today.json data/archive/
-          git commit -m "Odds-oppdatering $(date -u +%H:%M)" || echo "Ingen endring"
+          git add data/today.json data/archive/ data/history.json
+          git commit -m "Odds/resultat-oppdatering $(date -u +%H:%M)" || echo "Ingen endring"
           git push

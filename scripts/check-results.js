@@ -12,7 +12,8 @@ const path = require('path');
 
 const API = 'https://api.football-data.org/v4';
 const KEY = process.env.FOOTBALL_DATA_KEY;
-const ARCHIVE_DIR = path.join(__dirname, '..', 'data', 'archive');
+const TODAY_DIR = path.join(__dirname, '..', 'data');
+const ARCHIVE_DIR = path.join(TODAY_DIR, 'archive');
 
 // Samme grense som football-data.org sin gratisplan — se scripts/build-model.js
 const RATE_LIMIT_MS = 6500;
@@ -61,8 +62,13 @@ function inferKey(pick, market, homeName) {
   return null;
 }
 
+// Hvor lenge etter avspark vi tidligst forsøker å sjekke resultatet - en kamp
+// varer ~105 min (2×45 + pause), pluss overtid og litt tid før tellende
+// datakilder har oppdatert seg. 140 min = 2t20min gir god margin.
+const MINUTES_AFTER_KICKOFF = 140;
+
 // Behandler én arkivert dag. Returnerer true hvis noe ble endret.
-async function processDay(file) {
+async function processDay(file, now) {
   const filePath = path.join(ARCHIVE_DIR, file);
   const day = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   if (day.resultsChecked) return false;
@@ -71,6 +77,15 @@ async function processDay(file) {
     day.resultsChecked = true;
     fs.writeFileSync(filePath, JSON.stringify(day, null, 2));
     return false;
+  }
+
+  // For DAGENS egen fil: ikke sløs et API-kall på kamper som umulig kan være
+  // ferdige ennå. Tidligere dager sjekkes alltid (de er garantert overstått).
+  const today = new Date(now).toISOString().slice(0, 10);
+  if (day.date === today) {
+    const anyCheckable = day.fixtures.some((f) =>
+      !f.result && (now - new Date(f.kickoff).getTime()) / 60000 >= MINUTES_AFTER_KICKOFF);
+    if (!anyCheckable) return false;
   }
 
   const comps = [...new Set(day.fixtures.map((f) => f.competition))];
@@ -130,6 +145,15 @@ async function processDay(file) {
   day.resultsCheckedAt = new Date().toISOString();
   fs.writeFileSync(filePath, JSON.stringify(day, null, 2));
 
+  // Sjekker vi DAGENS egen fil (samme-dag-resultat, se MINUTES_AFTER_KICKOFF),
+  // må data/today.json - som selve siden faktisk leser - også få resultatet.
+  // Arkivfila alene holder ikke, den er bare det permanente datagrunnlaget.
+  const todayPath = path.join(TODAY_DIR, 'today.json');
+  if (fs.existsSync(todayPath)) {
+    const liveDb = JSON.parse(fs.readFileSync(todayPath, 'utf8'));
+    if (liveDb.date === day.date) fs.writeFileSync(todayPath, JSON.stringify(day, null, 2));
+  }
+
   // Dagen er ferdig sjekket → legg "ett spill pr kamp"-tipsene inn i den
   // varige historikk-loggen (kun de som faktisk hadde ekte odds - se
   // scripts/build-model.js sin pickMatchPick og scripts/fetch-odds.js).
@@ -171,14 +195,15 @@ async function main() {
   if (!KEY) throw new Error('Mangler FOOTBALL_DATA_KEY');
   if (!fs.existsSync(ARCHIVE_DIR)) { console.log('Ingen arkiverte dager ennå.'); return; }
 
-  const today = new Date().toISOString().slice(0, 10);
+  const now = Date.now();
+  const today = new Date(now).toISOString().slice(0, 10);
   const files = fs.readdirSync(ARCHIVE_DIR)
-    .filter((f) => f.endsWith('.json') && f.slice(0, 10) < today) // aldri sjekk dagens egen fil — ikke ferdigspilt ennå
+    .filter((f) => f.endsWith('.json') && f.slice(0, 10) <= today) // tidligere dager + dagens (processDay avgjør selv om dagens er verdt et forsøk)
     .sort();
 
   let updated = 0;
   for (const file of files) {
-    if (await processDay(file)) updated++;
+    if (await processDay(file, now)) updated++;
   }
   console.log(`Ferdig. ${updated} dag(er) oppdatert med resultater.`);
 }
