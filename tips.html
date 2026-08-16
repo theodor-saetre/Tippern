@@ -46,7 +46,7 @@
 <div class="wrap">
   <header>
     <h1>Dagens<span class="accent">tips</span></h1>
-    <div class="sub">Ett spill pr kamp</div>
+    <div class="sub">Dagens spill &amp; kombi-spill</div>
   </header>
   <nav>
     <a href="index.html">I dag</a>
@@ -55,11 +55,12 @@
     <a href="avkastning.html">Avkastning</a>
   </nav>
   <div class="status-tag" id="statusTag">● Laster …</div>
+  <div class="section-title">Dagens spill <span>— ekte, hentede bookmakerodds (1,30–2,50)</span></div>
   <div id="list"></div>
   <div class="section-title">Kombi-spill <span>— to markeder i samme kamp, modellens egen pris (ikke ekte)</span></div>
   <div id="komboList"></div>
   <div class="disclaimer">
-    <b>Til underholdning.</b> Modellens tryggeste spill pr kamp — det spillet med høyest beregnet sannsynlighet. Ikke nødvendigvis verdi, bare det mest sannsynlige. Ekte odds vises når hentet (~90 min før avspark). Spill kun for penger du tåler å tape.
+    <b>Dagens spill</b> er plukket ut fra ekte, hentede bookmakerodds. <b>Kombi-spill</b> kan aldri ha ekte pris (bookmakere tilbyr ikke slike kombinasjoner) — vises kun som modellens egen sannsynlighet/pris. Spill kun for penger du tåler å tape.
   </div>
 </div>
 <script>
@@ -86,29 +87,20 @@ async function load(){
 
   tag.textContent = `● Live — oppdatert ${new Date(data.generatedAt).toLocaleString('no-NO')}`;
 
-  document.getElementById('list').innerHTML = data.fixtures
-    .sort((a,b)=> new Date(a.kickoff) - new Date(b.kickoff))
-    .map(f => {
-      const mp = f.matchPick;
-      if (!mp) {
-        // Ingen modell for denne kampen (typisk nyopprykket lag uten historikk) -
-        // vis den likevel, med odds hvis hentet, i stedet for å gjøre den usynlig.
-        const oddsBits = f.odds ? Object.entries(f.odds).filter(([,v])=>v!=null) : [];
+  const byLabel = new Map(data.fixtures.map(f => [f.label, f]));
+  const dagensSpill = (data.coupon && data.coupon.dagensSpill) || [];
+  document.getElementById('list').innerHTML = dagensSpill.length
+    ? dagensSpill.map(ds => {
+        const f = byLabel.get(ds.match);
+        const kickoff = f ? new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'}) : '';
+        const probLabel = ds.modelBased === false ? 'Bookmakers snitt' : 'Modell';
         return `<div class="card">
-          <div class="match">${f.label} · ${new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'})}</div>
-          <div class="top"><span class="pick" style="color:var(--chalk-dim);font-weight:400;">Ingen modell tilgjengelig</span></div>
-          ${oddsBits.length ? `<div class="oddsline live"><span>Bookmaker (${oddsBits[0][0]})</span><b>${fmtOdds(oddsBits[0][1])}</b></div>` : `<div class="oddsline"><span class="muted">Ingen odds hentet ennå</span></div>`}
+          <div class="match">${ds.match}${kickoff ? ' · '+kickoff : ''}</div>
+          <div class="top"><span class="pick">${ds.pick}</span><span class="prob">${fmtPct(ds.p)}</span></div>
+          <div class="oddsline live"><span>Bookmaker · ${probLabel}</span><b>${fmtOdds(ds.odds)}</b></div>
         </div>`;
-      }
-      const oddsLine = mp.odds != null
-        ? `<div class="oddsline live"><span>Bookmaker</span><b>${fmtOdds(mp.odds)}</b></div>`
-        : `<div class="oddsline"><span class="muted">Ingen ferske odds ennå</span></div>`;
-      return `<div class="card">
-        <div class="match">${f.label} · ${new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'})}</div>
-        <div class="top"><span class="pick">${mp.pick}</span><span class="prob">${fmtPct(mp.p)}</span></div>
-        ${oddsLine}
-      </div>`;
-    }).join('');
+      }).join('')
+    : `<div class="empty">Ingen dagens spill akkurat nå — kommer når odds er hentet (~90 min før avspark).</div>`;
 
   // Kombi-spill: to markeder i samme kamp. Kan ALDRI ha ekte bookmakerodds
   // (The Odds API tilbyr ikke egenkomponerte kombinasjoner) - alltid modellens

@@ -102,7 +102,6 @@ async function processDay(file, now) {
     const hg = mt.score.fullTime.home, ag = mt.score.fullTime.away;
     f.result = { home: hg, away: ag };
     f.outcomes = actualOutcomes(hg, ag);
-    if (f.matchPick) f.matchPick.hit = f.outcomes[f.matchPick.key];
     resolvedCount++;
   }
 
@@ -168,11 +167,11 @@ const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
 
 // Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
 // statistikk.html (treffprosent) og avkastning.html (100 kr pr spill).
-// Kun tips som faktisk hadde en ekte hentet odds telles med. Tagget med
-// `source` (matchPick / dagensSpill) slik man ser hvor tipset kom fra.
-// The Gambler telles bevisst IKKE med her - det er eksplisitt "for gøy, ikke
-// smart", og skal ikke blandes inn i det seriøse treffprosent-/avkastnings-
-// regnskapet. Treff/bom for Gambler vises fortsatt i selve dagens kupong.
+// Kun "Dagens spill" telles med (kombi-spill kan aldri få ekte odds, og telles
+// derfor aldri her - se tips.html). The Gambler telles bevisst IKKE med her -
+// det er eksplisitt "for gøy, ikke smart", og skal ikke blandes inn i det
+// seriøse treffprosent-/avkastningsregnskapet. Treff/bom for Gambler vises
+// fortsatt i selve dagens kupong.
 function appendToHistory(day) {
   const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
   const push = (source, match, pick, p, odds, hit) => {
@@ -180,9 +179,6 @@ function appendToHistory(day) {
     history.push({ date: day.date, match, pick, p, odds, hit, source });
   };
 
-  for (const f of day.fixtures) {
-    if (f.matchPick) push('matchPick', f.label, f.matchPick.pick, f.matchPick.p, f.matchPick.odds, f.matchPick.hit);
-  }
   if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
     for (const ds of day.coupon.dagensSpill) push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
   }

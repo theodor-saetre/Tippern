@@ -12,6 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { impliedProb } = require('../lib/poisson');
 
 const KEY = process.env.ODDS_API_KEY;
 const MODE = process.env.ODDS_MODE === 'morning' ? 'morning' : 'prekickoff';
@@ -86,11 +87,6 @@ async function main() {
     }
   }
 
-  // Fyll inn ekte odds for "ett spill pr kamp" (tips.html) også, når vi har dem.
-  for (const f of db.fixtures) {
-    if (f.matchPick && f.odds) f.matchPick.odds = f.odds[f.matchPick.key] ?? f.matchPick.odds;
-  }
-
   // "Dagens spill" fra build-model.js er valgt ut fra modellens EGEN rimelige odds
   // (sirkulært — forteller ingenting om ekte verdi). Nå som vi har ferske bookmaker-
   // odds, plukker vi heller det beste spillet basert på EKTE priser i vinduet.
@@ -147,12 +143,15 @@ const DAGENS_SPILL_COUNT = 4;
 function recomputeDagensSpillFromLiveOdds(db) {
   const candidates = [];
   for (const f of db.fixtures) {
-    if (!f.odds || !f.markets) continue; // f.markets mangler for kamper uten modell (noModel)
+    if (!f.odds) continue;
     for (const key of Object.keys(DAGENS_SPILL_MARKETS)) {
       const odds = f.odds[key];
       if (odds == null || odds < DAGENS_SPILL_MIN_ODDS || odds > DAGENS_SPILL_MAX_ODDS) continue;
-      const p = f.markets[key];
-      candidates.push({ match: f.label, key, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true });
+      // Kamper uten modell (noModel, f.eks. nyopprykket lag uten historikk) har ikke
+      // f.markets - bruk da bookmakerens egen implisitte sannsynlighet (1/odds) i
+      // stedet for å utelate en kamp som faktisk HAR ekte, spillbar odds.
+      const p = f.markets ? f.markets[key] : impliedProb(odds);
+      candidates.push({ match: f.label, key, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true, modelBased: !!f.markets });
     }
   }
   if (candidates.length === 0) return;
@@ -233,6 +232,29 @@ function extractOdds(ev) {
           if (o.name === 'Yes') bestBttsYes = bestBttsYes === null ? o.price : Math.max(bestBttsYes, o.price);
         }
       }
+    }
+  }
+
+  // Ekte bookmakerodds skal ALLTID summere til over 100% implisitt sannsynlighet
+  // samlet (det er bookmakerens margin). Plukker vi "beste pris pr utfall" på
+  // tvers av ULIKE bookmakere (typisk for tynne markeder, f.eks. en nyopprykket
+  // klubb), kan én avvikende/feilpriset bookmaker gi en matematisk umulig
+  // kombinasjon (samlet sannsynlighet under 100%). Forkast heller enn å vise
+  // et tall som ser ekte ut, men er misvisende.
+  function plausible(...odds) {
+    if (odds.some((o) => o == null)) return true; // ufullstendig sett - ikke denne sjekkens jobb
+    const sum = odds.reduce((s, o) => s + 1 / o, 0);
+    return sum >= 0.97;
+  }
+  if (!plausible(bestHome, bestDraw, bestAway)) {
+    console.warn(`Kastet h2h-odds for ${ev.home_team}-${ev.away_team}: matematisk umulig kombinasjon (sannsynligvis feilpris hos én bookmaker)`);
+    bestHome = bestDraw = bestAway = null;
+  }
+  for (const point of Object.keys(totals)) {
+    const t = totals[point];
+    if (!plausible(t.over, t.under)) {
+      console.warn(`Kastet totals ${point} for ${ev.home_team}-${ev.away_team}: matematisk umulig kombinasjon`);
+      t.over = t.under = null;
     }
   }
 
