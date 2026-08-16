@@ -169,8 +169,10 @@ const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
 // Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
 // statistikk.html (treffprosent) og avkastning.html (100 kr pr spill).
 // Kun tips som faktisk hadde en ekte hentet odds telles med. Tagget med
-// `source` slik at man ser om det var "ett spill pr kamp"-tipset (matchPick),
-// "Dagens spill"-utvalget, eller et Gambler-bein.
+// `source` (matchPick / dagensSpill) slik man ser hvor tipset kom fra.
+// The Gambler telles bevisst IKKE med her - det er eksplisitt "for gøy, ikke
+// smart", og skal ikke blandes inn i det seriøse treffprosent-/avkastnings-
+// regnskapet. Treff/bom for Gambler vises fortsatt i selve dagens kupong.
 function appendToHistory(day) {
   const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
   const push = (source, match, pick, p, odds, hit) => {
@@ -183,9 +185,6 @@ function appendToHistory(day) {
   }
   if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
     for (const ds of day.coupon.dagensSpill) push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
-  }
-  if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
-    for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);
   }
 
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));

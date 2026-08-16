@@ -9,15 +9,6 @@
     "source": "dagensSpill"
   },
   {
-    "date": "2026-08-15",
-    "match": "SEV–RAY",
-    "pick": "Begge lag scorer",
-    "p": 0.32465918856453285,
-    "odds": 2.06,
-    "hit": true,
-    "source": "gambler"
-  },
-  {
     "date": "2026-08-16",
     "match": "ESP–LEV",
     "pick": "Espanyol eller uavgjort",
@@ -34,23 +25,5 @@
     "odds": 1.83,
     "hit": false,
     "source": "dagensSpill"
-  },
-  {
-    "date": "2026-08-16",
-    "match": "ESP–LEV",
-    "pick": "Begge lag scorer",
-    "p": 0.48098284202854413,
-    "odds": 1.94,
-    "hit": false,
-    "source": "gambler"
-  },
-  {
-    "date": "2026-08-16",
-    "match": "ESP–LEV",
-    "pick": "Espanyol vinner",
-    "p": 0.4206227748023328,
-    "odds": 2.22,
-    "hit": true,
-    "source": "gambler"
   }
 ]
