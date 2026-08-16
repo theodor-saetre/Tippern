@@ -133,7 +133,7 @@
         "key": "dcHD",
         "p": 0.7320957109948357,
         "pick": "Espanyol eller uavgjort",
-        "odds": 1.35
+        "odds": 1.34
       },
       "bestCombo": {
         "key": "dcHD_o15",
@@ -154,19 +154,37 @@
         "btts": 2.079076242683631
       },
       "odds": {
-        "dcHD": 1.35,
-        "dcAD": 1.82,
-        "pHome": 2.24,
-        "pDraw": 3.37,
-        "pAway": 3.95,
+        "dcHD": 1.34,
+        "dcAD": 1.83,
+        "pHome": 2.22,
+        "pDraw": 3.38,
+        "pAway": 4,
         "o15": null,
-        "o25": 2.3,
+        "o25": 2.23,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.94
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-16T15:47:44.783Z",
+          "odds": {
+            "dcHD": 1.35,
+            "dcAD": 1.82,
+            "pHome": 2.24,
+            "pDraw": 3.37,
+            "pAway": 3.95,
+            "o15": null,
+            "o25": 2.3,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -176,7 +194,7 @@
         "pick": "Espanyol eller uavgjort",
         "market": "Double chance",
         "p": 0.7320957109948357,
-        "odds": 1.35,
+        "odds": 1.34,
         "liveOdds": true
       },
       {
@@ -184,7 +202,15 @@
         "pick": "Levante eller uavgjort",
         "market": "Double chance",
         "p": 0.579377225197667,
-        "odds": 1.82,
+        "odds": 1.83,
+        "liveOdds": true
+      },
+      {
+        "match": "ESP–LEV",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.48098284202854413,
+        "odds": 1.94,
         "liveOdds": true
       },
       {
@@ -192,15 +218,7 @@
         "pick": "Espanyol vinner",
         "market": "Full tid",
         "p": 0.4206227748023328,
-        "odds": 2.24,
-        "liveOdds": true
-      },
-      {
-        "match": "ESP–LEV",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.4097871730643514,
-        "odds": 2.3,
+        "odds": 2.22,
         "liveOdds": true
       }
     ],
@@ -233,5 +251,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-16T15:47:44.783Z"
+  "oddsUpdatedAt": "2026-08-16T16:09:32.327Z"
 }
