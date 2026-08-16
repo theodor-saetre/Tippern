@@ -160,6 +160,7 @@ async function main() {
         formA: recentForm(away.form),
         markets,
         fairOdds: {
+          pHome: fairOdds(markets.pHome), pDraw: fairOdds(markets.pDraw), pAway: fairOdds(markets.pAway),
           dcHD: fairOdds(markets.dcHD), dcAD: fairOdds(markets.dcAD),
           o15: fairOdds(markets.o15), o25: fairOdds(markets.o25),
           u35: fairOdds(markets.u35), u45: fairOdds(markets.u45),

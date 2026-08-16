@@ -211,6 +211,7 @@ function extractOdds(ev) {
     dcHD: dc(bestHome, bestDraw),
     dcAD: dc(bestAway, bestDraw),
     pHome: bestHome,
+    pDraw: bestDraw,
     pAway: bestAway,
     o15: line(1.5).over ?? null,
     o25: line(2.5).over ?? null,

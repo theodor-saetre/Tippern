@@ -292,6 +292,9 @@ function render(id){
       <div class="xg-block"><div class="num">${f.lambdaA.toFixed(2)}</div><div class="cap">${f.awayName} forventet mål</div></div>
     </div>
     <div class="prob-table">
+      ${prow("Fulltid",`${f.homeName} vinner`,m.pHome,fo.pHome,live&&live.pHome)}
+      ${prow("Fulltid","Uavgjort",m.pDraw,fo.pDraw,live&&live.pDraw)}
+      ${prow("Fulltid",`${f.awayName} vinner`,m.pAway,fo.pAway,live&&live.pAway)}
       ${prow("Double chance",`${f.homeName} eller uavgjort`,m.dcHD,fo.dcHD,live&&live.dcHD)}
       ${prow("Double chance",`${f.awayName} eller uavgjort`,m.dcAD,fo.dcAD,live&&live.dcAD)}
       ${prow("Over 1,5 mål","totalt",m.o15,fo.o15,live&&live.o15)}
