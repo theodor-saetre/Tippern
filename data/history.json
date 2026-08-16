@@ -16,14 +16,5 @@
     "odds": 1.34,
     "hit": true,
     "source": "matchPick"
-  },
-  {
-    "date": "2026-08-16",
-    "match": "ESP–LEV",
-    "pick": "Levante eller uavgjort",
-    "p": 0.579377225197667,
-    "odds": 1.83,
-    "hit": false,
-    "source": "dagensSpill"
   }
 ]

@@ -158,10 +158,21 @@ function recomputeDagensSpillFromLiveOdds(db) {
   if (candidates.length === 0) return;
   candidates.sort((a, b) => b.p - a.p);
 
+  // Gambler-beina (lib/coupon.js, urørt) har ikke en key lagret - "X vinner"
+  // er den eneste av deres markeder som har et komplement i COMPLEMENTS-tabellen.
+  const byLabel = new Map(db.fixtures.map((f) => [f.label, f]));
+  const gamblerKeys = ((db.coupon && db.coupon.gambler && db.coupon.gambler.legs) || [])
+    .filter((l) => l.market === 'Full tid')
+    .map((l) => {
+      const f = byLabel.get(l.match);
+      return { match: l.match, key: (f && l.pick.startsWith(f.homeName)) ? 'pHome' : 'pAway' };
+    });
+
   const chosen = [];
   for (const c of candidates) {
-    const contradicts = chosen.some((x) => x.match === c.match && COMPLEMENTS[x.key] === c.key);
-    if (contradicts) continue;
+    const contradictsChosen = chosen.some((x) => x.match === c.match && COMPLEMENTS[x.key] === c.key);
+    const contradictsGambler = gamblerKeys.some((g) => g.match === c.match && COMPLEMENTS[g.key] === c.key);
+    if (contradictsChosen || contradictsGambler) continue;
     chosen.push(c);
     if (chosen.length >= DAGENS_SPILL_COUNT) break;
   }
