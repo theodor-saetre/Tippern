@@ -115,12 +115,13 @@
         "btts": 2.154677679844168
       },
       "odds": {
-        "dcHD": 1.34,
+        "dcHD": 1.35,
         "dcAD": 1.86,
-        "pHome": 2.2,
+        "pHome": 2.22,
         "pAway": 4,
         "o15": null,
-        "o25": 2.28,
+        "o25": 2.3,
+        "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
@@ -166,5 +167,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-16T09:17:30.544Z"
+  "oddsUpdatedAt": "2026-08-16T10:57:01.785Z"
 }

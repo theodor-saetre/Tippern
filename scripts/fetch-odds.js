@@ -214,6 +214,7 @@ function extractOdds(ev) {
     pAway: bestAway,
     o15: line(1.5).over ?? null,
     o25: line(2.5).over ?? null,
+    o35: line(3.5).over ?? null,
     u35: line(3.5).under ?? null,
     u45: line(4.5).under ?? null,
     btts: bestBttsYes,
