@@ -83,15 +83,16 @@ function recentForm(form) {
 }
 
 // Ett anbefalt spill pr kamp (tips.html) — det tryggeste (høyest modell-sannsynlighet)
-// blant de vanlige markedene. Ekte odds fylles inn av fetch-odds.js når hentet,
-// og check-results.js avgjør senere om det traff.
+// blant markedene bookmakere FAKTISK priser. u35/u45 utelates bevisst: de er nesten
+// alltid sanne (97-99%) og vinner derfor "høyest sannsynlighet" hver gang, men
+// bookmakere tilbyr så godt som aldri odds på et så opplagt utfall - bekreftet i
+// praksis (0 av 2 fikk ekte odds). Uten ekte odds kan ikke tipset spores i historikken.
+// Ekte odds fylles inn av fetch-odds.js når hentet, og check-results.js avgjør senere om det traff.
 const PICK_LABELS = {
   dcHD: (f) => `${f.homeName} eller uavgjort`,
   dcAD: (f) => `${f.awayName} eller uavgjort`,
   o15: () => 'Over 1,5 mål',
   o25: () => 'Over 2,5 mål',
-  u35: () => 'Under 3,5 mål',
-  u45: () => 'Under 4,5 mål',
   btts: () => 'Begge lag scorer',
 };
 function pickMatchPick(fixture) {

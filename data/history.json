@@ -1,0 +1,18 @@
+[
+  {
+    "date": "2026-08-15",
+    "match": "ALA–GET",
+    "pick": "Alavés eller uavgjort",
+    "p": 0.7414055944802589,
+    "odds": 1.35,
+    "hit": true
+  },
+  {
+    "date": "2026-08-15",
+    "match": "SEV–RAY",
+    "pick": "Rayo Vallecano eller uavgjort",
+    "p": 0.7669298149631305,
+    "odds": 1.63,
+    "hit": false
+  }
+]
