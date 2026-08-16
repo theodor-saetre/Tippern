@@ -148,19 +148,37 @@
         "btts": 2.079076242683631
       },
       "odds": {
-        "dcHD": 1.36,
-        "dcAD": 1.84,
+        "dcHD": 1.35,
+        "dcAD": 1.82,
         "pHome": 2.24,
-        "pDraw": 3.44,
+        "pDraw": 3.37,
         "pAway": 3.95,
         "o15": null,
-        "o25": 2.3,
+        "o25": 2.32,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.98
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-16T14:48:01.749Z",
+          "odds": {
+            "dcHD": 1.36,
+            "dcAD": 1.84,
+            "pHome": 2.24,
+            "pDraw": 3.44,
+            "pAway": 3.95,
+            "o15": null,
+            "o25": 2.3,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -169,7 +187,7 @@
       "pick": "Levante eller uavgjort",
       "market": "Double chance",
       "p": 0.579377225197667,
-      "odds": 1.84,
+      "odds": 1.82,
       "liveOdds": true
     },
     "gambler": {
@@ -201,5 +219,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-16T14:48:01.749Z"
+  "oddsUpdatedAt": "2026-08-16T15:42:06.629Z"
 }
