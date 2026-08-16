@@ -157,8 +157,10 @@
     <div class="card pick" id="dagensCard"></div>
     <div class="card gambler" id="gamblerCard"></div>
   </div>
+  <div class="fun-header">Kombi-spill <span>— to markeder i samme kamp, modellens egen pris</span></div>
+  <div class="card full" id="komboCard"></div>
   <div class="disclaimer">
-    <b>Til underholdning.</b> Modellen er styrkejustert (Dixon-Coles-prinsipp) og bruker nå tidsvektet form over siste 10 kamper pluss egen hjemme-/borteform. «Dagens spill» velger beste spill i odds-vinduet 1,70–2,50. Fortsatt bare ett datapunkt — bookmakeren har som regel en bedre modell og en innebygd margin. Spill kun for penger du tåler å tape.
+    <b>Til underholdning.</b> Modellen er styrkejustert (Dixon-Coles-prinsipp) og bruker nå tidsvektet form over siste 10 kamper pluss egen hjemme-/borteform. «Dagens spill» velger 3-4 spill i odds-vinduet 1,30–2,50. Fortsatt bare ett datapunkt — bookmakeren har som regel en bedre modell og en innebygd margin. Spill kun for penger du tåler å tape.
   </div>
   <footer>
     Live-kilde: football-data.org (gratis) · Odds: The Odds API (gratis kvote)<br>
@@ -361,30 +363,53 @@ function liveNote(pickLine){
 // bare ekte, hentede bookmakerpriser. Modellens eget output vises kun som
 // sannsynlighet (%), aldri omregnet til et odds-tall som kan forveksles med en pris.
 
-// Bygger innholdet i "Dagens spill"-kortet. `best.liveOdds` er true når
-// fetch-odds.js har plukket spillet ut fra EKTE bookmakerodds i vinduet
-// (se recomputeDagensSpillFromLiveOdds i fetch-odds.js).
-function dagensSpillBody(best){
-  if (best.liveOdds) {
-    // best.odds ER den ekte prisen her - trygt å vise.
-    return `<div class="pick-sub">Bookmakerodds i vinduet 1,70–2,50 — ekte pris</div>
-      <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
-      <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>`;
-  }
-  // Ingen ekte odds i vinduet ennå - vis KUN sannsynlighet, ikke noe odds-tall.
-  return `<div class="pick-sub">Modellens favoritt i påvente av odds i vinduet 1,70–2,50</div>
-    <div class="selgroup">
-      <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtPct(best.p)}</span></div>
-      ${liveNote(best)}
+// Bygger innholdet i "Dagens spill"-kortet — en LISTE på 3-4 spill.
+// `x.liveOdds` er true når fetch-odds.js har plukket spillet ut fra EKTE
+// bookmakerodds i vinduet (se recomputeDagensSpillFromLiveOdds i fetch-odds.js).
+function dagensSpillBody(list){
+  if (!list || list.length === 0) return `<div class="pick-sub">Ingen spill i vinduet 1,30–2,50 ennå</div>`;
+  const anyReal = list.some(x => x.liveOdds);
+  const sub = anyReal
+    ? 'Bookmakerodds i vinduet 1,30–2,50 — ekte pris'
+    : 'Modellens favoritter i påvente av odds i vinduet 1,30–2,50';
+  return `<div class="pick-sub">${sub}</div>` + list.map(x => {
+    if (x.liveOdds) {
+      // x.odds ER den ekte prisen her - trygt å vise.
+      return `<div class="selgroup"><div class="selrow"><span class="sname">${x.pick}<small>${x.match} · ${x.market}</small></span><span class="sodds">${fmtOdds(x.odds)}</span></div>
+        <div class="oddnote">Modellens sjanse: ${fmtPct(x.p)}</div></div>`;
+    }
+    // Ingen ekte odds i vinduet ennå - vis KUN sannsynlighet, ikke noe odds-tall.
+    return `<div class="selgroup">
+      <div class="selrow"><span class="sname">${x.pick}<small>${x.match} · ${x.market}</small></span><span class="sodds">${fmtPct(x.p)}</span></div>
+      ${liveNote(x)}
     </div>`;
+  }).join('');
+}
+
+// Kombi-spill: to markeder i SAMME kamp (se lib/poisson.js sin comboMarkets).
+// Kan ALDRI ha ekte bookmakerodds - The Odds API tilbyr ikke egenkomponerte
+// kombinasjoner. Vises derfor helt atskilt fra Dagens spill, alltid tydelig
+// merket som modellens egen (riktig utregnede, men ikke hentede) pris.
+function renderKombi(){
+  const withCombo = (DATA.fixtures || []).filter(f => f.bestCombo);
+  document.getElementById('komboCard').innerHTML = withCombo.length ? `
+    <h2>Modellens beste kombi pr kamp</h2>
+    <div style="font-family:'Spline Sans Mono',monospace;font-size:11px;color:var(--chalk-dim);margin-bottom:14px;">
+      Modellens egen, korrekt utregnede pris for kombinasjonen - IKKE en ekte, hentet bookmakerodds. Slike kombinasjoner finnes ikke i odds-feeden vi bruker.
+    </div>
+    ${withCombo.map(f => `
+      <div class="selgroup">
+        <div class="selrow"><span class="sname">${f.bestCombo.pick}<small>${f.label}</small></span><span class="sodds">${fmtPct(f.bestCombo.p)}</span></div>
+        <div class="oddnote">Modellens egen pris: <b>${fmtOdds(f.bestCombo.fairOdds)}</b> (ikke ekte)</div>
+      </div>`).join('')}`
+    : `<div class="pick-sub">Ingen kamper med modell i dag</div>`;
 }
 
 function renderCoupon(){
   const c = DATA.coupon || {};
-  const best = c.dagensSpill;
-  document.getElementById('dagensCard').innerHTML = best
-    ? `<div class="pick-title">⭐ Dagens spill</div>${dagensSpillBody(best)}`
-    : `<div class="pick-title">⭐ Dagens spill</div><div class="pick-sub">Ingen spill i vinduet 1,70–2,50 i dag</div>`;
+  const list = Array.isArray(c.dagensSpill) ? c.dagensSpill : (c.dagensSpill ? [c.dagensSpill] : []);
+  document.getElementById('dagensCard').innerHTML = `<div class="pick-title">⭐ Dagens spill</div>${dagensSpillBody(list)}`;
+  renderKombi();
 
   const g = c.gambler;
   let combinedLine = `<div class="pick-sub" style="margin-top:12px;">Ekte samlet odds vises når alle bein har fått pris</div>`;

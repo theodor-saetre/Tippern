@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { expectedGoals } = require('../lib/ratings');
-const { modelMarkets, fairOdds } = require('../lib/poisson');
+const { modelMarkets, comboMarkets, fairOdds } = require('../lib/poisson');
 const { buildCoupon } = require('../lib/coupon');
 
 const API = 'https://api.football-data.org/v4';
@@ -104,6 +104,28 @@ function pickMatchPick(fixture) {
   return { ...best, odds: null };
 }
 
+// "Kombi-spill" — to markeder i SAMME kamp kombinert (se comboMarkets i
+// lib/poisson.js for den korrekte utregningen). Disse kan ALDRI få ekte
+// bookmakerodds (The Odds API tilbyr ikke egenkomponerte kombinasjoner) - bare
+// modellens egen, riktig utregnede pris. Holdes bevisst atskilt fra Dagens
+// spill (som kun skal inneholde ekte, hentede priser).
+const COMBO_LABELS = {
+  dcHD_o15: (f) => `${f.homeName} eller uavgjort + Over 1,5 mål`,
+  dcHD_o25: (f) => `${f.homeName} eller uavgjort + Over 2,5 mål`,
+  dcHD_btts: (f) => `${f.homeName} eller uavgjort + Begge lag scorer`,
+  dcAD_o15: (f) => `${f.awayName} eller uavgjort + Over 1,5 mål`,
+  dcAD_o25: (f) => `${f.awayName} eller uavgjort + Over 2,5 mål`,
+  dcAD_btts: (f) => `${f.awayName} eller uavgjort + Begge lag scorer`,
+};
+function bestCombo(fixture, combos) {
+  let best = null;
+  for (const key of Object.keys(COMBO_LABELS)) {
+    const p = combos[key];
+    if (best === null || p > best.p) best = { key, p, pick: COMBO_LABELS[key](fixture), fairOdds: fairOdds(p) };
+  }
+  return best;
+}
+
 async function main() {
   if (!KEY) throw new Error('Mangler FOOTBALL_DATA_KEY');
 
@@ -178,6 +200,7 @@ async function main() {
       const lambdaA = home.fallback || away.fallback ? blendA.atk * blendH.def * LEAGUE_AWAY_AVG : eg.lambdaA;
 
       const markets = modelMarkets(lambdaH, lambdaA);
+      const combos = comboMarkets(lambdaH, lambdaA);
       const homeName = mt.homeTeam.shortName || mt.homeTeam.name;
       const awayName = mt.awayTeam.shortName || mt.awayTeam.name;
 
@@ -197,6 +220,7 @@ async function main() {
         formA: recentForm(away.form),
         markets,
         matchPick: pickMatchPick({ homeName, awayName, markets }),
+        bestCombo: bestCombo({ homeName, awayName }, combos),
         fairOdds: {
           pHome: fairOdds(markets.pHome), pDraw: fairOdds(markets.pDraw), pAway: fairOdds(markets.pAway),
           dcHD: fairOdds(markets.dcHD), dcAD: fairOdds(markets.dcAD),
@@ -213,6 +237,9 @@ async function main() {
   // uten modell (noModel) må holdes utenfor kupongen, men blir værende i
   // fixtures-lista slik at de fortsatt vises i appen.
   const coupon = buildCoupon(fixtures.filter((f) => !f.noModel));
+  // dagensSpill er alltid en LISTE (selv med bare ett element her) - fetch-odds.js
+  // fyller den med 3-4 ekte-odds-baserte spill så snart odds er hentet.
+  coupon.dagensSpill = coupon.dagensSpill ? [coupon.dagensSpill] : [];
   // `date` er datoen kampene faktisk spilles (kan være frem i tid) — check-results.js
   // bruker denne til å vite når den skal sjekke resultatet, så den må stemme med ekte kampdato.
   const out = { generatedAt: new Date().toISOString(), date: matchDate, fixtures, coupon };

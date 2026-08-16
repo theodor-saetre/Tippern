@@ -102,14 +102,16 @@ async function processDay(file) {
     const key = inferKey(pick, market, f.homeName);
     return key ? (f.odds[key] ?? null) : null;
   }
-  if (day.coupon && day.coupon.dagensSpill) {
-    const ds = day.coupon.dagensSpill;
-    const f = byLabel.get(ds.match);
-    const key = f && inferKey(ds.pick, ds.market, f.homeName);
-    ds.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
-    // Var ds.odds allerede ekte pris (liveOdds:true, se fetch-odds.js)? Behold
-    // den. Ellers, forsøk å slå opp ekte odds nå (kan ha kommet inn senere).
-    ds.realOdds = ds.liveOdds ? ds.odds : realOddsFor(ds.pick, ds.market, f);
+  // dagensSpill er en LISTE (3-4 spill) - se scripts/fetch-odds.js.
+  if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
+    for (const ds of day.coupon.dagensSpill) {
+      const f = byLabel.get(ds.match);
+      const key = f && inferKey(ds.pick, ds.market, f.homeName);
+      ds.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
+      // Var ds.odds allerede ekte pris (liveOdds:true, se fetch-odds.js)? Behold
+      // den. Ellers, forsøk å slå opp ekte odds nå (kan ha kommet inn senere).
+      ds.realOdds = ds.liveOdds ? ds.odds : realOddsFor(ds.pick, ds.market, f);
+    }
   }
   if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
     for (const leg of day.coupon.gambler.legs) {
@@ -155,9 +157,8 @@ function appendToHistory(day) {
   for (const f of day.fixtures) {
     if (f.matchPick) push('matchPick', f.label, f.matchPick.pick, f.matchPick.p, f.matchPick.odds, f.matchPick.hit);
   }
-  if (day.coupon && day.coupon.dagensSpill) {
-    const ds = day.coupon.dagensSpill;
-    push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
+  if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
+    for (const ds of day.coupon.dagensSpill) push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
   }
   if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
     for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);

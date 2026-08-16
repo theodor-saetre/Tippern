@@ -132,16 +132,19 @@ const DAGENS_SPILL_MARKETS = {
   btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
 
-// Plukker beste spill i odds-vinduet 1,70-2,50 basert på EKTE, hentede bookmakerodds
-// (ikke modellens egne). Lar forrige (modell-baserte) forslag stå urørt hvis ingen
-// kamper med ferske odds havner i vinduet ennå.
+// Plukker de 3-4 beste spillene i odds-vinduet 1,30-2,50 basert på EKTE, hentede
+// bookmakerodds (ikke modellens egne). Lar forrige (modell-baserte) forslag stå
+// urørt hvis ingen kamper med ferske odds havner i vinduet ennå.
+const DAGENS_SPILL_MIN_ODDS = 1.30;
+const DAGENS_SPILL_MAX_ODDS = 2.50;
+const DAGENS_SPILL_COUNT = 4;
 function recomputeDagensSpillFromLiveOdds(db) {
   const candidates = [];
   for (const f of db.fixtures) {
     if (!f.odds || !f.markets) continue; // f.markets mangler for kamper uten modell (noModel)
     for (const key of Object.keys(DAGENS_SPILL_MARKETS)) {
       const odds = f.odds[key];
-      if (odds == null || odds < 1.70 || odds > 2.50) continue;
+      if (odds == null || odds < DAGENS_SPILL_MIN_ODDS || odds > DAGENS_SPILL_MAX_ODDS) continue;
       const p = f.markets[key];
       candidates.push({ match: f.label, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true });
     }
@@ -149,7 +152,7 @@ function recomputeDagensSpillFromLiveOdds(db) {
   if (candidates.length === 0) return;
   candidates.sort((a, b) => b.p - a.p);
   db.coupon = db.coupon || {};
-  db.coupon.dagensSpill = candidates[0];
+  db.coupon.dagensSpill = candidates.slice(0, DAGENS_SPILL_COUNT);
 }
 
 // Gjør lagnavn sammenlignbare: små bokstaver, uten aksenter/klubbtillegg/tegnsetting.

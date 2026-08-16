@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T14:46:55.798Z",
+  "generatedAt": "2026-08-16T15:44:10.873Z",
   "date": "2026-08-16",
   "fixtures": [
     {
@@ -12,15 +12,15 @@
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for Real Racing Club de Santander (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
       "odds": {
-        "dcHD": 1.97,
-        "dcAD": 1.34,
-        "pHome": 4,
-        "pDraw": 3.9,
-        "pAway": 2.05,
+        "dcHD": 1.12,
+        "dcAD": 3.82,
+        "pHome": 1.38,
+        "pDraw": 6,
+        "pAway": 10.5,
         "o15": null,
-        "o25": 1.56,
-        "o35": 2.34,
-        "u35": 1.62,
+        "o25": null,
+        "o35": 1.58,
+        "u35": 2.58,
         "u45": null,
         "btts": null
       },
@@ -130,10 +130,16 @@
         "noBtts": 0.5190171579714559
       },
       "matchPick": {
-        "key": "u45",
-        "p": 0.9136564594445312,
-        "pick": "Under 4,5 mål",
-        "odds": null
+        "key": "dcHD",
+        "p": 0.7320957109948357,
+        "pick": "Espanyol eller uavgjort",
+        "odds": 1.35
+      },
+      "bestCombo": {
+        "key": "dcHD_o15",
+        "p": 0.5048625887739617,
+        "pick": "Espanyol eller uavgjort + Over 1,5 mål",
+        "fairOdds": 1.9807369811822646
       },
       "fairOdds": {
         "pHome": 2.3774271387704564,
@@ -148,13 +154,13 @@
         "btts": 2.079076242683631
       },
       "odds": {
-        "dcHD": 1.36,
-        "dcAD": 1.84,
+        "dcHD": 1.35,
+        "dcAD": 1.82,
         "pHome": 2.24,
-        "pDraw": 3.44,
+        "pDraw": 3.37,
         "pAway": 3.95,
         "o15": null,
-        "o25": 2.3,
+        "o25": 2.32,
         "o35": null,
         "u35": null,
         "u45": null,
@@ -164,14 +170,40 @@
     }
   ],
   "coupon": {
-    "dagensSpill": {
-      "match": "ESP–LEV",
-      "pick": "Levante eller uavgjort",
-      "market": "Double chance",
-      "p": 0.579377225197667,
-      "odds": 1.84,
-      "liveOdds": true
-    },
+    "dagensSpill": [
+      {
+        "match": "ESP–LEV",
+        "pick": "Espanyol eller uavgjort",
+        "market": "Double chance",
+        "p": 0.7320957109948357,
+        "odds": 1.35,
+        "liveOdds": true
+      },
+      {
+        "match": "ESP–LEV",
+        "pick": "Levante eller uavgjort",
+        "market": "Double chance",
+        "p": 0.579377225197667,
+        "odds": 1.82,
+        "liveOdds": true
+      },
+      {
+        "match": "ESP–LEV",
+        "pick": "Espanyol vinner",
+        "market": "Full tid",
+        "p": 0.4206227748023328,
+        "odds": 2.24,
+        "liveOdds": true
+      },
+      {
+        "match": "ESP–LEV",
+        "pick": "Over 2,5 mål",
+        "market": "Totalt",
+        "p": 0.4097871730643514,
+        "odds": 2.32,
+        "liveOdds": true
+      }
+    ],
     "gambler": {
       "legs": [
         {
@@ -201,5 +233,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-16T14:48:01.749Z"
+  "oddsUpdatedAt": "2026-08-16T15:44:40.776Z"
 }
