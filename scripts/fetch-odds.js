@@ -116,13 +116,15 @@ function applyFreshOdds(db, f, fresh) {
 // Markedsnøkkel → hvordan lage samme lesbare tekst som lib/coupon.js bruker,
 // og hvilket felt i f.markets som har modellens sannsynlighet for det spillet.
 const DAGENS_SPILL_MARKETS = {
-  dcHD: (f) => ({ pick: `${f.homeName} eller uavgjort`, market: 'Double chance' }),
-  dcAD: (f) => ({ pick: `${f.awayName} eller uavgjort`, market: 'Double chance' }),
-  o15:  () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
-  o25:  () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
-  u35:  () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
-  u45:  () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
-  btts: () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
+  dcHD:  (f) => ({ pick: `${f.homeName} eller uavgjort`, market: 'Double chance' }),
+  dcAD:  (f) => ({ pick: `${f.awayName} eller uavgjort`, market: 'Double chance' }),
+  pHome: (f) => ({ pick: `${f.homeName} vinner`, market: 'Full tid' }),
+  pAway: (f) => ({ pick: `${f.awayName} vinner`, market: 'Full tid' }),
+  o15:   () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
+  o25:   () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
+  u35:   () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
+  u45:   () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
+  btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
 
 // Plukker beste spill i odds-vinduet 1,70-2,50 basert på EKTE, hentede bookmakerodds
@@ -208,6 +210,8 @@ function extractOdds(ev) {
   return {
     dcHD: dc(bestHome, bestDraw),
     dcAD: dc(bestAway, bestDraw),
+    pHome: bestHome,
+    pAway: bestAway,
     o15: line(1.5).over ?? null,
     o25: line(2.5).over ?? null,
     u35: line(3.5).under ?? null,

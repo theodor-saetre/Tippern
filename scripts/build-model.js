@@ -117,6 +117,15 @@ async function main() {
       const home = await cachedTeamForm(mt.homeTeam.id, comp);
       const away = await cachedTeamForm(mt.awayTeam.id, comp);
 
+      // Uten noen kamphistorikk i det hele tatt (verken i denne ligaen eller
+      // fallback) kan ikke ratingen regnes - blir NaN/null og krasjer siden.
+      // Typisk et nyopprykket lag fra en divisjon football-data.org ikke dekker
+      // på gratisplanen. Heller hoppe over kampen enn å vise et ødelagt tall.
+      if (home.form.length === 0 || away.form.length === 0) {
+        console.warn(`Hopper over ${mt.homeTeam.tla}-${mt.awayTeam.tla}: mangler kamphistorikk for ${home.form.length === 0 ? mt.homeTeam.name : mt.awayTeam.name}`);
+        continue;
+      }
+
       const eg = expectedGoals(home.form, away.form);
 
       // Usikkerhetsrabatt: hvis formen kom fra en annen liga (nyopprykket lag uten

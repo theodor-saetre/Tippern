@@ -314,22 +314,23 @@ function liveNote(pickLine){
   return `<div class="chance">Bookmaker akkurat nå: <b>${fmtOdds(live)}</b>${valueTag}</div>`;
 }
 
+// Regel: et tall som ser ut som odds skal ALDRI være modellens egen gjetning -
+// bare ekte, hentede bookmakerpriser. Modellens eget output vises kun som
+// sannsynlighet (%), aldri omregnet til et odds-tall som kan forveksles med en pris.
+
 // Bygger innholdet i "Dagens spill"-kortet. `best.liveOdds` er true når
 // fetch-odds.js har plukket spillet ut fra EKTE bookmakerodds i vinduet
-// (se recomputeDagensSpillFromLiveOdds i fetch-odds.js) - ellers er det
-// fortsatt bare modellens egen gjetning fra i morges.
+// (se recomputeDagensSpillFromLiveOdds i fetch-odds.js).
 function dagensSpillBody(best){
-  const row = `<div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
-    <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>`;
-
   if (best.liveOdds) {
-    return `<div class="pick-sub">Bookmakerodds i vinduet 1,70–2,50 — ekte pris, ikke modellgjetning</div>
-      ${row}
-      <div class="chance">Modellens egen rimelige odds her: <b>${fmtOdds(1/best.p)}</b></div>`;
+    // best.odds ER den ekte prisen her - trygt å vise.
+    return `<div class="pick-sub">Bookmakerodds i vinduet 1,70–2,50 — ekte pris</div>
+      <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtOdds(best.odds)}</span></div>
+      <div class="bigline"><span class="lab">Modellens sjanse</span><span class="odds">${fmtPct(best.p)}</span></div>`;
   }
-  return `<div class="pick-sub">Modellens beste spill i odds 1,70–2,50</div>
-    ${row}
-    <div class="chance">Modellens rimelige odds <b>${fmtOdds(best.odds)}</b> — ikke en ekte pris, se under</div>
+  // Ingen ekte odds i vinduet ennå - vis KUN sannsynlighet, ikke noe odds-tall.
+  return `<div class="pick-sub">Modellens favoritt i påvente av odds i vinduet 1,70–2,50</div>
+    <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtPct(best.p)}</span></div>
     ${liveNote(best)}`;
 }
 
@@ -341,12 +342,20 @@ function renderCoupon(){
     : `<div class="pick-title">⭐ Dagens spill</div><div class="pick-sub">Ingen spill i vinduet 1,70–2,50 i dag</div>`;
 
   const g = c.gambler;
+  let combinedLine = `<div class="pick-sub" style="margin-top:12px;">Ekte samlet odds vises når alle bein har fått pris</div>`;
+  if (g && g.legs && g.legs.length) {
+    const liveOddsPerLeg = g.legs.map(liveOddsFor);
+    if (liveOddsPerLeg.every(o => o != null)) {
+      const realCombined = liveOddsPerLeg.reduce((a, b) => a * b, 1);
+      combinedLine = `<div class="bigline"><span class="lab">Ekte samlet odds</span><span class="odds">${realCombined.toFixed(1)}</span></div>`;
+    }
+  }
   document.getElementById('gamblerCard').innerHTML = g && g.legs && g.legs.length ? `
     <div class="pick-title">🎲 The Gambler</div>
-    <div class="pick-sub">Kveldens ville langskudd — 10+ i odds</div>
-    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtOdds(l.odds)}</span></div>${liveNote(l)}`).join('')}
-    <div class="bigline"><span class="lab">Samlet odds (modell)</span><span class="odds">${g.combinedOdds.toFixed(1)}</span></div>
-    <div class="chance warn">Ekte sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
+    <div class="pick-sub">Kveldens ville langskudd — modellens sjanse pr bein, ekte odds når hentet</div>
+    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtPct(l.p)}</span></div>${liveNote(l)}`).join('')}
+    ${combinedLine}
+    <div class="chance warn">Modellens ekte samlet sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
     : `<div class="pick-title">🎲 The Gambler</div><div class="pick-sub">Ikke nok kamper i dag til en combo</div>`;
 }
 
