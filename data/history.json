@@ -2,17 +2,19 @@
   {
     "date": "2026-08-15",
     "match": "ALA–GET",
-    "pick": "Alavés eller uavgjort",
-    "p": 0.7414055944802589,
-    "odds": 1.35,
-    "hit": true
+    "pick": "Over 1,5 mål",
+    "p": 0.3362136051052149,
+    "odds": 1.79,
+    "hit": true,
+    "source": "dagensSpill"
   },
   {
     "date": "2026-08-15",
     "match": "SEV–RAY",
-    "pick": "Rayo Vallecano eller uavgjort",
-    "p": 0.7669298149631305,
-    "odds": 1.63,
-    "hit": false
+    "pick": "Begge lag scorer",
+    "p": 0.32465918856453285,
+    "odds": 2.06,
+    "hit": true,
+    "source": "gambler"
   }
 ]

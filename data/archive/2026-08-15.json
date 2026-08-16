@@ -155,13 +155,6 @@
         "u35": true,
         "u45": true,
         "btts": false
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.7414055944802589,
-        "pick": "Alavés eller uavgjort",
-        "odds": 1.35,
-        "hit": true
       }
     },
     {
@@ -317,13 +310,6 @@
         "u35": true,
         "u45": true,
         "btts": true
-      },
-      "matchPick": {
-        "key": "dcAD",
-        "p": 0.7669298149631305,
-        "pick": "Rayo Vallecano eller uavgjort",
-        "odds": 1.63,
-        "hit": false
       }
     }
   ],
@@ -335,7 +321,8 @@
       "p": 0.3362136051052149,
       "odds": 1.79,
       "liveOdds": true,
-      "hit": true
+      "hit": true,
+      "realOdds": 1.79
     },
     "gambler": {
       "legs": [
@@ -345,7 +332,8 @@
           "market": "BTTS",
           "p": 0.32465918856453285,
           "odds": 3.0801530812094327,
-          "hit": true
+          "hit": true,
+          "realOdds": 2.06
         },
         {
           "match": "ALA–GET",
@@ -353,7 +341,8 @@
           "market": "Full tid",
           "p": 0.3218576871910718,
           "odds": 3.106963231878153,
-          "hit": true
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "SEV–RAY",
@@ -361,7 +350,8 @@
           "market": "Full tid",
           "p": 0.23307016611124065,
           "odds": 4.290553427257249,
-          "hit": true
+          "hit": true,
+          "realOdds": null
         }
       ],
       "combinedOdds": 41.06026323122943,
@@ -372,5 +362,5 @@
   },
   "oddsUpdatedAt": "2026-08-15T18:09:19.374Z",
   "resultsChecked": true,
-  "resultsCheckedAt": "2026-08-16T05:17:18.975Z"
+  "resultsCheckedAt": "2026-08-16T14:59:43.597Z"
 }

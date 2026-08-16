@@ -91,19 +91,32 @@ async function processDay(file) {
     resolvedCount++;
   }
 
-  // Merk av treff i "Dagens spill" og "The Gambler"
+  // Merk av treff i "Dagens spill" og "The Gambler". `.odds` på gambler-bein er
+  // ALLTID modellens egen fair-odds (lib/coupon.js, urørt) - aldri overskrevet
+  // med ekte pris. Slår derfor opp ekte odds separat (realOdds) via samme
+  // fixture.odds som frontend allerede bruker til "bookmaker akkurat nå" -
+  // slik at historikken kun bruker ekte, faktiske priser, aldri modelltall.
   const byLabel = new Map(day.fixtures.map((f) => [f.label, f]));
+  function realOddsFor(pick, market, f) {
+    if (!f || !f.odds) return null;
+    const key = inferKey(pick, market, f.homeName);
+    return key ? (f.odds[key] ?? null) : null;
+  }
   if (day.coupon && day.coupon.dagensSpill) {
     const ds = day.coupon.dagensSpill;
     const f = byLabel.get(ds.match);
     const key = f && inferKey(ds.pick, ds.market, f.homeName);
     ds.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
+    // Var ds.odds allerede ekte pris (liveOdds:true, se fetch-odds.js)? Behold
+    // den. Ellers, forsøk å slå opp ekte odds nå (kan ha kommet inn senere).
+    ds.realOdds = ds.liveOdds ? ds.odds : realOddsFor(ds.pick, ds.market, f);
   }
   if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
     for (const leg of day.coupon.gambler.legs) {
       const f = byLabel.get(leg.match);
       const key = f && inferKey(leg.pick, leg.market, f.homeName);
       leg.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
+      leg.realOdds = realOddsFor(leg.pick, leg.market, f);
     }
     if (day.coupon.gambler.legs.length) {
       day.coupon.gambler.comboHit = day.coupon.gambler.legs.every((l) => l.hit === true);
@@ -129,17 +142,27 @@ const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
 
 // Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
 // statistikk.html (treffprosent) og avkastning.html (100 kr pr spill).
-// Kun tips som faktisk hadde en ekte hentet odds telles med.
+// Kun tips som faktisk hadde en ekte hentet odds telles med. Tagget med
+// `source` slik at man ser om det var "ett spill pr kamp"-tipset (matchPick),
+// "Dagens spill"-utvalget, eller et Gambler-bein.
 function appendToHistory(day) {
   const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
+  const push = (source, match, pick, p, odds, hit) => {
+    if (odds == null || hit == null) return; // ingen ekte odds → ikke en reell "innsats"
+    history.push({ date: day.date, match, pick, p, odds, hit, source });
+  };
+
   for (const f of day.fixtures) {
-    const mp = f.matchPick;
-    if (!mp || mp.odds == null || mp.hit == null) continue; // ingen ekte odds → ikke en reell "innsats"
-    history.push({
-      date: day.date, match: f.label, pick: mp.pick,
-      p: mp.p, odds: mp.odds, hit: mp.hit,
-    });
+    if (f.matchPick) push('matchPick', f.label, f.matchPick.pick, f.matchPick.p, f.matchPick.odds, f.matchPick.hit);
   }
+  if (day.coupon && day.coupon.dagensSpill) {
+    const ds = day.coupon.dagensSpill;
+    push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
+  }
+  if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
+    for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);
+  }
+
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
 }
 
