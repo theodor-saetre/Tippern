@@ -166,12 +166,12 @@ async function processDay(file, now) {
 const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
 
 // Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
-// statistikk.html (treffprosent) og avkastning.html (100 kr pr spill).
-// Kun "Dagens spill" telles med (kombi-spill kan aldri få ekte odds, og telles
-// derfor aldri her - se tips.html). The Gambler telles bevisst IKKE med her -
-// det er eksplisitt "for gøy, ikke smart", og skal ikke blandes inn i det
-// seriøse treffprosent-/avkastningsregnskapet. Treff/bom for Gambler vises
-// fortsatt i selve dagens kupong.
+// statistikk.html (treffprosent) og avkastning.html (100 kr pr spill). Kun bein
+// som faktisk har en EKTE, hentet odds telles med (aldri modellens egen
+// fair-odds) - kombi-spill kan derfor aldri havne her (se tips.html). The
+// Gambler-beina telles nå med NÅR de har ekte odds registrert (leg.realOdds) -
+// resten av The Gambler er fortsatt "for gøy, ikke smart" og vises kun i
+// selve dagens kupong, ikke her.
 function appendToHistory(day) {
   const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
   const push = (source, match, pick, p, odds, hit) => {
@@ -181,6 +181,9 @@ function appendToHistory(day) {
 
   if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
     for (const ds of day.coupon.dagensSpill) push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
+  }
+  if (day.coupon && day.coupon.gambler && Array.isArray(day.coupon.gambler.legs)) {
+    for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);
   }
 
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
