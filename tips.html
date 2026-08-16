@@ -35,6 +35,9 @@
   .card .oddsline.live b { color:var(--flare); }
   .card .oddsline .muted { opacity:0.6; }
   .empty { font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); padding:30px 0; text-align:center; }
+  .section-title { margin:26px 0 12px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.12em; color:var(--flare); }
+  .section-title span { color:var(--chalk-dim); font-weight:400; letter-spacing:0.05em; text-transform:none; }
+  .card.combo .prob { color:var(--warn); }
   .disclaimer { margin-top:22px; padding:14px 16px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12px; line-height:1.55; color:#d8c9a8; }
   .disclaimer b { color:var(--warn); }
 </style>
@@ -53,6 +56,8 @@
   </nav>
   <div class="status-tag" id="statusTag">● Laster …</div>
   <div id="list"></div>
+  <div class="section-title">Kombi-spill <span>— to markeder i samme kamp, modellens egen pris (ikke ekte)</span></div>
+  <div id="komboList"></div>
   <div class="disclaimer">
     <b>Til underholdning.</b> Modellens tryggeste spill pr kamp — det spillet med høyest beregnet sannsynlighet. Ikke nødvendigvis verdi, bare det mest sannsynlige. Ekte odds vises når hentet (~90 min før avspark). Spill kun for penger du tåler å tape.
   </div>
@@ -104,6 +109,18 @@ async function load(){
         ${oddsLine}
       </div>`;
     }).join('');
+
+  // Kombi-spill: to markeder i samme kamp. Kan ALDRI ha ekte bookmakerodds
+  // (The Odds API tilbyr ikke egenkomponerte kombinasjoner) - alltid modellens
+  // egen, riktig utregnede pris (se comboMarkets i lib/poisson.js).
+  const withCombo = data.fixtures.filter(f => f.bestCombo);
+  document.getElementById('komboList').innerHTML = withCombo.length
+    ? withCombo.map(f => `<div class="card combo">
+        <div class="match">${f.label}</div>
+        <div class="top"><span class="pick">${f.bestCombo.pick}</span><span class="prob">${fmtPct(f.bestCombo.p)}</span></div>
+        <div class="oddsline"><span>Modellens egen pris (ikke ekte)</span><b>${fmtOdds(f.bestCombo.fairOdds)}</b></div>
+      </div>`).join('')
+    : `<div class="empty">Ingen kamper med modell i dag.</div>`;
 }
 
 load();

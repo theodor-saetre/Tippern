@@ -132,6 +132,12 @@ const DAGENS_SPILL_MARKETS = {
   btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
 
+// To spill er direkte MOTSTRIDENDE hvis de er hverandres logiske komplement -
+// nøyaktig ett av dem kan være sant (f.eks. "Levante eller uavgjort" (dcAD) og
+// "Espanyol vinner" (pHome): skjer det ene, skjedde definitivt ikke det andre).
+// Slikt skal aldri havne sammen i samme liste - forvirrende og misvisende.
+const COMPLEMENTS = { dcHD: 'pAway', pAway: 'dcHD', dcAD: 'pHome', pHome: 'dcAD' };
+
 // Plukker de 3-4 beste spillene i odds-vinduet 1,30-2,50 basert på EKTE, hentede
 // bookmakerodds (ikke modellens egne). Lar forrige (modell-baserte) forslag stå
 // urørt hvis ingen kamper med ferske odds havner i vinduet ennå.
@@ -146,13 +152,22 @@ function recomputeDagensSpillFromLiveOdds(db) {
       const odds = f.odds[key];
       if (odds == null || odds < DAGENS_SPILL_MIN_ODDS || odds > DAGENS_SPILL_MAX_ODDS) continue;
       const p = f.markets[key];
-      candidates.push({ match: f.label, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true });
+      candidates.push({ match: f.label, key, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true });
     }
   }
   if (candidates.length === 0) return;
   candidates.sort((a, b) => b.p - a.p);
+
+  const chosen = [];
+  for (const c of candidates) {
+    const contradicts = chosen.some((x) => x.match === c.match && COMPLEMENTS[x.key] === c.key);
+    if (contradicts) continue;
+    chosen.push(c);
+    if (chosen.length >= DAGENS_SPILL_COUNT) break;
+  }
+
   db.coupon = db.coupon || {};
-  db.coupon.dagensSpill = candidates.slice(0, DAGENS_SPILL_COUNT);
+  db.coupon.dagensSpill = chosen;
 }
 
 // Gjør lagnavn sammenlignbare: små bokstaver, uten aksenter/klubbtillegg/tegnsetting.
