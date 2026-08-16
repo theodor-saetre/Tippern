@@ -137,7 +137,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564633,
@@ -274,7 +292,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -284,7 +320,8 @@
       "market": "Totalt",
       "p": 0.3362136051052149,
       "odds": 1.79,
-      "liveOdds": true
+      "liveOdds": true,
+      "hit": true
     },
     "gambler": {
       "legs": [
@@ -293,27 +330,33 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.32465918856453285,
-          "odds": 3.0801530812094327
+          "odds": 3.0801530812094327,
+          "hit": true
         },
         {
           "match": "ALA–GET",
           "pick": "Alavés vinner",
           "market": "Full tid",
           "p": 0.3218576871910718,
-          "odds": 3.106963231878153
+          "odds": 3.106963231878153,
+          "hit": true
         },
         {
           "match": "SEV–RAY",
           "pick": "Sevilla FC vinner",
           "market": "Full tid",
           "p": 0.23307016611124065,
-          "odds": 4.290553427257249
+          "odds": 4.290553427257249,
+          "hit": true
         }
       ],
       "combinedOdds": 41.06026323122943,
       "combinedProb": 0.024354446886239747,
-      "hitRate": 41
+      "hitRate": 41,
+      "comboHit": true
     }
   },
-  "oddsUpdatedAt": "2026-08-15T18:09:19.374Z"
+  "oddsUpdatedAt": "2026-08-15T18:09:19.374Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-16T05:17:18.975Z"
 }
