@@ -83,15 +83,19 @@
   .xg-block .cap { font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--chalk-dim); margin-top:6px; }
   .model-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
   @media (max-width:560px){ .model-grid{ grid-template-columns:1fr; } }
-  .prob-table { margin-top:20px; }
-  .prob-table .prow { display:grid; grid-template-columns:1fr auto 90px; align-items:center; gap:12px; padding:11px 0; border-bottom:1px solid var(--pitch-line); }
+  .prob-table { margin-top:6px; }
+  .prob-table .pgroup { font-family:'Spline Sans Mono',monospace; font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--chalk-dim); padding:18px 0 8px; border-top:1px solid var(--pitch-line); }
+  .prob-table .pgroup:first-child { padding-top:0; border-top:none; }
+  .prob-table .prow { display:grid; grid-template-columns:1fr auto 100px; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--pitch-line); }
   .prob-table .prow:last-child { border-bottom:none; }
   .prob-table .market { font-size:14px; font-weight:600; }
   .prob-table .market small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); margin-top:2px; }
-  .prob-table .modelprob { font-family:'Spline Sans Mono',monospace; font-size:18px; font-weight:600; }
-  .prob-table .fairodds { text-align:right; font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); }
-  .prob-table .fairodds b { color:var(--flare); font-size:15px; }
-  .value-tag { display:inline-block; margin-left:6px; font-size:10px; font-weight:700; color:var(--pitch); background:var(--flare); border-radius:3px; padding:1px 5px; vertical-align:middle; }
+  .prob-table .modelprob { font-family:'Spline Sans Mono',monospace; font-size:17px; font-weight:600; }
+  .prob-table .oddscell { text-align:right; font-family:'Spline Sans Mono',monospace; font-size:11px; line-height:1.6; color:var(--chalk-dim); }
+  .prob-table .oddscell .fair b { color:var(--chalk); font-size:13px; font-weight:600; }
+  .prob-table .oddscell .live { color:var(--chalk-dim); }
+  .prob-table .oddscell .live b { color:var(--flare); font-size:13px; font-weight:600; }
+  .value-tag { display:inline-block; margin-left:5px; font-size:10px; font-weight:700; color:var(--pitch); background:var(--flare); border-radius:3px; padding:1px 5px; vertical-align:middle; }
   .fun-header { margin:30px 0 14px; font-size:13px; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--flare); }
   .fun-header span { color:var(--chalk-dim); font-weight:400; letter-spacing:0.05em; text-transform:none; }
   .card.pick { border-color:var(--flare-dim); background:linear-gradient(160deg,var(--panel-hi),var(--panel)); }
@@ -100,11 +104,15 @@
   .pick .pick-title { color:var(--flare); }
   .gambler .pick-title { color:var(--warn); }
   .pick-sub { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); margin-bottom:16px; }
-  .selrow { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0; border-bottom:1px solid var(--pitch-line); font-size:14px; }
-  .selrow:last-of-type { border-bottom:none; }
+  .selrow { display:flex; justify-content:space-between; align-items:baseline; padding:9px 0 2px; font-size:14px; }
+  .selgroup { border-bottom:1px solid var(--pitch-line); padding-bottom:7px; margin-bottom:2px; }
+  .selgroup:last-of-type { border-bottom:none; margin-bottom:0; }
   .selrow .sname { font-weight:600; }
   .selrow .sname small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); }
   .selrow .sodds { font-family:'Spline Sans Mono',monospace; font-weight:600; color:var(--chalk); }
+  .oddnote { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); padding-bottom:9px; }
+  .oddnote b { color:var(--flare); font-weight:600; }
+  .oddnote.muted { opacity:0.55; }
   .bigline { display:flex; justify-content:space-between; align-items:center; margin-top:16px; padding-top:14px; border-top:2px solid var(--edge); }
   .bigline .lab { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--chalk-dim); }
   .bigline .odds { font-family:'Spline Sans Mono',monospace; font-size:30px; font-weight:600; }
@@ -274,16 +282,16 @@ function render(id){
     <div class="legend"><span><span class="dot a"></span>${f.homeName} (hjemme)</span><span><span class="dot b"></span>${f.awayName} (borte)</span></div>`;
 
   const m = f.markets, fo = f.fairOdds, live = f.odds;
-  function prow(market,sub,prob,fair,liveOdds){
+  function prow(label,prob,fair,liveOdds){
     // Verdi = bookmaker betaler mer enn modellens "rimelige" pris.
     // Bare et signal om at MODELLEN mener det er verdi — ikke en garanti.
     const edge = (liveOdds && fair) ? (liveOdds/fair - 1) * 100 : null;
     const valueTag = (edge !== null && edge > 0) ? `<span class="value-tag">+${edge.toFixed(0)}%</span>` : '';
-    const liveCell = live ? `<div class="fairodds">bookmaker<br><b>${fmtOdds(liveOdds)}</b>${valueTag}</div>` : '';
-    return `<div class="prow" style="${live?'grid-template-columns:1fr auto 90px 90px;':''}">
-      <div class="market">${market}<small>${sub}</small></div>
+    const liveLine = liveOdds ? `<div class="live">bookmaker <b>${fmtOdds(liveOdds)}</b>${valueTag}</div>` : (live ? `<div class="live">bookmaker —</div>` : '');
+    return `<div class="prow">
+      <div class="market">${label}</div>
       <div class="modelprob">${fmtPct(prob)}</div>
-      <div class="fairodds">rimelig<br><b>${fmtOdds(fair)}</b></div>${liveCell}</div>`;
+      <div class="oddscell"><div class="fair">rimelig <b>${fmtOdds(fair)}</b></div>${liveLine}</div></div>`;
   }
   document.getElementById('modelCard').innerHTML = `
     <h2>Modell — styrkejustert forventet mål (Poisson)${live?' · ferske odds hentet':''}</h2>
@@ -292,29 +300,33 @@ function render(id){
       <div class="xg-block"><div class="num">${f.lambdaA.toFixed(2)}</div><div class="cap">${f.awayName} forventet mål</div></div>
     </div>
     <div class="prob-table">
-      ${prow("Fulltid",`${f.homeName} vinner`,m.pHome,fo.pHome,live&&live.pHome)}
-      ${prow("Fulltid","Uavgjort",m.pDraw,fo.pDraw,live&&live.pDraw)}
-      ${prow("Fulltid",`${f.awayName} vinner`,m.pAway,fo.pAway,live&&live.pAway)}
-      ${prow("Double chance",`${f.homeName} eller uavgjort`,m.dcHD,fo.dcHD,live&&live.dcHD)}
-      ${prow("Double chance",`${f.awayName} eller uavgjort`,m.dcAD,fo.dcAD,live&&live.dcAD)}
-      ${prow("Over 1,5 mål","totalt",m.o15,fo.o15,live&&live.o15)}
-      ${prow("Over 2,5 mål","totalt",m.o25,fo.o25,live&&live.o25)}
-      ${prow("Under 3,5 mål","totalt",m.u35,fo.u35,live&&live.u35)}
-      ${prow("Under 4,5 mål","totalt",m.u45,fo.u45,live&&live.u45)}
-      ${prow("Begge lag scorer","ja",m.btts,fo.btts,null)}
+      <div class="pgroup">Fulltid</div>
+      ${prow(`${f.homeName} vinner`,m.pHome,fo.pHome,live&&live.pHome)}
+      ${prow("Uavgjort",m.pDraw,fo.pDraw,live&&live.pDraw)}
+      ${prow(`${f.awayName} vinner`,m.pAway,fo.pAway,live&&live.pAway)}
+      <div class="pgroup">Dobbel sjanse</div>
+      ${prow(`${f.homeName} eller uavgjort`,m.dcHD,fo.dcHD,live&&live.dcHD)}
+      ${prow(`${f.awayName} eller uavgjort`,m.dcAD,fo.dcAD,live&&live.dcAD)}
+      <div class="pgroup">Totalt mål</div>
+      ${prow("Over 1,5 mål",m.o15,fo.o15,live&&live.o15)}
+      ${prow("Over 2,5 mål",m.o25,fo.o25,live&&live.o25)}
+      ${prow("Under 3,5 mål",m.u35,fo.u35,live&&live.u35)}
+      ${prow("Under 4,5 mål",m.u45,fo.u45,live&&live.u45)}
+      <div class="pgroup">Begge lag scorer</div>
+      ${prow("Ja",m.btts,fo.btts,null)}
     </div>`;
 }
 
 // Vis ferske bookmaker-odds + verdi-tag ved siden av spillet, hvis hentet — ellers
-// en tydelig "ikke hentet ennå"-note, så 1,79 aldri kan misforstås som ekte pris.
+// en kort "ikke hentet ennå"-note, så tallet over aldri kan misforstås som ekte pris.
 function liveNote(pickLine){
   // BTTS hentes kun i prekickoff-runden (eget, dyrere kall pr kamp) - ikke i
   // morgen-oversikten. Så den kan vise "ikke hentet ennå" lenger enn andre markeder.
   const live = liveOddsFor(pickLine);
-  if (live == null) return `<div class="pick-sub" style="margin:6px 0 0;">Ingen ferske bookmakerodds hentet ennå (~90 min før avspark)</div>`;
+  if (live == null) return `<div class="oddnote muted">Ingen ferske odds ennå</div>`;
   const edge = (live/pickLine.odds - 1) * 100;
   const valueTag = edge > 0 ? `<span class="value-tag">+${edge.toFixed(0)}%</span>` : '';
-  return `<div class="chance">Bookmaker akkurat nå: <b>${fmtOdds(live)}</b>${valueTag}</div>`;
+  return `<div class="oddnote">Bookmaker <b>${fmtOdds(live)}</b>${valueTag}</div>`;
 }
 
 // Regel: et tall som ser ut som odds skal ALDRI være modellens egen gjetning -
@@ -333,8 +345,10 @@ function dagensSpillBody(best){
   }
   // Ingen ekte odds i vinduet ennå - vis KUN sannsynlighet, ikke noe odds-tall.
   return `<div class="pick-sub">Modellens favoritt i påvente av odds i vinduet 1,70–2,50</div>
-    <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtPct(best.p)}</span></div>
-    ${liveNote(best)}`;
+    <div class="selgroup">
+      <div class="selrow"><span class="sname">${best.pick}<small>${best.match} · ${best.market}</small></span><span class="sodds">${fmtPct(best.p)}</span></div>
+      ${liveNote(best)}
+    </div>`;
 }
 
 function renderCoupon(){
@@ -356,7 +370,7 @@ function renderCoupon(){
   document.getElementById('gamblerCard').innerHTML = g && g.legs && g.legs.length ? `
     <div class="pick-title">🎲 The Gambler</div>
     <div class="pick-sub">Kveldens ville langskudd — modellens sjanse pr bein, ekte odds når hentet</div>
-    ${g.legs.map(l=>`<div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtPct(l.p)}</span></div>${liveNote(l)}`).join('')}
+    ${g.legs.map(l=>`<div class="selgroup"><div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtPct(l.p)}</span></div>${liveNote(l)}</div>`).join('')}
     ${combinedLine}
     <div class="chance warn">Modellens ekte samlet sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
     : `<div class="pick-title">🎲 The Gambler</div><div class="pick-sub">Ikke nok kamper i dag til en combo</div>`;
