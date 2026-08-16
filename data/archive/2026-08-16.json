@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-08-16T11:31:00.047Z",
+  "generatedAt": "2026-08-16T14:46:55.798Z",
   "date": "2026-08-16",
   "fixtures": [
+    {
+      "id": 564629,
+      "label": "SAN–VIL",
+      "homeName": "Santander",
+      "awayName": "Villarreal",
+      "kickoff": "2026-08-16T15:00:00Z",
+      "competition": "PD",
+      "noModel": true,
+      "noModelReason": "Mangler kamphistorikk for Real Racing Club de Santander (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
+      "odds": {
+        "dcHD": 1.97,
+        "dcAD": 1.34,
+        "pHome": 4,
+        "pDraw": 3.9,
+        "pAway": 2.05,
+        "o15": null,
+        "o25": 1.56,
+        "o35": 2.34,
+        "u35": 1.62,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": []
+    },
     {
       "id": 564632,
       "label": "ESP–LEV",
@@ -105,6 +129,12 @@
         "btts": 0.48098284202854413,
         "noBtts": 0.5190171579714559
       },
+      "matchPick": {
+        "key": "u45",
+        "p": 0.9136564594445312,
+        "pick": "Under 4,5 mål",
+        "odds": null
+      },
       "fairOdds": {
         "pHome": 2.3774271387704564,
         "pDraw": 3.2105518130215955,
@@ -118,11 +148,11 @@
         "btts": 2.079076242683631
       },
       "odds": {
-        "dcHD": 1.34,
-        "dcAD": 1.86,
-        "pHome": 2.2,
-        "pDraw": 3.46,
-        "pAway": 4,
+        "dcHD": 1.36,
+        "dcAD": 1.84,
+        "pHome": 2.24,
+        "pDraw": 3.44,
+        "pAway": 3.95,
         "o15": null,
         "o25": 2.3,
         "o35": null,
@@ -139,7 +169,7 @@
       "pick": "Levante eller uavgjort",
       "market": "Double chance",
       "p": 0.579377225197667,
-      "odds": 1.86,
+      "odds": 1.84,
       "liveOdds": true
     },
     "gambler": {
@@ -171,5 +201,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-16T11:31:07.527Z"
+  "oddsUpdatedAt": "2026-08-16T14:48:01.749Z"
 }

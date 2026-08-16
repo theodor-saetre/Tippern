@@ -124,6 +124,10 @@
   .disclaimer { margin-top:26px; padding:16px 18px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12.5px; line-height:1.55; color:#d8c9a8; }
   .disclaimer b { color:var(--warn); }
   footer { margin-top:22px; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); text-align:center; line-height:1.6; }
+  nav.pages { display:flex; gap:8px; margin:16px 0 22px; flex-wrap:wrap; }
+  nav.pages a { font-family:'Spline Sans Mono',monospace; font-size:12px; background:var(--panel); color:var(--chalk-dim); border:1px solid var(--edge); border-radius:4px; padding:8px 12px; text-decoration:none; transition:all 0.15s; }
+  nav.pages a:hover { border-color:var(--flare-dim); color:var(--chalk); }
+  nav.pages a.active { background:var(--flare); color:var(--pitch); border-color:var(--flare); font-weight:600; }
 </style>
 </head>
 <body>
@@ -132,6 +136,12 @@
     <h1>Kamp<span class="accent">analyse</span></h1>
     <div class="sub">Pre-match · tidsvektet form · hjemme/borte · styrkejustert modell</div>
   </header>
+  <nav class="pages">
+    <a href="index.html" class="active">I dag</a>
+    <a href="tips.html">Tips</a>
+    <a href="statistikk.html">Statistikk</a>
+    <a href="avkastning.html">Avkastning</a>
+  </nav>
   <div class="demo-tag" id="statusTag">● Laster data …</div>
   <div class="match-select" id="matchSelect"></div>
   <div class="scoreboard" id="scoreboard"></div>
@@ -235,6 +245,24 @@ function render(id){
     <div class="team-head"><div class="badge">${f.homeName.slice(0,3).toUpperCase()}</div><div class="name">${f.homeName}</div><div class="venue">Hjemme</div></div>
     <div class="vs">VS<span class="kickoff">${fmtKickoff(f.kickoff)} · ${COMP_NAMES[f.competition] || f.competition}</span></div>
     <div class="team-head"><div class="badge">${f.awayName.slice(0,3).toUpperCase()}</div><div class="name">${f.awayName}</div><div class="venue">Borte</div></div>`;
+
+  // Noen kamper mangler nok kamphistorikk til å regne en modell (typisk et
+  // nyopprykket lag). Vis kampen og eventuelle ekte odds likevel - bedre enn
+  // at kampen bare er usynlig - men hopp over form/rating/goals/model-kortene.
+  if (f.noModel) {
+    ['formCard','h2hCard','ratingCard','goalsCard'].forEach(id=>{ document.getElementById(id).innerHTML=''; });
+    const live = f.odds;
+    document.getElementById('modelCard').innerHTML = `
+      <h2>Ingen modell for denne kampen</h2>
+      <div style="font-family:'Spline Sans Mono',monospace;font-size:13px;color:var(--chalk-dim);line-height:1.6;">
+        ${f.noModelReason}. Modellen krever minst 5 tidligere kamper for begge lag.
+        ${live ? '<br><br>Ekte bookmakerodds er likevel hentet:' : '<br><br>Ingen odds hentet ennå.'}
+      </div>
+      ${live ? `<div class="prob-table" style="margin-top:14px;">${Object.entries(live).filter(([,v])=>v!=null).map(([k,v])=>
+        `<div class="prow"><div class="market">${k}</div><div></div><div class="oddscell"><div class="live">bookmaker <b>${fmtOdds(v)}</b></div></div></div>`).join('')}</div>` : ''}
+    `;
+    return;
+  }
 
   // Form-kuler — siste 5 kamper (uavhengig av venue), nyeste sist
   function pills(form){

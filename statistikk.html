@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistikk — Kampanalyse</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+  :root {
+    --pitch:#0a1f14; --pitch-line:#16311f; --panel:#11271a; --panel-hi:#163420;
+    --chalk:#eef4ec; --chalk-dim:#8ba894; --flare:#d3f85a; --flare-dim:#a4c73f;
+    --warn:#f5a623; --cool:#4aa3d4; --edge:#23492f; --bad:#d4574a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Archivo',sans-serif; background:var(--pitch);
+    background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+    background-size:44px 44px; color:var(--chalk); min-height:100vh; padding:20px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid var(--edge); padding-bottom:16px; margin-bottom:6px; flex-wrap:wrap; gap:8px; }
+  header h1 { font-size:clamp(24px,5vw,36px); font-weight:900; letter-spacing:-0.03em; text-transform:uppercase; line-height:0.9; }
+  header h1 .accent { color:var(--flare); }
+  header .sub { font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); text-transform:uppercase; letter-spacing:0.08em; }
+  nav { display:flex; gap:8px; margin:16px 0 24px; flex-wrap:wrap; }
+  nav a { font-family:'Spline Sans Mono',monospace; font-size:12px; background:var(--panel); color:var(--chalk-dim); border:1px solid var(--edge); border-radius:4px; padding:8px 12px; text-decoration:none; transition:all 0.15s; }
+  nav a:hover { border-color:var(--flare-dim); color:var(--chalk); }
+  nav a.active { background:var(--flare); color:var(--pitch); border-color:var(--flare); font-weight:600; }
+  .status-tag { display:inline-block; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--warn); border:1px solid var(--warn); border-radius:3px; padding:3px 8px; margin-bottom:20px; letter-spacing:0.05em; }
+  .stat-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:20px; }
+  @media (max-width:520px){ .stat-grid{ grid-template-columns:1fr 1fr; } }
+  .stat-box { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:16px; text-align:center; }
+  .stat-box .num { font-family:'Spline Sans Mono',monospace; font-size:30px; font-weight:600; color:var(--flare); line-height:1; }
+  .stat-box .cap { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--chalk-dim); margin-top:6px; }
+  .card { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:0 18px; margin-bottom:20px; }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--pitch-line); font-size:14px; }
+  .row:last-child { border-bottom:none; }
+  .row .lbl { font-weight:600; }
+  .row .lbl small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); margin-top:2px; }
+  .row .res { font-family:'Spline Sans Mono',monospace; font-weight:700; font-size:13px; padding:3px 9px; border-radius:4px; white-space:nowrap; }
+  .row .res.hit { background:rgba(211,248,90,0.15); color:var(--flare); }
+  .row .res.miss { background:rgba(212,87,74,0.15); color:var(--bad); }
+  .empty { font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); padding:30px 0; text-align:center; }
+  .disclaimer { margin-top:22px; padding:14px 16px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12px; line-height:1.55; color:#d8c9a8; }
+  .disclaimer b { color:var(--warn); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Statist<span class="accent">ikk</span></h1>
+    <div class="sub">Treffprosent over tid</div>
+  </header>
+  <nav>
+    <a href="index.html">I dag</a>
+    <a href="tips.html">Tips</a>
+    <a href="statistikk.html" class="active">Statistikk</a>
+    <a href="avkastning.html">Avkastning</a>
+  </nav>
+  <div class="status-tag" id="statusTag">● Laster …</div>
+  <div id="stats"></div>
+  <div id="list"></div>
+  <div class="disclaimer">
+    <b>Til underholdning.</b> Bygges opp én dag av gangen fra `data/history.json` — bare tips som faktisk hadde en ekte, hentet bookmakerodds telles med. Jo lenger appen kjører, jo mer meningsfullt blir tallet. Få dager = ikke statistisk pålitelig ennå.
+  </div>
+</div>
+<script>
+const fmtPct = n => n.toFixed(0)+"%";
+
+async function load(){
+  const tag = document.getElementById('statusTag');
+  let history;
+  try {
+    const res = await fetch('data/history.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP '+res.status);
+    history = await res.json();
+  } catch(e) {
+    history = [];
+  }
+
+  if (history.length === 0) {
+    tag.textContent = '● Ingen avklarte tips ennå';
+    document.getElementById('list').innerHTML = `<div class="empty">Historikken bygger seg opp dag for dag. Kom tilbake etter noen kampdager.</div>`;
+    return;
+  }
+
+  const hits = history.filter(h => h.hit).length;
+  const hitRate = hits / history.length * 100;
+  const avgModelProb = history.reduce((s,h)=>s+h.p, 0) / history.length * 100;
+
+  tag.textContent = `● ${history.length} avklarte tips`;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-grid">
+      <div class="stat-box"><div class="num">${fmtPct(hitRate)}</div><div class="cap">Treffprosent</div></div>
+      <div class="stat-box"><div class="num">${hits}/${history.length}</div><div class="cap">Traff</div></div>
+      <div class="stat-box"><div class="num">${fmtPct(avgModelProb)}</div><div class="cap">Modellen sa i snitt</div></div>
+    </div>`;
+
+  document.getElementById('list').innerHTML = `<div class="card">` +
+    [...history].reverse().map(h => `
+      <div class="row">
+        <span class="lbl">${h.pick}<small>${h.date} · ${h.match} · odds ${h.odds.toFixed(2)}</small></span>
+        <span class="res ${h.hit?'hit':'miss'}">${h.hit?'TRAFF':'BOM'}</span>
+      </div>`).join('') +
+  `</div>`;
+}
+
+load();
+</script>
+</body>
+</html>

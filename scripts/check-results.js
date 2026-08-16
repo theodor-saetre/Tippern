@@ -87,6 +87,7 @@ async function processDay(file) {
     const hg = mt.score.fullTime.home, ag = mt.score.fullTime.away;
     f.result = { home: hg, away: ag };
     f.outcomes = actualOutcomes(hg, ag);
+    if (f.matchPick) f.matchPick.hit = f.outcomes[f.matchPick.key];
     resolvedCount++;
   }
 
@@ -114,9 +115,32 @@ async function processDay(file) {
   day.resultsCheckedAt = new Date().toISOString();
   fs.writeFileSync(filePath, JSON.stringify(day, null, 2));
 
+  // Dagen er ferdig sjekket → legg "ett spill pr kamp"-tipsene inn i den
+  // varige historikk-loggen (kun de som faktisk hadde ekte odds - se
+  // scripts/build-model.js sin pickMatchPick og scripts/fetch-odds.js).
+  if (allResolved) appendToHistory(day);
+
   console.log(`${day.date}: ${resolvedCount}/${day.fixtures.length} kamper avklart` +
     (allResolved ? ' — dagen er ferdig sjekket' : ' — noen gjenstår, prøver igjen neste kjøring'));
   return true;
+}
+
+const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
+
+// Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
+// statistikk.html (treffprosent) og avkastning.html (100 kr pr spill).
+// Kun tips som faktisk hadde en ekte hentet odds telles med.
+function appendToHistory(day) {
+  const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
+  for (const f of day.fixtures) {
+    const mp = f.matchPick;
+    if (!mp || mp.odds == null || mp.hit == null) continue; // ingen ekte odds → ikke en reell "innsats"
+    history.push({
+      date: day.date, match: f.label, pick: mp.pick,
+      p: mp.p, odds: mp.odds, hit: mp.hit,
+    });
+  }
+  fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
 }
 
 async function main() {

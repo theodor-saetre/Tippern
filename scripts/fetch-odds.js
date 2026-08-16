@@ -86,6 +86,11 @@ async function main() {
     }
   }
 
+  // Fyll inn ekte odds for "ett spill pr kamp" (tips.html) også, når vi har dem.
+  for (const f of db.fixtures) {
+    if (f.matchPick && f.odds) f.matchPick.odds = f.odds[f.matchPick.key] ?? f.matchPick.odds;
+  }
+
   // "Dagens spill" fra build-model.js er valgt ut fra modellens EGEN rimelige odds
   // (sirkulært — forteller ingenting om ekte verdi). Nå som vi har ferske bookmaker-
   // odds, plukker vi heller det beste spillet basert på EKTE priser i vinduet.
@@ -133,7 +138,7 @@ const DAGENS_SPILL_MARKETS = {
 function recomputeDagensSpillFromLiveOdds(db) {
   const candidates = [];
   for (const f of db.fixtures) {
-    if (!f.odds) continue;
+    if (!f.odds || !f.markets) continue; // f.markets mangler for kamper uten modell (noModel)
     for (const key of Object.keys(DAGENS_SPILL_MARKETS)) {
       const odds = f.odds[key];
       if (odds == null || odds < 1.70 || odds > 2.50) continue;

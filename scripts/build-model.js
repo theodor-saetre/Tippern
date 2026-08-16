@@ -82,6 +82,27 @@ function recentForm(form) {
   }));
 }
 
+// Ett anbefalt spill pr kamp (tips.html) — det tryggeste (høyest modell-sannsynlighet)
+// blant de vanlige markedene. Ekte odds fylles inn av fetch-odds.js når hentet,
+// og check-results.js avgjør senere om det traff.
+const PICK_LABELS = {
+  dcHD: (f) => `${f.homeName} eller uavgjort`,
+  dcAD: (f) => `${f.awayName} eller uavgjort`,
+  o15: () => 'Over 1,5 mål',
+  o25: () => 'Over 2,5 mål',
+  u35: () => 'Under 3,5 mål',
+  u45: () => 'Under 4,5 mål',
+  btts: () => 'Begge lag scorer',
+};
+function pickMatchPick(fixture) {
+  let best = null;
+  for (const key of Object.keys(PICK_LABELS)) {
+    const p = fixture.markets[key];
+    if (best === null || p > best.p) best = { key, p, pick: PICK_LABELS[key](fixture) };
+  }
+  return { ...best, odds: null };
+}
+
 async function main() {
   if (!KEY) throw new Error('Mangler FOOTBALL_DATA_KEY');
 
@@ -120,9 +141,22 @@ async function main() {
       // Uten noen kamphistorikk i det hele tatt (verken i denne ligaen eller
       // fallback) kan ikke ratingen regnes - blir NaN/null og krasjer siden.
       // Typisk et nyopprykket lag fra en divisjon football-data.org ikke dekker
-      // på gratisplanen. Heller hoppe over kampen enn å vise et ødelagt tall.
+      // på gratisplanen. Vis likevel KAMPEN (uten modell/tips) - heller enn å
+      // gjøre den usynlig, som er verre enn en ufullstendig prediksjon.
       if (home.form.length === 0 || away.form.length === 0) {
-        console.warn(`Hopper over ${mt.homeTeam.tla}-${mt.awayTeam.tla}: mangler kamphistorikk for ${home.form.length === 0 ? mt.homeTeam.name : mt.awayTeam.name}`);
+        const missing = home.form.length === 0 ? mt.homeTeam.name : mt.awayTeam.name;
+        console.warn(`Ingen modell for ${mt.homeTeam.tla}-${mt.awayTeam.tla}: mangler kamphistorikk for ${missing}`);
+        fixtures.push({
+          id: mt.id,
+          label: `${mt.homeTeam.tla}–${mt.awayTeam.tla}`,
+          homeName: mt.homeTeam.shortName || mt.homeTeam.name,
+          awayName: mt.awayTeam.shortName || mt.awayTeam.name,
+          kickoff: mt.utcDate,
+          competition: comp,
+          noModel: true,
+          noModelReason: `Mangler kamphistorikk for ${missing} (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)`,
+          odds: null,
+        });
         continue;
       }
 
@@ -143,12 +177,14 @@ async function main() {
       const lambdaA = home.fallback || away.fallback ? blendA.atk * blendH.def * LEAGUE_AWAY_AVG : eg.lambdaA;
 
       const markets = modelMarkets(lambdaH, lambdaA);
+      const homeName = mt.homeTeam.shortName || mt.homeTeam.name;
+      const awayName = mt.awayTeam.shortName || mt.awayTeam.name;
 
       fixtures.push({
         id: mt.id,
         label: `${mt.homeTeam.tla}–${mt.awayTeam.tla}`,
-        homeName: mt.homeTeam.shortName || mt.homeTeam.name,
-        awayName: mt.awayTeam.shortName || mt.awayTeam.name,
+        homeName,
+        awayName,
         kickoff: mt.utcDate,
         competition: comp,
         lambdaH,
@@ -159,6 +195,7 @@ async function main() {
         formH: recentForm(home.form),
         formA: recentForm(away.form),
         markets,
+        matchPick: pickMatchPick({ homeName, awayName, markets }),
         fairOdds: {
           pHome: fairOdds(markets.pHome), pDraw: fairOdds(markets.pDraw), pAway: fairOdds(markets.pAway),
           dcHD: fairOdds(markets.dcHD), dcAD: fairOdds(markets.dcAD),
@@ -171,7 +208,10 @@ async function main() {
     }
   }
 
-  const coupon = buildCoupon(fixtures);
+  // buildCoupon() (testet, urørt) forventer at alle kamper har markets - kamper
+  // uten modell (noModel) må holdes utenfor kupongen, men blir værende i
+  // fixtures-lista slik at de fortsatt vises i appen.
+  const coupon = buildCoupon(fixtures.filter((f) => !f.noModel));
   // `date` er datoen kampene faktisk spilles (kan være frem i tid) — check-results.js
   // bruker denne til å vite når den skal sjekke resultatet, så den må stemme med ekte kampdato.
   const out = { generatedAt: new Date().toISOString(), date: matchDate, fixtures, coupon };

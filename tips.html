@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dagens tips — Kampanalyse</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+  :root {
+    --pitch:#0a1f14; --pitch-line:#16311f; --panel:#11271a; --panel-hi:#163420;
+    --chalk:#eef4ec; --chalk-dim:#8ba894; --flare:#d3f85a; --flare-dim:#a4c73f;
+    --warn:#f5a623; --cool:#4aa3d4; --edge:#23492f;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Archivo',sans-serif; background:var(--pitch);
+    background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+    background-size:44px 44px; color:var(--chalk); min-height:100vh; padding:20px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid var(--edge); padding-bottom:16px; margin-bottom:6px; flex-wrap:wrap; gap:8px; }
+  header h1 { font-size:clamp(24px,5vw,36px); font-weight:900; letter-spacing:-0.03em; text-transform:uppercase; line-height:0.9; }
+  header h1 .accent { color:var(--flare); }
+  header .sub { font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); text-transform:uppercase; letter-spacing:0.08em; }
+  nav { display:flex; gap:8px; margin:16px 0 24px; flex-wrap:wrap; }
+  nav a { font-family:'Spline Sans Mono',monospace; font-size:12px; background:var(--panel); color:var(--chalk-dim); border:1px solid var(--edge); border-radius:4px; padding:8px 12px; text-decoration:none; transition:all 0.15s; }
+  nav a:hover { border-color:var(--flare-dim); color:var(--chalk); }
+  nav a.active { background:var(--flare); color:var(--pitch); border-color:var(--flare); font-weight:600; }
+  .status-tag { display:inline-block; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--warn); border:1px solid var(--warn); border-radius:3px; padding:3px 8px; margin-bottom:20px; letter-spacing:0.05em; }
+  .card { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:16px 18px; margin-bottom:12px; }
+  .card .top { display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .card .match { font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--chalk-dim); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px; }
+  .card .pick { font-size:17px; font-weight:700; }
+  .card .prob { font-family:'Spline Sans Mono',monospace; font-size:20px; font-weight:600; color:var(--flare); white-space:nowrap; }
+  .card .oddsline { margin-top:10px; padding-top:10px; border-top:1px solid var(--pitch-line); font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); display:flex; justify-content:space-between; align-items:center; }
+  .card .oddsline b { color:var(--chalk); font-size:14px; }
+  .card .oddsline.live b { color:var(--flare); }
+  .card .oddsline .muted { opacity:0.6; }
+  .empty { font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); padding:30px 0; text-align:center; }
+  .disclaimer { margin-top:22px; padding:14px 16px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12px; line-height:1.55; color:#d8c9a8; }
+  .disclaimer b { color:var(--warn); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Dagens<span class="accent">tips</span></h1>
+    <div class="sub">Ett spill pr kamp</div>
+  </header>
+  <nav>
+    <a href="index.html">I dag</a>
+    <a href="tips.html" class="active">Tips</a>
+    <a href="statistikk.html">Statistikk</a>
+    <a href="avkastning.html">Avkastning</a>
+  </nav>
+  <div class="status-tag" id="statusTag">● Laster …</div>
+  <div id="list"></div>
+  <div class="disclaimer">
+    <b>Til underholdning.</b> Modellens tryggeste spill pr kamp — det spillet med høyest beregnet sannsynlighet. Ikke nødvendigvis verdi, bare det mest sannsynlige. Ekte odds vises når hentet (~90 min før avspark). Spill kun for penger du tåler å tape.
+  </div>
+</div>
+<script>
+const fmtPct = p => p==null ? "—" : (p*100).toFixed(0)+"%";
+const fmtOdds = o => (o==null || !isFinite(o)) ? "—" : o.toFixed(2);
+
+async function load(){
+  const tag = document.getElementById('statusTag');
+  let data;
+  try {
+    const res = await fetch('data/today.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP '+res.status);
+    data = await res.json();
+  } catch(e) {
+    tag.textContent = '● Fant ikke data/today.json';
+    return;
+  }
+
+  if (!data.fixtures || data.fixtures.length === 0) {
+    tag.textContent = `● Ingen kamper i dag (${new Date(data.generatedAt).toLocaleString('no-NO')})`;
+    document.getElementById('list').innerHTML = `<div class="empty">Ingen kamper å tipse på akkurat nå.</div>`;
+    return;
+  }
+
+  tag.textContent = `● Live — oppdatert ${new Date(data.generatedAt).toLocaleString('no-NO')}`;
+
+  document.getElementById('list').innerHTML = data.fixtures
+    .sort((a,b)=> new Date(a.kickoff) - new Date(b.kickoff))
+    .map(f => {
+      const mp = f.matchPick;
+      if (!mp) {
+        // Ingen modell for denne kampen (typisk nyopprykket lag uten historikk) -
+        // vis den likevel, med odds hvis hentet, i stedet for å gjøre den usynlig.
+        const oddsBits = f.odds ? Object.entries(f.odds).filter(([,v])=>v!=null) : [];
+        return `<div class="card">
+          <div class="match">${f.label} · ${new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'})}</div>
+          <div class="top"><span class="pick" style="color:var(--chalk-dim);font-weight:400;">Ingen modell tilgjengelig</span></div>
+          ${oddsBits.length ? `<div class="oddsline live"><span>Bookmaker (${oddsBits[0][0]})</span><b>${fmtOdds(oddsBits[0][1])}</b></div>` : `<div class="oddsline"><span class="muted">Ingen odds hentet ennå</span></div>`}
+        </div>`;
+      }
+      const oddsLine = mp.odds != null
+        ? `<div class="oddsline live"><span>Bookmaker</span><b>${fmtOdds(mp.odds)}</b></div>`
+        : `<div class="oddsline"><span class="muted">Ingen ferske odds ennå</span></div>`;
+      return `<div class="card">
+        <div class="match">${f.label} · ${new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'})}</div>
+        <div class="top"><span class="pick">${mp.pick}</span><span class="prob">${fmtPct(mp.p)}</span></div>
+        ${oddsLine}
+      </div>`;
+    }).join('');
+}
+
+load();
+</script>
+</body>
+</html>
