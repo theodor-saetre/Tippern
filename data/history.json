@@ -25,5 +25,41 @@
     "odds": 2.06,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-17",
+    "match": "DEP–ELC",
+    "pick": "Deportivo eller uavgjort",
+    "p": 0.7352941176470588,
+    "odds": 1.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-17",
+    "match": "DEP–ELC",
+    "pick": "Elche eller uavgjort",
+    "p": 0.5714285714285714,
+    "odds": 1.75,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-17",
+    "match": "DEP–ELC",
+    "pick": "Begge lag scorer",
+    "p": 0.49019607843137253,
+    "odds": 2.04,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-17",
+    "match": "DEP–ELC",
+    "pick": "Over 2,5 mål",
+    "p": 0.40322580645161293,
+    "odds": 2.48,
+    "hit": false,
+    "source": "dagensSpill"
   }
 ]
