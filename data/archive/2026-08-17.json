@@ -13,18 +13,36 @@
       "noModelReason": "Mangler kamphistorikk for RC Deportivo La Coruña (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
       "odds": {
         "dcHD": 1.36,
-        "dcAD": 1.73,
-        "pHome": 2.39,
+        "dcAD": 1.75,
+        "pHome": 2.38,
         "pDraw": 3.17,
-        "pAway": 3.8,
+        "pAway": 3.9,
         "o15": null,
-        "o25": 2.42,
+        "o25": 2.48,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.04
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-17T05:25:02.103Z",
+          "odds": {
+            "dcHD": 1.36,
+            "dcAD": 1.73,
+            "pHome": 2.39,
+            "pDraw": 3.17,
+            "pAway": 3.8,
+            "o15": null,
+            "o25": 2.42,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -44,8 +62,18 @@
         "key": "dcAD",
         "pick": "Elche eller uavgjort",
         "market": "Double chance",
-        "p": 0.5780346820809249,
-        "odds": 1.73,
+        "p": 0.5714285714285714,
+        "odds": 1.75,
+        "liveOdds": true,
+        "modelBased": false
+      },
+      {
+        "match": "DEP–ELC",
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.49019607843137253,
+        "odds": 2.04,
         "liveOdds": true,
         "modelBased": false
       },
@@ -54,8 +82,8 @@
         "key": "o25",
         "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "p": 0.4132231404958678,
-        "odds": 2.42,
+        "p": 0.40322580645161293,
+        "odds": 2.48,
         "liveOdds": true,
         "modelBased": false
       }
@@ -67,5 +95,5 @@
       "hitRate": 1
     }
   },
-  "oddsUpdatedAt": "2026-08-17T05:25:02.103Z"
+  "oddsUpdatedAt": "2026-08-17T17:51:10.447Z"
 }
