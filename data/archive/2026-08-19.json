@@ -12,19 +12,37 @@
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for Málaga CF (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
       "odds": {
-        "dcHD": 1.1,
-        "dcAD": 3.67,
-        "pHome": 1.37,
+        "dcHD": 1.11,
+        "dcAD": 3.61,
+        "pHome": 1.39,
         "pDraw": 5.5,
-        "pAway": 11,
+        "pAway": 10.5,
         "o15": null,
-        "o25": 1.81,
-        "o35": null,
-        "u35": null,
+        "o25": 1.65,
+        "o35": 2.3,
+        "u35": 1.55,
         "u45": null,
-        "btts": null
+        "btts": 2.08
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-19T05:18:57.997Z",
+          "odds": {
+            "dcHD": 1.1,
+            "dcAD": 3.67,
+            "pHome": 1.37,
+            "pDraw": 5.5,
+            "pAway": 11,
+            "o15": null,
+            "o25": 1.81,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -34,8 +52,18 @@
         "key": "pHome",
         "pick": "Atleti vinner",
         "market": "Full tid",
-        "p": 0.7299270072992701,
-        "odds": 1.37,
+        "p": 0.7194244604316548,
+        "odds": 1.39,
+        "liveOdds": true,
+        "modelBased": false
+      },
+      {
+        "match": "ATL–MAL",
+        "key": "u35",
+        "pick": "Under 3,5 mål",
+        "market": "Totalt",
+        "p": 0.6451612903225806,
+        "odds": 1.55,
         "liveOdds": true,
         "modelBased": false
       },
@@ -44,8 +72,18 @@
         "key": "o25",
         "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "p": 0.5524861878453039,
-        "odds": 1.81,
+        "p": 0.6060606060606061,
+        "odds": 1.65,
+        "liveOdds": true,
+        "modelBased": false
+      },
+      {
+        "match": "ATL–MAL",
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.4807692307692307,
+        "odds": 2.08,
         "liveOdds": true,
         "modelBased": false
       }
@@ -57,5 +95,5 @@
       "hitRate": 1
     }
   },
-  "oddsUpdatedAt": "2026-08-19T05:18:57.997Z"
+  "oddsUpdatedAt": "2026-08-19T17:46:24.746Z"
 }
