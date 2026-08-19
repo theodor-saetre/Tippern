@@ -61,5 +61,41 @@
     "odds": 2.48,
     "hit": false,
     "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-19",
+    "match": "ATL–MAL",
+    "pick": "Atleti vinner",
+    "p": 0.7194244604316548,
+    "odds": 1.39,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-19",
+    "match": "ATL–MAL",
+    "pick": "Under 3,5 mål",
+    "p": 0.6451612903225806,
+    "odds": 1.55,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-19",
+    "match": "ATL–MAL",
+    "pick": "Over 2,5 mål",
+    "p": 0.6060606060606061,
+    "odds": 1.65,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-19",
+    "match": "ATL–MAL",
+    "pick": "Begge lag scorer",
+    "p": 0.4807692307692307,
+    "odds": 2.08,
+    "hit": false,
+    "source": "dagensSpill"
   }
 ]
