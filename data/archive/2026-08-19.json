@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T05:18:34.930Z",
+  "generatedAt": "2026-08-19T05:18:57.749Z",
   "date": "2026-08-19",
   "fixtures": [
     {
@@ -12,11 +12,11 @@
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for Málaga CF (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
       "odds": {
-        "dcHD": 1.09,
-        "dcAD": 4.01,
-        "pHome": 1.33,
-        "pDraw": 5.9,
-        "pAway": 12.5,
+        "dcHD": 1.1,
+        "dcAD": 3.67,
+        "pHome": 1.37,
+        "pDraw": 5.5,
+        "pAway": 11,
         "o15": null,
         "o25": 1.81,
         "o35": null,
@@ -34,8 +34,8 @@
         "key": "pHome",
         "pick": "Atleti vinner",
         "market": "Full tid",
-        "p": 0.7518796992481203,
-        "odds": 1.33,
+        "p": 0.7299270072992701,
+        "odds": 1.37,
         "liveOdds": true,
         "modelBased": false
       },
@@ -57,5 +57,5 @@
       "hitRate": 1
     }
   },
-  "oddsUpdatedAt": "2026-08-18T05:18:35.190Z"
+  "oddsUpdatedAt": "2026-08-19T05:18:57.997Z"
 }
