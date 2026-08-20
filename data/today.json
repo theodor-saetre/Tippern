@@ -154,7 +154,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -167,7 +185,9 @@
         "p": 0.7288944212777413,
         "odds": 1.39,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.39
       },
       {
         "match": "RAY–ALA",
@@ -177,7 +197,9 @@
         "p": 0.44119570526799184,
         "odds": 2.06,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 2.06
       },
       {
         "match": "RAY–ALA",
@@ -187,7 +209,9 @@
         "p": 0.4006148105381029,
         "odds": 2.46,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.46
       }
     ],
     "gambler": {
@@ -197,27 +221,36 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.44119570526799184,
-          "odds": 2.2665678474648305
+          "odds": 2.2665678474648305,
+          "hit": true,
+          "realOdds": 2.06
         },
         {
           "match": "RAY–ALA",
           "pick": "Rayo Vallecano vinner",
           "market": "Full tid",
           "p": 0.4006148105381029,
-          "odds": 2.496163331197884
+          "odds": 2.496163331197884,
+          "hit": false,
+          "realOdds": 2.46
         },
         {
           "match": "RAY–ALA",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.16717818395877912,
-          "odds": 5.981641720947086
+          "odds": 5.981641720947086,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 33.84247522337511,
       "combinedProb": 0.029548666088977344,
-      "hitRate": 34
+      "hitRate": 34,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-20T17:52:06.065Z"
+  "oddsUpdatedAt": "2026-08-20T17:52:06.065Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-20T21:49:48.802Z"
 }
