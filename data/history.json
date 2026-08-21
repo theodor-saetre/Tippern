@@ -142,5 +142,59 @@
     "odds": 2.46,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "ARS–COV",
+    "pick": "Under 3,5 mål",
+    "p": 0.9231013351018964,
+    "odds": 1.6,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "BET–RSO",
+    "pick": "Real Betis eller uavgjort",
+    "p": 0.852071103285806,
+    "odds": 1.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "BET–RSO",
+    "pick": "Real Betis vinner",
+    "p": 0.6298006799947647,
+    "odds": 2.18,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "BET–RSO",
+    "pick": "Over 2,5 mål",
+    "p": 0.5985187794273248,
+    "odds": 1.91,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "BET–RSO",
+    "pick": "Begge lag scorer",
+    "p": 0.5574895632587673,
+    "odds": 1.74,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-21",
+    "match": "ARS–COV",
+    "pick": "Arsenal vinner",
+    "p": 0.47157043938310744,
+    "odds": 1.24,
+    "hit": true,
+    "source": "gambler"
   }
 ]

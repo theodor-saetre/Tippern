@@ -154,7 +154,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564647,
@@ -308,7 +326,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -321,7 +357,9 @@
         "p": 0.9231013351018964,
         "odds": 1.6,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.6
       },
       {
         "match": "BET–RSO",
@@ -331,7 +369,9 @@
         "p": 0.852071103285806,
         "odds": 1.36,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.36
       },
       {
         "match": "BET–RSO",
@@ -341,7 +381,9 @@
         "p": 0.6298006799947647,
         "odds": 2.18,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 2.18
       },
       {
         "match": "BET–RSO",
@@ -351,7 +393,9 @@
         "p": 0.5985187794273248,
         "odds": 1.91,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.91
       }
     ],
     "gambler": {
@@ -361,27 +405,36 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5574895632587673,
-          "odds": 1.7937555532960439
+          "odds": 1.7937555532960439,
+          "hit": false,
+          "realOdds": 1.74
         },
         {
           "match": "ARS–COV",
           "pick": "Arsenal vinner",
           "market": "Full tid",
           "p": 0.47157043938310744,
-          "odds": 2.120573972592867
+          "odds": 2.120573972592867,
+          "hit": true,
+          "realOdds": 1.24
         },
         {
           "match": "BET–RSO",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.3748282837606952,
-          "odds": 2.6678883193308818
+          "odds": 2.6678883193308818,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 10.148090483860058,
       "combinedProb": 0.09854070591806818,
-      "hitRate": 10
+      "hitRate": 10,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-21T17:52:03.475Z"
+  "oddsUpdatedAt": "2026-08-21T17:52:03.475Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-21T21:44:36.807Z"
 }
