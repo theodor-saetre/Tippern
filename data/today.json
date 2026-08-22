@@ -1327,7 +1327,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1427,6 +1445,6 @@
     }
   },
   "oddsUpdatedAt": "2026-08-22T18:10:36.221Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-22T20:08:28.377Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-22T22:08:37.714Z"
 }

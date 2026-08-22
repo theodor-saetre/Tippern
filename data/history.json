@@ -196,5 +196,77 @@
     "odds": 1.24,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "NOT–LEE",
+    "pick": "Nottingham eller uavgjort",
+    "p": 0.8599640830325636,
+    "odds": 1.45,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "EVE–CRY",
+    "pick": "Everton eller uavgjort",
+    "p": 0.8117747094429985,
+    "odds": 1.42,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "EVE–CRY",
+    "pick": "Over 2,5 mål",
+    "p": 0.8064632168400321,
+    "odds": 2.06,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "EVE–CRY",
+    "pick": "Begge lag scorer",
+    "p": 0.7457775473309904,
+    "odds": 1.82,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "NOT–LEE",
+    "pick": "Nottingham vinner",
+    "p": 0.6191091964565412,
+    "odds": 2.58,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "VAL–CEL",
+    "pick": "Begge lag scorer",
+    "p": 0.5250827843433981,
+    "odds": 2.02,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "NOT–LEE",
+    "pick": "Begge lag scorer",
+    "p": 0.48940180442287845,
+    "odds": 1.91,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-22",
+    "match": "BRE–TOT",
+    "pick": "Begge lag scorer",
+    "p": 0.4708075991637114,
+    "odds": 1.69,
+    "hit": false,
+    "source": "gambler"
   }
 ]
