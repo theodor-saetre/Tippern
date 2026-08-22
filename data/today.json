@@ -295,7 +295,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560545,
@@ -449,7 +467,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560546,
@@ -603,7 +639,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560547,
@@ -1214,7 +1268,9 @@
         "p": 0.8599640830325636,
         "odds": 1.45,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.45
       },
       {
         "match": "EVE–CRY",
@@ -1224,7 +1280,9 @@
         "p": 0.8117747094429985,
         "odds": 1.42,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.42
       },
       {
         "match": "EVE–CRY",
@@ -1234,7 +1292,9 @@
         "p": 0.8064632168400321,
         "odds": 2.06,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.06
       },
       {
         "match": "EVE–CRY",
@@ -1244,7 +1304,9 @@
         "p": 0.7457775473309904,
         "odds": 1.82,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.82
       }
     ],
     "gambler": {
@@ -1255,7 +1317,7 @@
           "market": "Full tid",
           "p": 0.6191091964565412,
           "odds": 1.6152239471218963,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.58
         },
         {
@@ -1265,7 +1327,7 @@
           "p": 0.5250827843433981,
           "odds": 1.9044616007559136,
           "hit": null,
-          "realOdds": null
+          "realOdds": 2.02
         },
         {
           "match": "NOT–LEE",
@@ -1273,7 +1335,7 @@
           "market": "BTTS",
           "p": 0.48940180442287845,
           "odds": 2.043310815290595,
-          "hit": null,
+          "hit": false,
           "realOdds": 1.91
         },
         {
@@ -1283,7 +1345,7 @@
           "p": 0.4708075991637114,
           "odds": 2.1240098965613243,
           "hit": null,
-          "realOdds": null
+          "realOdds": 1.69
         }
       ],
       "combinedOdds": 13.350450934011622,
@@ -1294,5 +1356,5 @@
   },
   "oddsUpdatedAt": "2026-08-22T16:08:22.734Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-22T14:09:09.988Z"
+  "resultsCheckedAt": "2026-08-22T16:45:56.568Z"
 }
