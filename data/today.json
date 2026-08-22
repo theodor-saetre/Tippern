@@ -965,7 +965,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564643,
@@ -1356,5 +1374,5 @@
   },
   "oddsUpdatedAt": "2026-08-22T16:08:22.734Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-22T16:45:56.568Z"
+  "resultsCheckedAt": "2026-08-22T17:41:52.926Z"
 }
