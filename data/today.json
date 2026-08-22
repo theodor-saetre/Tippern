@@ -1155,7 +1155,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564645,
@@ -1380,7 +1398,7 @@
           "market": "BTTS",
           "p": 0.5250827843433981,
           "odds": 1.9044616007559136,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.02
         },
         {
@@ -1410,5 +1428,5 @@
   },
   "oddsUpdatedAt": "2026-08-22T18:10:36.221Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-22T18:53:53.160Z"
+  "resultsCheckedAt": "2026-08-22T20:08:28.377Z"
 }
