@@ -1261,19 +1261,37 @@
         "btts": 3.3663511529596803
       },
       "odds": {
-        "dcHD": 3.07,
+        "dcHD": 3.15,
         "dcAD": 1.14,
-        "pHome": 8.25,
-        "pDraw": 4.9,
-        "pAway": 1.49,
+        "pHome": 8.5,
+        "pDraw": 5,
+        "pAway": 1.47,
         "o15": null,
-        "o25": 1.74,
+        "o25": 1.69,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.9
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-22T16:08:22.734Z",
+          "odds": {
+            "dcHD": 3.07,
+            "dcAD": 1.14,
+            "pHome": 8.25,
+            "pDraw": 4.9,
+            "pAway": 1.49,
+            "o15": null,
+            "o25": 1.74,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -1286,9 +1304,7 @@
         "p": 0.8599640830325636,
         "odds": 1.45,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.45
+        "modelBased": true
       },
       {
         "match": "EVE–CRY",
@@ -1298,9 +1314,7 @@
         "p": 0.8117747094429985,
         "odds": 1.42,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.42
+        "modelBased": true
       },
       {
         "match": "EVE–CRY",
@@ -1310,9 +1324,7 @@
         "p": 0.8064632168400321,
         "odds": 2.06,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 2.06
+        "modelBased": true
       },
       {
         "match": "EVE–CRY",
@@ -1322,9 +1334,7 @@
         "p": 0.7457775473309904,
         "odds": 1.82,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.82
+        "modelBased": true
       }
     ],
     "gambler": {
@@ -1372,7 +1382,7 @@
       "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-22T16:08:22.734Z",
+  "oddsUpdatedAt": "2026-08-22T18:10:36.221Z",
   "resultsChecked": false,
   "resultsCheckedAt": "2026-08-22T17:41:52.926Z"
 }
