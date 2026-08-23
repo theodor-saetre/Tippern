@@ -436,7 +436,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564646,
@@ -590,7 +608,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564644,
@@ -856,7 +892,9 @@
         "p": 0.8700318225386192,
         "odds": 1.53,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.53
       },
       {
         "match": "NEW–LIV",
@@ -866,7 +904,9 @@
         "p": 0.8107098482625996,
         "odds": 2.05,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 2.05
       },
       {
         "match": "NEW–LIV",
@@ -876,7 +916,9 @@
         "p": 0.8017286713027949,
         "odds": 1.56,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.56
       },
       {
         "match": "GET–SAN",
@@ -886,7 +928,9 @@
         "p": 0.6753872966926808,
         "odds": 1.76,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.76
       }
     ],
     "gambler": {
@@ -898,7 +942,7 @@
           "p": 0.6087595076601556,
           "odds": 1.6426848162809429,
           "hit": null,
-          "realOdds": null
+          "realOdds": 2
         },
         {
           "match": "ATL–VIL",
@@ -906,7 +950,7 @@
           "market": "BTTS",
           "p": 0.5318022944508533,
           "odds": 1.8803980547556953,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.69
         },
         {
@@ -915,7 +959,7 @@
           "market": "Full tid",
           "p": 0.5027974440445272,
           "odds": 1.9888724810451524,
-          "hit": null,
+          "hit": false,
           "realOdds": 1.85
         },
         {
@@ -936,5 +980,5 @@
   },
   "oddsUpdatedAt": "2026-08-23T16:09:52.783Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-23T15:43:05.297Z"
+  "resultsCheckedAt": "2026-08-23T17:41:15.782Z"
 }
