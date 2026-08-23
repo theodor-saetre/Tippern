@@ -268,5 +268,68 @@
     "odds": 1.69,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "NEW–LIV",
+    "pick": "Over 2,5 mål",
+    "p": 0.8700318225386192,
+    "odds": 1.53,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "NEW–LIV",
+    "pick": "Newcastle eller uavgjort",
+    "p": 0.8107098482625996,
+    "odds": 2.05,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "NEW–LIV",
+    "pick": "Begge lag scorer",
+    "p": 0.8017286713027949,
+    "odds": 1.56,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "GET–SAN",
+    "pick": "Santander eller uavgjort",
+    "p": 0.6753872966926808,
+    "odds": 1.76,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "GET–SAN",
+    "pick": "Begge lag scorer",
+    "p": 0.6087595076601556,
+    "odds": 2,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "ATL–VIL",
+    "pick": "Begge lag scorer",
+    "p": 0.5318022944508533,
+    "odds": 1.69,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-23",
+    "match": "ATL–VIL",
+    "pick": "Atleti vinner",
+    "p": 0.5027974440445272,
+    "odds": 1.85,
+    "hit": false,
+    "source": "gambler"
   }
 ]
