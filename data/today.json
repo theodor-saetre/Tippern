@@ -506,19 +506,37 @@
         "btts": 1.8803980547556953
       },
       "odds": {
-        "dcHD": 1.28,
-        "dcAD": 2.07,
-        "pHome": 1.91,
-        "pDraw": 3.92,
-        "pAway": 4.4,
+        "dcHD": 1.26,
+        "dcAD": 2.18,
+        "pHome": 1.85,
+        "pDraw": 4,
+        "pAway": 4.8,
         "o15": null,
-        "o25": 1.86,
+        "o25": 1.74,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.69
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-23T12:13:22.633Z",
+          "odds": {
+            "dcHD": 1.28,
+            "dcAD": 2.07,
+            "pHome": 1.91,
+            "pDraw": 3.92,
+            "pAway": 4.4,
+            "o15": null,
+            "o25": 1.86,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564644,
@@ -835,5 +853,5 @@
       "hitRate": 15
     }
   },
-  "oddsUpdatedAt": "2026-08-23T12:13:22.633Z"
+  "oddsUpdatedAt": "2026-08-23T13:50:05.762Z"
 }
