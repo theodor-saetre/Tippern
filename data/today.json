@@ -892,9 +892,7 @@
         "p": 0.8700318225386192,
         "odds": 1.53,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.53
+        "modelBased": true
       },
       {
         "match": "NEW–LIV",
@@ -904,9 +902,7 @@
         "p": 0.8107098482625996,
         "odds": 2.05,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 2.05
+        "modelBased": true
       },
       {
         "match": "NEW–LIV",
@@ -916,9 +912,7 @@
         "p": 0.8017286713027949,
         "odds": 1.56,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.56
+        "modelBased": true
       },
       {
         "match": "GET–SAN",
@@ -928,9 +922,7 @@
         "p": 0.6753872966926808,
         "odds": 1.76,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": null,
-        "realOdds": 1.76
+        "modelBased": true
       }
     ],
     "gambler": {
@@ -978,7 +970,7 @@
       "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-23T16:09:52.783Z",
+  "oddsUpdatedAt": "2026-08-23T18:10:11.468Z",
   "resultsChecked": false,
   "resultsCheckedAt": "2026-08-23T17:41:15.782Z"
 }
