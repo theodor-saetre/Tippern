@@ -331,5 +331,59 @@
     "odds": 1.85,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "MAL–DEP",
+    "pick": "Deportivo eller uavgjort",
+    "p": 0.9999999999999999,
+    "odds": 1.69,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "FUL–CHE",
+    "pick": "Fulham eller uavgjort",
+    "p": 0.9211517140219507,
+    "odds": 2.01,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "OSA–LEV",
+    "pick": "Begge lag scorer",
+    "p": 0.63682383188778,
+    "odds": 2.02,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "OSA–LEV",
+    "pick": "Over 2,5 mål",
+    "p": 0.6071807443202675,
+    "odds": 2.19,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "OSA–LEV",
+    "pick": "Osasuna vinner",
+    "p": 0.4280726155817897,
+    "odds": 1.95,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-24",
+    "match": "FUL–CHE",
+    "pick": "Begge lag scorer",
+    "p": 0.2490219490167357,
+    "odds": 1.75,
+    "hit": true,
+    "source": "gambler"
   }
 ]
