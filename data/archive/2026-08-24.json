@@ -384,19 +384,37 @@
         "btts": null
       },
       "odds": {
-        "dcHD": 1.4,
-        "dcAD": 1.64,
-        "pHome": 2.55,
-        "pDraw": 3.1,
-        "pAway": 3.5,
-        "o15": 1.48,
-        "o25": 2.62,
+        "dcHD": 1.38,
+        "dcAD": 1.69,
+        "pHome": 2.42,
+        "pDraw": 3.19,
+        "pAway": 3.6,
+        "o15": 1.41,
+        "o25": 2.38,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.99
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-24T17:53:25.008Z",
+          "odds": {
+            "dcHD": 1.4,
+            "dcAD": 1.64,
+            "pHome": 2.55,
+            "pDraw": 3.1,
+            "pAway": 3.5,
+            "o15": 1.48,
+            "o25": 2.62,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -407,7 +425,7 @@
         "pick": "Deportivo eller uavgjort",
         "market": "Double chance",
         "p": 0.9999999999999999,
-        "odds": 1.64,
+        "odds": 1.69,
         "liveOdds": true,
         "modelBased": true
       },
@@ -471,5 +489,5 @@
       "hitRate": 24
     }
   },
-  "oddsUpdatedAt": "2026-08-24T17:53:25.008Z"
+  "oddsUpdatedAt": "2026-08-24T18:20:18.495Z"
 }
