@@ -124,19 +124,37 @@
         "btts": 1.6651674480177345
       },
       "odds": {
-        "dcHD": 1.58,
-        "dcAD": 1.5,
-        "pHome": 2.96,
-        "pDraw": 3.4,
-        "pAway": 2.7,
+        "dcHD": 1.54,
+        "dcAD": 1.55,
+        "pHome": 2.9,
+        "pDraw": 3.3,
+        "pAway": 2.92,
         "o15": null,
-        "o25": 2.16,
+        "o25": 2.3,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.94
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-25T05:22:02.262Z",
+          "odds": {
+            "dcHD": 1.58,
+            "dcAD": 1.5,
+            "pHome": 2.96,
+            "pDraw": 3.4,
+            "pAway": 2.7,
+            "o15": null,
+            "o25": 2.16,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -147,7 +165,17 @@
         "pick": "Valencia eller uavgjort",
         "market": "Double chance",
         "p": 0.7479884895829867,
-        "odds": 1.58,
+        "odds": 1.54,
+        "liveOdds": true,
+        "modelBased": true
+      },
+      {
+        "match": "VAL–BET",
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.6005402046445419,
+        "odds": 1.94,
         "liveOdds": true,
         "modelBased": true
       },
@@ -157,7 +185,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.5756999078326978,
-        "odds": 2.16,
+        "odds": 2.3,
         "liveOdds": true,
         "modelBased": true
       }
@@ -191,5 +219,5 @@
       "hitRate": 10
     }
   },
-  "oddsUpdatedAt": "2026-08-25T05:22:02.262Z"
+  "oddsUpdatedAt": "2026-08-25T17:51:17.373Z"
 }
