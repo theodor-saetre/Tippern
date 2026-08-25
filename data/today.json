@@ -154,7 +154,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -167,7 +185,9 @@
         "p": 0.7479884895829867,
         "odds": 1.54,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.54
       },
       {
         "match": "VAL–BET",
@@ -177,7 +197,9 @@
         "p": 0.6005402046445419,
         "odds": 1.94,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.94
       },
       {
         "match": "VAL–BET",
@@ -187,7 +209,9 @@
         "p": 0.5756999078326978,
         "odds": 2.3,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.3
       }
     ],
     "gambler": {
@@ -197,27 +221,36 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6005402046445419,
-          "odds": 1.6651674480177345
+          "odds": 1.6651674480177345,
+          "hit": false,
+          "realOdds": 1.94
         },
         {
           "match": "VAL–BET",
           "pick": "Valencia vinner",
           "market": "Full tid",
           "p": 0.48588864659771197,
-          "odds": 2.0580847216789215
+          "odds": 2.0580847216789215,
+          "hit": false,
+          "realOdds": 2.9
         },
         {
           "match": "VAL–BET",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.3516584108860816,
-          "odds": 2.84366865413592
+          "odds": 2.84366865413592,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 9.745410824007168,
       "combinedProb": 0.10261240065288647,
-      "hitRate": 10
+      "hitRate": 10,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-25T17:51:17.373Z"
+  "oddsUpdatedAt": "2026-08-25T17:51:17.373Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-25T21:49:28.237Z"
 }
