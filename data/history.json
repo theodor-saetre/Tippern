@@ -430,5 +430,59 @@
     "odds": 2.9,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Over 2,5 mål",
+    "p": 0.6220884258322992,
+    "odds": 1.31,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Under 3,5 mål",
+    "p": 0.6004014710125575,
+    "odds": 2.06,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Begge lag scorer",
+    "p": 0.4984304059403268,
+    "odds": 1.89,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Begge lag scorer",
+    "p": 0.4984304059403268,
+    "odds": 1.89,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Over 3,5 mål",
+    "p": 0.3995985289874425,
+    "odds": 1.96,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-26",
+    "match": "RMA–RSO",
+    "pick": "Real Madrid vinner",
+    "p": 0.7332866310666624,
+    "odds": 1.24,
+    "hit": true,
+    "source": "gambler"
   }
 ]
