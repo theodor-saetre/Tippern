@@ -136,7 +136,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564630,
@@ -259,7 +277,25 @@
         "u45": 2.436995834892557,
         "btts": 1.8434759479868001
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -272,7 +308,9 @@
         "p": 0.5668435068740846,
         "odds": 2.05,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.05
       },
       {
         "match": "CEL–OSA",
@@ -282,7 +320,9 @@
         "p": 0.39711259379959035,
         "odds": 2.36,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 2.36
       }
     ],
     "gambler": {
@@ -292,34 +332,45 @@
           "pick": "Celta vinner",
           "market": "Full tid",
           "p": 0.5668435068740846,
-          "odds": 1.76415534071229
+          "odds": 1.76415534071229,
+          "hit": false,
+          "realOdds": 2.05
         },
         {
           "match": "FCB–ATH",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.54245351076702,
-          "odds": 1.8434759479868001
+          "odds": 1.8434759479868001,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "CEL–OSA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.41507431336935574,
-          "odds": 2.4092071414454055
+          "odds": 2.4092071414454055,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "CEL–OSA",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.195431518797278,
-          "odds": 5.11688189374051
+          "odds": 5.11688189374051,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 40.09164112517531,
       "combinedProb": 0.02494285521707057,
-      "hitRate": 40
+      "hitRate": 40,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-27T15:57:18.721Z"
+  "oddsUpdatedAt": "2026-08-27T15:57:18.721Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-28T03:37:21.436Z"
 }

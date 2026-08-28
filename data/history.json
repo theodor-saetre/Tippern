@@ -484,5 +484,32 @@
     "odds": 1.24,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-27",
+    "match": "CEL–OSA",
+    "pick": "Celta vinner",
+    "p": 0.5668435068740846,
+    "odds": 2.05,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-27",
+    "match": "CEL–OSA",
+    "pick": "Over 2,5 mål",
+    "p": 0.39711259379959035,
+    "odds": 2.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-27",
+    "match": "CEL–OSA",
+    "pick": "Celta vinner",
+    "p": 0.5668435068740846,
+    "odds": 2.05,
+    "hit": false,
+    "source": "gambler"
   }
 ]
