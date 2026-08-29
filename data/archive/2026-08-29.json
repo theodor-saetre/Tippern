@@ -290,7 +290,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560561,
@@ -426,7 +444,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560558,
@@ -716,7 +752,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 5,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564653,
@@ -1014,7 +1068,7 @@
         "odds": 1.35,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.35
       },
       {
@@ -1050,7 +1104,7 @@
           "market": "Full tid",
           "p": 0.6123896831671772,
           "odds": 1.6329471698937952,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.16
         },
         {
@@ -1077,7 +1131,7 @@
           "market": "BTTS",
           "p": 0.5838151147729195,
           "odds": 1.7128710351888707,
-          "hit": null,
+          "hit": false,
           "realOdds": null
         },
         {
@@ -1098,5 +1152,5 @@
   },
   "oddsUpdatedAt": "2026-08-29T14:02:38.845Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-29T14:02:53.411Z"
+  "resultsCheckedAt": "2026-08-29T17:45:34.298Z"
 }
