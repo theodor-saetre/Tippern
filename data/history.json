@@ -565,5 +565,68 @@
     "odds": 2.07,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "TOT–NEW",
+    "pick": "Under 3,5 mål",
+    "p": 0.9019533322755723,
+    "odds": 1.55,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "BOU–EVE",
+    "pick": "Bournemouth eller uavgjort",
+    "p": 0.846848967969952,
+    "odds": 1.35,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "SEV–ATL",
+    "pick": "Sevilla FC eller uavgjort",
+    "p": 0.8207697597136925,
+    "odds": 1.93,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "RSO–ESP",
+    "pick": "Over 2,5 mål",
+    "p": 0.8133361225098805,
+    "odds": 1.92,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "BOU–EVE",
+    "pick": "Bournemouth vinner",
+    "p": 0.6123896831671772,
+    "odds": 2.16,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "SEV–ATL",
+    "pick": "Sevilla FC vinner",
+    "p": 0.5942078234511605,
+    "odds": 4.3,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-29",
+    "match": "LIV–NOT",
+    "pick": "Over 3,5 mål",
+    "p": 0.5507541814427995,
+    "odds": 2.46,
+    "hit": true,
+    "source": "gambler"
   }
 ]

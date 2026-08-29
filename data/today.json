@@ -1078,7 +1078,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1116,7 +1134,7 @@
         "odds": 1.93,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.93
       },
       {
@@ -1149,7 +1167,7 @@
           "market": "BTTS",
           "p": 0.6072671081525256,
           "odds": 1.646721824012956,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1158,7 +1176,7 @@
           "market": "Full tid",
           "p": 0.5942078234511605,
           "odds": 1.6829128808705303,
-          "hit": null,
+          "hit": false,
           "realOdds": 4.3
         },
         {
@@ -1187,6 +1205,6 @@
     }
   },
   "oddsUpdatedAt": "2026-08-29T14:02:38.845Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-08-29T20:03:09.473Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-08-29T22:42:11.215Z"
 }
