@@ -136,7 +136,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560560,
@@ -668,19 +686,37 @@
         "btts": 1.8655829191635156
       },
       "odds": {
-        "dcHD": 1.73,
-        "dcAD": 1.39,
-        "pHome": 3.45,
-        "pDraw": 3.48,
-        "pAway": 2.32,
+        "dcHD": 1.75,
+        "dcAD": 1.4,
+        "pHome": 3.5,
+        "pDraw": 3.5,
+        "pAway": 2.34,
         "o15": null,
-        "o25": 1.99,
+        "o25": 1.97,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.75
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-29T11:25:40.775Z",
+          "odds": {
+            "dcHD": 1.73,
+            "dcAD": 1.39,
+            "pHome": 3.45,
+            "pDraw": 3.48,
+            "pAway": 2.32,
+            "o15": null,
+            "o25": 1.99,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564653,
@@ -965,7 +1001,9 @@
         "p": 0.9019533322755723,
         "odds": 1.55,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.55
       },
       {
         "match": "BOU–EVE",
@@ -975,7 +1013,9 @@
         "p": 0.846848967969952,
         "odds": 1.35,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.35
       },
       {
         "match": "SEV–ATL",
@@ -985,7 +1025,9 @@
         "p": 0.8207697597136925,
         "odds": 1.93,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.93
       },
       {
         "match": "RSO–ESP",
@@ -995,7 +1037,9 @@
         "p": 0.8133361225098805,
         "odds": 1.92,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.92
       }
     ],
     "gambler": {
@@ -1005,41 +1049,54 @@
           "pick": "Bournemouth vinner",
           "market": "Full tid",
           "p": 0.6123896831671772,
-          "odds": 1.6329471698937952
+          "odds": 1.6329471698937952,
+          "hit": null,
+          "realOdds": 2.16
         },
         {
           "match": "SEV–ATL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6072671081525256,
-          "odds": 1.646721824012956
+          "odds": 1.646721824012956,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "SEV–ATL",
           "pick": "Sevilla FC vinner",
           "market": "Full tid",
           "p": 0.5942078234511605,
-          "odds": 1.6829128808705303
+          "odds": 1.6829128808705303,
+          "hit": null,
+          "realOdds": 4.3
         },
         {
           "match": "COV–HUL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5838151147729195,
-          "odds": 1.7128710351888707
+          "odds": 1.7128710351888707,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "LIV–NOT",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5507541814427995,
-          "odds": 1.815692070426629
+          "odds": 1.815692070426629,
+          "hit": true,
+          "realOdds": 2.46
         }
       ],
       "combinedOdds": 14.074107779090257,
       "combinedProb": 0.07105246142037427,
-      "hitRate": 14
+      "hitRate": 14,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-29T11:25:40.775Z"
+  "oddsUpdatedAt": "2026-08-29T14:02:38.845Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-08-29T14:02:53.411Z"
 }
