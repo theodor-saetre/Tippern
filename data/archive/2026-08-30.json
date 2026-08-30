@@ -136,7 +136,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560556,
@@ -259,7 +277,25 @@
         "u45": 1.193492394351244,
         "btts": 1.7754311845203814
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 4,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560559,
@@ -395,7 +431,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560553,
@@ -518,7 +572,25 @@
         "u45": 1.364835848050756,
         "btts": 1.465857121589653
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 5,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564656,
@@ -654,7 +726,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564651,
@@ -896,19 +986,37 @@
         "btts": 1.5780642591701222
       },
       "odds": {
-        "dcHD": 1.52,
-        "dcAD": 1.55,
-        "pHome": 2.78,
-        "pDraw": 3.35,
-        "pAway": 2.9,
+        "dcHD": 1.56,
+        "dcAD": 1.52,
+        "pHome": 2.96,
+        "pDraw": 3.3,
+        "pAway": 2.83,
         "o15": null,
-        "o25": 2.28,
+        "o25": 2.32,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.93
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-08-30T14:01:25.462Z",
+          "odds": {
+            "dcHD": 1.52,
+            "dcAD": 1.55,
+            "pHome": 2.78,
+            "pDraw": 3.35,
+            "pAway": 2.9,
+            "o15": null,
+            "o25": 2.28,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -921,7 +1029,9 @@
         "p": 0.9334634269905008,
         "odds": 1.58,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.58
       },
       {
         "match": "CEL–ATH",
@@ -929,9 +1039,11 @@
         "pick": "Celta eller uavgjort",
         "market": "Double chance",
         "p": 0.8135973522459867,
-        "odds": 1.52,
+        "odds": 1.56,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.56
       },
       {
         "match": "SUN–FUL",
@@ -941,7 +1053,9 @@
         "p": 0.7874816593983109,
         "odds": 1.46,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.46
       },
       {
         "match": "DEP–VAL",
@@ -951,7 +1065,9 @@
         "p": 0.7636524141366718,
         "odds": 1.59,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.59
       }
     ],
     "gambler": {
@@ -961,34 +1077,45 @@
           "pick": "Celta vinner",
           "market": "Full tid",
           "p": 0.5921236730238607,
-          "odds": 1.6888363792198917
+          "odds": 1.6888363792198917,
+          "hit": null,
+          "realOdds": 2.96
         },
         {
           "match": "CHE–BHA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5632434581068497,
-          "odds": 1.7754311845203814
+          "odds": 1.7754311845203814,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "RMA–MAL",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5005319487034837,
-          "odds": 1.9978744665356063
+          "odds": 1.9978744665356063,
+          "hit": true,
+          "realOdds": 1.61
         },
         {
           "match": "DEP–VAL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.49600579345198087,
-          "odds": 2.016105483446962
+          "odds": 2.016105483446962,
+          "hit": null,
+          "realOdds": null
         }
       ],
       "combinedOdds": 12.077383770174393,
       "combinedProb": 0.08279938925759253,
-      "hitRate": 12
+      "hitRate": 12,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-08-30T14:01:25.462Z"
+  "oddsUpdatedAt": "2026-08-30T18:05:42.815Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-08-30T18:05:56.882Z"
 }
