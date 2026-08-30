@@ -628,5 +628,59 @@
     "odds": 2.46,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "LEE–BRE",
+    "pick": "Leeds United eller uavgjort",
+    "p": 0.9334634269905008,
+    "odds": 1.58,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "CEL–ATH",
+    "pick": "Celta eller uavgjort",
+    "p": 0.8135973522459867,
+    "odds": 1.56,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "SUN–FUL",
+    "pick": "Sunderland eller uavgjort",
+    "p": 0.7874816593983109,
+    "odds": 1.46,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "DEP–VAL",
+    "pick": "Valencia eller uavgjort",
+    "p": 0.7636524141366718,
+    "odds": 1.59,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "CEL–ATH",
+    "pick": "Celta vinner",
+    "p": 0.5921236730238607,
+    "odds": 2.96,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-08-30",
+    "match": "RMA–MAL",
+    "pick": "Over 3,5 mål",
+    "p": 0.5005319487034837,
+    "odds": 1.61,
+    "hit": true,
+    "source": "gambler"
   }
 ]
