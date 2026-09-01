@@ -449,7 +449,25 @@
         "u45": 1.107410565638477,
         "btts": 2.8452053778106183
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 5,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -538,7 +556,7 @@
           "market": "BTTS",
           "p": 0.3514684766867335,
           "odds": 2.8452053778106183,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         }
       ],
@@ -549,6 +567,6 @@
     }
   },
   "oddsUpdatedAt": "2026-08-31T16:25:46.972Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-01T00:50:39.661Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-01T09:38:04.476Z"
 }
