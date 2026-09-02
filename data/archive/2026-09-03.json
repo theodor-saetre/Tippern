@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T09:38:32.885Z",
+  "generatedAt": "2026-09-02T09:09:42.164Z",
   "date": "2026-09-03",
   "fixtures": [
     {
@@ -125,12 +125,12 @@
       },
       "odds": {
         "dcHD": 1.32,
-        "dcAD": 1.94,
-        "pHome": 2.06,
-        "pDraw": 3.68,
+        "dcAD": 1.97,
+        "pHome": 2.03,
+        "pDraw": 3.8,
         "pAway": 4.1,
         "o15": null,
-        "o25": 1.98,
+        "o25": 1.97,
         "o35": null,
         "u35": null,
         "u45": null,
@@ -157,7 +157,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.3472321863869116,
-        "odds": 1.98,
+        "odds": 1.97,
         "liveOdds": true,
         "modelBased": true
       },
@@ -167,7 +167,7 @@
         "pick": "Real Sociedad vinner",
         "market": "Full tid",
         "p": 0.34326998179479107,
-        "odds": 2.06,
+        "odds": 2.03,
         "liveOdds": true,
         "modelBased": true
       }
@@ -201,5 +201,5 @@
       "hitRate": 42
     }
   },
-  "oddsUpdatedAt": "2026-09-01T09:38:33.179Z"
+  "oddsUpdatedAt": "2026-09-02T09:09:42.387Z"
 }
