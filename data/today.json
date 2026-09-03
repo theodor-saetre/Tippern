@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T09:09:42.164Z",
+  "generatedAt": "2026-09-03T09:16:11.047Z",
   "date": "2026-09-03",
   "fixtures": [
     {
@@ -124,13 +124,13 @@
         "btts": 2.2866241798954734
       },
       "odds": {
-        "dcHD": 1.32,
-        "dcAD": 1.97,
-        "pHome": 2.03,
+        "dcHD": 1.29,
+        "dcAD": 2.04,
+        "pHome": 1.96,
         "pDraw": 3.8,
-        "pAway": 4.1,
+        "pAway": 4.4,
         "o15": null,
-        "o25": 1.97,
+        "o25": 1.95,
         "o35": null,
         "u35": null,
         "u45": null,
@@ -143,21 +143,11 @@
     "dagensSpill": [
       {
         "match": "RSO–CEL",
-        "key": "dcHD",
-        "pick": "Real Sociedad eller uavgjort",
-        "market": "Double chance",
-        "p": 0.6788453118008151,
-        "odds": 1.32,
-        "liveOdds": true,
-        "modelBased": true
-      },
-      {
-        "match": "RSO–CEL",
         "key": "o25",
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.3472321863869116,
-        "odds": 1.97,
+        "odds": 1.95,
         "liveOdds": true,
         "modelBased": true
       },
@@ -167,7 +157,7 @@
         "pick": "Real Sociedad vinner",
         "market": "Full tid",
         "p": 0.34326998179479107,
-        "odds": 2.03,
+        "odds": 1.96,
         "liveOdds": true,
         "modelBased": true
       }
@@ -201,5 +191,5 @@
       "hitRate": 42
     }
   },
-  "oddsUpdatedAt": "2026-09-02T09:09:42.387Z"
+  "oddsUpdatedAt": "2026-09-03T09:16:11.424Z"
 }
