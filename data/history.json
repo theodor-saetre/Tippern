@@ -682,5 +682,32 @@
     "odds": 1.61,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-03",
+    "match": "RSO–CEL",
+    "pick": "Over 2,5 mål",
+    "p": 0.3472321863869116,
+    "odds": 1.95,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-03",
+    "match": "RSO–CEL",
+    "pick": "Real Sociedad vinner",
+    "p": 0.34326998179479107,
+    "odds": 1.96,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-03",
+    "match": "RSO–CEL",
+    "pick": "Real Sociedad vinner",
+    "p": 0.34326998179479107,
+    "odds": 1.96,
+    "hit": false,
+    "source": "gambler"
   }
 ]
