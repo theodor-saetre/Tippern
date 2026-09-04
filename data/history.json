@@ -709,5 +709,59 @@
     "odds": 1.96,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "IPS–LIV",
+    "pick": "Over 2,5 mål",
+    "p": 0.8468977088974674,
+    "odds": 1.4,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "BET–RMA",
+    "pick": "Under 3,5 mål",
+    "p": 0.8123489979536206,
+    "odds": 1.94,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "BET–RMA",
+    "pick": "Real Madrid vinner",
+    "p": 0.4380316339286642,
+    "odds": 1.51,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "BET–RMA",
+    "pick": "Over 2,5 mål",
+    "p": 0.3867602860893202,
+    "odds": 1.4,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "BET–RMA",
+    "pick": "Real Betis vinner",
+    "p": 0.24667961834849061,
+    "odds": 7.5,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-04",
+    "match": "BET–RMA",
+    "pick": "Over 3,5 mål",
+    "p": 0.18765100204637938,
+    "odds": 2.04,
+    "hit": false,
+    "source": "gambler"
   }
 ]
