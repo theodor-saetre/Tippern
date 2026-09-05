@@ -1508,7 +1508,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1617,6 +1635,6 @@
     }
   },
   "oddsUpdatedAt": "2026-09-05T15:22:02.978Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-05T19:09:37.721Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-05T21:24:15.467Z"
 }

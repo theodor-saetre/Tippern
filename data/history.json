@@ -763,5 +763,59 @@
     "odds": 2.04,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "FUL–CRY",
+    "pick": "Fulham eller uavgjort",
+    "p": 0.9135836512655419,
+    "odds": 1.38,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "HUL–AVL",
+    "pick": "Hull City eller uavgjort",
+    "p": 0.8950168901018962,
+    "odds": 2.07,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "NOT–TOT",
+    "pick": "Nottingham eller uavgjort",
+    "p": 0.8655335291873805,
+    "odds": 1.48,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "ATH–ATL",
+    "pick": "Atleti eller uavgjort",
+    "p": 0.8630713333513818,
+    "odds": 1.46,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "BRE–SUN",
+    "pick": "Brentford vinner",
+    "p": 0.6086625354768717,
+    "odds": 1.78,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-05",
+    "match": "NOT–TOT",
+    "pick": "Nottingham vinner",
+    "p": 0.5901470639575549,
+    "odds": 2.52,
+    "hit": false,
+    "source": "gambler"
   }
 ]
