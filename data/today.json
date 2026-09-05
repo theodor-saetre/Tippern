@@ -136,7 +136,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560562,
@@ -272,7 +290,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560563,
@@ -395,7 +431,25 @@
         "u45": 1.2492972532879951,
         "btts": 1.750016320906172
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560564,
@@ -518,7 +572,25 @@
         "u45": 1.20111336608336,
         "btts": 1.8743417264636362
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560565,
@@ -654,7 +726,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560568,
@@ -790,7 +880,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560569,
@@ -1080,7 +1188,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564660,
@@ -1360,7 +1486,7 @@
         "odds": 1.38,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.38
       },
       {
@@ -1384,7 +1510,7 @@
         "odds": 1.48,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.48
       },
       {
@@ -1396,7 +1522,7 @@
         "odds": 1.46,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.46
       }
     ],
@@ -1408,7 +1534,7 @@
           "market": "Full tid",
           "p": 0.6086625354768717,
           "odds": 1.6429465290097498,
-          "hit": null,
+          "hit": false,
           "realOdds": 1.78
         },
         {
@@ -1417,7 +1543,7 @@
           "market": "Full tid",
           "p": 0.6024228371437507,
           "odds": 1.6599636307635182,
-          "hit": null,
+          "hit": false,
           "realOdds": null
         },
         {
@@ -1426,7 +1552,7 @@
           "market": "Full tid",
           "p": 0.6016270470509467,
           "odds": 1.6621593143157316,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1435,7 +1561,7 @@
           "market": "BTTS",
           "p": 0.5921806912354175,
           "odds": 1.6886737693418927,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1444,7 +1570,7 @@
           "market": "Full tid",
           "p": 0.5901470639575549,
           "odds": 1.694492883339877,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.52
         }
       ],
@@ -1456,5 +1582,5 @@
   },
   "oddsUpdatedAt": "2026-09-05T15:22:02.978Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-05T15:22:17.907Z"
+  "resultsCheckedAt": "2026-09-05T17:25:51.862Z"
 }
