@@ -277,7 +277,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564659,
@@ -400,7 +418,25 @@
         "u45": 1.1727494059307868,
         "btts": 2.041652536137327
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 5
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": false
+      }
     },
     {
       "id": 564664,
@@ -820,19 +856,37 @@
         "btts": 1.7659428416025218
       },
       "odds": {
-        "dcHD": 1.39,
-        "dcAD": 1.74,
-        "pHome": 2.36,
-        "pDraw": 3.37,
-        "pAway": 3.6,
+        "dcHD": 1.41,
+        "dcAD": 1.71,
+        "pHome": 2.44,
+        "pDraw": 3.35,
+        "pAway": 3.48,
         "o15": null,
-        "o25": 2.28,
+        "o25": 2.26,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.92
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-06T15:35:13.509Z",
+          "odds": {
+            "dcHD": 1.39,
+            "dcAD": 1.74,
+            "pHome": 2.36,
+            "pDraw": 3.37,
+            "pAway": 3.6,
+            "o15": null,
+            "o25": 2.28,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -846,7 +900,7 @@
         "odds": 1.78,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.78
       },
       {
@@ -879,11 +933,11 @@
         "pick": "Espanyol eller uavgjort",
         "market": "Double chance",
         "p": 0.6706716804643241,
-        "odds": 1.39,
+        "odds": 1.41,
         "liveOdds": true,
         "modelBased": true,
         "hit": null,
-        "realOdds": 1.39
+        "realOdds": 1.41
       }
     ],
     "gambler": {
@@ -904,7 +958,7 @@
           "p": 0.5662697435283581,
           "odds": 1.7659428416025218,
           "hit": null,
-          "realOdds": null
+          "realOdds": 1.92
         },
         {
           "match": "ALA–OSA",
@@ -921,7 +975,7 @@
           "market": "BTTS",
           "p": 0.4897993083053861,
           "odds": 2.041652536137327,
-          "hit": null,
+          "hit": false,
           "realOdds": null
         }
       ],
@@ -931,7 +985,7 @@
       "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-06T15:35:13.509Z",
+  "oddsUpdatedAt": "2026-09-06T17:48:36.951Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-06T15:35:27.762Z"
+  "resultsCheckedAt": "2026-09-06T17:48:51.627Z"
 }
