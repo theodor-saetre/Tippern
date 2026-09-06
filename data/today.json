@@ -123,7 +123,25 @@
         "u45": 1.2264762961955722,
         "btts": 1.6945858904162716
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560570,
@@ -507,18 +525,36 @@
       },
       "odds": {
         "dcHD": 1.36,
-        "dcAD": 1.72,
-        "pHome": 2.38,
+        "dcAD": 1.73,
+        "pHome": 2.37,
         "pDraw": 3.2,
-        "pAway": 3.7,
+        "pAway": 3.75,
         "o15": null,
-        "o25": 2.57,
+        "o25": 2.58,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.14
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-06T12:24:34.318Z",
+          "odds": {
+            "dcHD": 1.36,
+            "dcAD": 1.72,
+            "pHome": 2.38,
+            "pDraw": 3.2,
+            "pAway": 3.7,
+            "o15": null,
+            "o25": 2.57,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564666,
@@ -630,19 +666,37 @@
         "btts": 2.171388459577174
       },
       "odds": {
-        "dcHD": 1.44,
-        "dcAD": 1.65,
-        "pHome": 2.5,
-        "pDraw": 3.4,
-        "pAway": 3.22,
+        "dcHD": 1.47,
+        "dcAD": 1.64,
+        "pHome": 2.54,
+        "pDraw": 3.5,
+        "pAway": 3.1,
         "o15": null,
-        "o25": 2.04,
+        "o25": 1.93,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.72
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-06T12:24:34.318Z",
+          "odds": {
+            "dcHD": 1.44,
+            "dcAD": 1.65,
+            "pHome": 2.5,
+            "pDraw": 3.4,
+            "pAway": 3.22,
+            "o15": null,
+            "o25": 2.04,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564661,
@@ -791,7 +845,9 @@
         "p": 0.8820039339242551,
         "odds": 1.78,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.78
       },
       {
         "match": "ALA–OSA",
@@ -801,7 +857,9 @@
         "p": 0.8259676923513098,
         "odds": 1.36,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.36
       },
       {
         "match": "MAL–LEV",
@@ -809,9 +867,11 @@
         "pick": "Levante eller uavgjort",
         "market": "Double chance",
         "p": 0.7718926045968248,
-        "odds": 1.65,
+        "odds": 1.64,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.64
       },
       {
         "match": "ESP–SEV",
@@ -821,7 +881,9 @@
         "p": 0.6706716804643241,
         "odds": 1.39,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.39
       }
     ],
     "gambler": {
@@ -831,34 +893,45 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5901146738300482,
-          "odds": 1.6945858904162716
+          "odds": 1.6945858904162716,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "ESP–SEV",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5662697435283581,
-          "odds": 1.7659428416025218
+          "odds": 1.7659428416025218,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "ALA–OSA",
           "pick": "Alavés vinner",
           "market": "Full tid",
           "p": 0.5105601304685692,
-          "odds": 1.9586331566513917
+          "odds": 1.9586331566513917,
+          "hit": null,
+          "realOdds": 2.37
         },
         {
           "match": "VAL–FCB",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.4897993083053861,
-          "odds": 2.041652536137327
+          "odds": 2.041652536137327,
+          "hit": null,
+          "realOdds": null
         }
       ],
       "combinedOdds": 11.966720934762618,
       "combinedProb": 0.08356508064753637,
-      "hitRate": 12
+      "hitRate": 12,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-06T12:24:34.318Z"
+  "oddsUpdatedAt": "2026-09-06T15:35:13.509Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-09-06T15:35:27.762Z"
 }
