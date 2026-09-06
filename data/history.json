@@ -817,5 +817,59 @@
     "odds": 2.52,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "ARS–CHE",
+    "pick": "Arsenal vinner",
+    "p": 0.8820039339242551,
+    "odds": 1.78,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "ALA–OSA",
+    "pick": "Alavés eller uavgjort",
+    "p": 0.8259676923513098,
+    "odds": 1.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "MAL–LEV",
+    "pick": "Levante eller uavgjort",
+    "p": 0.7718926045968248,
+    "odds": 1.64,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "ESP–SEV",
+    "pick": "Espanyol eller uavgjort",
+    "p": 0.6706716804643241,
+    "odds": 1.41,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "ESP–SEV",
+    "pick": "Begge lag scorer",
+    "p": 0.5662697435283581,
+    "odds": 1.92,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-06",
+    "match": "ALA–OSA",
+    "pick": "Alavés vinner",
+    "p": 0.5105601304685692,
+    "odds": 2.37,
+    "hit": true,
+    "source": "gambler"
   }
 ]
