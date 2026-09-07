@@ -136,7 +136,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564658,
@@ -290,7 +308,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -303,7 +339,9 @@
         "p": 0.8456787801640349,
         "odds": 1.4,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.4
       },
       {
         "match": "ELC–RSO",
@@ -313,7 +351,9 @@
         "p": 0.7563932365541477,
         "odds": 1.41,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.41
       },
       {
         "match": "ELC–RSO",
@@ -323,7 +363,9 @@
         "p": 0.5372972470902043,
         "odds": 1.67,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.67
       },
       {
         "match": "ELC–RSO",
@@ -333,7 +375,9 @@
         "p": 0.5264026489883641,
         "odds": 1.76,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.76
       }
     ],
     "gambler": {
@@ -343,27 +387,36 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5372972470902043,
-          "odds": 1.8611671759265773
+          "odds": 1.8611671759265773,
+          "hit": true,
+          "realOdds": 1.67
         },
         {
           "match": "ELC–RSO",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.2742549921697744,
-          "odds": 3.64624174053671
+          "odds": 3.64624174053671,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "GET–CEL",
           "pick": "Getafe vinner",
           "market": "Full tid",
           "p": 0.2528849264582463,
-          "odds": 3.9543677593022117
+          "odds": 3.9543677593022117,
+          "hit": false,
+          "realOdds": 2.66
         }
       ],
       "combinedOdds": 26.835389273788106,
       "combinedProb": 0.03726422560140634,
-      "hitRate": 27
+      "hitRate": 27,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-07T18:53:53.786Z"
+  "oddsUpdatedAt": "2026-09-07T18:53:53.786Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-07T21:49:05.001Z"
 }

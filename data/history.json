@@ -871,5 +871,59 @@
     "odds": 2.37,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "GET–CEL",
+    "pick": "Getafe eller uavgjort",
+    "p": 0.8456787801640349,
+    "odds": 1.4,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "ELC–RSO",
+    "pick": "Real Sociedad eller uavgjort",
+    "p": 0.7563932365541477,
+    "odds": 1.41,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "ELC–RSO",
+    "pick": "Begge lag scorer",
+    "p": 0.5372972470902043,
+    "odds": 1.67,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "ELC–RSO",
+    "pick": "Elche eller uavgjort",
+    "p": 0.5264026489883641,
+    "odds": 1.76,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "ELC–RSO",
+    "pick": "Begge lag scorer",
+    "p": 0.5372972470902043,
+    "odds": 1.67,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-07",
+    "match": "GET–CEL",
+    "pick": "Getafe vinner",
+    "p": 0.2528849264582463,
+    "odds": 2.66,
+    "hit": false,
+    "source": "gambler"
   }
 ]
