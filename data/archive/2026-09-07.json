@@ -260,19 +260,37 @@
         "btts": 1.8611671759265773
       },
       "odds": {
-        "dcHD": 1.81,
-        "dcAD": 1.38,
-        "pHome": 3.6,
-        "pDraw": 3.65,
-        "pAway": 2.23,
+        "dcHD": 1.76,
+        "dcAD": 1.41,
+        "pHome": 3.45,
+        "pDraw": 3.58,
+        "pAway": 2.32,
         "o15": null,
-        "o25": 1.84,
+        "o25": 1.78,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.67
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-07T09:48:46.591Z",
+          "odds": {
+            "dcHD": 1.81,
+            "dcAD": 1.38,
+            "pHome": 3.6,
+            "pDraw": 3.65,
+            "pAway": 2.23,
+            "o15": null,
+            "o25": 1.84,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -293,7 +311,17 @@
         "pick": "Real Sociedad eller uavgjort",
         "market": "Double chance",
         "p": 0.7563932365541477,
-        "odds": 1.38,
+        "odds": 1.41,
+        "liveOdds": true,
+        "modelBased": true
+      },
+      {
+        "match": "ELC–RSO",
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.5372972470902043,
+        "odds": 1.67,
         "liveOdds": true,
         "modelBased": true
       },
@@ -303,17 +331,7 @@
         "pick": "Elche eller uavgjort",
         "market": "Double chance",
         "p": 0.5264026489883641,
-        "odds": 1.81,
-        "liveOdds": true,
-        "modelBased": true
-      },
-      {
-        "match": "ELC–RSO",
-        "key": "o25",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.4932995215861698,
-        "odds": 1.84,
+        "odds": 1.76,
         "liveOdds": true,
         "modelBased": true
       }
@@ -347,5 +365,5 @@
       "hitRate": 27
     }
   },
-  "oddsUpdatedAt": "2026-09-07T09:48:46.591Z"
+  "oddsUpdatedAt": "2026-09-07T18:53:53.786Z"
 }
