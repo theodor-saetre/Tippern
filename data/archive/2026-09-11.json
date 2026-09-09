@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T09:12:44.755Z",
+  "generatedAt": "2026-09-09T09:16:47.254Z",
   "date": "2026-09-11",
   "fixtures": [
     {
@@ -124,11 +124,11 @@
         "btts": 1.3444527837794478
       },
       "odds": {
-        "dcHD": 1.37,
-        "dcAD": 1.76,
-        "pHome": 2.34,
+        "dcHD": 1.36,
+        "dcAD": 1.77,
+        "pHome": 2.31,
         "pDraw": 3.3,
-        "pAway": 3.75,
+        "pAway": 3.8,
         "o15": null,
         "o25": 2.42,
         "o35": null,
@@ -157,7 +157,7 @@
         "pick": "Sevilla FC eller uavgjort",
         "market": "Double chance",
         "p": 0.676193070571123,
-        "odds": 1.37,
+        "odds": 1.36,
         "liveOdds": true,
         "modelBased": true
       },
@@ -167,7 +167,7 @@
         "pick": "Sevilla FC vinner",
         "market": "Full tid",
         "p": 0.4494505331820756,
-        "odds": 2.34,
+        "odds": 2.31,
         "liveOdds": true,
         "modelBased": true
       }
@@ -201,5 +201,5 @@
       "hitRate": 5
     }
   },
-  "oddsUpdatedAt": "2026-09-08T09:12:45.115Z"
+  "oddsUpdatedAt": "2026-09-09T09:16:47.573Z"
 }
