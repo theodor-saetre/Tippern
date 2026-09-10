@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-10T12:24:11.244Z",
+  "generatedAt": "2026-09-10T13:20:52.402Z",
   "date": "2026-09-10",
   "fixtures": [
     {
       "id": 575335,
       "label": "FEN–ROM",
-      "homeName": "Fenerbahçe",
-      "awayName": "Roma",
+      "homeName": "Fenerbahçe SK",
+      "awayName": "AS Roma",
       "kickoff": "2026-09-10T16:45:00Z",
       "competition": "CL",
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for Fenerbahçe SK (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
       "odds": {
-        "dcHD": 1.86,
+        "dcHD": 1.87,
         "dcAD": 1.36,
-        "pHome": 3.7,
+        "pHome": 3.72,
         "pDraw": 3.76,
         "pAway": 2.14,
         "o15": null,
@@ -30,18 +30,31 @@
       "id": 575336,
       "label": "PSV–SHD",
       "homeName": "PSV",
-      "awayName": "Shaktar",
+      "awayName": "FK Shakhtar Donetsk",
       "kickoff": "2026-09-10T16:45:00Z",
       "competition": "CL",
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for FK Shakhtar Donetsk (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
-      "odds": null
+      "odds": {
+        "dcHD": 1.18,
+        "dcAD": 2.84,
+        "pHome": 1.54,
+        "pDraw": 5,
+        "pAway": 6.6,
+        "o15": null,
+        "o25": 1.45,
+        "o35": 2.26,
+        "u35": 1.78,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": []
     },
     {
       "id": 575337,
       "label": "FCB–FK",
-      "homeName": "Bayern",
-      "awayName": "Bodø/Glimt",
+      "homeName": "FC Bayern München",
+      "awayName": "FK Bodø/Glimt",
       "kickoff": "2026-09-10T19:00:00Z",
       "competition": "CL",
       "lambdaH": 5.071974821380594,
@@ -158,38 +171,38 @@
         "u45": 5.16648557764489,
         "btts": 1.2182186686776575
       },
-      "odds": {
-        "dcHD": 1.04,
-        "dcAD": 10.65,
-        "pHome": 1.11,
-        "pDraw": 15.5,
-        "pAway": 34,
-        "o15": null,
-        "o25": 1.13,
-        "o35": null,
-        "u35": null,
-        "u45": 2.16,
-        "btts": null
-      },
+      "odds": null,
       "matchPick": {
         "key": "u45",
         "p": 0.19355517110643783,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
         "odds": null
-      },
-      "oddsHistory": []
+      }
     },
     {
       "id": 575338,
       "label": "MUN–SAB",
-      "homeName": "Man United",
+      "homeName": "Manchester United FC",
       "awayName": "Sabah FK",
       "kickoff": "2026-09-10T19:00:00Z",
       "competition": "CL",
       "noModel": true,
       "noModelReason": "Mangler kamphistorikk for Sabah FK (sannsynligvis nettopp opprykket fra en divisjon som ikke dekkes av gratis-APIet)",
-      "odds": null
+      "odds": {
+        "dcHD": 1.03,
+        "dcAD": 9.82,
+        "pHome": 1.11,
+        "pDraw": 13.5,
+        "pAway": 36,
+        "o15": null,
+        "o25": 1.2,
+        "o35": null,
+        "u35": null,
+        "u45": 1.74,
+        "btts": null
+      },
+      "oddsHistory": []
     },
     {
       "id": 575339,
@@ -314,14 +327,14 @@
       },
       "odds": {
         "dcHD": 1.28,
-        "dcAD": 2.19,
+        "dcAD": 2.2,
         "pHome": 1.82,
-        "pDraw": 4.27,
+        "pDraw": 4.3,
         "pAway": 4.5,
         "o15": null,
         "o25": 1.44,
-        "o35": 2.24,
-        "u35": 1.79,
+        "o35": null,
+        "u35": null,
         "u45": null,
         "btts": null
       },
@@ -337,8 +350,8 @@
     {
       "id": 575340,
       "label": "SLP–RCL",
-      "homeName": "Slavia Praha",
-      "awayName": "RC Lens",
+      "homeName": "SK Slavia Praha",
+      "awayName": "Racing Club de Lens",
       "kickoff": "2026-09-10T19:00:00Z",
       "competition": "CL",
       "lambdaH": 1.7565155538321098,
@@ -437,45 +450,22 @@
         "u45": 4.755520129464238,
         "btts": 1.215773433850069
       },
-      "odds": {
-        "dcHD": 1.59,
-        "dcAD": 1.55,
-        "pHome": 2.8,
-        "pDraw": 3.7,
-        "pAway": 2.68,
-        "o15": null,
-        "o25": 1.71,
-        "o35": null,
-        "u35": null,
-        "u45": null,
-        "btts": null
-      },
+      "odds": null,
       "matchPick": {
         "key": "u45",
         "p": 0.21028194030852754,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
         "odds": null
-      },
-      "oddsHistory": []
+      }
     }
   ],
   "coupon": {
     "dagensSpill": [
       {
-        "match": "SLP–RCL",
-        "key": "o25",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.9609125609346705,
-        "odds": 1.71,
-        "liveOdds": true,
-        "modelBased": true
-      },
-      {
         "match": "FEN–ROM",
         "key": "dcAD",
-        "pick": "Roma eller uavgjort",
+        "pick": "AS Roma eller uavgjort",
         "market": "Double chance",
         "p": 0.7352941176470588,
         "odds": 1.36,
@@ -483,24 +473,34 @@
         "modelBased": false
       },
       {
-        "match": "COM–RBL",
-        "key": "u35",
-        "pick": "Under 3,5 mål",
+        "match": "PSV–SHD",
+        "key": "o25",
+        "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "p": 0.6514893776316548,
-        "odds": 1.79,
+        "p": 0.6896551724137931,
+        "odds": 1.45,
+        "liveOdds": true,
+        "modelBased": false
+      },
+      {
+        "match": "COM–RBL",
+        "key": "pHome",
+        "pick": "Como 1907 vinner",
+        "market": "Full tid",
+        "p": 0.6188478313017876,
+        "odds": 1.82,
         "liveOdds": true,
         "modelBased": true
       },
       {
-        "match": "FCB–FK",
+        "match": "MUN–SAB",
         "key": "u45",
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "p": 0.19355517110643783,
-        "odds": 2.16,
+        "p": 0.5747126436781609,
+        "odds": 1.74,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": false
       }
     ],
     "gambler": {
@@ -528,7 +528,7 @@
         },
         {
           "match": "SLP–RCL",
-          "pick": "Slavia Praha vinner",
+          "pick": "SK Slavia Praha vinner",
           "market": "Full tid",
           "p": 0.07098887929434461,
           "odds": 14.086713439349449
@@ -539,5 +539,5 @@
       "hitRate": 121
     }
   },
-  "oddsUpdatedAt": "2026-09-10T12:24:11.494Z"
+  "oddsUpdatedAt": "2026-09-10T13:20:52.629Z"
 }
