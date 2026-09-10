@@ -123,6 +123,7 @@ const DAGENS_SPILL_MARKETS = {
   pAway: (f) => ({ pick: `${f.awayName} vinner`, market: 'Full tid' }),
   o15:   () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
   o25:   () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
+  o35:   () => ({ pick: 'Over 3,5 mål', market: 'Totalt' }),
   u35:   () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
   u45:   () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
   btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
@@ -169,9 +170,9 @@ function recomputeDagensSpillFromLiveOdds(db) {
 
   const chosen = [];
   for (const c of candidates) {
-    const contradictsChosen = chosen.some((x) => x.match === c.match && COMPLEMENTS[x.key] === c.key);
+    if (chosen.some((x) => x.match === c.match)) continue; // maks ett spill pr kamp
     const contradictsGambler = gamblerKeys.some((g) => g.match === c.match && COMPLEMENTS[g.key] === c.key);
-    if (contradictsChosen || contradictsGambler) continue;
+    if (contradictsGambler) continue;
     chosen.push(c);
     if (chosen.length >= DAGENS_SPILL_COUNT) break;
   }

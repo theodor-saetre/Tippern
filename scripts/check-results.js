@@ -102,6 +102,7 @@ async function processDay(file, now) {
     const hg = mt.score.fullTime.home, ag = mt.score.fullTime.away;
     f.result = { home: hg, away: ag };
     f.outcomes = actualOutcomes(hg, ag);
+    if (f.matchPick) f.matchPick.hit = f.outcomes[f.matchPick.key]; // for visning i tips.html
     resolvedCount++;
   }
 

@@ -68,6 +68,9 @@
   </div>
 </div>
 <script>
+// Ny telleperiode fra da spill-logikken ble lagt om (ett beste spill pr kamp).
+// Eldre tips lå på en annen logikk og blandes ikke inn i regnskapet.
+const TRACKING_START = '2026-09-11';
 const nok = n => (n>=0?'+':'−') + Math.abs(n).toFixed(0) + ' kr';
 
 async function load(){
@@ -80,6 +83,9 @@ async function load(){
   } catch(e) {
     history = [];
   }
+
+  const older = history.filter(h => h.date < TRACKING_START).length;
+  history = history.filter(h => h.date >= TRACKING_START);
 
   if (history.length === 0) {
     tag.textContent = '● Ingen avklarte tips ennå';
@@ -99,7 +105,7 @@ async function load(){
   const totalPL = rows[rows.length-1].balance;
   const roi = totalPL / totalStaked * 100;
 
-  tag.textContent = `● ${history.length} tips à 100 kr`;
+  tag.textContent = `● ${history.length} tips à 100 kr — fra ${TRACKING_START}` + (older ? ` (${older} eldre utelatt)` : '');
   document.getElementById('stats').innerHTML = `
     <div class="headline">
       <div class="num ${totalPL>=0?'pos':'neg'}">${nok(totalPL)}</div>

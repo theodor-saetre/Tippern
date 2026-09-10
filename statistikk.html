@@ -63,6 +63,8 @@
   </div>
 </div>
 <script>
+// Ny telleperiode fra da spill-logikken ble lagt om (ett beste spill pr kamp).
+const TRACKING_START = '2026-09-11';
 const fmtPct = n => n.toFixed(0)+"%";
 
 async function load(){
@@ -76,6 +78,9 @@ async function load(){
     history = [];
   }
 
+  const older = history.filter(h => h.date < TRACKING_START).length;
+  history = history.filter(h => h.date >= TRACKING_START);
+
   if (history.length === 0) {
     tag.textContent = '● Ingen avklarte tips ennå';
     document.getElementById('list').innerHTML = `<div class="empty">Historikken bygger seg opp dag for dag. Kom tilbake etter noen kampdager.</div>`;
@@ -86,7 +91,7 @@ async function load(){
   const hitRate = hits / history.length * 100;
   const avgModelProb = history.reduce((s,h)=>s+h.p, 0) / history.length * 100;
 
-  tag.textContent = `● ${history.length} avklarte tips`;
+  tag.textContent = `● ${history.length} avklarte tips — fra ${TRACKING_START}` + (older ? ` (${older} eldre utelatt)` : '');
   document.getElementById('stats').innerHTML = `
     <div class="stat-grid">
       <div class="stat-box"><div class="num">${fmtPct(hitRate)}</div><div class="cap">Treffprosent</div></div>

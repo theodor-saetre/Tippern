@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { expectedGoals } = require('../lib/ratings');
-const { modelMarkets, comboMarkets, fairOdds } = require('../lib/poisson');
+const { modelMarkets, mostLikelyScore, fairOdds } = require('../lib/poisson');
 const { buildCoupon } = require('../lib/coupon');
 
 const API = 'https://api.football-data.org/v4';
@@ -17,7 +17,7 @@ const KEY = process.env.FOOTBALL_DATA_KEY;
 // Ligaene du følger (football-data competition codes). Begrenset til 2 ligaer
 // slik at vi har råd til å hente BTTS-odds pr kamp også (se fetch-odds.js) uten
 // å sprenge gratiskvoten på The Odds API.
-const COMPETITIONS = ['PL', 'PD']; // Premier League, La Liga
+const COMPETITIONS = ['PL', 'PD', 'CL']; // Premier League, La Liga, Champions League
 
 // Gratisplanen tillater ca. 10 kall/minutt — vent litt mellom hvert kall
 // så vi ikke får 429 (rate limit) midt i en kjøring med mange kamper.
@@ -82,26 +82,42 @@ function recentForm(form) {
   }));
 }
 
-// "Kombi-spill" — to markeder i SAMME kamp kombinert (se comboMarkets i
-// lib/poisson.js for den korrekte utregningen). Disse kan ALDRI få ekte
-// bookmakerodds (The Odds API tilbyr ikke egenkomponerte kombinasjoner) - bare
-// modellens egen, riktig utregnede pris. Holdes bevisst atskilt fra Dagens
-// spill (som kun skal inneholde ekte, hentede priser).
-const COMBO_LABELS = {
-  dcHD_o15: (f) => `${f.homeName} eller uavgjort + Over 1,5 mål`,
-  dcHD_o25: (f) => `${f.homeName} eller uavgjort + Over 2,5 mål`,
-  dcHD_btts: (f) => `${f.homeName} eller uavgjort + Begge lag scorer`,
-  dcAD_o15: (f) => `${f.awayName} eller uavgjort + Over 1,5 mål`,
-  dcAD_o25: (f) => `${f.awayName} eller uavgjort + Over 2,5 mål`,
-  dcAD_btts: (f) => `${f.awayName} eller uavgjort + Begge lag scorer`,
+// Ett anbefalt spill pr kamp — "modellens beste spill". Vurderer HELE bredden av
+// vanlige enkeltmarkeder (seier, dobbel sjanse, over/under mål, begge lag scorer)
+// og velger det med høyest modell-sannsynlighet BLANT dem som har en rimelig odds
+// (fair ≥ 1,40). Terskelen hindrer at near-locks som "under 4,5 mål" (~95%, som
+// bookmakere knapt priser) vinner hver gang. Faller tilbake til høyeste
+// sannsynlighet uansett hvis ingen når terskelen. `odds` fylles av fetch-odds.js.
+const PICK_MARKETS = {
+  pHome: (f) => ({ pick: `${f.homeName} vinner`, market: 'Full tid' }),
+  pAway: (f) => ({ pick: `${f.awayName} vinner`, market: 'Full tid' }),
+  dcHD:  (f) => ({ pick: `${f.homeName} eller uavgjort`, market: 'Double chance' }),
+  dcAD:  (f) => ({ pick: `${f.awayName} eller uavgjort`, market: 'Double chance' }),
+  o15:   () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
+  o25:   () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
+  o35:   () => ({ pick: 'Over 3,5 mål', market: 'Totalt' }),
+  u35:   () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
+  u45:   () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
+  btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
-function bestCombo(fixture, combos) {
-  let best = null;
-  for (const key of Object.keys(COMBO_LABELS)) {
-    const p = combos[key];
-    if (best === null || p > best.p) best = { key, p, pick: COMBO_LABELS[key](fixture), fairOdds: fairOdds(p) };
-  }
-  return best;
+function pickMatchPick(fixture) {
+  const cands = Object.keys(PICK_MARKETS)
+    .map((key) => ({ key, p: fixture.markets[key], ...PICK_MARKETS[key](fixture) }))
+    .filter((c) => c.p != null);
+  const inBand = cands.filter((c) => 1 / c.p >= 1.40);
+  const pool = (inBand.length ? inBand : cands).sort((a, b) => b.p - a.p);
+  return { ...pool[0], odds: null };
+}
+
+// "Dagens spill" = de 3-4 sterkeste "beste spill" på tvers av alle dagens kamper
+// (maks ett pr kamp). fetch-odds.js regner denne om fra EKTE bookmakerodds i
+// vinduet så snart de er hentet - dette er modellens forhåndsforslag.
+const DAGENS_SPILL_COUNT = 4;
+function buildDagensSpill(modelledFixtures) {
+  return modelledFixtures
+    .map((f) => ({ match: f.label, ...f.matchPick }))
+    .sort((a, b) => b.p - a.p)
+    .slice(0, DAGENS_SPILL_COUNT);
 }
 
 async function main() {
@@ -178,11 +194,10 @@ async function main() {
       const lambdaA = home.fallback || away.fallback ? blendA.atk * blendH.def * LEAGUE_AWAY_AVG : eg.lambdaA;
 
       const markets = modelMarkets(lambdaH, lambdaA);
-      const combos = comboMarkets(lambdaH, lambdaA);
       const homeName = mt.homeTeam.shortName || mt.homeTeam.name;
       const awayName = mt.awayTeam.shortName || mt.awayTeam.name;
 
-      fixtures.push({
+      const fx = {
         id: mt.id,
         label: `${mt.homeTeam.tla}–${mt.awayTeam.tla}`,
         homeName,
@@ -197,26 +212,31 @@ async function main() {
         formH: recentForm(home.form),
         formA: recentForm(away.form),
         markets,
-        bestCombo: bestCombo({ homeName, awayName }, combos),
+        predictedScore: mostLikelyScore(lambdaH, lambdaA), // "forventet resultat" - kun for gøy
         fairOdds: {
           pHome: fairOdds(markets.pHome), pDraw: fairOdds(markets.pDraw), pAway: fairOdds(markets.pAway),
           dcHD: fairOdds(markets.dcHD), dcAD: fairOdds(markets.dcAD),
           o15: fairOdds(markets.o15), o25: fairOdds(markets.o25),
+          o35: fairOdds(markets.o35),
           u35: fairOdds(markets.u35), u45: fairOdds(markets.u45),
           btts: fairOdds(markets.btts),
         },
         odds: null, // fylles av fetch-odds.js ~1t før avspark
-      });
+      };
+      fx.matchPick = pickMatchPick(fx); // modellens beste enkeltspill for kampen
+      fixtures.push(fx);
     }
   }
 
-  // buildCoupon() (testet, urørt) forventer at alle kamper har markets - kamper
-  // uten modell (noModel) må holdes utenfor kupongen, men blir værende i
+  // buildCoupon() (testet, urørt) bygger fortsatt "The Gambler". "Dagens spill"
+  // overstyrer vi med de sterkeste "beste spill" pr kamp. Begge trenger markets,
+  // så kamper uten modell (noModel) holdes utenfor - de blir værende i
   // fixtures-lista slik at de fortsatt vises i appen.
-  const coupon = buildCoupon(fixtures.filter((f) => !f.noModel));
-  // dagensSpill er alltid en LISTE (selv med bare ett element her) - fetch-odds.js
-  // fyller den med 3-4 ekte-odds-baserte spill så snart odds er hentet.
-  coupon.dagensSpill = coupon.dagensSpill ? [coupon.dagensSpill] : [];
+  const modelled = fixtures.filter((f) => !f.noModel);
+  const coupon = buildCoupon(modelled);
+  // dagensSpill er alltid en LISTE - fetch-odds.js regner den om fra EKTE
+  // bookmakerodds i vinduet så snart de er hentet.
+  coupon.dagensSpill = buildDagensSpill(modelled);
   // `date` er datoen kampene faktisk spilles (kan være frem i tid) — check-results.js
   // bruker denne til å vite når den skal sjekke resultatet, så den må stemme med ekte kampdato.
   const out = { generatedAt: new Date().toISOString(), date: matchDate, fixtures, coupon };
