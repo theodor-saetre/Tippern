@@ -46,10 +46,79 @@ function mapForm(matches, teamId) {
         ga: isHome ? mt.score.fullTime.away : mt.score.fullTime.home,
         venue: isHome ? 'H' : 'A',
         date: mt.utcDate,
+        oppId: isHome ? mt.awayTeam.id : mt.homeTeam.id, // motstander (for styrkevekting)
+        comp: mt.competition && mt.competition.code,     // hvilken turnering kampen var i (for nivåvekting)
       };
     })
     .sort((a, b) => new Date(a.date) - new Date(b.date)); // eldst → nyest
 }
+
+// --- Motstands- og nivåvekting av form -------------------------------------
+// Modellen brukte tidligere rå mål scoret/sluppet inn, uten å bry seg om HVEM
+// de var mot. Her henter vi ligatabellene og lager en styrkeindeks pr lag, og
+// en grov nivåfaktor pr turnering, så "4 mål hjemme mot et topplag" veier mer
+// enn "4 mål mot et bunnlag i en svakere liga".
+
+// Grov relativ styrke pr turnering (1,00 ≈ snittet av topp-5-ligaene).
+const LEAGUE_TIER = { CL: 1.15, PL: 1.06, PD: 1.03, SA: 1.00, BL1: 1.00, FL1: 0.96 };
+const TIER_DEFAULT = 0.80; // ukjent / lavere divisjon
+
+// Tabeller vi henter for å kunne slå opp motstanderstyrke (ett kall hver, kun
+// rate-limitert – ikke kvote). Dekker der CL-lagenes hjemmeform kommer fra.
+const STANDINGS_COMPS = ['PL', 'PD', 'SA', 'BL1', 'FL1', 'CL'];
+const STRENGTH = new Map(); // teamId -> { atk, def } relativt til turneringssnitt (1,00 = snitt)
+
+async function fetchStrengthIndex() {
+  for (const comp of STANDINGS_COMPS) {
+    let table;
+    try {
+      const data = await fdFetch(`/competitions/${comp}/standings`);
+      const total = (data.standings || []).find((s) => s.type === 'TOTAL') || (data.standings || [])[0];
+      table = total && total.table;
+    } catch (e) {
+      console.warn(`Tabell mangler for ${comp} (${e.message}) – hopper over motstandsvekting der`);
+      continue;
+    }
+    if (!table || !table.length) continue;
+
+    const played = table.reduce((s, t) => s + (t.playedGames || 0), 0);
+    const goals = table.reduce((s, t) => s + (t.goalsFor || 0), 0);
+    const avgGpg = played > 0 ? goals / played : 1.35; // mål scoret pr lag pr kamp
+    for (const t of table) {
+      if (!t.playedGames) continue;
+      const rawAtk = t.goalsFor / t.playedGames / avgGpg;
+      const rawDef = t.goalsAgainst / t.playedGames / avgGpg;
+      // tidlig i sesongen er tabellen støyete – trekk mot 1,00 til det er spilt ~8 kamper
+      const reg = Math.min(t.playedGames, 8) / 8;
+      const clamp = (x) => Math.max(0.6, Math.min(1.55, 1 + (x - 1) * reg));
+      STRENGTH.set(t.team.id, { atk: clamp(rawAtk), def: clamp(rawDef) });
+    }
+  }
+  console.log(`Styrkeindeks bygget for ${STRENGTH.size} lag`);
+}
+
+// Justerer én formliste for motstanderstyrke + liganivå, mot turneringen
+// `targetComp` som kampen faktisk spilles i. Rå form beholdes til visning.
+function adjustForm(form, targetComp) {
+  const toTier = LEAGUE_TIER[targetComp] || 1.00;
+  return form.map((m) => {
+    const opp = STRENGTH.get(m.oppId) || { atk: 1, def: 1 };
+    const fromTier = LEAGUE_TIER[m.comp] || TIER_DEFAULT;
+    const tierRatio = fromTier / toTier; // < 1 ⇒ kampen var på et lavere nivå enn den vi spår
+
+    // Mål scoret mot en lekk defensiv (opp.def > 1) er "billigere"; i en svakere
+    // liga (tierRatio < 1) teller de mindre mot topp-motstand. Halv effekt hver,
+    // så en helt gjennomsnittlig motstander/liga lar tallet stå urørt.
+    const gfAdj = m.gf * (0.5 + 0.5 / opp.def) * (0.5 + 0.5 * tierRatio);
+    // Mål sluppet inn mot et svakt angrep (opp.atk < 1) er verre enn det ser ut;
+    // i en svakere liga ville man sluppet inn flere mot topp-motstand.
+    const gaAdj = m.ga * (0.5 + 0.5 / opp.atk) * (0.5 + 0.5 / tierRatio);
+
+    return { ...m, gf: Math.max(0, Math.min(6, gfAdj)), ga: Math.max(0, Math.min(6, gaAdj)) };
+  });
+}
+
+const avg = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
 
 // Hent siste ~10 ferdigspilte kamper for et lag i EN GITT liga → format ratings.js forventer.
 // Kun samme liga som kampen som analyseres — ellers blandes f.eks. Champions League-motstand
@@ -123,6 +192,8 @@ function buildDagensSpill(modelledFixtures) {
 async function main() {
   if (!KEY) throw new Error('Mangler FOOTBALL_DATA_KEY');
 
+  await fetchStrengthIndex(); // ligatabeller → motstanderstyrke-oppslag
+
   const today = new Date().toISOString().slice(0, 10);
   const fixtures = [];
   const formCache = new Map(); // "teamId:liga" -> form, i tilfelle et lag opptrer flere ganger samme dag
@@ -177,7 +248,11 @@ async function main() {
         continue;
       }
 
-      const eg = expectedGoals(home.form, away.form);
+      // Vekt formen for motstanderstyrke + liganivå FØR modellen regner på den
+      // (lib/ratings.js er urørt - den får bare justerte mål inn).
+      const homeFormAdj = adjustForm(home.form, comp);
+      const awayFormAdj = adjustForm(away.form, comp);
+      const eg = expectedGoals(homeFormAdj, awayFormAdj);
 
       // Usikkerhetsrabatt: hvis formen kom fra en annen liga (nyopprykket lag uten
       // historikk i denne ligaen ennå), trekk ratingen halvveis mot liga-snittet (1,00×)
@@ -213,6 +288,13 @@ async function main() {
         formSource: { home: home.fallback ? 'annen liga' : comp, away: away.fallback ? 'annen liga' : comp },
         formH: recentForm(home.form),
         formA: recentForm(away.form),
+        // Snitt mål siste 5 - rå vs. motstands-/nivåjustert, så det går an å se hva vektingen gjorde.
+        formAdj: {
+          home: { rawGF: avg(home.form.slice(-5).map((m) => m.gf)), rawGA: avg(home.form.slice(-5).map((m) => m.ga)),
+                  adjGF: avg(homeFormAdj.slice(-5).map((m) => m.gf)), adjGA: avg(homeFormAdj.slice(-5).map((m) => m.ga)) },
+          away: { rawGF: avg(away.form.slice(-5).map((m) => m.gf)), rawGA: avg(away.form.slice(-5).map((m) => m.ga)),
+                  adjGF: avg(awayFormAdj.slice(-5).map((m) => m.gf)), adjGA: avg(awayFormAdj.slice(-5).map((m) => m.ga)) },
+        },
         markets,
         predictedScore: mostLikelyScore(lambdaH, lambdaA), // "forventet resultat" - kun for gøy
         fairOdds: {

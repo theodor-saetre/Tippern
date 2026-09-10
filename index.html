@@ -323,6 +323,10 @@ function render(id){
   const edge = (mpLive && mpFair) ? (mpLive/mpFair - 1) * 100 : null;
   const valueTag = (edge !== null && edge > 0) ? `<span class="value-tag">+${edge.toFixed(0)}%</span>` : '';
   const ps = f.predictedScore;
+  const fa = f.formAdj;
+  const faRow = (name, s) => `<div class="prow">
+      <div class="market">${name}<small>scoret ${s.rawGF.toFixed(1)} → <b style="color:var(--chalk)">${s.adjGF.toFixed(1)}</b> · sluppet inn ${s.rawGA.toFixed(1)} → <b style="color:var(--chalk)">${s.adjGA.toFixed(1)}</b></small></div>
+      <div class="modelprob"></div><div class="oddscell"></div></div>`;
   document.getElementById('modelCard').innerHTML = `
     <h2>Modell — styrkejustert forventet mål (Poisson)${live?' · ferske odds hentet':''}</h2>
     <div class="model-grid">
@@ -339,6 +343,8 @@ function render(id){
           ${mpLive ? `<div class="live">bookmaker <b>${fmtOdds(mpLive)}</b>${valueTag}</div>` : (live ? `<div class="live">bookmaker —</div>` : '')}
         </div>
       </div>
+      ${fa ? `<div class="pgroup">Form vektet for motstand + liganivå <span style="text-transform:none;letter-spacing:0;">— snitt siste 5, rå → justert</span></div>
+      ${faRow(f.homeName, fa.home)}${faRow(f.awayName, fa.away)}` : ''}
       ${ps ? `<div class="pgroup">Forventet resultat <span style="text-transform:none;letter-spacing:0;">— kun for gøy</span></div>
       <div class="prow"><div class="market">${f.homeName} ${ps.home}–${ps.away} ${f.awayName}</div><div class="modelprob">${fmtPct(ps.p)}</div><div class="oddscell"></div></div>` : ''}
     </div>`;
