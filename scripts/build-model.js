@@ -166,8 +166,8 @@ async function main() {
         fixtures.push({
           id: mt.id,
           label: `${mt.homeTeam.tla}–${mt.awayTeam.tla}`,
-          homeName: mt.homeTeam.shortName || mt.homeTeam.name,
-          awayName: mt.awayTeam.shortName || mt.awayTeam.name,
+          homeName: mt.homeTeam.name || mt.homeTeam.shortName || mt.homeTeam.tla,
+          awayName: mt.awayTeam.name || mt.awayTeam.shortName || mt.awayTeam.tla,
           kickoff: mt.utcDate,
           competition: comp,
           noModel: true,
@@ -194,8 +194,10 @@ async function main() {
       const lambdaA = home.fallback || away.fallback ? blendA.atk * blendH.def * LEAGUE_AWAY_AVG : eg.lambdaA;
 
       const markets = modelMarkets(lambdaH, lambdaA);
-      const homeName = mt.homeTeam.shortName || mt.homeTeam.name;
-      const awayName = mt.awayTeam.shortName || mt.awayTeam.name;
+      // Fullt lagnavn (ikke kortform) - siden det bare er ett spill pr kamp nå
+      // skal det være umulig å ta feil av hvilket lag/kamp spillet gjelder.
+      const homeName = mt.homeTeam.name || mt.homeTeam.shortName || mt.homeTeam.tla;
+      const awayName = mt.awayTeam.name || mt.awayTeam.shortName || mt.awayTeam.tla;
 
       const fx = {
         id: mt.id,

@@ -180,6 +180,12 @@ const fmtKickoff = iso => {
   const hh = String(d.getHours()).padStart(2,'0'), mm = String(d.getMinutes()).padStart(2,'0');
   return `${DAYS[d.getDay()]} ${hh}:${mm}`;
 };
+// Kortkode-label ("SEV–VAL") → fullt lagoppsett ("Sevilla FC – Valencia CF"),
+// så du aldri er i tvil om hvilken kamp et spill gjelder.
+const fullMatch = label => {
+  const f = (DATA && DATA.fixtures || []).find(x => x.label === label);
+  return f ? `${f.homeName} – ${f.awayName}` : label;
+};
 
 // Kupongen (lib/coupon.js, testet, urørt) gir bare lesbar tekst tilbake — ikke hvilken
 // markedsnøkkel spillet kom fra. Tolker det heller her ut fra de faste tekstmalene,
@@ -366,12 +372,12 @@ function dagensSpillBody(list){
   return `<div class="pick-sub">${sub}</div>` + list.map(x => {
     if (x.liveOdds) {
       // x.odds ER den ekte prisen her - trygt å vise.
-      return `<div class="selgroup"><div class="selrow"><span class="sname">${x.pick}<small>${x.match} · ${x.market}</small></span><span class="sodds">${fmtOdds(x.odds)}</span></div>
+      return `<div class="selgroup"><div class="selrow"><span class="sname">${x.pick}<small>${fullMatch(x.match)} · ${x.market}</small></span><span class="sodds">${fmtOdds(x.odds)}</span></div>
         <div class="oddnote">Modellens sjanse: ${fmtPct(x.p)}</div></div>`;
     }
     // Ingen ekte odds i vinduet ennå - vis KUN sannsynlighet, ikke noe odds-tall.
     return `<div class="selgroup">
-      <div class="selrow"><span class="sname">${x.pick}<small>${x.match} · ${x.market}</small></span><span class="sodds">${fmtPct(x.p)}</span></div>
+      <div class="selrow"><span class="sname">${x.pick}<small>${fullMatch(x.match)} · ${x.market}</small></span><span class="sodds">${fmtPct(x.p)}</span></div>
       ${liveNote(x)}
     </div>`;
   }).join('');
@@ -394,7 +400,7 @@ function renderCoupon(){
   document.getElementById('gamblerCard').innerHTML = g && g.legs && g.legs.length ? `
     <div class="pick-title">🎲 The Gambler</div>
     <div class="pick-sub">Kveldens ville langskudd — modellens sjanse pr bein, ekte odds når hentet</div>
-    ${g.legs.map(l=>`<div class="selgroup"><div class="selrow"><span class="sname">${l.pick}<small>${l.match} · ${l.market}</small></span><span class="sodds">${fmtPct(l.p)}</span></div>${liveNote(l)}</div>`).join('')}
+    ${g.legs.map(l=>`<div class="selgroup"><div class="selrow"><span class="sname">${l.pick}<small>${fullMatch(l.match)} · ${l.market}</small></span><span class="sodds">${fmtPct(l.p)}</span></div>${liveNote(l)}</div>`).join('')}
     ${combinedLine}
     <div class="chance warn">Modellens ekte samlet sjanse <b>${fmtPct(g.combinedProb)}</b> — treffer ca. 1 av ${g.hitRate}. Derfor er den gøy, ikke smart 😄</div>`
     : `<div class="pick-title">🎲 The Gambler</div><div class="pick-sub">Ikke nok kamper i dag til en combo</div>`;

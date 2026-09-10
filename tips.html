@@ -89,6 +89,8 @@ async function load(){
 
   const byLabel = new Map(data.fixtures.map(f => [f.label, f]));
   const kickoffStr = f => f ? new Date(f.kickoff).toLocaleString('no-NO',{weekday:'short',hour:'2-digit',minute:'2-digit'}) : '';
+  // Kortkode-label ("SEV–VAL") → fullt lagoppsett, så du aldri tar feil av kampen.
+  const fullMatch = label => { const f = byLabel.get(label); return f ? `${f.homeName} – ${f.awayName}` : label; };
 
   // --- Dagens spill: de 3-4 sterkeste (fra data.coupon.dagensSpill) ---
   const dagensSpill = (data.coupon && data.coupon.dagensSpill) || [];
@@ -100,7 +102,7 @@ async function load(){
           ? `<div class="oddsline live"><span>Bookmaker${ds.modelBased === false ? ' · bookmakers snitt' : ''}</span><b>${fmtOdds(ds.odds)}</b></div>`
           : `<div class="oddsline"><span class="muted">Ingen ferske odds ennå</span></div>`;
         return `<div class="card">
-          <div class="match">${ds.match}${ko ? ' · '+ko : ''}</div>
+          <div class="match">${fullMatch(ds.match)}${ko ? ' · '+ko : ''}</div>
           <div class="top"><span class="pick">${ds.pick}</span><span class="prob">${fmtPct(ds.p)}</span></div>
           ${oddsLine}
         </div>`;
@@ -112,9 +114,10 @@ async function load(){
     .slice().sort((a,b)=> new Date(a.kickoff) - new Date(b.kickoff))
     .map(f => {
       const ko = kickoffStr(f);
+      const title = `${f.homeName} – ${f.awayName}`;
       if (!f.matchPick) {
         return `<div class="card">
-          <div class="match">${f.label}${ko ? ' · '+ko : ''}</div>
+          <div class="match">${title}${ko ? ' · '+ko : ''}</div>
           <div class="top"><span class="pick" style="color:var(--chalk-dim);font-weight:400;">Ingen modell tilgjengelig</span></div>
         </div>`;
       }
@@ -126,7 +129,7 @@ async function load(){
       const scoreLine = f.predictedScore
         ? `<div class="oddsline"><span class="muted">Forventet resultat (for gøy)</span><span>${f.homeName} ${f.predictedScore.home}–${f.predictedScore.away} ${f.awayName}</span></div>` : '';
       return `<div class="card">
-        <div class="match">${f.label}${ko ? ' · '+ko : ''}</div>
+        <div class="match">${title}${ko ? ' · '+ko : ''}</div>
         <div class="top"><span class="pick">${mp.pick}</span><span class="prob">${fmtPct(mp.p)}</span></div>
         ${oddsLine}
         ${scoreLine}
