@@ -979,5 +979,23 @@
     "odds": 2.16,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-11",
+    "match": "SEV–VAL",
+    "pick": "Over 2,5 mål",
+    "p": 0.7365918935604552,
+    "odds": 2.36,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-11",
+    "match": "SEV–VAL",
+    "pick": "Sevilla FC vinner",
+    "p": 0.4137841187854928,
+    "odds": 2.06,
+    "hit": true,
+    "source": "gambler"
   }
 ]
