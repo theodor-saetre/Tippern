@@ -925,5 +925,77 @@
     "odds": 2.66,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "FEN–ROM",
+    "pick": "AS Roma eller uavgjort",
+    "p": 0.7352941176470588,
+    "odds": 1.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "PSV–SHD",
+    "pick": "Over 2,5 mål",
+    "p": 0.6944444444444444,
+    "odds": 1.44,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "COM–RBL",
+    "pick": "Under 3,5 mål",
+    "p": 0.6606899849807563,
+    "odds": 1.85,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "MUN–SAB",
+    "pick": "Under 4,5 mål",
+    "p": 0.5649717514124294,
+    "odds": 1.77,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "COM–RBL",
+    "pick": "Como 1907 vinner",
+    "p": 0.61595827751627,
+    "odds": 1.8,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-10",
+    "match": "COM–RBL",
+    "pick": "Over 3,5 mål",
+    "p": 0.33931001501924374,
+    "odds": 2.16,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-11",
+    "match": "SEV–VAL",
+    "pick": "Over 2,5 mål",
+    "p": 0.7365918935604552,
+    "odds": 2.36,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-11",
+    "match": "SEV–VAL",
+    "pick": "Sevilla FC vinner",
+    "p": 0.4137841187854928,
+    "odds": 2.06,
+    "hit": true,
+    "source": "gambler"
   }
 ]
