@@ -87,6 +87,14 @@ async function main() {
     }
   }
 
+  // Fyll inn ekte odds på "modellens beste spill" for HVER kamp - ikke bare de
+  // 3-4 som havner i Dagens spill. Uten dette kan ikke check-results.js spore
+  // treff/bom for kamper som vises på tips.html/i dag men ikke ble valgt inn i
+  // den daglige kupongen (se appendToHistory).
+  for (const f of db.fixtures) {
+    if (f.matchPick && f.odds) f.matchPick.odds = f.odds[f.matchPick.key] ?? f.matchPick.odds;
+  }
+
   // "Dagens spill" fra build-model.js er valgt ut fra modellens EGEN rimelige odds
   // (sirkulært — forteller ingenting om ekte verdi). Nå som vi har ferske bookmaker-
   // odds, plukker vi heller det beste spillet basert på EKTE priser i vinduet.

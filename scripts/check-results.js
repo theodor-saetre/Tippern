@@ -180,8 +180,21 @@ function appendToHistory(day) {
     history.push({ date: day.date, match, pick, p, odds, hit, source });
   };
 
+  const dagensMatches = new Set();
   if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
-    for (const ds of day.coupon.dagensSpill) push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
+    for (const ds of day.coupon.dagensSpill) {
+      push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
+      dagensMatches.add(ds.match);
+    }
+  }
+  // Modellens beste spill for HVER kamp - ikke bare de 3-4 som ble Dagens
+  // spill. Uten dette forsvant tipset for enhver kamp som ikke ble plukket ut,
+  // selv om den var synlig og sporbar (ekte odds) på tips.html/i dag hele dagen.
+  // Hopper over kamper som allerede er dekket via Dagens spill, slik at samme
+  // kamp aldri telles to ganger i regnskapet.
+  for (const f of day.fixtures) {
+    if (!f.matchPick || dagensMatches.has(f.label)) continue;
+    push('matchPick', f.label, f.matchPick.pick, f.matchPick.p, f.matchPick.odds, f.matchPick.hit);
   }
   if (day.coupon && day.coupon.gambler && Array.isArray(day.coupon.gambler.legs)) {
     for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);
