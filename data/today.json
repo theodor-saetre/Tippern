@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T08:58:39.711Z",
+  "generatedAt": "2026-09-12T10:42:28.228Z",
   "date": "2026-09-12",
   "fixtures": [
     {
@@ -119,10 +119,17 @@
         "btts": 0.7512256511697653,
         "noBtts": 0.24877434883023475
       },
+      "matchPick": {
+        "key": "o35",
+        "p": 0.620472072548648,
+        "pick": "Over 3,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
-        "away": 2,
-        "p": 0.07942025794581278
+        "away": 3,
+        "p": 0.07117861552977399
       },
       "fairOdds": {
         "pHome": 4.813678893957402,
@@ -138,24 +145,17 @@
         "btts": 1.3311579529304647
       },
       "odds": {
-        "dcHD": 1.31,
-        "dcAD": 2.04,
-        "pHome": 1.97,
-        "pDraw": 3.95,
+        "dcHD": 1.33,
+        "dcAD": 2.07,
+        "pHome": 1.96,
+        "pDraw": 4.1,
         "pAway": 4.2,
         "o15": null,
-        "o25": 1.86,
+        "o25": 1.78,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o35",
-        "p": 0.620472072548648,
-        "pick": "Over 3,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -276,10 +276,17 @@
         "btts": 0.3812563433549008,
         "noBtts": 0.6187436566450992
       },
+      "matchPick": {
+        "key": "o15",
+        "p": 0.6959041466820483,
+        "pick": "Over 1,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
-        "home": 1,
+        "home": 2,
         "away": 0,
-        "p": 0.15457861882945145
+        "p": 0.1485445244080867
       },
       "fairOdds": {
         "pHome": 1.539974255644779,
@@ -301,18 +308,11 @@
         "pDraw": 4.9,
         "pAway": 6.4,
         "o15": null,
-        "o25": 1.47,
-        "o35": 2.28,
-        "u35": 1.76,
+        "o25": 1.45,
+        "o35": 2.24,
+        "u35": 1.79,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o15",
-        "p": 0.6959041466820483,
-        "pick": "Over 1,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -433,10 +433,17 @@
         "btts": 0.7553583818306905,
         "noBtts": 0.24464161816930952
       },
+      "matchPick": {
+        "key": "o35",
+        "p": 0.6464951414618905,
+        "pick": "Over 3,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
-        "away": 2,
-        "p": 0.07635699494732044
+        "away": 3,
+        "p": 0.07264076673991926
       },
       "fairOdds": {
         "pHome": 5.354145906613361,
@@ -458,18 +465,11 @@
         "pDraw": 3.5,
         "pAway": 3.45,
         "o15": null,
-        "o25": 2.02,
+        "o25": 2,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o35",
-        "p": 0.6464951414618905,
-        "pick": "Over 3,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -590,6 +590,13 @@
         "btts": 0.45193723682926,
         "noBtts": 0.54806276317074
       },
+      "matchPick": {
+        "key": "o15",
+        "p": 0.6832609547041432,
+        "pick": "Over 1,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
         "away": 1,
@@ -613,20 +620,13 @@
         "dcAD": 1.63,
         "pHome": 2.59,
         "pDraw": 3.7,
-        "pAway": 2.9,
+        "pAway": 2.92,
         "o15": null,
         "o25": 1.67,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o15",
-        "p": 0.6832609547041432,
-        "pick": "Over 1,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -747,6 +747,13 @@
         "btts": 0.6709634463604272,
         "noBtts": 0.32903655363957285
       },
+      "matchPick": {
+        "key": "btts",
+        "p": 0.6709634463604272,
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
         "away": 1,
@@ -766,24 +773,17 @@
         "btts": 1.49039415697591
       },
       "odds": {
-        "dcHD": 1.09,
-        "dcAD": 4.88,
-        "pHome": 1.27,
-        "pDraw": 7.5,
+        "dcHD": 1.08,
+        "dcAD": 5.01,
+        "pHome": 1.26,
+        "pDraw": 7.8,
         "pAway": 14,
         "o15": null,
         "o25": 1.4,
-        "o35": 2.11,
+        "o35": 2.12,
         "u35": 1.84,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "btts",
-        "p": 0.6709634463604272,
-        "pick": "Begge lag scorer",
-        "market": "BTTS",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -904,6 +904,13 @@
         "btts": 0.33637110064584475,
         "noBtts": 0.6636288993541553
       },
+      "matchPick": {
+        "key": "dcHD",
+        "p": 0.6310119167806185,
+        "pick": "Tottenham Hotspur FC eller uavgjort",
+        "market": "Double chance",
+        "odds": null
+      },
       "predictedScore": {
         "home": 0,
         "away": 0,
@@ -923,24 +930,17 @@
         "btts": 2.9729070008688727
       },
       "odds": {
-        "dcHD": 1.37,
-        "dcAD": 1.91,
-        "pHome": 2.12,
+        "dcHD": 1.36,
+        "dcAD": 1.92,
+        "pHome": 2.08,
         "pDraw": 3.9,
-        "pAway": 3.75,
+        "pAway": 3.8,
         "o15": null,
         "o25": 1.76,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.6310119167806185,
-        "pick": "Tottenham Hotspur FC eller uavgjort",
-        "market": "Double chance",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -1061,10 +1061,17 @@
         "btts": 0.19477651488368874,
         "noBtts": 0.8052234851163113
       },
+      "matchPick": {
+        "key": "pAway",
+        "p": 0.5328782681674545,
+        "pick": "Arsenal FC vinner",
+        "market": "Full tid",
+        "odds": null
+      },
       "predictedScore": {
         "home": 0,
-        "away": 0,
-        "p": 0.2592219117235062
+        "away": 1,
+        "p": 0.25309362919206346
       },
       "fairOdds": {
         "pHome": 9.810488747476665,
@@ -1091,13 +1098,6 @@
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "pAway",
-        "p": 0.5328782681674545,
-        "pick": "Arsenal FC vinner",
-        "market": "Full tid",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -1212,10 +1212,17 @@
         "btts": 0.6112660577815539,
         "noBtts": 0.38873394221844615
       },
+      "matchPick": {
+        "key": "o25",
+        "p": 0.6276415859228139,
+        "pick": "Over 2,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
-        "away": 1,
-        "p": 0.1066661412634707
+        "away": 2,
+        "p": 0.09836108968334087
       },
       "fairOdds": {
         "pHome": 5.209286007749807,
@@ -1232,23 +1239,16 @@
       },
       "odds": {
         "dcHD": 1.57,
-        "dcAD": 1.58,
-        "pHome": 2.76,
+        "dcAD": 1.57,
+        "pHome": 2.77,
         "pDraw": 3.65,
-        "pAway": 2.78,
+        "pAway": 2.76,
         "o15": null,
         "o25": 1.77,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o25",
-        "p": 0.6276415859228139,
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -1369,6 +1369,13 @@
         "btts": 0.4730585986735236,
         "noBtts": 0.5269414013264764
       },
+      "matchPick": {
+        "key": "o15",
+        "p": 0.6744995402695642,
+        "pick": "Over 1,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 1,
         "away": 1,
@@ -1388,24 +1395,17 @@
         "btts": 2.113903019211663
       },
       "odds": {
-        "dcHD": 1.38,
+        "dcHD": 1.37,
         "dcAD": 1.71,
-        "pHome": 2.4,
+        "pHome": 2.38,
         "pDraw": 3.25,
         "pAway": 3.6,
         "o15": null,
-        "o25": 2.31,
+        "o25": 2.38,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "o15",
-        "p": 0.6744995402695642,
-        "pick": "Over 1,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -1526,6 +1526,13 @@
         "btts": 0.6729587628054043,
         "noBtts": 0.32704123719459566
       },
+      "matchPick": {
+        "key": "u45",
+        "p": 0.6789033397660181,
+        "pick": "Under 4,5 mål",
+        "market": "Totalt",
+        "odds": null
+      },
       "predictedScore": {
         "home": 2,
         "away": 1,
@@ -1556,13 +1563,6 @@
         "u35": null,
         "u45": null,
         "btts": null
-      },
-      "matchPick": {
-        "key": "u45",
-        "p": 0.6789033397660181,
-        "pick": "Under 4,5 mål",
-        "market": "Totalt",
-        "odds": null
       },
       "oddsHistory": []
     },
@@ -1683,6 +1683,13 @@
         "btts": 0.6325873289852164,
         "noBtts": 0.3674126710147836
       },
+      "matchPick": {
+        "key": "btts",
+        "p": 0.6325873289852164,
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "odds": null
+      },
       "predictedScore": {
         "home": 4,
         "away": 1,
@@ -1714,13 +1721,6 @@
         "u45": null,
         "btts": null
       },
-      "matchPick": {
-        "key": "btts",
-        "p": 0.6325873289852164,
-        "pick": "Begge lag scorer",
-        "market": "BTTS",
-        "odds": null
-      },
       "oddsHistory": []
     }
   ],
@@ -1732,7 +1732,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.8189052529670623,
-        "odds": 2.02,
+        "odds": 2,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1742,7 +1742,7 @@
         "pick": "Deportivo Alavés eller uavgjort",
         "market": "Double chance",
         "p": 0.808035112967054,
-        "odds": 1.58,
+        "odds": 1.57,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1762,7 +1762,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.8009942641711807,
-        "odds": 1.86,
+        "odds": 1.78,
         "liveOdds": true,
         "modelBased": true
       }
@@ -1784,24 +1784,24 @@
           "odds": 1.6359488430116085
         },
         {
-          "match": "ATH–ELC",
-          "pick": "Over 3,5 mål",
-          "market": "Totalt",
-          "p": 0.51479756771949,
-          "odds": 1.9425111203029104
-        },
-        {
           "match": "BOU–BRE",
           "pick": "AFC Bournemouth vinner",
           "market": "Full tid",
           "p": 0.49713917128547175,
           "odds": 2.0115091663653497
+        },
+        {
+          "match": "OSA–ESP",
+          "pick": "Begge lag scorer",
+          "market": "BTTS",
+          "p": 0.4730585986735236,
+          "odds": 2.113903019211663
         }
       ],
-      "combinedOdds": 10.344551030440558,
-      "combinedProb": 0.09666925099574977,
-      "hitRate": 10
+      "combinedOdds": 11.257272829525665,
+      "combinedProb": 0.08883146168201521,
+      "hitRate": 11
     }
   },
-  "oddsUpdatedAt": "2026-09-12T08:58:40.244Z"
+  "oddsUpdatedAt": "2026-09-12T10:42:28.741Z"
 }
