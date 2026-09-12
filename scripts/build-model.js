@@ -273,6 +273,9 @@ async function main() {
       // skal det være umulig å ta feil av hvilket lag/kamp spillet gjelder.
       const homeName = mt.homeTeam.name || mt.homeTeam.shortName || mt.homeTeam.tla;
       const awayName = mt.awayTeam.name || mt.awayTeam.shortName || mt.awayTeam.tla;
+      // Regnes ut FØR fixture-objektet, slik at "forventet resultat" kan låses
+      // til en scorelinje som stemmer med akkurat DETTE spillet (se mostLikelyScore).
+      const matchPick = pickMatchPick({ homeName, awayName, markets });
 
       const fx = {
         id: mt.id,
@@ -296,7 +299,10 @@ async function main() {
                   adjGF: avg(awayFormAdj.slice(-5).map((m) => m.gf)), adjGA: avg(awayFormAdj.slice(-5).map((m) => m.ga)) },
         },
         markets,
-        predictedScore: mostLikelyScore(lambdaH, lambdaA), // "forventet resultat" - kun for gøy
+        matchPick, // modellens beste enkeltspill for kampen
+        // "Forventet resultat" - mest sannsynlige scorelinje SOM STEMMER MED spillet
+        // over (kun for gøy, men skal aldri se ut som en selvmotsigelse).
+        predictedScore: mostLikelyScore(lambdaH, lambdaA, matchPick.key),
         fairOdds: {
           pHome: fairOdds(markets.pHome), pDraw: fairOdds(markets.pDraw), pAway: fairOdds(markets.pAway),
           dcHD: fairOdds(markets.dcHD), dcAD: fairOdds(markets.dcAD),
@@ -307,7 +313,6 @@ async function main() {
         },
         odds: null, // fylles av fetch-odds.js ~1t før avspark
       };
-      fx.matchPick = pickMatchPick(fx); // modellens beste enkeltspill for kampen
       fixtures.push(fx);
     }
   }
