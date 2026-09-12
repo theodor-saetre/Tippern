@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { expectedGoals } = require('../lib/ratings');
-const { modelMarkets, mostLikelyScore, fairOdds } = require('../lib/poisson');
+const { modelMarkets, mostLikelyScore, SCORE_CONDITIONS, fairOdds } = require('../lib/poisson');
 const { buildCoupon } = require('../lib/coupon');
 
 const API = 'https://api.football-data.org/v4';
@@ -120,27 +120,21 @@ function adjustForm(form, targetComp) {
 
 const avg = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
 
-// Hent siste ~10 ferdigspilte kamper for et lag i EN GITT liga → format ratings.js forventer.
-// Kun samme liga som kampen som analyseres — ellers blandes f.eks. Champions League-motstand
-// (mye tøffere enn ligahverdagen) inn i formen, og skjevfordreier ratingen.
-// Returnerer også `fallback: true` hvis vi måtte hente fra en annen liga (se main()).
-async function getTeamForm(teamId, competition) {
+// Hent siste ~10 ferdigspilte kamper for et lag, PÅ TVERS AV ALLE turneringer
+// (liga, cup, Champions League osv). Tidligere ble dette filtrert til bare
+// samme turnering som kampen som analyseres, for å unngå å blande inn tøffere/
+// svakere motstand urettferdig - men nå som adjustForm() vekter hvert enkelt
+// formresultat for motstanderstyrke OG liganivå, trenger vi ikke lenger kaste
+// bort ekte, fersk form (f.eks. en god CL-kamp) bare fordi den var i en annen
+// turnering. Ett kall pr lag (var før to ved "fallback").
+async function getTeamForm(teamId) {
   // Uten dateFrom/dateTo ser endpointet ut til å ikke nå tilbake til forrige sesong
   // i sommerpausen (får 0 kamper for et lag som ikke har spilt i ny sesong ennå).
   // Går derfor ~9 måneder tilbake — mer enn nok til å dekke en hel sesong.
   const dateTo = new Date().toISOString().slice(0, 10);
   const dateFrom = new Date(Date.now() - 270 * 24 * 3600 * 1000).toISOString().slice(0, 10);
-  const data = await fdFetch(`/teams/${teamId}/matches?status=FINISHED&competitions=${competition}&dateFrom=${dateFrom}&dateTo=${dateTo}&limit=10`);
-
-  // Nyopprykkede lag har ofte ingen (eller svært få) kamper i den nye ligaen ennå.
-  // Fall da tilbake til laget sine siste kamper uansett liga (typisk fra nivået under),
-  // heller enn å krasje på tom form.
-  if (data.matches.length < 5) {
-    const fallback = await fdFetch(`/teams/${teamId}/matches?status=FINISHED&dateFrom=${dateFrom}&dateTo=${dateTo}&limit=10`);
-    if (fallback.matches.length > data.matches.length) return { form: mapForm(fallback.matches, teamId), fallback: true };
-  }
-
-  return { form: mapForm(data.matches, teamId), fallback: false };
+  const data = await fdFetch(`/teams/${teamId}/matches?status=FINISHED&dateFrom=${dateFrom}&dateTo=${dateTo}&limit=10`);
+  return { form: mapForm(data.matches, teamId) };
 }
 
 // Siste 5 kamper som W/D/L-kuler for frontend (gjenbruker allerede hentet form)
@@ -153,10 +147,13 @@ function recentForm(form) {
 
 // Ett anbefalt spill pr kamp — "modellens beste spill". Vurderer HELE bredden av
 // vanlige enkeltmarkeder (seier, dobbel sjanse, over/under mål, begge lag scorer)
-// og velger det med høyest modell-sannsynlighet BLANT dem som har en rimelig odds
-// (fair ≥ 1,40). Terskelen hindrer at near-locks som "under 4,5 mål" (~95%, som
-// bookmakere knapt priser) vinner hver gang. Faller tilbake til høyeste
-// sannsynlighet uansett hvis ingen når terskelen. `odds` fylles av fetch-odds.js.
+// og velger det med høyest modell-sannsynlighet BLANT dem som (a) har en rimelig
+// odds (fair ≥ 1,40 - hindrer at near-locks som "under 4,5 mål" vinner hver gang,
+// noe bookmakere knapt priser) OG (b) IKKE motsier modellens egen mest sannsynlige
+// scorelinje (`storyScore`, se mostLikelyScore i lib/poisson.js) - f.eks. skal
+// "over 1,5" aldri anbefales hvis modellen egentlig lener mot en 1-0-kamp.
+// Faller tilbake gradvis (dropper først story-kravet, så odds-kravet) hvis
+// ingen kandidat overlever, så vi aldri står helt uten et spill.
 const PICK_MARKETS = {
   pHome: (f) => ({ pick: `${f.homeName} vinner`, market: 'Full tid' }),
   pAway: (f) => ({ pick: `${f.awayName} vinner`, market: 'Full tid' }),
@@ -169,12 +166,16 @@ const PICK_MARKETS = {
   u45:   () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
   btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
 };
-function pickMatchPick(fixture) {
+function pickMatchPick(fixture, storyScore) {
   const cands = Object.keys(PICK_MARKETS)
     .map((key) => ({ key, p: fixture.markets[key], ...PICK_MARKETS[key](fixture) }))
     .filter((c) => c.p != null);
-  const inBand = cands.filter((c) => 1 / c.p >= 1.40);
-  const pool = (inBand.length ? inBand : cands).sort((a, b) => b.p - a.p);
+  const coherent = storyScore
+    ? cands.filter((c) => !SCORE_CONDITIONS[c.key] || SCORE_CONDITIONS[c.key](storyScore.home, storyScore.away))
+    : cands;
+  const storyPool = coherent.length ? coherent : cands;
+  const inBand = storyPool.filter((c) => 1 / c.p >= 1.40);
+  const pool = (inBand.length ? inBand : storyPool).sort((a, b) => b.p - a.p);
   return { ...pool[0], odds: null };
 }
 
@@ -196,12 +197,11 @@ async function main() {
 
   const today = new Date().toISOString().slice(0, 10);
   const fixtures = [];
-  const formCache = new Map(); // "teamId:liga" -> form, i tilfelle et lag opptrer flere ganger samme dag
+  const formCache = new Map(); // teamId -> form, i tilfelle et lag opptrer flere ganger samme dag
 
-  async function cachedTeamForm(teamId, competition) {
-    const key = `${teamId}:${competition}`;
-    if (!formCache.has(key)) formCache.set(key, await getTeamForm(teamId, competition));
-    return formCache.get(key);
+  async function cachedTeamForm(teamId) {
+    if (!formCache.has(teamId)) formCache.set(teamId, await getTeamForm(teamId));
+    return formCache.get(teamId);
   }
 
   // Hent kamper i dag → 21 dager frem for hver liga (ETT kall pr liga uansett vindu-
@@ -223,8 +223,8 @@ async function main() {
   for (const comp of COMPETITIONS) {
     const data = byComp.get(comp).filter((mt) => mt.utcDate.slice(0, 10) === matchDate);
     for (const mt of data) {
-      const home = await cachedTeamForm(mt.homeTeam.id, comp);
-      const away = await cachedTeamForm(mt.awayTeam.id, comp);
+      const home = await cachedTeamForm(mt.homeTeam.id);
+      const away = await cachedTeamForm(mt.awayTeam.id);
 
       // Uten noen kamphistorikk i det hele tatt (verken i denne ligaen eller
       // fallback) kan ikke ratingen regnes - blir NaN/null og krasjer siden.
@@ -249,33 +249,26 @@ async function main() {
       }
 
       // Vekt formen for motstanderstyrke + liganivå FØR modellen regner på den
-      // (lib/ratings.js er urørt - den får bare justerte mål inn).
+      // (lib/ratings.js er urørt - den får bare justerte mål inn). Dette er nå
+      // den ENESTE justeringen for "kampen var på et annet nivå" - den gamle,
+      // grove 50%-rabatten for nyopprykkede/andre-liga-lag er overflødig, siden
+      // adjustForm() allerede vekter hvert enkelt formresultat presist.
       const homeFormAdj = adjustForm(home.form, comp);
       const awayFormAdj = adjustForm(away.form, comp);
       const eg = expectedGoals(homeFormAdj, awayFormAdj);
-
-      // Usikkerhetsrabatt: hvis formen kom fra en annen liga (nyopprykket lag uten
-      // historikk i denne ligaen ennå), trekk ratingen halvveis mot liga-snittet (1,00×)
-      // i stedet for å stole fullt ut på tall fra et annet nivå. Regner derfor om
-      // forventet mål selv her — samme formel som lib/ratings.js sin expectedGoals().
-      const CONFIDENCE = 0.5; // 1 = full tillit til formen, 0 = ignorer den helt
-      const discount = (blend, usedFallback) => usedFallback
-        ? { atk: 1 + (blend.atk - 1) * CONFIDENCE, def: 1 + (blend.def - 1) * CONFIDENCE }
-        : blend;
-      const blendH = discount(eg.blendH, home.fallback);
-      const blendA = discount(eg.blendA, away.fallback);
-      const LEAGUE_HOME_AVG = 1.55, LEAGUE_AWAY_AVG = 1.20; // speiler lib/ratings.js LEAGUE
-      const lambdaH = home.fallback || away.fallback ? blendH.atk * blendA.def * LEAGUE_HOME_AVG : eg.lambdaH;
-      const lambdaA = home.fallback || away.fallback ? blendA.atk * blendH.def * LEAGUE_AWAY_AVG : eg.lambdaA;
+      const { lambdaH, lambdaA, blendH, blendA } = eg;
 
       const markets = modelMarkets(lambdaH, lambdaA);
       // Fullt lagnavn (ikke kortform) - siden det bare er ett spill pr kamp nå
       // skal det være umulig å ta feil av hvilket lag/kamp spillet gjelder.
       const homeName = mt.homeTeam.name || mt.homeTeam.shortName || mt.homeTeam.tla;
       const awayName = mt.awayTeam.name || mt.awayTeam.shortName || mt.awayTeam.tla;
-      // Regnes ut FØR fixture-objektet, slik at "forventet resultat" kan låses
-      // til en scorelinje som stemmer med akkurat DETTE spillet (se mostLikelyScore).
-      const matchPick = pickMatchPick({ homeName, awayName, markets });
+      // Regnes ut FØR fixture-objektet: storyScore er modellens ubegrensede beste
+      // gjetning på scorelinjen ("hvilken vei lener kampen"), og styrer hvilke
+      // spill som i det hele tatt er kandidater (se pickMatchPick). Det viste
+      // "forventet resultat" låses etterpå til akkurat DETTE spillet.
+      const storyScore = mostLikelyScore(lambdaH, lambdaA);
+      const matchPick = pickMatchPick({ homeName, awayName, markets }, storyScore);
 
       const fx = {
         id: mt.id,
@@ -288,7 +281,11 @@ async function main() {
         lambdaA,
         blendH,
         blendA,
-        formSource: { home: home.fallback ? 'annen liga' : comp, away: away.fallback ? 'annen liga' : comp },
+        // Hvilke turneringer formen faktisk kommer fra (kan være flere nå, f.eks. "PL/CL").
+        formSource: {
+          home: [...new Set(home.form.map((m) => m.comp).filter(Boolean))].join('/') || comp,
+          away: [...new Set(away.form.map((m) => m.comp).filter(Boolean))].join('/') || comp,
+        },
         formH: recentForm(home.form),
         formA: recentForm(away.form),
         // Snitt mål siste 5 - rå vs. motstands-/nivåjustert, så det går an å se hva vektingen gjorde.
