@@ -563,7 +563,7 @@
         "p": 0.6432032841307634,
         "pick": "FC Barcelona vinner",
         "market": "Full tid",
-        "odds": 1.21
+        "odds": 1.22
       },
       "predictedScore": {
         "home": 1,
@@ -584,19 +584,37 @@
         "btts": 1.2015154808856368
       },
       "odds": {
-        "dcHD": 6.22,
+        "dcHD": 5.96,
         "dcAD": 1.08,
-        "pHome": 17,
-        "pDraw": 9.8,
-        "pAway": 1.21,
+        "pHome": 16,
+        "pDraw": 9.5,
+        "pAway": 1.22,
         "o15": null,
-        "o25": 1.25,
-        "o35": 1.74,
-        "u35": 2.27,
-        "u45": null,
-        "btts": null
+        "o25": 1.22,
+        "o35": 1.69,
+        "u35": 2.56,
+        "u45": 1.6,
+        "btts": 1.7
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-13T09:53:55.179Z",
+          "odds": {
+            "dcHD": 6.22,
+            "dcAD": 1.08,
+            "pHome": 17,
+            "pDraw": 9.8,
+            "pAway": 1.21,
+            "o15": null,
+            "o25": 1.25,
+            "o35": 1.74,
+            "u35": 2.27,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564668,
@@ -898,11 +916,11 @@
     "dagensSpill": [
       {
         "match": "LEV–FCB",
-        "key": "o35",
-        "pick": "Over 3,5 mål",
-        "market": "Totalt",
-        "p": 0.7739166527778552,
-        "odds": 1.74,
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.8322822434738004,
+        "odds": 1.7,
         "liveOdds": true,
         "modelBased": true
       },
@@ -963,5 +981,5 @@
       "hitRate": 14
     }
   },
-  "oddsUpdatedAt": "2026-09-13T09:53:55.179Z"
+  "oddsUpdatedAt": "2026-09-13T13:29:19.273Z"
 }
