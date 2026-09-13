@@ -287,7 +287,8 @@
         "p": 0.7061087992741986,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -320,7 +321,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564672,
@@ -789,7 +808,8 @@
         "p": 0.7136002366336534,
         "pick": "RC Deportivo La Coruña eller uavgjort",
         "market": "Double chance",
-        "odds": 1.62
+        "odds": 1.62,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -822,7 +842,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564674,
@@ -992,7 +1030,7 @@
         "odds": 1.69,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.69
       },
       {
@@ -1004,7 +1042,7 @@
         "odds": 1.53,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.53
       }
     ],
@@ -1025,7 +1063,7 @@
           "market": "BTTS",
           "p": 0.5390292450483771,
           "odds": 1.8551869108887615,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1043,7 +1081,7 @@
           "market": "Totalt",
           "p": 0.48515243870062286,
           "odds": 2.061207818883249,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.37
         }
       ],
@@ -1055,5 +1093,5 @@
   },
   "oddsUpdatedAt": "2026-09-13T13:29:19.273Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-13T17:01:09.294Z"
+  "resultsCheckedAt": "2026-09-13T19:34:09.046Z"
 }
