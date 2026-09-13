@@ -1087,5 +1087,41 @@
     "odds": 2.56,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-13",
+    "match": "LEV–FCB",
+    "pick": "Begge lag scorer",
+    "p": 0.8322822434738004,
+    "odds": 1.7,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-13",
+    "match": "GET–DEP",
+    "pick": "Over 1,5 mål",
+    "p": 0.7480802255355092,
+    "odds": 1.69,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-13",
+    "match": "MUN–MCI",
+    "pick": "Over 2,5 mål",
+    "p": 0.6975613124605815,
+    "odds": 1.53,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-13",
+    "match": "MUN–MCI",
+    "pick": "Over 3,5 mål",
+    "p": 0.48515243870062286,
+    "odds": 2.37,
+    "hit": false,
+    "source": "gambler"
   }
 ]
