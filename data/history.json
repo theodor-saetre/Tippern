@@ -1123,5 +1123,41 @@
     "odds": 2.37,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-14",
+    "match": "VIL–BET",
+    "pick": "Over 2,5 mål",
+    "p": 0.9630874487016,
+    "odds": 1.64,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-14",
+    "match": "LEE–NEW",
+    "pick": "Leeds United FC eller uavgjort",
+    "p": 0.8005823205633285,
+    "odds": 1.43,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-14",
+    "match": "VIL–BET",
+    "pick": "Villarreal CF vinner",
+    "p": 0.5327282969736371,
+    "odds": 2.04,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-14",
+    "match": "LEE–NEW",
+    "pick": "Leeds United FC vinner",
+    "p": 0.4625109457715127,
+    "odds": 2.36,
+    "hit": true,
+    "source": "gambler"
   }
 ]
