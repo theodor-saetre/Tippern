@@ -124,7 +124,8 @@
         "p": 0.6979165958268746,
         "pick": "RCD Espanyol de Barcelona eller uavgjort",
         "market": "Double chance",
-        "odds": 1.69
+        "odds": 1.69,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564680,
@@ -281,7 +300,8 @@
         "p": 0.664319086977629,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 3,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564681,
@@ -484,7 +522,9 @@
         "p": 0.8118766383192155,
         "odds": 1.82,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.82
       },
       {
         "match": "RAY–ESP",
@@ -494,7 +534,9 @@
         "p": 0.6979165958268746,
         "odds": 1.69,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.69
       },
       {
         "match": "ELC–RMA",
@@ -504,7 +546,9 @@
         "p": 0.6964034678984155,
         "odds": 1.31,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.31
       }
     ],
     "gambler": {
@@ -514,27 +558,36 @@
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5302884263316535,
-          "odds": 1.8857662176744907
+          "odds": 1.8857662176744907,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "ELC–RMA",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.4837297154808344,
-          "odds": 2.067270146937294
+          "odds": 2.067270146937294,
+          "hit": null,
+          "realOdds": 1.86
         },
         {
           "match": "RAY–ESP",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.39471961288650215,
-          "odds": 2.5334439114570686
+          "odds": 2.5334439114570686,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 9.87634786473677,
       "combinedProb": 0.10125200263251892,
-      "hitRate": 10
+      "hitRate": 10,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-15T09:41:38.314Z"
+  "oddsUpdatedAt": "2026-09-15T09:41:38.314Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-09-15T20:30:23.318Z"
 }
