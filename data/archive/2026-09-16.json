@@ -124,7 +124,8 @@
         "p": 0.680945647908383,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564684,
@@ -281,7 +300,8 @@
         "p": 0.6833889076703151,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -301,7 +321,25 @@
         "u45": 1.6110325267046346,
         "btts": 1.4632956268035102
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564685,
@@ -628,7 +666,9 @@
         "p": 0.8789559012349821,
         "odds": 1.89,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.89
       },
       {
         "match": "DEP–SEV",
@@ -638,7 +678,9 @@
         "p": 0.6764399830742682,
         "odds": 1.46,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.46
       },
       {
         "match": "FCB–SAN",
@@ -648,7 +690,9 @@
         "p": 0.22005677957625314,
         "odds": 2.22,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 2.22
       }
     ],
     "gambler": {
@@ -658,34 +702,45 @@
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5746329850459657,
-          "odds": 1.7402412079077023
+          "odds": 1.7402412079077023,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "LEV–ATH",
           "pick": "Levante UD vinner",
           "market": "Full tid",
           "p": 0.4877726102718297,
-          "odds": 2.0501356143033784
+          "odds": 2.0501356143033784,
+          "hit": null,
+          "realOdds": 3.55
         },
         {
           "match": "DEP–SEV",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.44673727727243245,
-          "odds": 2.238452107926899
+          "odds": 2.238452107926899,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "FCB–SAN",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6556850789796461,
-          "odds": 1.5251223980209594
+          "odds": 1.5251223980209594,
+          "hit": null,
+          "realOdds": null
         }
       ],
       "combinedOdds": 12.179923052384337,
       "combinedProb": 0.0821023249243139,
-      "hitRate": 12
+      "hitRate": 12,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-16T09:36:01.477Z"
+  "oddsUpdatedAt": "2026-09-16T09:36:01.477Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-09-16T20:30:23.727Z"
 }
