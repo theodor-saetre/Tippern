@@ -300,7 +300,8 @@
         "p": 0.6409562692197377,
         "pick": "Málaga CF eller uavgjort",
         "market": "Double chance",
-        "odds": 1.98
+        "odds": 1.98,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -333,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -347,7 +366,7 @@
         "odds": 1.34,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.34
       },
       {
@@ -371,7 +390,7 @@
           "market": "BTTS",
           "p": 0.2789174418872629,
           "odds": 3.585290303946625,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -391,6 +410,6 @@
     }
   },
   "oddsUpdatedAt": "2026-09-17T09:44:01.985Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-17T20:37:32.815Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-17T23:10:00.981Z"
 }
