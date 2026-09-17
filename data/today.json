@@ -124,7 +124,8 @@
         "p": 0.6946592071745374,
         "pick": "Real Betis Balompié vinner",
         "market": "Full tid",
-        "odds": 1.69
+        "odds": 1.69,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564683,
@@ -327,7 +346,9 @@
         "p": 0.7611561681817081,
         "odds": 1.34,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.34
       },
       {
         "match": "BET–GET",
@@ -337,7 +358,9 @@
         "p": 0.6946592071745374,
         "odds": 1.69,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.69
       }
     ],
     "gambler": {
@@ -347,20 +370,27 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.2789174418872629,
-          "odds": 3.585290303946625
+          "odds": 3.585290303946625,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "BET–GET",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.07166977485375724,
-          "odds": 13.952883234815628
+          "odds": 13.952883234815628,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 50.02513697388389,
       "combinedProb": 0.01998995026284605,
-      "hitRate": 50
+      "hitRate": 50,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-17T09:44:01.985Z"
+  "oddsUpdatedAt": "2026-09-17T09:44:01.985Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-09-17T20:37:32.815Z"
 }
