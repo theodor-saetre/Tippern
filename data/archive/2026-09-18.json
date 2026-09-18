@@ -124,7 +124,8 @@
         "p": 0.6712376565421121,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564692,
@@ -281,7 +300,8 @@
         "p": 0.6564772643142324,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -327,7 +365,9 @@
         "p": 0.8501675330273879,
         "odds": 1.65,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.65
       },
       {
         "match": "ESP–ELC",
@@ -337,7 +377,9 @@
         "p": 0.5812729808923695,
         "odds": 1.91,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.91
       }
     ],
     "gambler": {
@@ -347,20 +389,27 @@
           "pick": "RCD Espanyol de Barcelona vinner",
           "market": "Full tid",
           "p": 0.5812729808923695,
-          "odds": 1.7203620895380367
+          "odds": 1.7203620895380367,
+          "hit": false,
+          "realOdds": 1.91
         },
         {
           "match": "BRE–CHE",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5229529541681621,
-          "odds": 1.9122179003475661
+          "odds": 1.9122179003475661,
+          "hit": false,
+          "realOdds": 2.23
         }
       ],
       "combinedOdds": 3.2897071826939763,
       "combinedProb": 0.30397842253579826,
-      "hitRate": 3
+      "hitRate": 3,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-18T09:17:31.310Z"
+  "oddsUpdatedAt": "2026-09-18T09:17:31.310Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-18T21:58:48.842Z"
 }
