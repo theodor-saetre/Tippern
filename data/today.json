@@ -302,19 +302,37 @@
         "btts": 1.228155488108977
       },
       "odds": {
-        "dcHD": 1.26,
-        "dcAD": 2.14,
-        "pHome": 1.86,
-        "pDraw": 3.92,
+        "dcHD": 1.27,
+        "dcAD": 2.15,
+        "pHome": 1.87,
+        "pDraw": 3.95,
         "pAway": 4.7,
         "o15": null,
-        "o25": 1.83,
+        "o25": 1.81,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.75
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-19T09:05:13.914Z",
+          "odds": {
+            "dcHD": 1.26,
+            "dcAD": 2.14,
+            "pHome": 1.86,
+            "pDraw": 3.92,
+            "pAway": 4.7,
+            "o15": null,
+            "o25": 1.83,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560586,
@@ -604,18 +622,36 @@
       },
       "odds": {
         "dcHD": 1.21,
-        "dcAD": 2.52,
+        "dcAD": 2.51,
         "pHome": 1.65,
-        "pDraw": 4.52,
+        "pDraw": 4.5,
         "pAway": 5.7,
         "o15": null,
         "o25": 1.7,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.76
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-09-19T09:05:13.914Z",
+          "odds": {
+            "dcHD": 1.21,
+            "dcAD": 2.52,
+            "pHome": 1.65,
+            "pDraw": 4.52,
+            "pAway": 5.7,
+            "o15": null,
+            "o25": 1.7,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560589,
@@ -1398,7 +1434,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.8375251275988315,
-        "odds": 1.83,
+        "odds": 1.81,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1469,5 +1505,5 @@
       "hitRate": 11
     }
   },
-  "oddsUpdatedAt": "2026-09-19T09:05:13.914Z"
+  "oddsUpdatedAt": "2026-09-19T12:43:19.214Z"
 }
