@@ -1560,7 +1560,8 @@
         "p": 0.6376232668939907,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": 1.59
+        "odds": 1.59,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1611,7 +1612,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1649,7 +1668,7 @@
         "odds": 1.32,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.32
       },
       {
@@ -1711,6 +1730,6 @@
     }
   },
   "oddsUpdatedAt": "2026-09-19T18:39:40.999Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-19T18:40:02.293Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-19T23:15:58.675Z"
 }

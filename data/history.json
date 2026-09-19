@@ -1249,5 +1249,59 @@
     "odds": 2.23,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "EVE–IPS",
+    "pick": "Over 2,5 mål",
+    "p": 0.8375251275988315,
+    "odds": 1.81,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "TOT–AVL",
+    "pick": "Aston Villa FC eller uavgjort",
+    "p": 0.7924862212363907,
+    "odds": 2,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "SEV–FCB",
+    "pick": "FC Barcelona vinner",
+    "p": 0.7880971605617731,
+    "odds": 1.32,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "OSA–RAY",
+    "pick": "Rayo Vallecano de Madrid eller uavgjort",
+    "p": 0.7518807807421204,
+    "odds": 1.59,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "NOT–COV",
+    "pick": "Coventry City FC eller uavgjort",
+    "p": 0.583761095525881,
+    "odds": 2.45,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-09-19",
+    "match": "NEW–HUL",
+    "pick": "Begge lag scorer",
+    "p": 0.5524705281906205,
+    "odds": 1.76,
+    "hit": true,
+    "source": "gambler"
   }
 ]
