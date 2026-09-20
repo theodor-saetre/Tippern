@@ -652,7 +652,8 @@
         "p": 0.6537697419577769,
         "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "odds": 1.54
+        "odds": 1.54,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -685,7 +686,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564697,
@@ -1148,7 +1167,8 @@
         "p": 0.7123325071424771,
         "pick": "Real Betis Balompié eller uavgjort",
         "market": "Double chance",
-        "odds": 1.35
+        "odds": 1.35,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1181,7 +1201,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564696,
@@ -1305,7 +1343,8 @@
         "p": 0.7070042524761382,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1338,7 +1377,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564689,
@@ -1521,7 +1578,7 @@
         "odds": 1.37,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.37
       },
       {
@@ -1557,7 +1614,7 @@
           "market": "BTTS",
           "p": 0.6134033613637178,
           "odds": 1.6302486471166395,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1566,7 +1623,7 @@
           "market": "BTTS",
           "p": 0.6039005507506519,
           "odds": 1.655901785081988,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1600,10 +1657,10 @@
       "combinedOdds": 12.705892416218775,
       "combinedProb": 0.07870364136906459,
       "hitRate": 13,
-      "comboHit": false
+      "comboHit": true
     }
   },
   "oddsUpdatedAt": "2026-09-20T13:15:02.262Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-09-20T16:53:40.450Z"
+  "resultsCheckedAt": "2026-09-20T19:06:57.091Z"
 }
