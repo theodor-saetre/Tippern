@@ -1303,5 +1303,77 @@
     "odds": 1.76,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "LEE–CRY",
+    "pick": "Leeds United FC vinner",
+    "p": 0.8567220220615919,
+    "odds": 1.77,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "FUL–MUN",
+    "pick": "Manchester United FC eller uavgjort",
+    "p": 0.8453718807312138,
+    "odds": 1.37,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "MCI–SUN",
+    "pick": "Under 3,5 mål",
+    "p": 0.8043172629574245,
+    "odds": 1.63,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "VAL–RSO",
+    "pick": "Real Sociedad de Fútbol eller uavgjort",
+    "p": 0.7950996881291408,
+    "odds": 1.52,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "GET–MAL",
+    "pick": "Getafe CF vinner",
+    "p": 0.6035164085777462,
+    "odds": 2.1,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "DEP–BET",
+    "pick": "Real Betis Balompié eller uavgjort",
+    "p": 0.7123325071424771,
+    "odds": 1.35,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "GET–MAL",
+    "pick": "Getafe CF vinner",
+    "p": 0.6035164085777462,
+    "odds": 2.1,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-09-20",
+    "match": "MCI–SUN",
+    "pick": "Manchester City FC vinner",
+    "p": 0.5869070976823294,
+    "odds": 1.38,
+    "hit": true,
+    "source": "gambler"
   }
 ]
