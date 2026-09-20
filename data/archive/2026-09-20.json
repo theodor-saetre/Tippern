@@ -124,7 +124,8 @@
         "p": 0.6868976860937065,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560585,
@@ -281,7 +300,8 @@
         "p": 0.5475926781295681,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 3,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560590,
@@ -438,7 +476,8 @@
         "p": 0.5869070976823294,
         "pick": "Manchester City FC vinner",
         "market": "Full tid",
-        "odds": 1.38
+        "odds": 1.38,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -471,7 +510,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 5,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560583,
@@ -752,7 +809,8 @@
         "p": 0.6035164085777462,
         "pick": "Getafe CF vinner",
         "market": "Full tid",
-        "odds": 2.1
+        "odds": 2.1,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -785,7 +843,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564688,
@@ -909,7 +985,8 @@
         "p": 0.5998253348247968,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -929,7 +1006,25 @@
         "u45": 1.284616551107182,
         "btts": 1.6671519889904123
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564695,
@@ -1413,7 +1508,9 @@
         "p": 0.8567220220615919,
         "odds": 1.77,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.77
       },
       {
         "match": "FUL–MUN",
@@ -1423,7 +1520,9 @@
         "p": 0.8453718807312138,
         "odds": 1.37,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.37
       },
       {
         "match": "MCI–SUN",
@@ -1433,7 +1532,9 @@
         "p": 0.8043172629574245,
         "odds": 1.63,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.63
       },
       {
         "match": "VAL–RSO",
@@ -1443,7 +1544,9 @@
         "p": 0.7950996881291408,
         "odds": 1.52,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.52
       }
     ],
     "gambler": {
@@ -1453,41 +1556,54 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6134033613637178,
-          "odds": 1.6302486471166395
+          "odds": 1.6302486471166395,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "FUL–MUN",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6039005507506519,
-          "odds": 1.655901785081988
+          "odds": 1.655901785081988,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "GET–MAL",
           "pick": "Getafe CF vinner",
           "market": "Full tid",
           "p": 0.6035164085777462,
-          "odds": 1.6569557774851749
+          "odds": 1.6569557774851749,
+          "hit": true,
+          "realOdds": 2.1
         },
         {
           "match": "ATL–RMA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5998253348247968,
-          "odds": 1.6671519889904123
+          "odds": 1.6671519889904123,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "MCI–SUN",
           "pick": "Manchester City FC vinner",
           "market": "Full tid",
           "p": 0.5869070976823294,
-          "odds": 1.703847174363637
+          "odds": 1.703847174363637,
+          "hit": true,
+          "realOdds": 1.38
         }
       ],
       "combinedOdds": 12.705892416218775,
       "combinedProb": 0.07870364136906459,
-      "hitRate": 13
+      "hitRate": 13,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-09-20T13:15:02.262Z"
+  "oddsUpdatedAt": "2026-09-20T13:15:02.262Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-09-20T16:53:40.450Z"
 }
