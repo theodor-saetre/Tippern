@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T10:17:13.279Z",
+  "generatedAt": "2026-09-22T09:33:08.544Z",
   "date": "2026-10-09",
   "fixtures": [
     {
@@ -124,7 +124,7 @@
         "p": 0.6004070981478445,
         "pick": "RCD Espanyol de Barcelona vinner",
         "market": "Full tid",
-        "odds": 3.1
+        "odds": 3
       },
       "predictedScore": {
         "home": 0,
@@ -145,11 +145,11 @@
         "btts": 2.6374979752928276
       },
       "odds": {
-        "dcHD": 1.5,
-        "dcAD": 1.62,
-        "pHome": 2.68,
+        "dcHD": 1.52,
+        "dcAD": 1.59,
+        "pHome": 2.76,
         "pDraw": 3.4,
-        "pAway": 3.1,
+        "pAway": 3,
         "o15": null,
         "o25": 2.11,
         "o35": null,
@@ -168,7 +168,7 @@
         "pick": "RCD Espanyol de Barcelona eller uavgjort",
         "market": "Double chance",
         "p": 0.8741724232378094,
-        "odds": 1.62,
+        "odds": 1.59,
         "liveOdds": true,
         "modelBased": true
       }
@@ -188,5 +188,5 @@
       "hitRate": 3
     }
   },
-  "oddsUpdatedAt": "2026-09-21T10:17:13.646Z"
+  "oddsUpdatedAt": "2026-09-22T09:33:08.785Z"
 }
