@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T09:54:40.280Z",
+  "generatedAt": "2026-09-26T09:37:24.071Z",
   "date": "2026-10-09",
   "fixtures": [
     {
@@ -147,7 +147,7 @@
       "odds": {
         "dcHD": 1.52,
         "dcAD": 1.54,
-        "pHome": 2.74,
+        "pHome": 2.76,
         "pDraw": 3.4,
         "pAway": 2.83,
         "o15": null,
@@ -188,5 +188,5 @@
       "hitRate": 3
     }
   },
-  "oddsUpdatedAt": "2026-09-25T09:54:40.543Z"
+  "oddsUpdatedAt": "2026-09-26T09:37:24.669Z"
 }
