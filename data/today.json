@@ -124,7 +124,8 @@
         "p": 0.5508172219194788,
         "pick": "Arsenal FC vinner",
         "market": "Full tid",
-        "odds": 1.5
+        "odds": 1.5,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560592,
@@ -1557,7 +1576,9 @@
         "p": 0.836714623155546,
         "odds": 1.65,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.65
       },
       {
         "match": "IPS–FUL",
@@ -1567,7 +1588,9 @@
         "p": 0.8341947424096114,
         "odds": 1.63,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.63
       },
       {
         "match": "RMA–VIL",
@@ -1577,7 +1600,9 @@
         "p": 0.7622907305562836,
         "odds": 1.4,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.4
       },
       {
         "match": "MUN–TOT",
@@ -1587,7 +1612,9 @@
         "p": 0.754042734908611,
         "odds": 1.72,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.72
       }
     ],
     "gambler": {
@@ -1597,34 +1624,45 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5760273150571159,
-          "odds": 1.7360287851989191
+          "odds": 1.7360287851989191,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "FCB–GET",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5573828242444404,
-          "odds": 1.7940990581393474
+          "odds": 1.7940990581393474,
+          "hit": null,
+          "realOdds": 1.83
         },
         {
           "match": "ARS–LEE",
           "pick": "Arsenal FC vinner",
           "market": "Full tid",
           "p": 0.5508172219194788,
-          "odds": 1.8154842662965702
+          "odds": 1.8154842662965702,
+          "hit": true,
+          "realOdds": 1.5
         },
         {
           "match": "AVL–BRE",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.4576098769348683,
-          "odds": 2.185267518039892
+          "odds": 2.185267518039892,
+          "hit": null,
+          "realOdds": null
         }
       ],
       "combinedOdds": 12.356641309107388,
       "combinedProb": 0.08092814017859011,
-      "hitRate": 12
+      "hitRate": 12,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-10T10:54:28.263Z"
+  "oddsUpdatedAt": "2026-10-10T10:54:28.263Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-10-10T14:51:25.067Z"
 }
