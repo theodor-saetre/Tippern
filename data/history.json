@@ -1375,5 +1375,14 @@
     "odds": 1.38,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-09",
+    "match": "MAL–ESP",
+    "pick": "RCD Espanyol de Barcelona eller uavgjort",
+    "p": 0.8741724232378094,
+    "odds": 1.48,
+    "hit": true,
+    "source": "dagensSpill"
   }
 ]
