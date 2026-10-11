@@ -476,7 +476,8 @@
         "p": 0.5567756888686901,
         "pick": "Manchester City FC vinner",
         "market": "Full tid",
-        "odds": 2.17
+        "odds": 2.17,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -527,7 +528,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 0,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564703,
@@ -814,7 +833,8 @@
         "p": 0.6424345754863302,
         "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "odds": 1.81
+        "odds": 1.81,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -847,7 +867,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564701,
@@ -971,7 +1009,8 @@
         "p": 0.6388957336360972,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -1022,7 +1061,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 5,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564705,
@@ -1217,7 +1274,7 @@
         "odds": 1.38,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.38
       },
       {
@@ -1229,7 +1286,7 @@
         "odds": 2.47,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 2.47
       }
     ],
@@ -1241,7 +1298,7 @@
           "market": "BTTS",
           "p": 0.5896124000642042,
           "odds": 1.6960294591686127,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1280,5 +1337,5 @@
   },
   "oddsUpdatedAt": "2026-10-11T15:09:05.955Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-10-11T15:09:41.709Z"
+  "resultsCheckedAt": "2026-10-11T19:37:17.649Z"
 }
