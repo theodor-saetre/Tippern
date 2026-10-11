@@ -1384,5 +1384,50 @@
     "odds": 1.48,
     "hit": true,
     "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-11",
+    "match": "HUL–EVE",
+    "pick": "Hull City AFC eller uavgjort",
+    "p": 0.9223990244269833,
+    "odds": 1.85,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-11",
+    "match": "CRY–NOT",
+    "pick": "Nottingham Forest FC eller uavgjort",
+    "p": 0.9070779706460487,
+    "odds": 1.51,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-11",
+    "match": "LIV–MCI",
+    "pick": "Manchester City FC eller uavgjort",
+    "p": 0.8568427791255349,
+    "odds": 1.38,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-11",
+    "match": "RSO–DEP",
+    "pick": "RC Deportivo La Coruña eller uavgjort",
+    "p": 0.8521329419147919,
+    "odds": 2.47,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-11",
+    "match": "HUL–EVE",
+    "pick": "Hull City AFC vinner",
+    "p": 0.42264536475805947,
+    "odds": 3.95,
+    "hit": false,
+    "source": "gambler"
   }
 ]
