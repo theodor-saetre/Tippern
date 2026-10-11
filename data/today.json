@@ -124,7 +124,8 @@
         "p": 0.5773546352419405,
         "pick": "Everton FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.34
+        "odds": 1.34,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560596,
@@ -281,7 +300,8 @@
         "p": 0.4541436240754444,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560598,
@@ -438,7 +476,7 @@
         "p": 0.5567756888686901,
         "pick": "Manchester City FC vinner",
         "market": "Full tid",
-        "odds": 2.24
+        "odds": 2.17
       },
       "predictedScore": {
         "home": 0,
@@ -459,19 +497,37 @@
         "btts": 2.7672191540784645
       },
       "odds": {
-        "dcHD": 1.81,
-        "dcAD": 1.42,
-        "pHome": 3.37,
-        "pDraw": 3.9,
-        "pAway": 2.24,
+        "dcHD": 1.86,
+        "dcAD": 1.38,
+        "pHome": 3.65,
+        "pDraw": 3.8,
+        "pAway": 2.17,
         "o15": null,
-        "o25": 1.6,
-        "o35": 2.47,
-        "u35": 1.64,
+        "o25": 1.73,
+        "o35": 2.61,
+        "u35": 1.51,
         "u45": null,
-        "btts": null
+        "btts": 1.62
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-11T11:06:57.461Z",
+          "odds": {
+            "dcHD": 1.81,
+            "dcAD": 1.42,
+            "pHome": 3.37,
+            "pDraw": 3.9,
+            "pAway": 2.24,
+            "o15": null,
+            "o25": 1.6,
+            "o35": 2.47,
+            "u35": 1.64,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564703,
@@ -595,7 +651,8 @@
         "p": 0.483250218721951,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -615,7 +672,25 @@
         "u45": 1.128839565322465,
         "btts": 2.069321360360051
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564707,
@@ -918,18 +993,36 @@
       },
       "odds": {
         "dcHD": 1.17,
-        "dcAD": 2.84,
+        "dcAD": 2.86,
         "pHome": 1.56,
-        "pDraw": 4.7,
+        "pDraw": 4.75,
         "pAway": 7.2,
         "o15": null,
-        "o25": 1.74,
+        "o25": 1.71,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.87
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-11T11:06:57.461Z",
+          "odds": {
+            "dcHD": 1.17,
+            "dcAD": 2.84,
+            "pHome": 1.56,
+            "pDraw": 4.7,
+            "pAway": 7.2,
+            "o15": null,
+            "o25": 1.74,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564705,
@@ -1099,7 +1192,9 @@
         "p": 0.9223990244269833,
         "odds": 1.85,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.85
       },
       {
         "match": "CRY–NOT",
@@ -1109,7 +1204,9 @@
         "p": 0.9070779706460487,
         "odds": 1.51,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.51
       },
       {
         "match": "LIV–MCI",
@@ -1117,9 +1214,11 @@
         "pick": "Manchester City FC eller uavgjort",
         "market": "Double chance",
         "p": 0.8568427791255349,
-        "odds": 1.42,
+        "odds": 1.38,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.38
       },
       {
         "match": "RSO–DEP",
@@ -1129,7 +1228,9 @@
         "p": 0.8521329419147919,
         "odds": 2.47,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 2.47
       }
     ],
     "gambler": {
@@ -1139,34 +1240,45 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5896124000642042,
-          "odds": 1.6960294591686127
+          "odds": 1.6960294591686127,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "SAN–VAL",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5586748211824208,
-          "odds": 1.78995000684571
+          "odds": 1.78995000684571,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "ELC–CEL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.483250218721951,
-          "odds": 2.069321360360051
+          "odds": 2.069321360360051,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "HUL–EVE",
           "pick": "Hull City AFC vinner",
           "market": "Full tid",
           "p": 0.42264536475805947,
-          "odds": 2.366049845530527
+          "odds": 2.366049845530527,
+          "hit": false,
+          "realOdds": 3.95
         }
       ],
       "combinedOdds": 14.863672346269796,
       "combinedProb": 0.06727812459152877,
-      "hitRate": 15
+      "hitRate": 15,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-11T11:06:57.461Z"
+  "oddsUpdatedAt": "2026-10-11T15:09:05.955Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-10-11T15:09:41.709Z"
 }
