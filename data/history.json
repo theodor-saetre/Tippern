@@ -1447,5 +1447,50 @@
     "odds": 1.37,
     "hit": false,
     "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-13",
+    "match": "SAB–SLP",
+    "pick": "SK Slavia Praha eller uavgjort",
+    "p": 1.0000000000000002,
+    "odds": 1.34,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-13",
+    "match": "RBL–PSV",
+    "pick": "RB Leipzig vinner",
+    "p": 0.8206707750447093,
+    "odds": 1.65,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-13",
+    "match": "ARS–LIL",
+    "pick": "Under 3,5 mål",
+    "p": 0.795335757649847,
+    "odds": 1.66,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-13",
+    "match": "GAL–FCB",
+    "pick": "FC Barcelona vinner",
+    "p": 0.7113396725193631,
+    "odds": 1.33,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-13",
+    "match": "ARS–LIL",
+    "pick": "Arsenal FC vinner",
+    "p": 0.5580007483175755,
+    "odds": 1.23,
+    "hit": true,
+    "source": "gambler"
   }
 ]
