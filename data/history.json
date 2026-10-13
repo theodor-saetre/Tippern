@@ -1429,5 +1429,23 @@
     "odds": 3.95,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-12",
+    "match": "LEV–SEV",
+    "pick": "Over 2,5 mål",
+    "p": 0.7723027403438333,
+    "odds": 2.23,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-12",
+    "match": "COV–NEW",
+    "pick": "Newcastle United FC eller uavgjort",
+    "p": 0.7396615083035052,
+    "odds": 1.37,
+    "hit": false,
+    "source": "dagensSpill"
   }
 ]
