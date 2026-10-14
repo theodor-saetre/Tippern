@@ -100,7 +100,8 @@
         "p": 0.3837779084499312,
         "pick": "LASK Linz eller uavgjort",
         "market": "Double chance",
-        "odds": 3.35
+        "odds": 3.35,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -133,7 +134,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 6
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575351,
@@ -257,7 +276,8 @@
         "p": 0.7133035128178207,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -290,7 +310,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575352,
@@ -414,7 +452,8 @@
         "p": 0.6290090178582679,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -447,7 +486,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 4
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575353,
@@ -571,7 +628,8 @@
         "p": 0.6154455378835102,
         "pick": "Manchester City FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.41
+        "odds": 1.41,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -604,7 +662,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 4
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575354,
@@ -728,7 +804,8 @@
         "p": 0.6479671699729954,
         "pick": "Borussia Dortmund eller uavgjort",
         "market": "Double chance",
-        "odds": 1.46
+        "odds": 1.46,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -761,7 +838,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575355,
@@ -861,7 +956,8 @@
         "p": 0.5667405373597245,
         "pick": "Aston Villa FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.23
+        "odds": 1.23,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -894,7 +990,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 6,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": false
+      }
     },
     {
       "id": 575356,
@@ -1018,7 +1132,8 @@
         "p": 0.6486707479477225,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1051,7 +1166,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575357,
@@ -1127,7 +1260,8 @@
         "p": 0.42291374730473325,
         "pick": "FK Shakhtar Donetsk eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -1147,7 +1281,25 @@
         "u45": 1.0019387627584695,
         "btts": null
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 575358,
@@ -1247,7 +1399,8 @@
         "p": 0.9962532885359415,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1280,7 +1433,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -1293,7 +1464,9 @@
         "p": 0.9834969894554787,
         "odds": 1.72,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.72
       },
       {
         "match": "SBA–VFB",
@@ -1303,7 +1476,9 @@
         "p": 0.9811921172986509,
         "odds": 1.33,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.33
       },
       {
         "match": "FEY–COM",
@@ -1313,7 +1488,9 @@
         "p": 0.8593921427596927,
         "odds": 1.82,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.82
       },
       {
         "match": "ROM–RMA",
@@ -1323,7 +1500,9 @@
         "p": 0.806914634818006,
         "odds": 2,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2
       }
     ],
     "gambler": {
@@ -1333,41 +1512,54 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6191791601305432,
-          "odds": 1.6150414361316154
+          "odds": 1.6150414361316154,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "MCI–PSG",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.611910632750523,
-          "odds": 1.634225565757903
+          "odds": 1.634225565757903,
+          "hit": true,
+          "realOdds": 2.16
         },
         {
           "match": "ROM–RMA",
           "pick": "AS Roma vinner",
           "market": "Full tid",
           "p": 0.5800717341566389,
-          "odds": 1.7239247167488534
+          "odds": 1.7239247167488534,
+          "hit": false,
+          "realOdds": 3.9
         },
         {
           "match": "AVL–FEN",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5505617621603128,
-          "odds": 1.8163266480333946
+          "odds": 1.8163266480333946,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "BET–FCP",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.42704322580654674,
-          "odds": 2.341683322833006
+          "odds": 2.341683322833006,
+          "hit": true,
+          "realOdds": null
         }
       ],
       "combinedOdds": 19.35245577192801,
       "combinedProb": 0.051673028569870945,
-      "hitRate": 19
+      "hitRate": 19,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-14T09:52:27.026Z"
+  "oddsUpdatedAt": "2026-10-14T09:52:27.026Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-14T21:58:37.418Z"
 }
