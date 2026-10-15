@@ -1,1565 +1,192 @@
 {
-  "generatedAt": "2026-10-14T09:52:26.785Z",
-  "date": "2026-10-14",
+  "generatedAt": "2026-10-15T09:31:00.788Z",
+  "date": "2026-10-16",
   "fixtures": [
     {
-      "id": 575350,
-      "label": "LIN–LIV",
-      "homeName": "LASK Linz",
-      "awayName": "Liverpool FC",
-      "kickoff": "2026-10-14T16:45:00Z",
-      "competition": "CL",
-      "lambdaH": 0,
-      "lambdaA": 0.9576912636132304,
+      "id": 564716,
+      "label": "DEP–LEV",
+      "homeName": "RC Deportivo La Coruña",
+      "awayName": "Levante UD",
+      "kickoff": "2026-10-16T19:00:00Z",
+      "competition": "PD",
+      "lambdaH": 1.490917404662732,
+      "lambdaA": 0.9453271483973995,
       "blendH": {
-        "atk": 0,
-        "def": 0.8153326962131169
+        "atk": 0.7724312577901435,
+        "def": 0.9930444070962932
       },
       "blendA": {
-        "atk": 0.9788348446195749,
-        "def": 0.6704941022607918
+        "atk": 0.7932904289426316,
+        "def": 1.2452657590637384
       },
       "formSource": {
-        "home": "CL",
-        "away": "PL/CL"
-      },
-      "formH": [
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 1,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 3,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 0,
-          "rawGA": 1,
-          "adjGF": 0,
-          "adjGA": 1.0308804204993431
-        },
-        "away": {
-          "rawGF": 1,
-          "rawGA": 0.8,
-          "adjGF": 0.9373600964821339,
-          "adjGA": 0.8279939566693676
-        }
-      },
-      "markets": {
-        "pHome": 0,
-        "pDraw": 0.3837779084499312,
-        "pAway": 0.6162220915500688,
-        "dcHD": 0.3837779084499312,
-        "dcAD": 1,
-        "dcHA": 0.6162220915500688,
-        "o15": 0.24868134145981136,
-        "o25": 0.07268605876816482,
-        "o35": 0.016503010544521277,
-        "o45": 0.0030515069327852183,
-        "u15": 0.7513186585401886,
-        "u25": 0.9273139412318352,
-        "u35": 0.9834969894554787,
-        "u45": 0.9969484930672148,
-        "btts": 0,
-        "noBtts": 1
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.3837779084499312,
-        "pick": "LASK Linz eller uavgjort",
-        "market": "Double chance",
-        "odds": 3.35,
-        "hit": false
-      },
-      "predictedScore": {
-        "home": 0,
-        "away": 0,
-        "p": 0.3837779084499312
-      },
-      "fairOdds": {
-        "pHome": null,
-        "pDraw": 2.6056736929933604,
-        "pAway": 1.6227915449843116,
-        "dcHD": 2.6056736929933604,
-        "dcAD": 1,
-        "o15": 4.021210413816298,
-        "o25": 13.757796432319177,
-        "o35": 60.59500460853691,
-        "u35": 1.0167799299046745,
-        "u45": 1.0030608471290197,
-        "btts": null
-      },
-      "odds": {
-        "dcHD": 3.35,
-        "dcAD": 1.13,
-        "pHome": 8.6,
-        "pDraw": 5.5,
-        "pAway": 1.42,
-        "o15": null,
-        "o25": 1.51,
-        "o35": 2.31,
-        "u35": 1.72,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 3,
-        "away": 6
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": true
-      }
-    },
-    {
-      "id": 575351,
-      "label": "FEY–COM",
-      "homeName": "Feyenoord Rotterdam",
-      "awayName": "Como 1907",
-      "kickoff": "2026-10-14T16:45:00Z",
-      "competition": "CL",
-      "lambdaH": 2.4688449973159723,
-      "lambdaA": 1.0953867623668316,
-      "blendH": {
-        "atk": 1.8267363497043014,
-        "def": 0.7155506110051566
-      },
-      "blendA": {
-        "atk": 1.275692156408181,
-        "def": 0.8719393054901721
-      },
-      "formSource": {
-        "home": "DED/CL",
-        "away": "SA/CL"
+        "home": "PD",
+        "away": "PD"
       },
       "formH": [
         {
           "r": "W",
           "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
           "ga": 1,
           "venue": "A"
         },
         {
           "r": "L",
-          "gf": 1,
-          "ga": 5,
-          "venue": "A"
+          "gf": 0,
+          "ga": 1,
+          "venue": "H"
         },
         {
-          "r": "W",
-          "gf": 7,
-          "ga": 0,
-          "venue": "A"
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
         },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        }
+      ],
+      "formA": [
         {
           "r": "W",
           "gf": 5,
-          "ga": 0,
+          "ga": 2,
           "venue": "H"
         },
         {
-          "r": "W",
-          "gf": 2,
+          "r": "D",
+          "gf": 0,
           "ga": 0,
-          "venue": "H"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
           "venue": "A"
         },
         {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
+          "r": "L",
           "gf": 2,
-          "ga": 1,
+          "ga": 4,
           "venue": "H"
         },
         {
           "r": "L",
-          "gf": 0,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 3.6,
-          "rawGA": 1.2,
-          "adjGF": 3.095773961758616,
-          "adjGA": 1.1137133699633701
-        },
-        "away": {
-          "rawGF": 2,
-          "rawGA": 1,
-          "adjGF": 1.8298683398392679,
-          "adjGA": 1.1867796570161107
-        }
-      },
-      "markets": {
-        "pHome": 0.6642957416544341,
-        "pDraw": 0.19509640110525855,
-        "pAway": 0.14060785724030753,
-        "dcHD": 0.8593921427596927,
-        "dcAD": 0.33570425834556605,
-        "dcHA": 0.8049035988947416,
-        "o15": 0.8806960037805432,
-        "o25": 0.6908526416611742,
-        "o35": 0.4771330374400883,
-        "o45": 0.2866964871821794,
-        "u15": 0.11930399621945675,
-        "u25": 0.3091473583388258,
-        "u35": 0.5228669625599117,
-        "u45": 0.7133035128178207,
-        "btts": 0.6191791601305432,
-        "noBtts": 0.3808208398694568
-      },
-      "matchPick": {
-        "key": "u45",
-        "p": 0.7133035128178207,
-        "pick": "Under 4,5 mål",
-        "market": "Totalt",
-        "odds": null,
-        "hit": false
-      },
-      "predictedScore": {
-        "home": 2,
-        "away": 1,
-        "p": 0.09454159947847308
-      },
-      "fairOdds": {
-        "pHome": 1.5053536208278133,
-        "pDraw": 5.125671177606599,
-        "pAway": 7.111978090178404,
-        "dcHD": 1.1636131519527109,
-        "dcAD": 2.978812377681023,
-        "o15": 1.1354655814348233,
-        "o25": 1.4474866848528978,
-        "o35": 2.095851516309151,
-        "u35": 1.912532387022668,
-        "u45": 1.40192776571311,
-        "btts": 1.6150414361316154
-      },
-      "odds": {
-        "dcHD": 1.82,
-        "dcAD": 1.43,
-        "pHome": 3.31,
-        "pDraw": 4.02,
-        "pAway": 2.22,
-        "o15": null,
-        "o25": 1.5,
-        "o35": 2.31,
-        "u35": 1.72,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 3,
-        "away": 2
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": true
-      }
-    },
-    {
-      "id": 575352,
-      "label": "ROM–RMA",
-      "homeName": "AS Roma",
-      "awayName": "Real Madrid CF",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 2.1542350138814608,
-      "lambdaA": 1.1981838544487937,
-      "blendH": {
-        "atk": 1.3099154687820824,
-        "def": 0.8044658130725717
-      },
-      "blendA": {
-        "atk": 1.2411795866879434,
-        "def": 1.0610066636636213
-      },
-      "formSource": {
-        "home": "SA/CL",
-        "away": "PD/CL"
-      },
-      "formH": [
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "D",
           "gf": 1,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
+          "ga": 3,
           "venue": "A"
         },
         {
           "r": "D",
-          "gf": 2,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
           "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
+          "ga": 3,
           "venue": "H"
         }
       ],
       "formAdj": {
         "home": {
           "rawGF": 1.4,
-          "rawGA": 0.8,
-          "adjGF": 1.3074105828456664,
-          "adjGA": 0.8534498664353365
+          "rawGA": 1.6,
+          "adjGF": 1.3904273504273506,
+          "adjGA": 1.6495797567429034
         },
         "away": {
           "rawGF": 2.2,
-          "rawGA": 1.2,
-          "adjGF": 1.9010240591463918,
-          "adjGA": 1.2921525070899658
-        }
-      },
-      "markets": {
-        "pHome": 0.5800717341566389,
-        "pDraw": 0.22684290066136706,
-        "pAway": 0.19308536518199365,
-        "dcHD": 0.806914634818006,
-        "dcAD": 0.41992826584336074,
-        "dcHA": 0.7731570993386325,
-        "o15": 0.8594089898622466,
-        "o25": 0.6509862079670445,
-        "o35": 0.4312034103719995,
-        "o45": 0.2470024109739901,
-        "u15": 0.14059101013775344,
-        "u25": 0.34901379203295546,
-        "u35": 0.5687965896280005,
-        "u45": 0.7529975890260099,
-        "btts": 0.6290090178582679,
-        "noBtts": 0.3709909821417321
-      },
-      "matchPick": {
-        "key": "btts",
-        "p": 0.6290090178582679,
-        "pick": "Begge lag scorer",
-        "market": "BTTS",
-        "odds": null,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.10208574574304394
-      },
-      "fairOdds": {
-        "pHome": 1.7239247167488534,
-        "pDraw": 4.408337210838298,
-        "pAway": 5.179056419203209,
-        "dcHD": 1.2392884660290528,
-        "dcAD": 2.3813591066361184,
-        "o15": 1.1635903414976942,
-        "o25": 1.5361308546349786,
-        "o35": 2.3190911202147015,
-        "u35": 1.7580977422069486,
-        "u45": 1.3280255004448072,
-        "btts": 1.5898023265309147
-      },
-      "odds": {
-        "dcHD": 2,
-        "dcAD": 1.35,
-        "pHome": 3.9,
-        "pDraw": 4.1,
-        "pAway": 2.02,
-        "o15": null,
-        "o25": 1.44,
-        "o35": 2.18,
-        "u35": 1.83,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 3,
-        "away": 4
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": true
-      }
-    },
-    {
-      "id": 575353,
-      "label": "MCI–PSG",
-      "homeName": "Manchester City FC",
-      "awayName": "Paris Saint-Germain FC",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 2.137908777208175,
-      "lambdaA": 2.1018775507168614,
-      "blendH": {
-        "atk": 1.6158332010992136,
-        "def": 1.2076225424717157
-      },
-      "blendA": {
-        "atk": 1.4504239230350477,
-        "def": 0.8536128508544657
-      },
-      "formSource": {
-        "home": "PL/CL",
-        "away": "FL1/CL"
-      },
-      "formH": [
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 5,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 0,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 6,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 1,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 2.4,
-          "rawGA": 0.6,
-          "adjGF": 2.2344368419894804,
-          "adjGA": 0.7250579740697797
-        },
-        "away": {
-          "rawGF": 2.6,
-          "rawGA": 1,
-          "adjGF": 2.347249977467656,
-          "adjGA": 1.0501414408870473
-        }
-      },
-      "markets": {
-        "pHome": 0.39808032851101394,
-        "pDraw": 0.2173652093724962,
-        "pAway": 0.3845544621164901,
-        "dcHD": 0.6154455378835102,
-        "dcAD": 0.6019196714889863,
-        "dcHA": 0.782634790627504,
-        "o15": 0.9329075565786069,
-        "o25": 0.7949637679609765,
-        "o35": 0.611910632750523,
-        "o45": 0.4178840877632499,
-        "u15": 0.06709244342139309,
-        "u25": 0.20503623203902355,
-        "u35": 0.38808936724947696,
-        "u45": 0.5821159122367501,
-        "btts": 0.7826983433670327,
-        "noBtts": 0.2173016566329673
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.6154455378835102,
-        "pick": "Manchester City FC eller uavgjort",
-        "market": "Double chance",
-        "odds": 1.41,
-        "hit": false
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.07317648378163376
-      },
-      "fairOdds": {
-        "pHome": 2.512055804767887,
-        "pDraw": 4.600552235966666,
-        "pAway": 2.60041190133708,
-        "dcHD": 1.6248391424511022,
-        "dcAD": 1.6613512522796785,
-        "o15": 1.0719175688397802,
-        "o25": 1.2579189647409044,
-        "o35": 1.634225565757903,
-        "u35": 2.5767260955571767,
-        "u45": 1.7178709239497545,
-        "btts": 1.2776314252795953
-      },
-      "odds": {
-        "dcHD": 1.41,
-        "dcAD": 1.91,
-        "pHome": 2.1,
-        "pDraw": 4.3,
-        "pAway": 3.45,
-        "o15": null,
-        "o25": 1.44,
-        "o35": 2.16,
-        "u35": 1.83,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 2,
-        "away": 4
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": true
-      }
-    },
-    {
-      "id": 575354,
-      "label": "FK–BVB",
-      "homeName": "FK Bodø/Glimt",
-      "awayName": "Borussia Dortmund",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 1.4835991140273777,
-      "lambdaA": 1.5413793132158065,
-      "blendH": {
-        "atk": 1.633498211283034,
-        "def": 0.9472775350942518
-      },
-      "blendA": {
-        "atk": 1.3559729999142958,
-        "def": 0.5859576166756478
-      },
-      "formSource": {
-        "home": "CL",
-        "away": "BL1/CL"
-      },
-      "formH": [
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 5,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 5,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "D",
-          "gf": 2,
-          "ga": 2,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1.6,
           "rawGA": 2.4,
-          "adjGF": 1.6016813294232648,
-          "adjGA": 2.246990907845632
-        },
-        "away": {
-          "rawGF": 2.4,
-          "rawGA": 1.2,
-          "adjGF": 2.2827112256835287,
-          "adjGA": 1.2465085285065072
+          "adjGF": 2.241291048133154,
+          "adjGA": 2.25571148578832
         }
       },
       "markets": {
-        "pHome": 0.3520328300270047,
-        "pDraw": 0.27061869416041373,
-        "pAway": 0.37734847581258174,
-        "dcHD": 0.6226515241874184,
-        "dcAD": 0.6479671699729954,
-        "dcHA": 0.7293813058395864,
-        "o15": 0.8189870862205058,
-        "o25": 0.582382263363868,
-        "o35": 0.3583633516626141,
-        "o45": 0.18895025786491676,
-        "u15": 0.18101291377949424,
-        "u25": 0.417617736636132,
-        "u35": 0.6416366483373859,
-        "u45": 0.8110497421350833,
-        "btts": 0.6220889108454857,
-        "noBtts": 0.3779110891545143
+        "pHome": 0.4828961990275415,
+        "pDraw": 0.29374170303844815,
+        "pAway": 0.22336209793401052,
+        "dcHD": 0.7766379020659897,
+        "dcAD": 0.5171038009724587,
+        "dcHA": 0.7062582969615521,
+        "o15": 0.7153968810455911,
+        "o25": 0.43973123451814244,
+        "o35": 0.22888587091059143,
+        "o45": 0.10046815375387139,
+        "u15": 0.28460311895440893,
+        "u25": 0.5602687654818576,
+        "u35": 0.7711141290894086,
+        "u45": 0.8995318462461286,
+        "btts": 0.4898002270717384,
+        "noBtts": 0.5101997729282616
       },
       "matchPick": {
         "key": "dcAD",
-        "p": 0.6479671699729954,
-        "pick": "Borussia Dortmund eller uavgjort",
+        "p": 0.5171038009724587,
+        "pick": "Levante UD eller uavgjort",
         "market": "Double chance",
-        "odds": 1.46,
-        "hit": false
+        "odds": 1.84
       },
       "predictedScore": {
         "home": 1,
         "away": 1,
-        "p": 0.12547974367065742
+        "p": 0.13933711719617314
       },
       "fairOdds": {
-        "pHome": 2.840644152203899,
-        "pDraw": 3.695236218260788,
-        "pAway": 2.650070330472652,
-        "dcHD": 1.606034774113874,
-        "dcAD": 1.543288065106255,
-        "o15": 1.221020473735233,
-        "o25": 1.7170852598153519,
-        "o35": 2.7904639114477954,
-        "u35": 1.5585144685722179,
-        "u45": 1.2329699993091747,
-        "btts": 1.6074872619749685
+        "pHome": 2.0708384162348024,
+        "pDraw": 3.4043514749729256,
+        "pAway": 4.4770353128373515,
+        "dcHD": 1.2876013356286486,
+        "dcAD": 1.9338477074030649,
+        "o15": 1.3978254958820147,
+        "o25": 2.2741163726879674,
+        "o35": 4.368989645457955,
+        "u35": 1.2968248956621735,
+        "u45": 1.111689379506839,
+        "btts": 2.041648706409308
       },
       "odds": {
-        "dcHD": 1.78,
-        "dcAD": 1.46,
-        "pHome": 3.15,
-        "pDraw": 4.1,
-        "pAway": 2.26,
+        "dcHD": 1.35,
+        "dcAD": 1.84,
+        "pHome": 2.17,
+        "pDraw": 3.6,
+        "pAway": 3.75,
         "o15": null,
-        "o25": 1.38,
-        "o35": 2.01,
-        "u35": 1.93,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 1,
-        "away": 0
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": false,
-        "o25": false,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": false
-      }
-    },
-    {
-      "id": 575355,
-      "label": "AVL–FEN",
-      "homeName": "Aston Villa FC",
-      "awayName": "Fenerbahçe SK",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 1.1659621709192443,
-      "lambdaA": 1.499819335437385,
-      "blendH": {
-        "atk": 1.0762446859420514,
-        "def": 1.532931835069113
-      },
-      "blendA": {
-        "atk": 0.8153326962131169,
-        "def": 0.6989429713180296
-      },
-      "formSource": {
-        "home": "PL/CL",
-        "away": "CL"
-      },
-      "formH": [
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "D",
-          "gf": 2,
-          "ga": 2,
-          "venue": "H"
-        }
-      ],
-      "formA": [
-        {
-          "r": "D",
-          "gf": 1,
-          "ga": 1,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1.8,
-          "rawGA": 1.6,
-          "adjGF": 1.778724152056101,
-          "adjGA": 1.8207382268741141
-        },
-        "away": {
-          "rawGF": 1,
-          "rawGA": 1,
-          "adjGF": 1.0308804204993431,
-          "adjGA": 1.0308804204993431
-        }
-      },
-      "markets": {
-        "pHome": 0.2792486125651894,
-        "pDraw": 0.2874919247945351,
-        "pAway": 0.4332594626402749,
-        "dcHD": 0.5667405373597245,
-        "dcAD": 0.7207513874348099,
-        "dcHA": 0.7125080752054642,
-        "o15": 0.7608731717349236,
-        "o25": 0.4979560692812122,
-        "o35": 0.27837825214634104,
-        "o45": 0.13204163111526707,
-        "u15": 0.23912682826507636,
-        "u25": 0.5020439307187878,
-        "u35": 0.721621747853659,
-        "u45": 0.867958368884733,
-        "btts": 0.5505617621603128,
-        "noBtts": 0.44943823783968717
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.5667405373597245,
-        "pick": "Aston Villa FC eller uavgjort",
-        "market": "Double chance",
-        "odds": 1.23,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.13742568592297175
-      },
-      "fairOdds": {
-        "pHome": 3.581038383016332,
-        "pDraw": 3.4783585685569447,
-        "pAway": 2.3080857689893697,
-        "dcHD": 1.7644758651969776,
-        "dcAD": 1.3874409642956773,
-        "o15": 1.3142794846082237,
-        "o25": 2.008209281279524,
-        "o35": 3.5922346386251056,
-        "u35": 1.385767547852223,
-        "u45": 1.1521289912613337,
-        "btts": 1.8163266480333946
-      },
-      "odds": {
-        "dcHD": 1.23,
-        "dcAD": 2.33,
-        "pHome": 1.74,
-        "pDraw": 4.21,
-        "pAway": 5.2,
-        "o15": null,
-        "o25": 1.63,
+        "o25": 2.04,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
       },
-      "oddsHistory": [],
-      "result": {
-        "home": 6,
-        "away": 0
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": false
-      }
-    },
-    {
-      "id": 575356,
-      "label": "BET–FCP",
-      "homeName": "Real Betis Balompié",
-      "awayName": "FC Porto",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 1.3299144967620322,
-      "lambdaA": 2.003573939384524,
-      "blendH": {
-        "atk": 1.3995251633047945,
-        "def": 0.9536667219626177
-      },
-      "blendA": {
-        "atk": 1.7507635644987425,
-        "def": 0.6130717583695473
-      },
-      "formSource": {
-        "home": "PD/CL",
-        "away": "PPL/CL"
-      },
-      "formH": [
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 1,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 5,
-          "ga": 2,
-          "venue": "H"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "A"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 2.4,
-          "rawGA": 1.2,
-          "adjGF": 2.149052469815689,
-          "adjGA": 1.3832058213664027
-        },
-        "away": {
-          "rawGF": 2.2,
-          "rawGA": 1.2,
-          "adjGF": 1.865217391304348,
-          "adjGA": 1.3732822085889569
-        }
-      },
-      "markets": {
-        "pHome": 0.24055912965404386,
-        "pDraw": 0.24095900842328016,
-        "pAway": 0.5184818619226765,
-        "dcHD": 0.481518138077324,
-        "dcAD": 0.7594408703459568,
-        "dcHA": 0.7590409915767204,
-        "o15": 0.857785312906769,
-        "o25": 0.6472515426187854,
-        "o35": 0.42704322580654674,
-        "o45": 0.2435277563973227,
-        "u15": 0.14221468709323104,
-        "u25": 0.35274845738121463,
-        "u35": 0.5729567741934533,
-        "u45": 0.7564722436026773,
-        "btts": 0.6486707479477225,
-        "noBtts": 0.3513292520522775
-      },
-      "matchPick": {
-        "key": "btts",
-        "p": 0.6486707479477225,
-        "pick": "Begge lag scorer",
-        "market": "BTTS",
-        "odds": null,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.10739786470372914
-      },
-      "fairOdds": {
-        "pHome": 4.1569821167799095,
-        "pDraw": 4.150083479109243,
-        "pAway": 1.9287077783043727,
-        "dcHD": 2.0767649667215986,
-        "dcAD": 1.3167582086337526,
-        "o15": 1.1657928679278846,
-        "o25": 1.5449943865007896,
-        "o35": 2.341683322833006,
-        "u35": 1.745332361952945,
-        "u45": 1.3219255676024924,
-        "btts": 1.5416141442539533
-      },
-      "odds": {
-        "dcHD": 1.38,
-        "dcAD": 1.85,
-        "pHome": 2.16,
-        "pDraw": 3.8,
-        "pAway": 3.6,
-        "o15": null,
-        "o25": 1.79,
-        "o35": null,
-        "u35": null,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 3,
-        "away": 2
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": true,
-        "u35": false,
-        "u45": false,
-        "btts": true
-      }
-    },
-    {
-      "id": 575357,
-      "label": "SHD–AEK",
-      "homeName": "FK Shakhtar Donetsk",
-      "awayName": "PAE AEK",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 0,
-      "lambdaA": 0.8605870299963176,
-      "blendH": {
-        "atk": 0.7226365032816646,
-        "def": 0.8795867768595041
-      },
-      "blendA": {
-        "atk": 0.8153326962131169,
-        "def": 0
-      },
-      "formSource": {
-        "home": "CL",
-        "away": "CL"
-      },
-      "formH": [
-        {
-          "r": "D",
-          "gf": 1,
-          "ga": 1,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1,
-          "rawGA": 1,
-          "adjGF": 1.0658263305322129,
-          "adjGA": 1.112121212121212
-        },
-        "away": {
-          "rawGF": 1,
-          "rawGA": 0,
-          "adjGF": 1.0308804204993431,
-          "adjGA": 0
-        }
-      },
-      "markets": {
-        "pHome": 0,
-        "pDraw": 0.42291374730473325,
-        "pAway": 0.5770862526952668,
-        "dcHD": 0.42291374730473325,
-        "dcAD": 1,
-        "dcHA": 0.5770862526952668,
-        "o15": 0.2131321669576731,
-        "o25": 0.05652508410770271,
-        "o35": 0.011600409338954948,
-        "o45": 0.0019350112307581636,
-        "u15": 0.7868678330423269,
-        "u25": 0.9434749158922973,
-        "u35": 0.9883995906610451,
-        "u45": 0.9980649887692419,
-        "btts": 0,
-        "noBtts": 1
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.42291374730473325,
-        "pick": "FK Shakhtar Donetsk eller uavgjort",
-        "market": "Double chance",
-        "odds": null,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 0,
-        "away": 0,
-        "p": 0.42291374730473325
-      },
-      "fairOdds": {
-        "pHome": null,
-        "pDraw": 2.3645483420037503,
-        "pAway": 1.7328432194139527,
-        "dcHD": 2.3645483420037503,
-        "dcAD": 1,
-        "o15": 4.691924331621864,
-        "o25": 17.69126071700492,
-        "o35": 86.20385460381414,
-        "u35": 1.0117365582185203,
-        "u45": 1.0019387627584695,
-        "btts": null
-      },
-      "odds": null,
-      "result": {
-        "home": 3,
-        "away": 1
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": false,
-        "u35": false,
-        "u45": true,
-        "btts": true
-      }
-    },
-    {
-      "id": 575358,
-      "label": "SBA–VFB",
-      "homeName": "ŠK Slovan Bratislava",
-      "awayName": "VfB Stuttgart",
-      "kickoff": "2026-10-14T19:00:00Z",
-      "competition": "CL",
-      "lambdaH": 1.3007429240344335,
-      "lambdaA": 6.3761594910358,
-      "blendH": {
-        "atk": 0.6989429713180296,
-        "def": 4.232245833700732
-      },
-      "blendA": {
-        "atk": 1.2554720239121053,
-        "def": 1.2006544420434238
-      },
-      "formSource": {
-        "home": "CL",
-        "away": "BL1/CL"
-      },
-      "formH": [
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 6,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
-          "venue": "A"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1,
-          "rawGA": 6,
-          "adjGF": 1.0308804204993431,
-          "adjGA": 5.351115421920467
-        },
-        "away": {
-          "rawGF": 2,
-          "rawGA": 1,
-          "adjGF": 1.8791125325335376,
-          "adjGA": 1.0710342714574934
-        }
-      },
-      "markets": {
-        "pHome": 0.01550695872559336,
-        "pDraw": 0.027702134862292283,
-        "pAway": 0.9567909064121138,
-        "dcHD": 0.04320909358788564,
-        "dcAD": 0.9844930412744062,
-        "dcHA": 0.9722978651377072,
-        "o15": 0.9962532885359415,
-        "o25": 0.9811921172986509,
-        "o35": 0.9440114768902074,
-        "o45": 0.8726534398538481,
-        "u15": 0.003746711464058472,
-        "u25": 0.018807882701349143,
-        "u35": 0.05598852310979263,
-        "u45": 0.12734656014615187,
-        "btts": 0.7268846890592152,
-        "noBtts": 0.2731153109407848
-      },
-      "matchPick": {
-        "key": "o15",
-        "p": 0.9962532885359415,
-        "pick": "Over 1,5 mål",
-        "market": "Totalt",
-        "odds": null,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 6,
-        "p": 0.059858256433675976
-      },
-      "fairOdds": {
-        "pHome": 64.48717751144565,
-        "pDraw": 36.098300906085925,
-        "pAway": 1.045160435052541,
-        "dcHD": 23.143276494935918,
-        "dcAD": 1.0157512121218453,
-        "o15": 1.003760802104417,
-        "o25": 1.019168399714757,
-        "o35": 1.0593091551113678,
-        "u35": 17.86080332997917,
-        "u45": 7.852587449965902,
-        "btts": 1.3757340263890683
-      },
-      "odds": {
-        "dcHD": 4.01,
-        "dcAD": 1.1,
-        "pHome": 10.5,
-        "pDraw": 6.5,
-        "pAway": 1.32,
-        "o15": null,
-        "o25": 1.33,
-        "o35": 1.97,
-        "u35": 2.06,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 0,
-        "away": 3
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": true,
-        "o25": true,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": false
-      }
+      "oddsHistory": []
     }
   ],
   "coupon": {
     "dagensSpill": [
       {
-        "match": "LIN–LIV",
-        "key": "u35",
-        "pick": "Under 3,5 mål",
-        "market": "Totalt",
-        "p": 0.9834969894554787,
-        "odds": 1.72,
-        "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.72
-      },
-      {
-        "match": "SBA–VFB",
-        "key": "o25",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.9811921172986509,
-        "odds": 1.33,
-        "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.33
-      },
-      {
-        "match": "FEY–COM",
+        "match": "DEP–LEV",
         "key": "dcHD",
-        "pick": "Feyenoord Rotterdam eller uavgjort",
+        "pick": "RC Deportivo La Coruña eller uavgjort",
         "market": "Double chance",
-        "p": 0.8593921427596927,
-        "odds": 1.82,
+        "p": 0.7766379020659897,
+        "odds": 1.35,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.82
-      },
-      {
-        "match": "ROM–RMA",
-        "key": "dcHD",
-        "pick": "AS Roma eller uavgjort",
-        "market": "Double chance",
-        "p": 0.806914634818006,
-        "odds": 2,
-        "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 2
+        "modelBased": true
       }
     ],
     "gambler": {
       "legs": [
         {
-          "match": "FEY–COM",
+          "match": "DEP–LEV",
           "pick": "Begge lag scorer",
           "market": "BTTS",
-          "p": 0.6191791601305432,
-          "odds": 1.6150414361316154,
-          "hit": true,
-          "realOdds": null
-        },
-        {
-          "match": "MCI–PSG",
-          "pick": "Over 3,5 mål",
-          "market": "Totalt",
-          "p": 0.611910632750523,
-          "odds": 1.634225565757903,
-          "hit": true,
-          "realOdds": 2.16
-        },
-        {
-          "match": "ROM–RMA",
-          "pick": "AS Roma vinner",
-          "market": "Full tid",
-          "p": 0.5800717341566389,
-          "odds": 1.7239247167488534,
-          "hit": false,
-          "realOdds": 3.9
-        },
-        {
-          "match": "AVL–FEN",
-          "pick": "Begge lag scorer",
-          "market": "BTTS",
-          "p": 0.5505617621603128,
-          "odds": 1.8163266480333946,
-          "hit": false,
-          "realOdds": null
-        },
-        {
-          "match": "BET–FCP",
-          "pick": "Over 3,5 mål",
-          "market": "Totalt",
-          "p": 0.42704322580654674,
-          "odds": 2.341683322833006,
-          "hit": true,
-          "realOdds": null
+          "p": 0.4898002270717384,
+          "odds": 2.041648706409308
         }
       ],
-      "combinedOdds": 19.35245577192801,
-      "combinedProb": 0.051673028569870945,
-      "hitRate": 19,
-      "comboHit": false
+      "combinedOdds": 2.041648706409308,
+      "combinedProb": 0.4898002270717384,
+      "hitRate": 2
     }
   },
-  "oddsUpdatedAt": "2026-10-14T09:52:27.026Z",
-  "resultsChecked": true,
-  "resultsCheckedAt": "2026-10-14T21:58:37.418Z"
+  "oddsUpdatedAt": "2026-10-15T09:31:01.094Z"
 }
