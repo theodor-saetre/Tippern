@@ -1573,5 +1573,23 @@
     "odds": 3.9,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-16",
+    "match": "DEP–LEV",
+    "pick": "RC Deportivo La Coruña eller uavgjort",
+    "p": 0.7766379020659897,
+    "odds": 1.38,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-16",
+    "match": "DEP–LEV",
+    "pick": "Begge lag scorer",
+    "p": 0.4898002270717384,
+    "odds": 1.73,
+    "hit": true,
+    "source": "gambler"
   }
 ]
