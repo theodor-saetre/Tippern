@@ -124,7 +124,7 @@
         "p": 0.5171038009724587,
         "pick": "Levante UD eller uavgjort",
         "market": "Double chance",
-        "odds": 1.86
+        "odds": 1.81
       },
       "predictedScore": {
         "home": 1,
@@ -145,19 +145,37 @@
         "btts": 2.041648706409308
       },
       "odds": {
-        "dcHD": 1.35,
-        "dcAD": 1.86,
-        "pHome": 2.17,
-        "pDraw": 3.6,
-        "pAway": 3.85,
+        "dcHD": 1.38,
+        "dcAD": 1.81,
+        "pHome": 2.22,
+        "pDraw": 3.63,
+        "pAway": 3.62,
         "o15": null,
-        "o25": 1.98,
+        "o25": 1.92,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.73
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-16T09:24:07.708Z",
+          "odds": {
+            "dcHD": 1.35,
+            "dcAD": 1.86,
+            "pHome": 2.17,
+            "pDraw": 3.6,
+            "pAway": 3.85,
+            "o15": null,
+            "o25": 1.98,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -168,7 +186,7 @@
         "pick": "RC Deportivo La Coruña eller uavgjort",
         "market": "Double chance",
         "p": 0.7766379020659897,
-        "odds": 1.35,
+        "odds": 1.38,
         "liveOdds": true,
         "modelBased": true
       }
@@ -188,5 +206,5 @@
       "hitRate": 2
     }
   },
-  "oddsUpdatedAt": "2026-10-16T09:24:07.708Z"
+  "oddsUpdatedAt": "2026-10-16T17:43:02.419Z"
 }
