@@ -1591,5 +1591,95 @@
     "odds": 1.73,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "MCI–IPS",
+    "pick": "Over 2,5 mål",
+    "p": 0.9186539041419507,
+    "odds": 1.31,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "NEW–AVL",
+    "pick": "Over 2,5 mål",
+    "p": 0.8974586461971226,
+    "odds": 1.55,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "VAL–ATH",
+    "pick": "Athletic Club eller uavgjort",
+    "p": 0.8659759792179346,
+    "odds": 1.45,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "BET–FCB",
+    "pick": "Over 3,5 mål",
+    "p": 0.837621145944119,
+    "odds": 1.58,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "BRE–LIV",
+    "pick": "Begge lag scorer",
+    "p": 0.7015343217867678,
+    "odds": 1.54,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "VIL–ELC",
+    "pick": "Villarreal CF eller uavgjort",
+    "p": 0.6852262963419263,
+    "odds": 1.15,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "MCI–IPS",
+    "pick": "Manchester City FC vinner",
+    "p": 0.6191415920962824,
+    "odds": 1.28,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "VAL–ATH",
+    "pick": "Begge lag scorer",
+    "p": 0.5696962609394136,
+    "odds": 1.89,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "EVE–CHE",
+    "pick": "Everton FC vinner",
+    "p": 0.5642025785898908,
+    "odds": 3.15,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-17",
+    "match": "BRE–LIV",
+    "pick": "Over 3,5 mål",
+    "p": 0.49458412887721886,
+    "odds": 2.46,
+    "hit": false,
+    "source": "gambler"
   }
 ]
