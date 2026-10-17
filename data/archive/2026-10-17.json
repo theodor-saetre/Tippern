@@ -124,7 +124,8 @@
         "p": 0.6475358817143169,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560602,
@@ -806,7 +825,7 @@
         "p": 0.678262670603714,
         "pick": "Aston Villa FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.74
+        "odds": 1.8
       },
       "predictedScore": {
         "home": 2,
@@ -827,19 +846,37 @@
         "btts": 1.1593182379002378
       },
       "odds": {
-        "dcHD": 1.47,
-        "dcAD": 1.74,
-        "pHome": 2.38,
-        "pDraw": 3.85,
-        "pAway": 3.19,
+        "dcHD": 1.43,
+        "dcAD": 1.8,
+        "pHome": 2.26,
+        "pDraw": 3.9,
+        "pAway": 3.35,
         "o15": null,
-        "o25": 1.67,
-        "o35": 2.29,
-        "u35": 1.6,
+        "o25": 1.55,
+        "o35": 2.38,
+        "u35": 1.68,
         "u45": null,
-        "btts": null
+        "btts": 1.47
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T12:30:49.722Z",
+          "odds": {
+            "dcHD": 1.47,
+            "dcAD": 1.74,
+            "pHome": 2.38,
+            "pDraw": 3.85,
+            "pAway": 3.19,
+            "o15": null,
+            "o25": 1.67,
+            "o35": 2.29,
+            "u35": 1.6,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564710,
@@ -963,7 +1000,8 @@
         "p": 0.5246863415138598,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -983,7 +1021,25 @@
         "u45": 1.3987239333159087,
         "btts": 1.8154401523670134
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564708,
@@ -1285,19 +1341,37 @@
         "btts": 1.2166019569504327
       },
       "odds": {
-        "dcHD": 3.1,
-        "dcAD": 1.19,
-        "pHome": 6.4,
-        "pDraw": 6,
+        "dcHD": 3.08,
+        "dcAD": 1.18,
+        "pHome": 6.45,
+        "pDraw": 5.9,
         "pAway": 1.48,
         "o15": null,
-        "o25": 1.22,
-        "o35": 1.57,
-        "u35": 2.38,
+        "o25": 1.25,
+        "o35": 1.58,
+        "u35": 2.3,
         "u45": 1.69,
-        "btts": null
+        "btts": 1.4
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T12:30:49.722Z",
+          "odds": {
+            "dcHD": 3.1,
+            "dcAD": 1.19,
+            "pHome": 6.4,
+            "pDraw": 6,
+            "pAway": 1.48,
+            "o15": null,
+            "o25": 1.22,
+            "o35": 1.57,
+            "u35": 2.38,
+            "u45": 1.69,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564711,
@@ -1467,7 +1541,9 @@
         "p": 0.9186539041419507,
         "odds": 1.31,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.31
       },
       {
         "match": "NEW–AVL",
@@ -1475,9 +1551,11 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.8974586461971226,
-        "odds": 1.67,
+        "odds": 1.55,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.55
       },
       {
         "match": "VAL–ATH",
@@ -1487,7 +1565,9 @@
         "p": 0.8659759792179346,
         "odds": 1.42,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.42
       },
       {
         "match": "BET–FCB",
@@ -1495,9 +1575,11 @@
         "pick": "Over 3,5 mål",
         "market": "Totalt",
         "p": 0.837621145944119,
-        "odds": 1.57,
+        "odds": 1.58,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.58
       }
     ],
     "gambler": {
@@ -1507,41 +1589,54 @@
           "pick": "Manchester City FC vinner",
           "market": "Full tid",
           "p": 0.6191415920962824,
-          "odds": 1.6151394329917517
+          "odds": 1.6151394329917517,
+          "hit": null,
+          "realOdds": 1.28
         },
         {
           "match": "VAL–ATH",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5696962609394136,
-          "odds": 1.75532133272391
+          "odds": 1.75532133272391,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "EVE–CHE",
           "pick": "Everton FC vinner",
           "market": "Full tid",
           "p": 0.5642025785898908,
-          "odds": 1.7724130267169214
+          "odds": 1.7724130267169214,
+          "hit": false,
+          "realOdds": 3.15
         },
         {
           "match": "ESP–ATL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.550830606393814,
-          "odds": 1.8154401523670134
+          "odds": 1.8154401523670134,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "BRE–LIV",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.49458412887721886,
-          "odds": 2.021900707307677
+          "odds": 2.021900707307677,
+          "hit": null,
+          "realOdds": 2.46
         }
       ],
       "combinedOdds": 18.444774301786147,
       "combinedProb": 0.05421589788188204,
-      "hitRate": 18
+      "hitRate": 18,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-17T12:30:49.722Z"
+  "oddsUpdatedAt": "2026-10-17T15:59:59.289Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-10-17T16:00:41.378Z"
 }
