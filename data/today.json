@@ -302,19 +302,37 @@
         "btts": 2.078830302037537
       },
       "odds": {
-        "dcHD": 1.23,
-        "dcAD": 2.47,
+        "dcHD": 1.22,
+        "dcAD": 2.36,
         "pHome": 1.72,
-        "pDraw": 4.3,
-        "pAway": 5.8,
+        "pDraw": 4.2,
+        "pAway": 5.4,
         "o15": null,
         "o25": 1.81,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.83
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T08:57:07.198Z",
+          "odds": {
+            "dcHD": 1.23,
+            "dcAD": 2.47,
+            "pHome": 1.72,
+            "pDraw": 4.3,
+            "pAway": 5.8,
+            "o15": null,
+            "o25": 1.81,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560610,
@@ -459,19 +477,37 @@
         "btts": 1.1599443618699263
       },
       "odds": {
-        "dcHD": 1.1,
-        "dcAD": 4.8,
+        "dcHD": 1.09,
+        "dcAD": 4.62,
         "pHome": 1.28,
-        "pDraw": 7.8,
-        "pAway": 12.5,
+        "pDraw": 7.5,
+        "pAway": 12,
         "o15": null,
         "o25": 1.31,
-        "o35": 1.91,
-        "u35": 2.1,
+        "o35": 1.88,
+        "u35": 2.12,
         "u45": null,
-        "btts": null
+        "btts": 1.7
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T08:57:07.198Z",
+          "odds": {
+            "dcHD": 1.1,
+            "dcAD": 4.8,
+            "pHome": 1.28,
+            "pDraw": 7.8,
+            "pAway": 12.5,
+            "o15": null,
+            "o25": 1.31,
+            "o35": 1.91,
+            "u35": 2.1,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560611,
@@ -595,7 +631,7 @@
         "p": 0.7015343217867678,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": 1.54
       },
       "predictedScore": {
         "home": 1,
@@ -616,19 +652,37 @@
         "btts": 1.425447007999633
       },
       "odds": {
-        "dcHD": 1.5,
-        "dcAD": 1.65,
-        "pHome": 2.52,
-        "pDraw": 3.73,
-        "pAway": 2.96,
+        "dcHD": 1.51,
+        "dcAD": 1.64,
+        "pHome": 2.54,
+        "pDraw": 3.75,
+        "pAway": 2.92,
         "o15": null,
-        "o25": 1.56,
+        "o25": 1.59,
         "o35": 2.46,
         "u35": 1.64,
         "u45": null,
-        "btts": null
+        "btts": 1.54
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T08:57:07.198Z",
+          "odds": {
+            "dcHD": 1.5,
+            "dcAD": 1.65,
+            "pHome": 2.52,
+            "pDraw": 3.73,
+            "pAway": 2.96,
+            "o15": null,
+            "o25": 1.56,
+            "o35": 2.46,
+            "u35": 1.64,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560607,
@@ -1489,5 +1543,5 @@
       "hitRate": 18
     }
   },
-  "oddsUpdatedAt": "2026-10-17T08:57:07.198Z"
+  "oddsUpdatedAt": "2026-10-17T12:30:49.722Z"
 }
