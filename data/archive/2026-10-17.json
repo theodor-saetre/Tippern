@@ -300,7 +300,8 @@
         "p": 0.7104259467127879,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -351,7 +352,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560610,
@@ -475,7 +494,8 @@
         "p": 0.6191415920962824,
         "pick": "Manchester City FC vinner",
         "market": "Full tid",
-        "odds": 1.28
+        "odds": 1.28,
+        "hit": true
       },
       "predictedScore": {
         "home": 3,
@@ -526,7 +546,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560611,
@@ -650,7 +688,8 @@
         "p": 0.7015343217867678,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": 1.54
+        "odds": 1.54,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -701,7 +740,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560607,
@@ -1163,7 +1220,8 @@
         "p": 0.6852262963419263,
         "pick": "Villarreal CF eller uavgjort",
         "market": "Double chance",
-        "odds": 1.15
+        "odds": 1.15,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -1196,7 +1254,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564713,
@@ -1495,7 +1571,7 @@
         "p": 0.659748521863547,
         "pick": "Athletic Club vinner",
         "market": "Full tid",
-        "odds": 2.4
+        "odds": 2.48
       },
       "predictedScore": {
         "home": 0,
@@ -1516,19 +1592,37 @@
         "btts": 1.75532133272391
       },
       "odds": {
-        "dcHD": 1.74,
-        "dcAD": 1.42,
-        "pHome": 3.45,
+        "dcHD": 1.71,
+        "dcAD": 1.45,
+        "pHome": 3.35,
         "pDraw": 3.5,
-        "pAway": 2.4,
+        "pAway": 2.48,
         "o15": null,
-        "o25": 2.24,
+        "o25": 2.2,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.89
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-17T15:59:59.289Z",
+          "odds": {
+            "dcHD": 1.74,
+            "dcAD": 1.42,
+            "pHome": 3.45,
+            "pDraw": 3.5,
+            "pAway": 2.4,
+            "o15": null,
+            "o25": 2.24,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -1542,7 +1636,7 @@
         "odds": 1.31,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.31
       },
       {
@@ -1563,11 +1657,11 @@
         "pick": "Athletic Club eller uavgjort",
         "market": "Double chance",
         "p": 0.8659759792179346,
-        "odds": 1.42,
+        "odds": 1.45,
         "liveOdds": true,
         "modelBased": true,
         "hit": null,
-        "realOdds": 1.42
+        "realOdds": 1.45
       },
       {
         "match": "BET–FCB",
@@ -1590,7 +1684,7 @@
           "market": "Full tid",
           "p": 0.6191415920962824,
           "odds": 1.6151394329917517,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.28
         },
         {
@@ -1600,7 +1694,7 @@
           "p": 0.5696962609394136,
           "odds": 1.75532133272391,
           "hit": null,
-          "realOdds": null
+          "realOdds": 1.89
         },
         {
           "match": "EVE–CHE",
@@ -1626,7 +1720,7 @@
           "market": "Totalt",
           "p": 0.49458412887721886,
           "odds": 2.021900707307677,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.46
         }
       ],
@@ -1636,7 +1730,7 @@
       "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-17T15:59:59.289Z",
+  "oddsUpdatedAt": "2026-10-17T18:12:10.149Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-10-17T16:00:41.378Z"
+  "resultsCheckedAt": "2026-10-17T18:12:45.565Z"
 }
