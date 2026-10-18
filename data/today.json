@@ -124,7 +124,8 @@
         "p": 0.685327275115711,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560605,
@@ -281,7 +300,8 @@
         "p": 0.5916654413889668,
         "pick": "Leeds United FC vinner",
         "market": "Full tid",
-        "odds": 2.62
+        "odds": 2.62,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560609,
@@ -438,7 +476,8 @@
         "p": 0.6728891016977112,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 3,
@@ -458,7 +497,25 @@
         "u45": 1.4861289883830517,
         "btts": 2.0435861458533786
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 5,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": false
+      }
     },
     {
       "id": 560608,
@@ -739,7 +796,8 @@
         "p": 0.6365165331407165,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -772,7 +830,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564712,
@@ -1243,7 +1319,9 @@
         "p": 0.8700542366744419,
         "odds": 1.52,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.52
       },
       {
         "match": "MAL–RSO",
@@ -1253,7 +1331,9 @@
         "p": 0.8021651674116306,
         "odds": 1.4,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.4
       },
       {
         "match": "OSA–SAN",
@@ -1263,7 +1343,9 @@
         "p": 0.7729623553478042,
         "odds": 1.34,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.34
       },
       {
         "match": "BOU–SUN",
@@ -1273,7 +1355,9 @@
         "p": 0.716223618909078,
         "odds": 2.08,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.08
       }
     ],
     "gambler": {
@@ -1283,34 +1367,45 @@
           "pick": "Leeds United FC vinner",
           "market": "Full tid",
           "p": 0.5916654413889668,
-          "odds": 1.690144345176635
+          "odds": 1.690144345176635,
+          "hit": false,
+          "realOdds": 2.62
         },
         {
           "match": "OSA–SAN",
           "pick": "CA Osasuna vinner",
           "market": "Full tid",
           "p": 0.5638173124280073,
-          "odds": 1.7736241473211025
+          "odds": 1.7736241473211025,
+          "hit": true,
+          "realOdds": 2.06
         },
         {
           "match": "BHA–CRY",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5212686181527314,
-          "odds": 1.918396705989695
+          "odds": 1.918396705989695,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "BOU–SUN",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.507891597642544,
-          "odds": 1.9689240866390623
+          "odds": 1.9689240866390623,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 11.322772503554733,
       "combinedProb": 0.08831759179883324,
-      "hitRate": 11
+      "hitRate": 11,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-18T12:49:25.738Z"
+  "oddsUpdatedAt": "2026-10-18T12:49:25.738Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-10-18T16:11:20.516Z"
 }
