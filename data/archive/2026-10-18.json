@@ -639,7 +639,8 @@
         "p": 0.5570948735302645,
         "pick": "Arsenal FC vinner",
         "market": "Full tid",
-        "odds": 1.63
+        "odds": 1.63,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -672,7 +673,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564715,
@@ -972,7 +991,8 @@
         "p": 0.5418059423909649,
         "pick": "Deportivo Alavés eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -992,7 +1012,25 @@
         "u45": 1.025451688826072,
         "btts": 3.382880549198523
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564714,
@@ -1116,7 +1154,8 @@
         "p": 0.6356168570910793,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1149,7 +1188,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 5
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564709,
@@ -1332,7 +1389,7 @@
         "odds": 1.4,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.4
       },
       {
@@ -1407,5 +1464,5 @@
   },
   "oddsUpdatedAt": "2026-10-18T12:49:25.738Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-10-18T16:11:20.516Z"
+  "resultsCheckedAt": "2026-10-18T18:44:11.254Z"
 }
