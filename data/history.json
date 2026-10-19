@@ -1753,5 +1753,32 @@
     "odds": 2.06,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-19",
+    "match": "TOT–COV",
+    "pick": "Under 3,5 mål",
+    "p": 0.9007058907219452,
+    "odds": 1.55,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-19",
+    "match": "GET–RAY",
+    "pick": "Getafe CF eller uavgjort",
+    "p": 0.7899182887278486,
+    "odds": 1.57,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-19",
+    "match": "GET–RAY",
+    "pick": "Getafe CF vinner",
+    "p": 0.47367260854420395,
+    "odds": 3.2,
+    "hit": false,
+    "source": "gambler"
   }
 ]

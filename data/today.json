@@ -124,7 +124,8 @@
         "p": 0.5767800228277968,
         "pick": "Tottenham Hotspur FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.19
+        "odds": 1.19,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564717,
@@ -281,7 +300,8 @@
         "p": 0.6450922783072106,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": 1.63
+        "odds": 1.63,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -327,7 +365,9 @@
         "p": 0.9007058907219452,
         "odds": 1.55,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.55
       },
       {
         "match": "GET–RAY",
@@ -337,7 +377,9 @@
         "p": 0.7899182887278486,
         "odds": 1.57,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.57
       }
     ],
     "gambler": {
@@ -347,20 +389,27 @@
           "pick": "Getafe CF vinner",
           "market": "Full tid",
           "p": 0.47367260854420395,
-          "odds": 2.111162819976909
+          "odds": 2.111162819976909,
+          "hit": false,
+          "realOdds": 3.2
         },
         {
           "match": "TOT–COV",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.3393471023777734,
-          "odds": 2.9468352403574203
+          "odds": 2.9468352403574203,
+          "hit": true,
+          "realOdds": null
         }
       ],
       "combinedOdds": 6.221248996040304,
       "combinedProb": 0.16073942718519696,
-      "hitRate": 6
+      "hitRate": 6,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-10-19T10:23:43.831Z"
+  "oddsUpdatedAt": "2026-10-19T10:23:43.831Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-19T23:59:28.811Z"
 }
