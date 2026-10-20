@@ -1780,5 +1780,95 @@
     "odds": 3.2,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "SAB–BVB",
+    "pick": "Under 3,5 mål",
+    "p": 0.9681139060811881,
+    "odds": 1.74,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "ROM–SBA",
+    "pick": "Over 3,5 mål",
+    "p": 0.9306170784136795,
+    "odds": 1.67,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "FEN–SLP",
+    "pick": "Under 3,5 mål",
+    "p": 0.8487228931063637,
+    "odds": 1.72,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "NAP–FK",
+    "pick": "SSC Napoli vinner",
+    "p": 0.8389887460037869,
+    "odds": 1.78,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "LIV–VIL",
+    "pick": "Villarreal CF eller uavgjort",
+    "p": 0.7003641182462896,
+    "odds": 2.65,
+    "hit": false,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "FCP–PSV",
+    "pick": "Begge lag scorer",
+    "p": 0.6951633449429117,
+    "odds": 1.72,
+    "hit": false,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "PSG–FCB",
+    "pick": "FC Barcelona vinner",
+    "p": 0.6394894344219079,
+    "odds": 2.54,
+    "hit": false,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "LIV–VIL",
+    "pick": "Begge lag scorer",
+    "p": 0.5975432733440925,
+    "odds": 1.64,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "ROM–SBA",
+    "pick": "Begge lag scorer",
+    "p": 0.573401308468277,
+    "odds": 2.08,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-20",
+    "match": "FCP–PSV",
+    "pick": "FC Porto vinner",
+    "p": 0.5438006699819672,
+    "odds": 1.57,
+    "hit": false,
+    "source": "gambler"
   }
 ]
