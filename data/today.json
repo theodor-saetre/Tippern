@@ -124,7 +124,8 @@
         "p": 0.6877240276715966,
         "pick": "Athletic Club eller uavgjort",
         "market": "Double chance",
-        "odds": 1.37
+        "odds": 1.37,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 575368,
@@ -281,7 +300,8 @@
         "p": 0.4776981545416454,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 4,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575369,
@@ -438,7 +476,8 @@
         "p": 0.6993200394737591,
         "pick": "Lille OSC vinner",
         "market": "Full tid",
-        "odds": 2.28
+        "odds": 2.28,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -471,7 +510,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 4
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575370,
@@ -595,7 +652,8 @@
         "p": 0.9897602166219327,
         "pick": "Real Madrid CF eller uavgjort",
         "market": "Double chance",
-        "odds": 1.09
+        "odds": 1.09,
+        "hit": true
       },
       "predictedScore": {
         "home": 5,
@@ -628,7 +686,25 @@
         "u45": 1.78,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 4,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575371,
@@ -734,7 +810,8 @@
         "p": 0.6416875016432197,
         "pick": "FK Shakhtar Donetsk eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -754,7 +831,25 @@
         "u45": 2.1570381595067953,
         "btts": 1.194658733799938
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575372,
@@ -878,7 +973,8 @@
         "p": 0.6819634188312509,
         "pick": "FC Bayern München vinner",
         "market": "Full tid",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -898,7 +994,25 @@
         "u45": 1.2159671933331322,
         "btts": 2.032235319640365
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 575373,
@@ -1022,7 +1136,8 @@
         "p": 0.6046109400305996,
         "pick": "Racing Club de Lens eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 3,
@@ -1042,7 +1157,25 @@
         "u45": 6.390656526389236,
         "btts": 1.0561089762141869
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575374,
@@ -1148,7 +1281,8 @@
         "p": 0.9925276178604913,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 5,
@@ -1181,7 +1315,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 575375,
@@ -1287,7 +1439,8 @@
         "p": 0.596025760083106,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 3,
@@ -1307,7 +1460,25 @@
         "u45": 1.677779832637714,
         "btts": 2.0412902067568797
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575376,
@@ -1431,7 +1602,8 @@
         "p": 0.6970708693702802,
         "pick": "Feyenoord Rotterdam vinner",
         "market": "Full tid",
-        "odds": 5
+        "odds": 5,
+        "hit": false
       },
       "predictedScore": {
         "home": 3,
@@ -1464,7 +1636,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -1477,7 +1667,9 @@
         "p": 0.995836741421671,
         "odds": 1.36,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.36
       },
       {
         "match": "AVL–VIK",
@@ -1487,7 +1679,9 @@
         "p": 0.9066652828498073,
         "odds": 1.84,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.84
       },
       {
         "match": "LIL–GAL",
@@ -1497,7 +1691,9 @@
         "p": 0.8899284766256348,
         "odds": 1.43,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.43
       },
       {
         "match": "RMA–RBL",
@@ -1507,7 +1703,9 @@
         "p": 0.8839217788139062,
         "odds": 1.53,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.53
       }
     ],
     "gambler": {
@@ -1517,41 +1715,54 @@
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5988356329336305,
-          "odds": 1.6699073084564273
+          "odds": 1.6699073084564273,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "COM–MUN",
           "pick": "Como 1907 vinner",
           "market": "Full tid",
           "p": 0.5846709020288504,
-          "odds": 1.7103638927983718
+          "odds": 1.7103638927983718,
+          "hit": true,
+          "realOdds": 2.4
         },
         {
           "match": "RMA–RBL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5719685084773147,
-          "odds": 1.748348003742695
+          "odds": 1.748348003742695,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "LIL–GAL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.54652939255617,
-          "odds": 1.8297277577751214
+          "odds": 1.8297277577751214,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "FCB–ARS",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.4920689992618401,
-          "odds": 2.032235319640365
+          "odds": 2.032235319640365,
+          "hit": true,
+          "realOdds": null
         }
       ],
       "combinedOdds": 18.568175772406082,
       "combinedProb": 0.053855586690755415,
-      "hitRate": 19
+      "hitRate": 19,
+      "comboHit": true
     }
   },
-  "oddsUpdatedAt": "2026-10-21T09:46:58.530Z"
+  "oddsUpdatedAt": "2026-10-21T09:46:58.530Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-21T22:02:09.127Z"
 }
