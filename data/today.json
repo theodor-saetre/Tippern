@@ -124,7 +124,7 @@
         "p": 0.6667828341254787,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": 1.68
       },
       "predictedScore": {
         "home": 1,
@@ -145,19 +145,37 @@
         "btts": 1.499738668754953
       },
       "odds": {
-        "dcHD": 1.71,
-        "dcAD": 1.44,
-        "pHome": 3.29,
+        "dcHD": 1.72,
+        "dcAD": 1.43,
+        "pHome": 3.3,
         "pDraw": 3.58,
-        "pAway": 2.4,
+        "pAway": 2.38,
         "o15": null,
         "o25": 1.83,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.68
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-23T09:40:56.302Z",
+          "odds": {
+            "dcHD": 1.71,
+            "dcAD": 1.44,
+            "pHome": 3.29,
+            "pDraw": 3.58,
+            "pAway": 2.4,
+            "o15": null,
+            "o25": 1.83,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564719,
@@ -302,19 +320,37 @@
         "btts": 2.342024543069169
       },
       "odds": {
-        "dcHD": 1.19,
-        "dcAD": 2.49,
+        "dcHD": 1.18,
+        "dcAD": 2.5,
         "pHome": 1.69,
-        "pDraw": 4,
-        "pAway": 6.6,
+        "pDraw": 3.95,
+        "pAway": 6.8,
         "o15": null,
-        "o25": 2.1,
+        "o25": 2.13,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.16
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-23T09:40:56.302Z",
+          "odds": {
+            "dcHD": 1.19,
+            "dcAD": 2.49,
+            "pHome": 1.69,
+            "pDraw": 4,
+            "pAway": 6.6,
+            "o15": null,
+            "o25": 2.1,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -325,7 +361,7 @@
         "pick": "Ipswich Town FC eller uavgjort",
         "market": "Double chance",
         "p": 0.7366019413108217,
-        "odds": 1.71,
+        "odds": 1.72,
         "liveOdds": true,
         "modelBased": true
       },
@@ -362,5 +398,5 @@
       "hitRate": 5
     }
   },
-  "oddsUpdatedAt": "2026-10-23T09:40:56.302Z"
+  "oddsUpdatedAt": "2026-10-23T17:58:56.629Z"
 }
