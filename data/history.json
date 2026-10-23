@@ -1924,5 +1924,41 @@
     "odds": 2.4,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-23",
+    "match": "IPS–NOT",
+    "pick": "Ipswich Town FC eller uavgjort",
+    "p": 0.7366019413108217,
+    "odds": 1.72,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-23",
+    "match": "ALA–MAL",
+    "pick": "Deportivo Alavés vinner",
+    "p": 0.6604314079096821,
+    "odds": 1.69,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-23",
+    "match": "IPS–NOT",
+    "pick": "Ipswich Town FC vinner",
+    "p": 0.49484453469824485,
+    "odds": 3.3,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-23",
+    "match": "ALA–MAL",
+    "pick": "Begge lag scorer",
+    "p": 0.42698100793150656,
+    "odds": 2.16,
+    "hit": true,
+    "source": "gambler"
   }
 ]
