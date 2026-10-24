@@ -302,19 +302,37 @@
         "btts": 2.944111000139709
       },
       "odds": {
-        "dcHD": 1.14,
-        "dcAD": 3.13,
+        "dcHD": 1.15,
+        "dcAD": 3.26,
         "pHome": 1.48,
-        "pDraw": 5,
-        "pAway": 8.35,
+        "pDraw": 5.1,
+        "pAway": 9,
         "o15": null,
         "o25": 1.84,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 2.06
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-24T09:14:30.985Z",
+          "odds": {
+            "dcHD": 1.14,
+            "dcAD": 3.13,
+            "pHome": 1.48,
+            "pDraw": 5,
+            "pAway": 8.35,
+            "o15": null,
+            "o25": 1.84,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560618,
@@ -459,19 +477,37 @@
         "btts": 2.291084600224435
       },
       "odds": {
-        "dcHD": 1.74,
+        "dcHD": 1.73,
         "dcAD": 1.42,
-        "pHome": 3.35,
+        "pHome": 3.3,
         "pDraw": 3.63,
-        "pAway": 2.33,
+        "pAway": 2.34,
         "o15": null,
         "o25": 1.81,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.66
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-24T09:14:30.985Z",
+          "odds": {
+            "dcHD": 1.74,
+            "dcAD": 1.42,
+            "pHome": 3.35,
+            "pDraw": 3.63,
+            "pAway": 2.33,
+            "o15": null,
+            "o25": 1.81,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560617,
@@ -931,18 +967,36 @@
       },
       "odds": {
         "dcHD": 1.46,
-        "dcAD": 1.71,
+        "dcAD": 1.7,
         "pHome": 2.38,
         "pDraw": 3.75,
-        "pAway": 3.15,
+        "pAway": 3.11,
         "o15": null,
         "o25": 1.7,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.53
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-24T09:14:30.985Z",
+          "odds": {
+            "dcHD": 1.46,
+            "dcAD": 1.71,
+            "pHome": 2.38,
+            "pDraw": 3.75,
+            "pAway": 3.15,
+            "o15": null,
+            "o25": 1.7,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564722,
@@ -1274,17 +1328,17 @@
         "pick": "Coventry City FC eller uavgjort",
         "market": "Double chance",
         "p": 0.7533433888264185,
-        "odds": 1.74,
+        "odds": 1.73,
         "liveOdds": true,
         "modelBased": true
       },
       {
         "match": "SAN–ESP",
-        "key": "o25",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.714592510774136,
-        "odds": 1.7,
+        "key": "btts",
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "p": 0.7199305273793436,
+        "odds": 1.53,
         "liveOdds": true,
         "modelBased": true
       }
@@ -1325,5 +1379,5 @@
       "hitRate": 13
     }
   },
-  "oddsUpdatedAt": "2026-10-24T09:14:30.985Z"
+  "oddsUpdatedAt": "2026-10-24T12:57:48.933Z"
 }
