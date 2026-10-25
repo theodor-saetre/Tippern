@@ -268,7 +268,7 @@
         "p": 0.6599945380561295,
         "pick": "Crystal Palace FC vinner",
         "market": "Full tid",
-        "odds": 3.04
+        "odds": 2.71
       },
       "predictedScore": {
         "home": 3,
@@ -289,19 +289,37 @@
         "btts": 1.1608849433090849
       },
       "odds": {
-        "dcHD": 1.7,
-        "dcAD": 1.5,
-        "pHome": 3.04,
-        "pDraw": 3.85,
-        "pAway": 2.46,
+        "dcHD": 1.55,
+        "dcAD": 1.58,
+        "pHome": 2.71,
+        "pDraw": 3.6,
+        "pAway": 2.8,
         "o15": null,
-        "o25": 1.63,
-        "o35": 2.34,
-        "u35": 1.58,
+        "o25": 1.71,
+        "o35": null,
+        "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.61
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-25T09:31:55.929Z",
+          "odds": {
+            "dcHD": 1.7,
+            "dcAD": 1.5,
+            "pHome": 3.04,
+            "pDraw": 3.85,
+            "pAway": 2.46,
+            "o15": null,
+            "o25": 1.63,
+            "o35": 2.34,
+            "u35": 1.58,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560615,
@@ -425,7 +443,7 @@
         "p": 0.6894995453572453,
         "pick": "Over 2,5 mål",
         "market": "Totalt",
-        "odds": 1.71
+        "odds": 1.87
       },
       "predictedScore": {
         "home": 2,
@@ -446,19 +464,37 @@
         "btts": 1.6178037561253806
       },
       "odds": {
-        "dcHD": 1.46,
-        "dcAD": 1.74,
-        "pHome": 2.4,
-        "pDraw": 3.74,
-        "pAway": 3.25,
+        "dcHD": 1.48,
+        "dcAD": 1.66,
+        "pHome": 2.5,
+        "pDraw": 3.6,
+        "pAway": 3.08,
         "o15": null,
-        "o25": 1.71,
-        "o35": 2.57,
-        "u35": 1.52,
+        "o25": 1.87,
+        "o35": null,
+        "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.69
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-25T09:31:55.929Z",
+          "odds": {
+            "dcHD": 1.46,
+            "dcAD": 1.74,
+            "pHome": 2.4,
+            "pDraw": 3.74,
+            "pAway": 3.25,
+            "o15": null,
+            "o25": 1.71,
+            "o35": 2.57,
+            "u35": 1.52,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560619,
@@ -582,7 +618,7 @@
         "p": 0.6516089651404777,
         "pick": "Hull City AFC eller uavgjort",
         "market": "Double chance",
-        "odds": 2.37
+        "odds": 2.4
       },
       "predictedScore": {
         "home": 1,
@@ -603,19 +639,37 @@
         "btts": 1.8526989984694868
       },
       "odds": {
-        "dcHD": 2.37,
+        "dcHD": 2.4,
         "dcAD": 1.23,
-        "pHome": 5.4,
-        "pDraw": 4.23,
+        "pHome": 5.5,
+        "pDraw": 4.25,
         "pAway": 1.73,
         "o15": null,
-        "o25": 1.71,
+        "o25": 1.73,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.75
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-10-25T09:31:55.929Z",
+          "odds": {
+            "dcHD": 2.37,
+            "dcAD": 1.23,
+            "pHome": 5.4,
+            "pDraw": 4.23,
+            "pAway": 1.73,
+            "o15": null,
+            "o25": 1.71,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 560621,
@@ -1398,7 +1452,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.9276133222549924,
-        "odds": 1.63,
+        "odds": 1.71,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1418,7 +1472,7 @@
         "pick": "Manchester United FC eller uavgjort",
         "market": "Double chance",
         "p": 0.8594192914317808,
-        "odds": 1.46,
+        "odds": 1.48,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1469,5 +1523,5 @@
       "hitRate": 11
     }
   },
-  "oddsUpdatedAt": "2026-10-25T09:31:55.929Z"
+  "oddsUpdatedAt": "2026-10-25T13:24:09.743Z"
 }
