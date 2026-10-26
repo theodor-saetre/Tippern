@@ -2023,5 +2023,95 @@
     "odds": 2.2,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "CRY–NEW",
+    "pick": "Over 2,5 mål",
+    "p": 0.9276133222549924,
+    "odds": 1.71,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "FCB–RMA",
+    "pick": "FC Barcelona eller uavgjort",
+    "p": 0.9041543255087559,
+    "odds": 1.32,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "MUN–BOU",
+    "pick": "Manchester United FC eller uavgjort",
+    "p": 0.8594192914317808,
+    "odds": 1.48,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "SUN–LEE",
+    "pick": "Leeds United FC eller uavgjort",
+    "p": 0.8402165039335081,
+    "odds": 1.49,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "HUL–BRE",
+    "pick": "Hull City AFC eller uavgjort",
+    "p": 0.6516089651404777,
+    "odds": 2.4,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "ATH–GET",
+    "pick": "Athletic Club vinner",
+    "p": 0.6764737053084696,
+    "odds": 1.59,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "RSO–LEV",
+    "pick": "Real Sociedad de Fútbol eller uavgjort",
+    "p": 0.7000153687695474,
+    "odds": 1.21,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "MUN–BOU",
+    "pick": "Begge lag scorer",
+    "p": 0.6181219423021908,
+    "odds": 1.69,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "HUL–BRE",
+    "pick": "Begge lag scorer",
+    "p": 0.5397530849998295,
+    "odds": 1.75,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-10-25",
+    "match": "RSO–LEV",
+    "pick": "Over 3,5 mål",
+    "p": 0.5330945451536927,
+    "odds": 2.25,
+    "hit": false,
+    "source": "gambler"
   }
 ]

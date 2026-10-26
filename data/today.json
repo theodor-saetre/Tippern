@@ -1578,7 +1578,8 @@
         "p": 0.9975027995089043,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 5,
@@ -1611,7 +1612,25 @@
         "u45": 1.69,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1637,7 +1656,7 @@
         "odds": 1.32,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.32
       },
       {
@@ -1711,6 +1730,6 @@
     }
   },
   "oddsUpdatedAt": "2026-10-25T17:06:31.196Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-10-25T19:47:37.796Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-26T00:30:26.673Z"
 }
