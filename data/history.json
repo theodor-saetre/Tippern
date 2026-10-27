@@ -2113,5 +2113,23 @@
     "odds": 2.25,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-26",
+    "match": "SEV–OSA",
+    "pick": "Over 2,5 mål",
+    "p": 0.8767728828729167,
+    "odds": 2.26,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-10-26",
+    "match": "SEV–OSA",
+    "pick": "Sevilla FC vinner",
+    "p": 0.5757202190492962,
+    "odds": 1.97,
+    "hit": true,
+    "source": "gambler"
   }
 ]

@@ -124,7 +124,8 @@
         "p": 0.4375681984919456,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -170,7 +189,9 @@
         "p": 0.8767728828729167,
         "odds": 2.26,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.26
       }
     ],
     "gambler": {
@@ -180,13 +201,18 @@
           "pick": "Sevilla FC vinner",
           "market": "Full tid",
           "p": 0.5757202190492962,
-          "odds": 1.7369548035872868
+          "odds": 1.7369548035872868,
+          "hit": true,
+          "realOdds": 1.97
         }
       ],
       "combinedOdds": 1.7369548035872868,
       "combinedProb": 0.5757202190492962,
-      "hitRate": 2
+      "hitRate": 2,
+      "comboHit": true
     }
   },
-  "oddsUpdatedAt": "2026-10-26T10:37:59.291Z"
+  "oddsUpdatedAt": "2026-10-26T10:37:59.291Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-27T00:07:28.175Z"
 }
