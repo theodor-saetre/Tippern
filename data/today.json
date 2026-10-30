@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T11:11:04.412Z",
+  "generatedAt": "2026-10-30T11:05:59.825Z",
   "date": "2026-10-30",
   "fixtures": [
     {
@@ -124,7 +124,7 @@
         "p": 0.7080744284952492,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": 1.68
+        "odds": 1.82
       },
       "predictedScore": {
         "home": 2,
@@ -145,15 +145,15 @@
         "btts": 2.1070263666122107
       },
       "odds": {
-        "dcHD": 1.17,
-        "dcAD": 3.16,
-        "pHome": 1.49,
-        "pDraw": 5.4,
+        "dcHD": 1.15,
+        "dcAD": 3.22,
+        "pHome": 1.45,
+        "pDraw": 5.6,
         "pAway": 7.6,
         "o15": null,
-        "o25": 1.51,
-        "o35": 2.4,
-        "u35": 1.68,
+        "o25": 1.44,
+        "o35": 2.23,
+        "u35": 1.82,
         "u45": null,
         "btts": null
       },
@@ -168,7 +168,7 @@
         "pick": "Under 3,5 mål",
         "market": "Totalt",
         "p": 0.7080744284952492,
-        "odds": 1.68,
+        "odds": 1.82,
         "liveOdds": true,
         "modelBased": true
       }
@@ -188,5 +188,5 @@
       "hitRate": 2
     }
   },
-  "oddsUpdatedAt": "2026-10-29T11:11:04.698Z"
+  "oddsUpdatedAt": "2026-10-30T11:06:00.241Z"
 }
