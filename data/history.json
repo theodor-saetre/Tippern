@@ -2131,5 +2131,14 @@
     "odds": 1.97,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-10-30",
+    "match": "VIL–ESP",
+    "pick": "Under 3,5 mål",
+    "p": 0.7080744284952492,
+    "odds": 1.82,
+    "hit": true,
+    "source": "dagensSpill"
   }
 ]
