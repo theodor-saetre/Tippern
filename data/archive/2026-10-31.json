@@ -2039,7 +2039,8 @@
         "p": 0.5973404833832072,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": 1.71
+        "odds": 1.71,
+        "hit": false
       },
       "predictedScore": {
         "home": 3,
@@ -2090,7 +2091,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 6,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -2179,7 +2198,7 @@
           "market": "Totalt",
           "p": 0.5974998580058379,
           "odds": 1.673640565099899,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.58
         },
         {
@@ -2199,6 +2218,6 @@
     }
   },
   "oddsUpdatedAt": "2026-10-31T18:52:51.211Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-01T00:37:36.444Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-01T11:33:36.144Z"
 }
