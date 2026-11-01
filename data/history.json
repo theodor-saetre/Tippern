@@ -2140,5 +2140,68 @@
     "odds": 1.82,
     "hit": true,
     "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "ATH–RSO",
+    "pick": "Athletic Club eller uavgjort",
+    "p": 0.8897680364468442,
+    "odds": 1.33,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "SAN–RMA",
+    "pick": "Over 3,5 mål",
+    "p": 0.8699309989133546,
+    "odds": 1.7,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "GET–SEV",
+    "pick": "Sevilla FC eller uavgjort",
+    "p": 0.717618818138477,
+    "odds": 1.38,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "ELC–VAL",
+    "pick": "Elche CF eller uavgjort",
+    "p": 0.7018239768481,
+    "odds": 1.45,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "LIV–ARS",
+    "pick": "Arsenal FC eller uavgjort",
+    "p": 0.6826255433147288,
+    "odds": 1.47,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "LIV–ARS",
+    "pick": "Begge lag scorer",
+    "p": 0.599674491290379,
+    "odds": 1.68,
+    "hit": false,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-11-01",
+    "match": "SAN–RMA",
+    "pick": "Real Racing Club de Santander vinner",
+    "p": 0.1280195192415024,
+    "odds": 13,
+    "hit": false,
+    "source": "gambler"
   }
 ]
