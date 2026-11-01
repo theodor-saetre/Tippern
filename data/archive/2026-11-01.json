@@ -124,7 +124,7 @@
         "p": 0.6826255433147288,
         "pick": "Arsenal FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.51
+        "odds": 1.47
       },
       "predictedScore": {
         "home": 1,
@@ -145,19 +145,37 @@
         "btts": 1.6675713483296597
       },
       "odds": {
-        "dcHD": 1.6,
-        "dcAD": 1.51,
-        "pHome": 2.94,
-        "pDraw": 3.49,
-        "pAway": 2.66,
+        "dcHD": 1.7,
+        "dcAD": 1.47,
+        "pHome": 3.25,
+        "pDraw": 3.55,
+        "pAway": 2.5,
         "o15": null,
-        "o25": 1.94,
+        "o25": 1.83,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.68
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-01T11:35:50.616Z",
+          "odds": {
+            "dcHD": 1.6,
+            "dcAD": 1.51,
+            "pHome": 2.94,
+            "pDraw": 3.49,
+            "pAway": 2.66,
+            "o15": null,
+            "o25": 1.94,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564733,
@@ -281,7 +299,8 @@
         "p": 0.5864672866904678,
         "pick": "Getafe CF eller uavgjort",
         "market": "Double chance",
-        "odds": 1.66
+        "odds": 1.66,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -314,7 +333,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564734,
@@ -798,7 +835,9 @@
         "p": 0.8897680364468442,
         "odds": 1.33,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.33
       },
       {
         "match": "SAN–RMA",
@@ -808,7 +847,9 @@
         "p": 0.8699309989133546,
         "odds": 1.7,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.7
       },
       {
         "match": "GET–SEV",
@@ -818,7 +859,9 @@
         "p": 0.717618818138477,
         "odds": 1.38,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.38
       },
       {
         "match": "ELC–VAL",
@@ -828,7 +871,9 @@
         "p": 0.7018239768481,
         "odds": 1.45,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.45
       }
     ],
     "gambler": {
@@ -838,34 +883,45 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.599674491290379,
-          "odds": 1.6675713483296597
+          "odds": 1.6675713483296597,
+          "hit": null,
+          "realOdds": 1.68
         },
         {
           "match": "GET–SEV",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5078136931552651,
-          "odds": 1.9692261423408444
+          "odds": 1.9692261423408444,
+          "hit": true,
+          "realOdds": null
         },
         {
           "match": "ELC–VAL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.4918766270648944,
-          "odds": 2.033030123767332
+          "odds": 2.033030123767332,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "SAN–RMA",
           "pick": "Real Racing Club de Santander vinner",
           "market": "Full tid",
           "p": 0.1280195192415024,
-          "odds": 7.811308821692653
+          "odds": 7.811308821692653,
+          "hit": null,
+          "realOdds": 13
         }
       ],
       "combinedOdds": 52.14919861843969,
       "combinedProb": 0.01917575008806377,
-      "hitRate": 52
+      "hitRate": 52,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-01T11:35:50.616Z"
+  "oddsUpdatedAt": "2026-11-01T15:30:35.244Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-11-01T15:31:11.834Z"
 }
