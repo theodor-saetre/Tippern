@@ -1,78 +1,72 @@
 {
-  "generatedAt": "2026-11-01T11:35:50.274Z",
-  "date": "2026-11-01",
+  "generatedAt": "2026-11-02T12:57:08.343Z",
+  "date": "2026-11-02",
   "fixtures": [
     {
-      "id": 560631,
-      "label": "LIV–ARS",
-      "homeName": "Liverpool FC",
-      "awayName": "Arsenal FC",
-      "kickoff": "2026-11-01T16:30:00Z",
+      "id": 560622,
+      "label": "NEW–EVE",
+      "homeName": "Newcastle United FC",
+      "awayName": "Everton FC",
+      "kickoff": "2026-11-02T20:00:00Z",
       "competition": "PL",
-      "lambdaH": 1.3530865224166102,
-      "lambdaA": 1.5536538407450944,
+      "lambdaH": 1.334976264236705,
+      "lambdaA": 0.8172380266651934,
       "blendH": {
-        "atk": 1.5717286003167095,
-        "def": 1.1062990142123839
+        "atk": 0.9203435766093541,
+        "def": 1.152961578634649
       },
       "blendA": {
-        "atk": 1.17030885621461,
-        "def": 0.5554133496994895
+        "atk": 0.5906802980322615,
+        "def": 0.9358190039832752
       },
       "formSource": {
-        "home": "PL/CL",
-        "away": "PL/CL"
+        "home": "PL",
+        "away": "PL"
       },
       "formH": [
         {
           "r": "L",
-          "gf": 0,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 6,
-          "ga": 3,
+          "gf": 1,
+          "ga": 4,
           "venue": "A"
         },
         {
           "r": "W",
           "gf": 2,
           "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 4,
           "venue": "A"
         },
         {
-          "r": "W",
-          "gf": 4,
-          "ga": 3,
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
           "venue": "H"
         },
         {
           "r": "W",
           "gf": 2,
           "ga": 0,
-          "venue": "H"
+          "venue": "A"
         }
       ],
       "formA": [
         {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
+          "r": "D",
+          "gf": 0,
           "ga": 0,
-          "venue": "H"
+          "venue": "A"
         },
         {
           "r": "W",
           "gf": 1,
           "ga": 0,
-          "venue": "A"
+          "venue": "H"
         },
         {
           "r": "D",
@@ -81,137 +75,106 @@
           "venue": "A"
         },
         {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
           "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
         }
       ],
       "formAdj": {
         "home": {
-          "rawGF": 2.8,
+          "rawGF": 1.2,
           "rawGA": 2,
-          "adjGF": 2.95648340446222,
-          "adjGA": 1.8584761992766683
+          "adjGF": 1.2031755164914824,
+          "adjGA": 2.2725123895006294
         },
         "away": {
-          "rawGF": 2,
-          "rawGA": 0.6,
-          "adjGF": 2.1525872932661962,
-          "adjGA": 0.5846038906124221
+          "rawGF": 0.6,
+          "rawGA": 1.2,
+          "adjGF": 0.6126966292134831,
+          "adjGA": 1.1532155201449303
         }
       },
       "markets": {
-        "pHome": 0.3173744566852714,
-        "pDraw": 0.27592714742254676,
-        "pAway": 0.406698395892182,
-        "dcHD": 0.5933016041078182,
-        "dcAD": 0.6826255433147288,
-        "dcHA": 0.7240728525774534,
-        "o15": 0.8014186779979882,
-        "o25": 0.555594270310017,
-        "o35": 0.3318836523064417,
-        "o45": 0.1693164815517312,
-        "u15": 0.19858132200201184,
-        "u25": 0.44440572968998304,
-        "u35": 0.6681163476935583,
-        "u45": 0.8306835184482688,
-        "btts": 0.599674491290379,
-        "noBtts": 0.400325508709621
+        "pHome": 0.47233288679859603,
+        "pDraw": 0.31507386422392747,
+        "pAway": 0.21259324897747633,
+        "dcHD": 0.7874067510225236,
+        "dcAD": 0.5276671132014038,
+        "dcHA": 0.6849261357760723,
+        "o15": 0.650113367243194,
+        "o25": 0.3644468735418077,
+        "o35": 0.17133429204348943,
+        "o45": 0.06742937763007995,
+        "u15": 0.349886632756806,
+        "u25": 0.6355531264581923,
+        "u35": 0.8286657079565105,
+        "u45": 0.93257062236992,
+        "btts": 0.4278965776518115,
+        "noBtts": 0.5721034223481885
       },
       "matchPick": {
-        "key": "dcAD",
-        "p": 0.6826255433147288,
-        "pick": "Arsenal FC eller uavgjort",
-        "market": "Double chance",
-        "odds": 1.47,
-        "hit": true
+        "key": "o15",
+        "p": 0.650113367243194,
+        "pick": "Over 1,5 mål",
+        "market": "Totalt",
+        "odds": null
       },
       "predictedScore": {
         "home": 1,
         "away": 1,
-        "p": 0.12983070001600253
+        "p": 0.1432866870360167
       },
       "fairOdds": {
-        "pHome": 3.1508521840233135,
-        "pDraw": 3.6241450300960394,
-        "pAway": 2.458824549347634,
-        "dcHD": 1.6854833917123107,
-        "dcAD": 1.4649319964561358,
-        "o15": 1.2477872396212237,
-        "o25": 1.7998745729361254,
-        "o35": 3.0131041196227986,
-        "u35": 1.4967452951153728,
-        "u45": 1.2038279053230974,
-        "btts": 1.6675713483296597
+        "pHome": 2.1171509076529804,
+        "pDraw": 3.1738589376911497,
+        "pAway": 4.7038182294582045,
+        "dcHD": 1.2699916513306542,
+        "dcAD": 1.895134214321052,
+        "o15": 1.538193260416257,
+        "o25": 2.743884150470794,
+        "o35": 5.836543216615224,
+        "u35": 1.206759240063161,
+        "u45": 1.0723048485687048,
+        "btts": 2.3370133163666504
       },
       "odds": {
-        "dcHD": 1.7,
-        "dcAD": 1.47,
-        "pHome": 3.25,
-        "pDraw": 3.55,
-        "pAway": 2.5,
+        "dcHD": 1.39,
+        "dcAD": 1.8,
+        "pHome": 2.22,
+        "pDraw": 3.7,
+        "pAway": 3.5,
         "o15": null,
-        "o25": 1.83,
+        "o25": 1.77,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": 1.68
+        "btts": null
       },
-      "oddsHistory": [
-        {
-          "at": "2026-11-01T11:35:50.616Z",
-          "odds": {
-            "dcHD": 1.6,
-            "dcAD": 1.51,
-            "pHome": 2.94,
-            "pDraw": 3.49,
-            "pAway": 2.66,
-            "o15": null,
-            "o25": 1.94,
-            "o35": null,
-            "u35": null,
-            "u45": null,
-            "btts": null
-          }
-        }
-      ],
-      "oddsLocked": true,
-      "result": {
-        "home": 0,
-        "away": 1
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": false,
-        "o25": false,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": false
-      }
+      "oddsHistory": []
     },
     {
-      "id": 564733,
-      "label": "GET–SEV",
-      "homeName": "Getafe CF",
-      "awayName": "Sevilla FC",
-      "kickoff": "2026-11-01T13:00:00Z",
+      "id": 564731,
+      "label": "DEP–OSA",
+      "homeName": "RC Deportivo La Coruña",
+      "awayName": "CA Osasuna",
+      "kickoff": "2026-11-02T20:00:00Z",
       "competition": "PD",
-      "lambdaH": 1.0833522699022127,
-      "lambdaA": 1.3565342425023525,
+      "lambdaH": 2.199198440716942,
+      "lambdaA": 0.8811643879658773,
       "blendH": {
-        "atk": 0.5207547018484998,
-        "def": 0.8758144036216304
+        "atk": 0.6867056653458856,
+        "def": 0.9242262848600279
       },
       "blendA": {
-        "atk": 1.2907360251335498,
-        "def": 1.3421615702038268
+        "atk": 0.7945063548473302,
+        "def": 2.0661511551294653
       },
       "formSource": {
         "home": "PD",
@@ -222,17 +185,17 @@
           "r": "L",
           "gf": 0,
           "ga": 1,
-          "venue": "A"
+          "venue": "H"
         },
         {
-          "r": "W",
+          "r": "D",
           "gf": 1,
-          "ga": 0,
+          "ga": 1,
           "venue": "H"
         },
         {
           "r": "L",
-          "gf": 0,
+          "gf": 2,
           "ga": 3,
           "venue": "A"
         },
@@ -245,759 +208,159 @@
         {
           "r": "L",
           "gf": 0,
-          "ga": 4,
+          "ga": 1,
           "venue": "A"
         }
       ],
       "formA": [
         {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
           "r": "L",
-          "gf": 1,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 3,
-          "ga": 3,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 1,
+          "gf": 0,
           "ga": 4,
           "venue": "A"
         },
         {
-          "r": "W",
-          "gf": 2,
-          "ga": 0,
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
           "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 0.4,
-          "rawGA": 1.8,
-          "adjGF": 0.3545558608058608,
-          "adjGA": 1.7798410185512878
         },
-        "away": {
-          "rawGF": 1.6,
-          "rawGA": 2,
-          "adjGF": 1.5126439531732865,
-          "adjGA": 1.8663321911061257
-        }
-      },
-      "markets": {
-        "pHome": 0.28238118186152283,
-        "pDraw": 0.30408610482894494,
-        "pAway": 0.4135327133095322,
-        "dcHD": 0.5864672866904678,
-        "dcAD": 0.717618818138477,
-        "dcHA": 0.6959138951710551,
-        "o15": 0.7167963158898211,
-        "o25": 0.4406766736019813,
-        "o35": 0.22965431167841188,
-        "o45": 0.10093665801014365,
-        "u15": 0.28320368411017893,
-        "u25": 0.5593233263980186,
-        "u35": 0.7703456883215881,
-        "u45": 0.8990633419898564,
-        "btts": 0.5078136931552651,
-        "noBtts": 0.49218630684473486
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.5864672866904678,
-        "pick": "Getafe CF eller uavgjort",
-        "market": "Double chance",
-        "odds": 1.66,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.14476039296021576
-      },
-      "fairOdds": {
-        "pHome": 3.5413124678059846,
-        "pDraw": 3.288542238924471,
-        "pAway": 2.4181883749823023,
-        "dcHD": 1.7051249450641415,
-        "dcAD": 1.3934974595482703,
-        "o15": 1.3950964560394172,
-        "o25": 2.2692374248590226,
-        "o35": 4.35437067430423,
-        "u35": 1.2981185137529327,
-        "u45": 1.112268683746737,
-        "btts": 1.9692261423408444
-      },
-      "odds": {
-        "dcHD": 1.66,
-        "dcAD": 1.38,
-        "pHome": 3.55,
-        "pDraw": 3.12,
-        "pAway": 2.48,
-        "o15": 1.5,
-        "o25": 2.57,
-        "o35": null,
-        "u35": null,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 3,
-        "away": 1
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": true,
-        "o45": false,
-        "u35": false,
-        "u45": true,
-        "btts": true
-      }
-    },
-    {
-      "id": 564734,
-      "label": "SAN–RMA",
-      "homeName": "Real Racing Club de Santander",
-      "awayName": "Real Madrid CF",
-      "kickoff": "2026-11-01T15:15:00Z",
-      "competition": "PD",
-      "lambdaH": 2.003450968092315,
-      "lambdaA": 4.256318161382922,
-      "blendH": {
-        "atk": 1.22433696061792,
-        "def": 1.7078361050539745
-      },
-      "blendA": {
-        "atk": 2.0768572526696514,
-        "def": 1.0557134622645998
-      },
-      "formSource": {
-        "home": "PD",
-        "away": "PD/CL"
-      },
-      "formH": [
         {
           "r": "L",
           "gf": 2,
-          "ga": 7,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 0,
           "ga": 5,
           "venue": "A"
         },
         {
-          "r": "D",
+          "r": "W",
           "gf": 2,
-          "ga": 2,
+          "ga": 0,
           "venue": "H"
         },
         {
           "r": "L",
           "gf": 0,
           "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 3,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
           "venue": "A"
         }
       ],
       "formAdj": {
         "home": {
-          "rawGF": 1.2,
-          "rawGA": 3.4,
-          "adjGF": 1.2165384366480807,
-          "adjGA": 3.662993096646943
-        },
-        "away": {
-          "rawGF": 3,
-          "rawGA": 1.2,
-          "adjGF": 3.0505504034947366,
-          "adjGA": 1.123174355808859
-        }
-      },
-      "markets": {
-        "pHome": 0.1280195192415024,
-        "pDraw": 0.11588700020231177,
-        "pAway": 0.7560934805561856,
-        "dcHD": 0.24390651944381417,
-        "dcAD": 0.8719804807584974,
-        "dcHA": 0.884112999797688,
-        "o15": 0.9881877556882533,
-        "o25": 0.9484355937446702,
-        "o35": 0.8699309989133546,
-        "o45": 0.7470758391015967,
-        "u15": 0.011812244311746656,
-        "u25": 0.051564406255329764,
-        "u35": 0.13006900108664543,
-        "u45": 0.2529241608984033,
-        "btts": 0.8549406747472943,
-        "noBtts": 0.1450593252527057
-      },
-      "matchPick": {
-        "key": "o15",
-        "p": 0.9881877556882533,
-        "pick": "Over 1,5 mål",
-        "market": "Totalt",
-        "odds": null,
-        "hit": true
-      },
-      "predictedScore": {
-        "home": 2,
-        "away": 4,
-        "p": 0.05270161382712057
-      },
-      "fairOdds": {
-        "pHome": 7.811308821692653,
-        "pDraw": 8.629095569427394,
-        "pAway": 1.3225877827492913,
-        "dcHD": 4.099931409296987,
-        "dcAD": 1.146814661642591,
-        "o15": 1.0119534412805182,
-        "o25": 1.054367852277391,
-        "o35": 1.1495164573387049,
-        "u35": 7.688226953737042,
-        "u45": 3.9537543445748087,
-        "btts": 1.1696718024272068
-      },
-      "odds": {
-        "dcHD": 5.25,
-        "dcAD": 1.1,
-        "pHome": 13,
-        "pDraw": 8.8,
-        "pAway": 1.26,
-        "o15": null,
-        "o25": 1.25,
-        "o35": 1.7,
-        "u35": 2.4,
-        "u45": 1.57,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 0,
-        "away": 3
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": true,
-        "o25": true,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": false
-      }
-    },
-    {
-      "id": 564728,
-      "label": "ELC–VAL",
-      "homeName": "Elche CF",
-      "awayName": "Valencia CF",
-      "kickoff": "2026-11-01T17:30:00Z",
-      "competition": "PD",
-      "lambdaH": 1.2676583555911598,
-      "lambdaA": 1.0814673413357139,
-      "blendH": {
-        "atk": 0.8136766660643389,
-        "def": 1.2113552358861202
-      },
-      "blendA": {
-        "atk": 0.7439789400729948,
-        "def": 1.005121732613044
-      },
-      "formSource": {
-        "home": "PD",
-        "away": "PD"
-      },
-      "formH": [
-        {
-          "r": "L",
-          "gf": 2,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 1,
-          "venue": "A"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 0,
-          "venue": "A"
-        }
-      ],
-      "formA": [
-        {
-          "r": "W",
-          "gf": 1,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 2,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 2,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 2,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1.6,
-          "rawGA": 0.8,
-          "adjGF": 1.5972346270750528,
-          "adjGA": 0.7704826818138735
-        },
-        "away": {
-          "rawGF": 1.2,
+          "rawGF": 0.8,
           "rawGA": 1.4,
-          "adjGF": 1.0842400687480087,
-          "adjGA": 1.3192259201153644
-        }
-      },
-      "markets": {
-        "pHome": 0.38918901371013725,
-        "pDraw": 0.3126349631379628,
-        "pAway": 0.2981760231519,
-        "dcHD": 0.7018239768481,
-        "dcAD": 0.6108109862898627,
-        "dcHA": 0.6873650368620372,
-        "o15": 0.6973289302005748,
-        "o25": 0.41694487986159395,
-        "o35": 0.21071326377566954,
-        "o45": 0.08959726655911883,
-        "u15": 0.30267106979942515,
-        "u25": 0.583055120138406,
-        "u35": 0.7892867362243304,
-        "u45": 0.9104027334408812,
-        "btts": 0.4918766270648944,
-        "noBtts": 0.5081233729351056
-      },
-      "matchPick": {
-        "key": "dcHD",
-        "p": 0.7018239768481,
-        "pick": "Elche CF eller uavgjort",
-        "market": "Double chance",
-        "odds": 1.45,
-        "hit": false
-      },
-      "predictedScore": {
-        "home": 1,
-        "away": 1,
-        "p": 0.14787058954708276
-      },
-      "fairOdds": {
-        "pHome": 2.569445602965521,
-        "pDraw": 3.1986185740803075,
-        "pAway": 3.3537237147018,
-        "dcHD": 1.4248587010250235,
-        "dcAD": 1.6371676712531265,
-        "o15": 1.4340434717262727,
-        "o25": 2.3983985612965264,
-        "o35": 4.74578572834705,
-        "u35": 1.2669666853691823,
-        "u45": 1.0984149797315355,
-        "btts": 2.033030123767332
-      },
-      "odds": {
-        "dcHD": 1.45,
-        "dcAD": 1.7,
-        "pHome": 2.48,
-        "pDraw": 3.5,
-        "pAway": 3.3,
-        "o15": null,
-        "o25": 2.02,
-        "o35": null,
-        "u35": null,
-        "u45": null,
-        "btts": null
-      },
-      "oddsHistory": [],
-      "result": {
-        "home": 0,
-        "away": 1
-      },
-      "outcomes": {
-        "pHome": false,
-        "pDraw": false,
-        "pAway": true,
-        "dcHD": false,
-        "dcAD": true,
-        "o15": false,
-        "o25": false,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": false
-      }
-    },
-    {
-      "id": 564729,
-      "label": "ATH–RSO",
-      "homeName": "Athletic Club",
-      "awayName": "Real Sociedad de Fútbol",
-      "kickoff": "2026-11-01T20:00:00Z",
-      "competition": "PD",
-      "lambdaH": 3.1396286376636207,
-      "lambdaA": 1.241762135838608,
-      "blendH": {
-        "atk": 1.2835739392787937,
-        "def": 0.4576613984525024
-      },
-      "blendA": {
-        "atk": 2.2610641477837063,
-        "def": 1.5780679250522178
-      },
-      "formSource": {
-        "home": "PD",
-        "away": "PD"
-      },
-      "formH": [
-        {
-          "r": "D",
-          "gf": 1,
-          "ga": 1,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "H"
-        },
-        {
-          "r": "D",
-          "gf": 0,
-          "ga": 0,
-          "venue": "A"
-        },
-        {
-          "r": "L",
-          "gf": 1,
-          "ga": 3,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 4,
-          "ga": 0,
-          "venue": "H"
-        }
-      ],
-      "formA": [
-        {
-          "r": "L",
-          "gf": 0,
-          "ga": 3,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 3,
-          "ga": 2,
-          "venue": "H"
-        },
-        {
-          "r": "W",
-          "gf": 5,
-          "ga": 2,
-          "venue": "A"
-        },
-        {
-          "r": "W",
-          "gf": 2,
-          "ga": 1,
-          "venue": "H"
-        }
-      ],
-      "formAdj": {
-        "home": {
-          "rawGF": 1.2,
-          "rawGA": 0.8,
-          "adjGF": 1.1704400991165698,
-          "adjGA": 0.8191878434065935
+          "adjGF": 0.7593524700537821,
+          "adjGA": 1.3590975282669793
         },
         "away": {
-          "rawGF": 2.6,
-          "rawGA": 2,
-          "adjGF": 2.4683011370228565,
-          "adjGA": 2.3477890785108033
+          "rawGF": 1,
+          "rawGA": 2.4,
+          "adjGF": 0.934322295173844,
+          "adjGA": 2.430155962467959
         }
       },
       "markets": {
-        "pHome": 0.741744812748727,
-        "pDraw": 0.14802322369811727,
-        "pAway": 0.11023196355315608,
-        "dcHD": 0.8897680364468442,
-        "dcAD": 0.25825518725127333,
-        "dcHA": 0.8519767763018831,
-        "o15": 0.9390032380634548,
-        "o25": 0.8125550742777992,
-        "o35": 0.6371444987568313,
-        "o45": 0.4450089294662597,
-        "u15": 0.06099676193654524,
-        "u25": 0.18744492572220084,
-        "u35": 0.3628555012431687,
-        "u45": 0.5549910705337403,
-        "btts": 0.6866632818744223,
-        "noBtts": 0.31333671812557773
+        "pHome": 0.6623075710963379,
+        "pDraw": 0.21176043569276365,
+        "pAway": 0.1259319932108981,
+        "dcHD": 0.8740680067891016,
+        "dcAD": 0.33769242890366175,
+        "dcHA": 0.788239564307236,
+        "o15": 0.8241080275445843,
+        "o25": 0.5945633780878816,
+        "o35": 0.37075395878600764,
+        "o45": 0.19840040480436208,
+        "u15": 0.17589197245541566,
+        "u25": 0.4054366219121184,
+        "u35": 0.6292460412139924,
+        "u45": 0.801599595195638,
+        "btts": 0.5323232074985687,
+        "noBtts": 0.46767679250143135
       },
       "matchPick": {
-        "key": "btts",
-        "p": 0.6866632818744223,
-        "pick": "Begge lag scorer",
-        "market": "BTTS",
-        "odds": null,
-        "hit": true
+        "key": "pHome",
+        "p": 0.6623075710963379,
+        "pick": "RC Deportivo La Coruña vinner",
+        "market": "Full tid",
+        "odds": 2.23
       },
       "predictedScore": {
-        "home": 3,
-        "away": 1,
-        "p": 0.08014806907966329
+        "home": 2,
+        "away": 0,
+        "p": 0.11110224402448263
       },
       "fairOdds": {
-        "pHome": 1.3481725558608786,
-        "pDraw": 6.755696673918061,
-        "pAway": 9.071778890319592,
-        "dcHD": 1.1238884282619892,
-        "dcAD": 3.8721390677316183,
-        "o15": 1.0649590538817963,
-        "o25": 1.230685810298831,
-        "o35": 1.5695026825957952,
-        "u35": 2.7559179799505014,
-        "u45": 1.8018307916887568,
-        "btts": 1.4563178582525127
+        "pHome": 1.5098725179068535,
+        "pDraw": 4.722317446734325,
+        "pAway": 7.940793872175926,
+        "dcHD": 1.144075738080737,
+        "dcAD": 2.961274563503122,
+        "o15": 1.2134331502381828,
+        "o25": 1.681906482730242,
+        "o35": 2.6972065336116384,
+        "u35": 1.589203482425919,
+        "u45": 1.2475056200046366,
+        "btts": 1.8785579623685462
       },
       "odds": {
-        "dcHD": 1.33,
-        "dcAD": 1.94,
-        "pHome": 2.07,
-        "pDraw": 3.75,
-        "pAway": 4.02,
+        "dcHD": 1.35,
+        "dcAD": 1.84,
+        "pHome": 2.23,
+        "pDraw": 3.4,
+        "pAway": 4,
         "o15": null,
-        "o25": 1.85,
+        "o25": 2.32,
         "o35": null,
         "u35": null,
         "u45": null,
         "btts": null
       },
-      "oddsHistory": [],
-      "result": {
-        "home": 2,
-        "away": 1
-      },
-      "outcomes": {
-        "pHome": true,
-        "pDraw": false,
-        "pAway": false,
-        "dcHD": true,
-        "dcAD": false,
-        "o15": true,
-        "o25": true,
-        "o35": false,
-        "o45": false,
-        "u35": true,
-        "u45": true,
-        "btts": true
-      }
+      "oddsHistory": []
     }
   ],
   "coupon": {
     "dagensSpill": [
       {
-        "match": "ATH–RSO",
+        "match": "DEP–OSA",
         "key": "dcHD",
-        "pick": "Athletic Club eller uavgjort",
+        "pick": "RC Deportivo La Coruña eller uavgjort",
         "market": "Double chance",
-        "p": 0.8897680364468442,
-        "odds": 1.33,
+        "p": 0.8740680067891016,
+        "odds": 1.35,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": true,
-        "realOdds": 1.33
+        "modelBased": true
       },
       {
-        "match": "SAN–RMA",
-        "key": "o35",
-        "pick": "Over 3,5 mål",
-        "market": "Totalt",
-        "p": 0.8699309989133546,
-        "odds": 1.7,
-        "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.7
-      },
-      {
-        "match": "GET–SEV",
-        "key": "dcAD",
-        "pick": "Sevilla FC eller uavgjort",
-        "market": "Double chance",
-        "p": 0.717618818138477,
-        "odds": 1.38,
-        "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.38
-      },
-      {
-        "match": "ELC–VAL",
+        "match": "NEW–EVE",
         "key": "dcHD",
-        "pick": "Elche CF eller uavgjort",
+        "pick": "Newcastle United FC eller uavgjort",
         "market": "Double chance",
-        "p": 0.7018239768481,
-        "odds": 1.45,
+        "p": 0.7874067510225236,
+        "odds": 1.39,
         "liveOdds": true,
-        "modelBased": true,
-        "hit": false,
-        "realOdds": 1.45
+        "modelBased": true
       }
     ],
     "gambler": {
       "legs": [
         {
-          "match": "LIV–ARS",
+          "match": "DEP–OSA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
-          "p": 0.599674491290379,
-          "odds": 1.6675713483296597,
-          "hit": false,
-          "realOdds": 1.68
+          "p": 0.5323232074985687,
+          "odds": 1.8785579623685462
         },
         {
-          "match": "GET–SEV",
-          "pick": "Begge lag scorer",
-          "market": "BTTS",
-          "p": 0.5078136931552651,
-          "odds": 1.9692261423408444,
-          "hit": true,
-          "realOdds": null
-        },
-        {
-          "match": "ELC–VAL",
-          "pick": "Begge lag scorer",
-          "market": "BTTS",
-          "p": 0.4918766270648944,
-          "odds": 2.033030123767332,
-          "hit": false,
-          "realOdds": null
-        },
-        {
-          "match": "SAN–RMA",
-          "pick": "Real Racing Club de Santander vinner",
+          "match": "NEW–EVE",
+          "pick": "Newcastle United FC vinner",
           "market": "Full tid",
-          "p": 0.1280195192415024,
-          "odds": 7.811308821692653,
-          "hit": false,
-          "realOdds": 13
+          "p": 0.47233288679859603,
+          "odds": 2.1171509076529804
         }
       ],
-      "combinedOdds": 52.14919861843969,
-      "combinedProb": 0.01917575008806377,
-      "hitRate": 52,
-      "comboHit": false
+      "combinedOdds": 3.977190695107301,
+      "combinedProb": 0.25143375730768697,
+      "hitRate": 4
     }
   },
-  "oddsUpdatedAt": "2026-11-01T15:30:35.244Z",
-  "resultsChecked": true,
-  "resultsCheckedAt": "2026-11-01T23:11:54.392Z"
+  "oddsUpdatedAt": "2026-11-02T12:57:08.691Z"
 }
