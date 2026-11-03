@@ -277,19 +277,37 @@
         "btts": 1.302199385402858
       },
       "odds": {
-        "dcHD": 1.44,
-        "dcAD": 1.89,
-        "pHome": 2.13,
-        "pDraw": 4.4,
-        "pAway": 3.3,
+        "dcHD": 1.45,
+        "dcAD": 1.93,
+        "pHome": 2.14,
+        "pDraw": 4.46,
+        "pAway": 3.41,
         "o15": null,
-        "o25": 1.32,
-        "o35": 1.86,
-        "u35": 2.1,
+        "o25": 1.27,
+        "o35": 1.72,
+        "u35": 2.31,
         "u45": null,
-        "btts": null
+        "btts": 1.32
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-03T12:30:20.915Z",
+          "odds": {
+            "dcHD": 1.44,
+            "dcAD": 1.89,
+            "pHome": 2.13,
+            "pDraw": 4.4,
+            "pAway": 3.3,
+            "o15": null,
+            "o25": 1.32,
+            "o35": 1.86,
+            "u35": 2.1,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 575379,
@@ -1365,11 +1383,11 @@
       },
       {
         "match": "GAL–VFB",
-        "key": "o25",
-        "pick": "Over 2,5 mål",
-        "market": "Totalt",
-        "p": 0.8889841730038592,
-        "odds": 1.32,
+        "key": "dcAD",
+        "pick": "VfB Stuttgart eller uavgjort",
+        "market": "Double chance",
+        "p": 0.8856084944744167,
+        "odds": 1.93,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1420,5 +1438,5 @@
       "hitRate": 11
     }
   },
-  "oddsUpdatedAt": "2026-11-03T12:30:20.915Z"
+  "oddsUpdatedAt": "2026-11-03T16:39:27.332Z"
 }
