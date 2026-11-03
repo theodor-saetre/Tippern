@@ -112,7 +112,8 @@
         "p": 0.7051214477943067,
         "pick": "Sporting Clube de Portugal eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -132,7 +133,25 @@
         "u45": 1.1702089434985932,
         "btts": 1.7546818684967178
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575378,
@@ -256,7 +275,8 @@
         "p": 0.4113485562668725,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -307,7 +327,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575379,
@@ -431,7 +469,8 @@
         "p": 0.7015036870893652,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -451,7 +490,25 @@
         "u45": 1.4382959875419157,
         "btts": 1.4255092573342514
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575380,
@@ -575,7 +632,8 @@
         "p": 0.6779025180209411,
         "pick": "FC Barcelona eller uavgjort",
         "market": "Double chance",
-        "odds": 1.12
+        "odds": 1.12,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -608,7 +666,25 @@
         "u45": 1.82,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575381,
@@ -732,7 +808,8 @@
         "p": 0.9293816779754249,
         "pick": "Club Atlético de Madrid eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -752,7 +829,25 @@
         "u45": 1.1156747880335658,
         "btts": 2.9157209596930893
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575382,
@@ -876,7 +971,8 @@
         "p": 0.6979807206951928,
         "pick": "Paris Saint-Germain FC vinner",
         "market": "Full tid",
-        "odds": 1.78
+        "odds": 1.78,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -909,7 +1005,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 6
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": false
+      }
     },
     {
       "id": 575383,
@@ -1033,7 +1147,8 @@
         "p": 0.6241218825585225,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1066,7 +1181,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 575384,
@@ -1190,7 +1323,8 @@
         "p": 0.7070007931662615,
         "pick": "FK Bodø/Glimt vinner",
         "market": "Full tid",
-        "odds": 1.79
+        "odds": 1.79,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -1223,7 +1357,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 575385,
@@ -1323,7 +1475,8 @@
         "p": 0.9982923756187494,
         "pick": "LASK Linz eller uavgjort",
         "market": "Double chance",
-        "odds": 1.15
+        "odds": 1.15,
+        "hit": true
       },
       "predictedScore": {
         "home": 7,
@@ -1356,7 +1509,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -1369,7 +1540,9 @@
         "p": 0.9925192876747054,
         "odds": 1.43,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.43
       },
       {
         "match": "MUN–ROM",
@@ -1379,7 +1552,9 @@
         "p": 0.9521862713264113,
         "odds": 1.78,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.78
       },
       {
         "match": "GAL–VFB",
@@ -1389,7 +1564,9 @@
         "p": 0.8856084944744167,
         "odds": 1.93,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.93
       },
       {
         "match": "FK–LIL",
@@ -1399,7 +1576,9 @@
         "p": 0.7070007931662615,
         "odds": 1.79,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.79
       }
     ],
     "gambler": {
@@ -1409,34 +1588,45 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5882961069815316,
-          "odds": 1.6998242689907739
+          "odds": 1.6998242689907739,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "SHD–SPO",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5699038771379831,
-          "odds": 1.7546818684967178
+          "odds": 1.7546818684967178,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "LIN–SBA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5249686744616154,
-          "odds": 1.90487556429068
+          "odds": 1.90487556429068,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "FEY–INT",
           "pick": "Feyenoord Rotterdam vinner",
           "market": "Full tid",
           "p": 0.5019546786389314,
-          "odds": 1.9922117325642563
+          "odds": 1.9922117325642563,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 11.318907690374916,
       "combinedProb": 0.08834774762324059,
-      "hitRate": 11
+      "hitRate": 11,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-03T16:39:27.332Z"
+  "oddsUpdatedAt": "2026-11-03T16:39:27.332Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-03T22:05:54.678Z"
 }

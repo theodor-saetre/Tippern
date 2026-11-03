@@ -2239,5 +2239,59 @@
     "odds": 2.27,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "LIN–SBA",
+    "pick": "LASK Linz vinner",
+    "p": 0.9925192876747054,
+    "odds": 1.43,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "MUN–ROM",
+    "pick": "AS Roma eller uavgjort",
+    "p": 0.9521862713264113,
+    "odds": 1.78,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "GAL–VFB",
+    "pick": "VfB Stuttgart eller uavgjort",
+    "p": 0.8856084944744167,
+    "odds": 1.93,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "FK–LIL",
+    "pick": "FK Bodø/Glimt vinner",
+    "p": 0.7070007931662615,
+    "odds": 1.79,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "FCB–AVL",
+    "pick": "FC Barcelona eller uavgjort",
+    "p": 0.6779025180209411,
+    "odds": 1.12,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-03",
+    "match": "VIL–PSG",
+    "pick": "Paris Saint-Germain FC vinner",
+    "p": 0.6979807206951928,
+    "odds": 1.78,
+    "hit": true,
+    "source": "matchPick"
   }
 ]
