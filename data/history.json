@@ -2293,5 +2293,59 @@
     "odds": 1.78,
     "hit": true,
     "source": "matchPick"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "PSV–BRU",
+    "pick": "Over 2,5 mål",
+    "p": 0.9757955989273002,
+    "odds": 1.33,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "VIK–SAB",
+    "pick": "Viking FK vinner",
+    "p": 0.9641187102557465,
+    "odds": 1.42,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "FEN–LIV",
+    "pick": "Over 2,5 mål",
+    "p": 0.9365417655281092,
+    "odds": 1.42,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "BVB–BET",
+    "pick": "Under 3,5 mål",
+    "p": 0.9095409951917314,
+    "odds": 1.73,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "RBL–MCI",
+    "pick": "RB Leipzig vinner",
+    "p": 0.7105458522637129,
+    "odds": 5.8,
+    "hit": false,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-04",
+    "match": "FCP–NAP",
+    "pick": "FC Porto vinner",
+    "p": 0.700680921010149,
+    "odds": 1.89,
+    "hit": true,
+    "source": "matchPick"
   }
 ]
