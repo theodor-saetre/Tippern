@@ -265,19 +265,37 @@
         "btts": 1.3511065918883078
       },
       "odds": {
-        "dcHD": 3,
-        "dcAD": 1.18,
-        "pHome": 6.75,
-        "pDraw": 5.4,
-        "pAway": 1.51,
+        "dcHD": 2.73,
+        "dcAD": 1.21,
+        "pHome": 6,
+        "pDraw": 5,
+        "pAway": 1.59,
         "o15": null,
-        "o25": 1.35,
-        "o35": 1.98,
-        "u35": 2,
+        "o25": 1.42,
+        "o35": null,
+        "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.56
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-04T12:41:29.711Z",
+          "odds": {
+            "dcHD": 3,
+            "dcAD": 1.18,
+            "pHome": 6.75,
+            "pDraw": 5.4,
+            "pAway": 1.51,
+            "o15": null,
+            "o25": 1.35,
+            "o35": 1.98,
+            "u35": 2,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     },
     {
       "id": 575388,
@@ -1358,7 +1376,7 @@
         "pick": "Over 2,5 mål",
         "market": "Totalt",
         "p": 0.9365417655281092,
-        "odds": 1.35,
+        "odds": 1.42,
         "liveOdds": true,
         "modelBased": true
       },
@@ -1409,5 +1427,5 @@
       "hitRate": 11
     }
   },
-  "oddsUpdatedAt": "2026-11-04T12:41:29.711Z"
+  "oddsUpdatedAt": "2026-11-04T16:38:29.122Z"
 }
