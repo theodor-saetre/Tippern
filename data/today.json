@@ -124,7 +124,8 @@
         "p": 0.6360443093803871,
         "pick": "Coventry City FC eller uavgjort",
         "market": "Double chance",
-        "odds": 2.37
+        "odds": 2.37,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564740,
@@ -281,7 +300,8 @@
         "p": 0.7093757597126547,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -314,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -327,7 +365,9 @@
         "p": 0.6963727694452668,
         "odds": 1.92,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.92
       },
       {
         "match": "EVE–COV",
@@ -337,7 +377,9 @@
         "p": 0.36395569061961297,
         "odds": 1.74,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.74
       }
     ],
     "gambler": {
@@ -347,20 +389,27 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.6004523620324398,
-          "odds": 1.6654110521193592
+          "odds": 1.6654110521193592,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "EVE–COV",
           "pick": "Everton FC vinner",
           "market": "Full tid",
           "p": 0.36395569061961297,
-          "odds": 2.7475872084801294
+          "odds": 2.7475872084801294,
+          "hit": true,
+          "realOdds": 1.74
         }
       ],
       "combinedOdds": 4.575862103664585,
       "combinedProb": 0.2185380541076945,
-      "hitRate": 5
+      "hitRate": 5,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-06T12:35:15.607Z"
+  "oddsUpdatedAt": "2026-11-06T12:35:15.607Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-07T01:20:47.738Z"
 }

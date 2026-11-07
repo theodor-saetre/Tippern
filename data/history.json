@@ -2347,5 +2347,32 @@
     "odds": 1.89,
     "hit": true,
     "source": "matchPick"
+  },
+  {
+    "date": "2026-11-06",
+    "match": "SEV–ALA",
+    "pick": "Sevilla FC vinner",
+    "p": 0.6963727694452668,
+    "odds": 1.92,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-06",
+    "match": "EVE–COV",
+    "pick": "Everton FC vinner",
+    "p": 0.36395569061961297,
+    "odds": 1.74,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-06",
+    "match": "EVE–COV",
+    "pick": "Everton FC vinner",
+    "p": 0.36395569061961297,
+    "odds": 1.74,
+    "hit": true,
+    "source": "gambler"
   }
 ]
