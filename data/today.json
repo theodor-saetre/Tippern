@@ -300,7 +300,8 @@
         "p": 0.7012586486687797,
         "pick": "Over 1,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -333,7 +334,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560633,
@@ -457,7 +476,8 @@
         "p": 0.71302828806839,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -490,7 +510,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560641,
@@ -1282,19 +1320,37 @@
         "btts": 1.9786775942214825
       },
       "odds": {
-        "dcHD": 4.34,
-        "dcAD": 1.08,
-        "pHome": 12,
-        "pDraw": 6.8,
+        "dcHD": 4.57,
+        "dcAD": 1.09,
+        "pHome": 12.5,
+        "pDraw": 7.2,
         "pAway": 1.29,
         "o15": null,
-        "o25": 1.48,
-        "o35": 2.21,
-        "u35": 1.78,
+        "o25": 1.43,
+        "o35": 2.22,
+        "u35": 1.79,
         "u45": null,
-        "btts": null
+        "btts": 1.84
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-07T11:26:19.869Z",
+          "odds": {
+            "dcHD": 4.34,
+            "dcAD": 1.08,
+            "pHome": 12,
+            "pDraw": 6.8,
+            "pAway": 1.29,
+            "o15": null,
+            "o25": 1.48,
+            "o35": 2.21,
+            "u35": 1.78,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -1332,7 +1388,7 @@
         "odds": 1.36,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.36
       },
       {
@@ -1344,7 +1400,7 @@
         "odds": 1.67,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.67
       }
     ],
@@ -1366,7 +1422,7 @@
           "p": 0.5801697678369312,
           "odds": 1.7236334180740538,
           "hit": null,
-          "realOdds": 2.21
+          "realOdds": 2.22
         },
         {
           "match": "FUL–NEW",
@@ -1374,7 +1430,7 @@
           "market": "BTTS",
           "p": 0.5371025666203904,
           "odds": 1.8618417824593512,
-          "hit": null,
+          "hit": true,
           "realOdds": null
         },
         {
@@ -1393,7 +1449,7 @@
       "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-07T11:26:19.869Z",
+  "oddsUpdatedAt": "2026-11-07T19:29:43.284Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-07T15:14:40.566Z"
+  "resultsCheckedAt": "2026-11-07T19:30:20.912Z"
 }
