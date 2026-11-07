@@ -2374,5 +2374,77 @@
     "odds": 1.74,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "MAL–SAN",
+    "pick": "Málaga CF eller uavgjort",
+    "p": 0.8168893312797749,
+    "odds": 1.5,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "ESP–DEP",
+    "pick": "RC Deportivo La Coruña eller uavgjort",
+    "p": 0.8115569481864993,
+    "odds": 1.65,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "FUL–NEW",
+    "pick": "Fulham FC eller uavgjort",
+    "p": 0.7832078120877752,
+    "odds": 1.36,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "ARS–HUL",
+    "pick": "Under 3,5 mål",
+    "p": 0.7762120271389846,
+    "odds": 1.67,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "LEE–TOT",
+    "pick": "Leeds United FC eller uavgjort",
+    "p": 0.6598895969224081,
+    "odds": 1.62,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "NOT–MCI",
+    "pick": "Manchester City FC eller uavgjort",
+    "p": 0.9547068580017548,
+    "odds": 1.26,
+    "hit": false,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "OSA–ATH",
+    "pick": "CA Osasuna eller uavgjort",
+    "p": 0.6059895335047842,
+    "odds": 1.89,
+    "hit": true,
+    "source": "matchPick"
+  },
+  {
+    "date": "2026-11-07",
+    "match": "VAL–RMA",
+    "pick": "Over 3,5 mål",
+    "p": 0.5801697678369312,
+    "odds": 2.22,
+    "hit": false,
+    "source": "gambler"
   }
 ]

@@ -652,7 +652,8 @@
         "p": 0.9547068580017548,
         "pick": "Manchester City FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.26
+        "odds": 1.26,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -685,7 +686,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564744,
@@ -985,7 +1004,8 @@
         "p": 0.5021092493197412,
         "pick": "RC Deportivo La Coruña vinner",
         "market": "Full tid",
-        "odds": 3.2
+        "odds": 3.2,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -1018,7 +1038,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564739,
@@ -1142,7 +1180,8 @@
         "p": 0.6059895335047842,
         "pick": "CA Osasuna eller uavgjort",
         "market": "Double chance",
-        "odds": 1.89
+        "odds": 1.89,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -1175,7 +1214,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564741,
@@ -1299,7 +1356,8 @@
         "p": 0.6152098161575112,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -1350,7 +1408,25 @@
           }
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 0,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -1376,7 +1452,7 @@
         "odds": 1.65,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.65
       },
       {
@@ -1421,7 +1497,7 @@
           "market": "Totalt",
           "p": 0.5801697678369312,
           "odds": 1.7236334180740538,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.22
         },
         {
@@ -1439,7 +1515,7 @@
           "market": "BTTS",
           "p": 0.41233479299074527,
           "odds": 2.4252137268039,
-          "hit": null,
+          "hit": false,
           "realOdds": null
         }
       ],
@@ -1450,6 +1526,6 @@
     }
   },
   "oddsUpdatedAt": "2026-11-07T19:29:43.284Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-07T19:30:20.912Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-07T22:54:02.604Z"
 }
