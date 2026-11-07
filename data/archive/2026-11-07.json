@@ -124,7 +124,8 @@
         "p": 0.6598895969224081,
         "pick": "Leeds United FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.62
+        "odds": 1.62,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560640,
@@ -752,7 +771,8 @@
         "p": 0.6326783308938694,
         "pick": "Málaga CF vinner",
         "market": "Full tid",
-        "odds": 2.52
+        "odds": 2.52,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -785,7 +805,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564745,
@@ -1269,7 +1307,9 @@
         "p": 0.8168893312797749,
         "odds": 1.5,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.5
       },
       {
         "match": "ESP–DEP",
@@ -1279,7 +1319,9 @@
         "p": 0.8115569481864993,
         "odds": 1.65,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.65
       },
       {
         "match": "FUL–NEW",
@@ -1289,7 +1331,9 @@
         "p": 0.7832078120877752,
         "odds": 1.36,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.36
       },
       {
         "match": "ARS–HUL",
@@ -1299,7 +1343,9 @@
         "p": 0.7762120271389846,
         "odds": 1.67,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.67
       }
     ],
     "gambler": {
@@ -1309,34 +1355,45 @@
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.6188242679662315,
-          "odds": 1.6159676531214655
+          "odds": 1.6159676531214655,
+          "hit": false,
+          "realOdds": null
         },
         {
           "match": "VAL–RMA",
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5801697678369312,
-          "odds": 1.7236334180740538
+          "odds": 1.7236334180740538,
+          "hit": null,
+          "realOdds": 2.21
         },
         {
           "match": "FUL–NEW",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5371025666203904,
-          "odds": 1.8618417824593512
+          "odds": 1.8618417824593512,
+          "hit": null,
+          "realOdds": null
         },
         {
           "match": "ESP–DEP",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.41233479299074527,
-          "odds": 2.4252137268039
+          "odds": 2.4252137268039,
+          "hit": null,
+          "realOdds": null
         }
       ],
       "combinedOdds": 12.576805913146565,
       "combinedProb": 0.07951144407457998,
-      "hitRate": 13
+      "hitRate": 13,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-07T11:26:19.869Z"
+  "oddsUpdatedAt": "2026-11-07T11:26:19.869Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-11-07T15:14:40.566Z"
 }
