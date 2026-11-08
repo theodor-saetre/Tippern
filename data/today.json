@@ -1185,7 +1185,8 @@
         "p": 0.5671555609537414,
         "pick": "Real Sociedad de Fútbol vinner",
         "market": "Full tid",
-        "odds": 1.83
+        "odds": 1.83,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -1218,7 +1219,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564742,
@@ -1342,7 +1361,8 @@
         "p": 0.561943521299957,
         "pick": "RC Celta de Vigo vinner",
         "market": "Full tid",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -1362,7 +1382,25 @@
         "u45": 1.0798386853812627,
         "btts": 2.482540152358252
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564747,
@@ -1486,7 +1524,8 @@
         "p": 0.5975558573848726,
         "pick": "Villarreal CF vinner",
         "market": "Full tid",
-        "odds": 1.53
+        "odds": 1.53,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1519,7 +1558,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564746,
@@ -1643,7 +1700,8 @@
         "p": 0.6873354238322811,
         "pick": "FC Barcelona eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -1663,7 +1721,25 @@
         "u45": 1.320775965251016,
         "btts": 1.5011979649445149
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -1713,7 +1789,7 @@
         "odds": 1.64,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.64
       }
     ],
@@ -1725,7 +1801,7 @@
           "market": "Full tid",
           "p": 0.5975558573848726,
           "odds": 1.6734837214655933,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.53
         },
         {
@@ -1734,7 +1810,7 @@
           "market": "Full tid",
           "p": 0.5671555609537414,
           "odds": 1.7631846866111613,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.83
         },
         {
@@ -1743,7 +1819,7 @@
           "market": "Full tid",
           "p": 0.561943521299957,
           "odds": 1.7795382669181359,
-          "hit": null,
+          "hit": false,
           "realOdds": null
         },
         {
@@ -1763,6 +1839,6 @@
     }
   },
   "oddsUpdatedAt": "2026-11-08T15:37:54.726Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-08T20:00:59.605Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-08T23:50:08.027Z"
 }
