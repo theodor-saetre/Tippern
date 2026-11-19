@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-18T13:33:11.015Z",
+  "generatedAt": "2026-11-19T14:00:46.388Z",
   "date": "2026-11-20",
   "fixtures": [
     {
@@ -124,7 +124,7 @@
         "p": 0.6379520721852674,
         "pick": "Athletic Club vinner",
         "market": "Full tid",
-        "odds": 1.54
+        "odds": 1.53
       },
       "predictedScore": {
         "home": 1,
@@ -145,11 +145,11 @@
         "btts": 3.9332063857333717
       },
       "odds": {
-        "dcHD": 1.16,
-        "dcAD": 2.93,
-        "pHome": 1.54,
-        "pDraw": 4.7,
-        "pAway": 7.8,
+        "dcHD": 1.15,
+        "dcAD": 2.88,
+        "pHome": 1.53,
+        "pDraw": 4.65,
+        "pAway": 7.6,
         "o15": null,
         "o25": 1.92,
         "o35": null,
@@ -168,7 +168,7 @@
         "pick": "Athletic Club vinner",
         "market": "Full tid",
         "p": 0.6379520721852674,
-        "odds": 1.54,
+        "odds": 1.53,
         "liveOdds": true,
         "modelBased": true
       }
@@ -188,5 +188,5 @@
       "hitRate": 4
     }
   },
-  "oddsUpdatedAt": "2026-11-18T13:33:11.460Z"
+  "oddsUpdatedAt": "2026-11-19T14:00:46.681Z"
 }
