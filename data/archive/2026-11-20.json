@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T14:00:46.388Z",
+  "generatedAt": "2026-11-20T13:42:17.948Z",
   "date": "2026-11-20",
   "fixtures": [
     {
@@ -146,12 +146,12 @@
       },
       "odds": {
         "dcHD": 1.15,
-        "dcAD": 2.88,
+        "dcAD": 2.9,
         "pHome": 1.53,
-        "pDraw": 4.65,
+        "pDraw": 4.7,
         "pAway": 7.6,
         "o15": null,
-        "o25": 1.92,
+        "o25": 1.76,
         "o35": null,
         "u35": null,
         "u45": null,
@@ -188,5 +188,5 @@
       "hitRate": 4
     }
   },
-  "oddsUpdatedAt": "2026-11-19T14:00:46.681Z"
+  "oddsUpdatedAt": "2026-11-20T13:42:18.138Z"
 }
