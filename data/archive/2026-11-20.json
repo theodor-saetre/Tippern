@@ -124,7 +124,8 @@
         "p": 0.6379520721852674,
         "pick": "Athletic Club vinner",
         "market": "Full tid",
-        "odds": 1.53
+        "odds": 1.53,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     }
   ],
   "coupon": {
@@ -170,7 +189,9 @@
         "p": 0.6379520721852674,
         "odds": 1.53,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.53
       }
     ],
     "gambler": {
@@ -180,13 +201,18 @@
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.2542454938615034,
-          "odds": 3.9332063857333717
+          "odds": 3.9332063857333717,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 3.9332063857333717,
       "combinedProb": 0.2542454938615034,
-      "hitRate": 4
+      "hitRate": 4,
+      "comboHit": false
     }
   },
-  "oddsUpdatedAt": "2026-11-20T13:42:18.138Z"
+  "oddsUpdatedAt": "2026-11-20T13:42:18.138Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-20T23:12:50.147Z"
 }

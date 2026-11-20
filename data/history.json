@@ -2518,5 +2518,14 @@
     "odds": 1.83,
     "hit": true,
     "source": "gambler"
+  },
+  {
+    "date": "2026-11-20",
+    "match": "ATH–ESP",
+    "pick": "Athletic Club vinner",
+    "p": 0.6379520721852674,
+    "odds": 1.53,
+    "hit": false,
+    "source": "dagensSpill"
   }
 ]
