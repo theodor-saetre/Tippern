@@ -35,6 +35,6 @@ jobs:
         run: |
           git config user.name  "kampanalyse-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data/today.json data/archive/ data/history.json
+          git add -A data/
           git commit -m "Odds/resultat-oppdatering $(date -u +%H:%M)" || echo "Ingen endring"
           git push

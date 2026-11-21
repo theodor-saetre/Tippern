@@ -55,8 +55,8 @@
     <div class="sub">100 kr pr tips</div>
   </header>
   <nav>
-    <a href="index.html">I dag</a>
-    <a href="tips.html">Tips</a>
+    <a href="index.html">Tips</a>
+    <a href="detaljer.html">Detaljer</a>
     <a href="statistikk.html">Statistikk</a>
     <a href="avkastning.html" class="active">Avkastning</a>
   </nav>
@@ -64,68 +64,38 @@
   <div id="stats"></div>
   <div id="list"></div>
   <div class="disclaimer">
-    <b>Til underholdning — ikke investeringsråd.</b> Simulerer 100 kr flat innsats pr tips, med de ekte oddsene som faktisk var hentet den dagen. Traff = 100×(odds−1) i pluss. Bom = 100 kr i minus. Ingen bookmaker-margin er trukket fra i tillegg — ekte resultat vil normalt være dårligere enn dette pga. spillselskapets innebygde margin.
+    <b>Til underholdning — ikke investeringsråd.</b> 100 kr flat innsats på modellens hovedspill i hver kamp. BB Golds priser kan ikke hentes automatisk, så prisen er et <b>estimat</b> (markedets marginfrie pris minus 2–3 %), ikke ekte odds. Ekte resultat blir normalt dårligere hvis BB Gold betaler mindre enn estimatet.
   </div>
 </div>
 <script>
-// Ny telleperiode fra da spill-logikken ble lagt om (ett beste spill pr kamp).
-// Eldre tips lå på en annen logikk og blandes ikke inn i regnskapet.
-const TRACKING_START = '2026-09-11';
+// Ny modell logges fra 21. nov 2026. Prisen er et ESTIMAT av BB Golds pris (ikke ekte odds), se forklaringen under.
+const TRACKING_START = '2026-11-21';
 const nok = n => (n>=0?'+':'−') + Math.abs(n).toFixed(0) + ' kr';
 
 async function load(){
   const tag = document.getElementById('statusTag');
-  let history;
-  try {
-    const res = await fetch('data/history.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP '+res.status);
-    history = await res.json();
-  } catch(e) {
-    history = [];
-  }
-
-  const older = history.filter(h => h.date < TRACKING_START).length;
-  history = history.filter(h => h.date >= TRACKING_START);
-
-  if (history.length === 0) {
-    tag.textContent = '● Ingen avklarte tips ennå';
-    document.getElementById('list').innerHTML = `<div class="empty">Historikken bygger seg opp dag for dag. Kom tilbake etter noen kampdager.</div>`;
+  let log = [];
+  try { const r = await fetch('data/combo-history.json', { cache: 'no-store' }); if (r.ok) log = await r.json(); } catch(e) {}
+  log = log.filter(h => h.date >= TRACKING_START);
+  if (!log.length) {
+    tag.textContent = '● Ingen avklarte spill ennå';
+    document.getElementById('list').innerHTML = '<div class="empty">Historikken bygger seg opp dag for dag, fra og med ' + TRACKING_START + '.</div>';
     return;
   }
-
   const STAKE = 100;
   let balance = 0;
-  const rows = history.map(h => {
-    const pl = h.hit ? STAKE * (h.odds - 1) : -STAKE;
-    balance += pl;
-    return { ...h, pl, balance };
-  });
-
-  const totalStaked = STAKE * history.length;
-  const totalPL = rows[rows.length-1].balance;
-  const roi = totalPL / totalStaked * 100;
-
-  tag.textContent = `● ${history.length} tips à 100 kr — fra ${TRACKING_START}` + (older ? ` (${older} eldre utelatt)` : '');
-  document.getElementById('stats').innerHTML = `
-    <div class="headline">
-      <div class="num ${totalPL>=0?'pos':'neg'}">${nok(totalPL)}</div>
-      <div class="cap">Total gevinst/tap</div>
-    </div>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="num">${totalStaked} kr</div><div class="cap">Satset totalt</div></div>
-      <div class="stat-box"><div class="num">${roi>=0?'+':''}${roi.toFixed(1)}%</div><div class="cap">ROI</div></div>
-      <div class="stat-box"><div class="num">${history.length}</div><div class="cap">Antall tips</div></div>
-    </div>`;
-
-  document.getElementById('list').innerHTML = `<div class="card">` +
-    [...rows].reverse().map(h => `
-      <div class="row">
-        <span class="lbl">${h.pick}<small>${h.date} · ${h.match} · odds ${h.odds.toFixed(2)} · saldo ${nok(h.balance)}</small></span>
-        <span class="pl ${h.pl>=0?'pos':'neg'}">${nok(h.pl)}</span>
-      </div>`).join('') +
-  `</div>`;
+  const rows = log.map(h => { const pl = h.hit ? STAKE * (h.estOdds - 1) : -STAKE; balance += pl; return { ...h, pl, balance }; });
+  const staked = STAKE * log.length, roi = balance / staked * 100;
+  tag.textContent = '● ' + log.length + ' spill à 100 kr — fra ' + TRACKING_START + ' — estimert pris';
+  document.getElementById('stats').innerHTML =
+    '<div class="headline"><div class="num ' + (balance>=0?'pos':'neg') + '">' + nok(balance) + '</div><div class="cap">Estimert gevinst/tap</div></div>'
+    + '<div class="stat-grid"><div class="stat-box"><div class="num">' + staked + ' kr</div><div class="cap">Satset totalt</div></div>'
+    + '<div class="stat-box"><div class="num">' + (roi>=0?'+':'') + roi.toFixed(1) + '%</div><div class="cap">ROI</div></div>'
+    + '<div class="stat-box"><div class="num">' + log.length + '</div><div class="cap">Antall spill</div></div></div>';
+  document.getElementById('list').innerHTML = '<div class="card">' + [...rows].reverse().map(h =>
+    '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · est. odds ' + h.estOdds.toFixed(2) + ' · saldo ' + nok(h.balance) + '</small></span>'
+    + '<span class="pl ' + (h.pl>=0?'pos':'neg') + '">' + nok(h.pl) + '</span></div>').join('') + '</div>';
 }
-
 load();
 </script>
 </body>

@@ -50,8 +50,8 @@
     <div class="sub">Treffprosent over tid</div>
   </header>
   <nav>
-    <a href="index.html">I dag</a>
-    <a href="tips.html">Tips</a>
+    <a href="index.html">Tips</a>
+    <a href="detaljer.html">Detaljer</a>
     <a href="statistikk.html" class="active">Statistikk</a>
     <a href="avkastning.html">Avkastning</a>
   </nav>
@@ -59,55 +59,35 @@
   <div id="stats"></div>
   <div id="list"></div>
   <div class="disclaimer">
-    <b>Til underholdning.</b> Bygges opp én dag av gangen fra `data/history.json` — bare tips som faktisk hadde en ekte, hentet bookmakerodds telles med. Jo lenger appen kjører, jo mer meningsfullt blir tallet. Få dager = ikke statistisk pålitelig ennå.
+    <b>Til underholdning.</b> Gjelder den nye modellen (ett kombispill pr kamp), fra 21. nov 2026. Hvert spill logges når kampen er ferdig. Få kamper = ikke statistisk pålitelig ennå.
   </div>
 </div>
 <script>
-// Ny telleperiode fra da spill-logikken ble lagt om (ett beste spill pr kamp).
-const TRACKING_START = '2026-09-11';
+// Ny modell (markedsbasert, kombispill i samme kamp) logges fra 21. nov 2026. Eldre tips (gammel formmodell) telles ikke med.
+const TRACKING_START = '2026-11-21';
 const fmtPct = n => n.toFixed(0)+"%";
 
 async function load(){
   const tag = document.getElementById('statusTag');
-  let history;
-  try {
-    const res = await fetch('data/history.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error('HTTP '+res.status);
-    history = await res.json();
-  } catch(e) {
-    history = [];
-  }
-
-  const older = history.filter(h => h.date < TRACKING_START).length;
-  history = history.filter(h => h.date >= TRACKING_START);
-
-  if (history.length === 0) {
-    tag.textContent = '● Ingen avklarte tips ennå';
-    document.getElementById('list').innerHTML = `<div class="empty">Historikken bygger seg opp dag for dag. Kom tilbake etter noen kampdager.</div>`;
+  let log = [];
+  try { const r = await fetch('data/combo-history.json', { cache: 'no-store' }); if (r.ok) log = await r.json(); } catch(e) {}
+  log = log.filter(h => h.date >= TRACKING_START);
+  if (!log.length) {
+    tag.textContent = '● Ingen avklarte spill ennå';
+    document.getElementById('list').innerHTML = '<div class="empty">Historikken bygger seg opp dag for dag, fra og med ' + TRACKING_START + '.</div>';
     return;
   }
-
-  const hits = history.filter(h => h.hit).length;
-  const hitRate = hits / history.length * 100;
-  const avgModelProb = history.reduce((s,h)=>s+h.p, 0) / history.length * 100;
-
-  tag.textContent = `● ${history.length} avklarte tips — fra ${TRACKING_START}` + (older ? ` (${older} eldre utelatt)` : '');
-  document.getElementById('stats').innerHTML = `
-    <div class="stat-grid">
-      <div class="stat-box"><div class="num">${fmtPct(hitRate)}</div><div class="cap">Treffprosent</div></div>
-      <div class="stat-box"><div class="num">${hits}/${history.length}</div><div class="cap">Traff</div></div>
-      <div class="stat-box"><div class="num">${fmtPct(avgModelProb)}</div><div class="cap">Modellen sa i snitt</div></div>
-    </div>`;
-
-  document.getElementById('list').innerHTML = `<div class="card">` +
-    [...history].reverse().map(h => `
-      <div class="row">
-        <span class="lbl">${h.pick}<small>${h.date} · ${h.match} · odds ${h.odds.toFixed(2)}</small></span>
-        <span class="res ${h.hit?'hit':'miss'}">${h.hit?'TRAFF':'BOM'}</span>
-      </div>`).join('') +
-  `</div>`;
+  const hits = log.filter(h => h.hit).length;
+  const avgP = log.reduce((s,h) => s + h.p, 0) / log.length * 100;
+  tag.textContent = '● ' + log.length + ' avklarte spill — fra ' + TRACKING_START;
+  document.getElementById('stats').innerHTML = '<div class="stat-grid">'
+    + '<div class="stat-box"><div class="num">' + fmtPct(hits/log.length*100) + '</div><div class="cap">Treffprosent</div></div>'
+    + '<div class="stat-box"><div class="num">' + hits + '/' + log.length + '</div><div class="cap">Traff</div></div>'
+    + '<div class="stat-box"><div class="num">' + fmtPct(avgP) + '</div><div class="cap">Modellen sa i snitt</div></div></div>';
+  document.getElementById('list').innerHTML = '<div class="card">' + [...log].reverse().map(h =>
+    '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · sa ' + fmtPct(h.p*100) + '</small></span>'
+    + '<span class="res ' + (h.hit?'hit':'miss') + '">' + (h.hit?'TRAFF':'BOM') + '</span></div>').join('') + '</div>';
 }
-
 load();
 </script>
 </body>

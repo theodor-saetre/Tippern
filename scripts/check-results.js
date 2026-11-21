@@ -9,6 +9,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { comboHit } = require('../lib/combos');
 
 const API = 'https://api.football-data.org/v4';
 const KEY = process.env.FOOTBALL_DATA_KEY;
@@ -103,7 +104,25 @@ async function processDay(file, now) {
     f.result = { home: hg, away: ag };
     f.outcomes = actualOutcomes(hg, ag);
     if (f.matchPick) f.matchPick.hit = f.outcomes[f.matchPick.key]; // for visning i tips.html
+    if (f.combos) for (const c of f.combos) c.hit = comboHit(c, hg, ag);
+    if (f.comboPick) f.comboPick.hit = comboHit(f.comboPick, hg, ag);
+    if (f.comboAlts) for (const c of f.comboAlts) c.hit = comboHit(c, hg, ag);
     resolvedCount++;
+  }
+
+  // Kombikuponger: marker hvert ben, og kupongen treffer bare hvis ALLE ben treffer.
+  const fxByLabel = new Map(day.fixtures.map((x) => [x.label, x]));
+  const markCoupon = (cp) => {
+    if (!cp || !cp.legs) return;
+    for (const l of cp.legs) {
+      const fx = fxByLabel.get(l.match);
+      if (fx && fx.result) l.hit = comboHit(l, fx.result.home, fx.result.away);
+    }
+    cp.hit = cp.legs.some((l) => l.hit === false) ? false : (cp.legs.every((l) => l.hit === true) ? true : null);
+  };
+  if (day.coupon) {
+    (day.coupon.kombikuponger || []).forEach(markCoupon);
+    markCoupon(day.coupon.dagensKombi);
   }
 
   // Merk av treff i "Dagens spill" og "The Gambler". `.odds` på gambler-bein er
@@ -157,7 +176,7 @@ async function processDay(file, now) {
   // Dagen er ferdig sjekket → legg "ett spill pr kamp"-tipsene inn i den
   // varige historikk-loggen (kun de som faktisk hadde ekte odds - se
   // scripts/build-model.js sin pickMatchPick og scripts/fetch-odds.js).
-  if (allResolved) appendToHistory(day);
+  if (allResolved) { appendToHistory(day); appendComboHistory(day); appendCouponHistory(day); }
 
   console.log(`${day.date}: ${resolvedCount}/${day.fixtures.length} kamper avklart` +
     (allResolved ? ' — dagen er ferdig sjekket' : ' — noen gjenstår, prøver igjen neste kjøring'));
@@ -201,6 +220,53 @@ function appendToHistory(day) {
   }
 
   fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
+}
+
+// Egen logg for kombispillene (resultat/dobbel sjanse + mål). Holdes ADSKILT fra
+// history.json: kombipriser finnes ikke i odds-feeden, så `estOdds` er et markedsestimat
+// (estimert BB Gold-pris: marginfri Unibet-pris minus ~2-3 %) - ikke en ekte odds. Her måler vi derfor
+// treffprosent og estimert avkastning, aldri ekte avkastning.
+const COMBO_HISTORY_PATH = path.join(__dirname, '..', 'data', 'combo-history.json');
+// Antall uavgjorte i begge lags siste (opptil) 5 kamper; null hvis formdata mangler.
+function drawsInForm(f) {
+  if (!Array.isArray(f.formH) || !Array.isArray(f.formA) || f.formH.length < 4 || f.formA.length < 4) return null;
+  return [...f.formH, ...f.formA].filter((m) => m.r === 'D').length;
+}
+
+function appendComboHistory(day) {
+  const log = fs.existsSync(COMBO_HISTORY_PATH) ? JSON.parse(fs.readFileSync(COMBO_HISTORY_PATH, 'utf8')) : [];
+  for (const f of day.fixtures) {
+    const c = f.comboPick;
+    if (!c || c.hit == null) continue;
+    log.push({
+      date: day.date, match: f.label, pick: c.label, bb: c.bb,
+      p: c.p, estOdds: +c.estBB.toFixed(2), fair: +c.fairMarket.toFixed(2), edge: +(c.edge ?? 0).toFixed(3), hit: c.hit,
+      // Til fremtidig test (ikke brukt i valget): lite-uavgjort-hypotesen (<=1 uavgjort i lagenes siste 5+5)
+      // og treff for alle linjer/12-spill, så de kan evalueres på nye kamper.
+      score: f.result ? `${f.result.home}-${f.result.away}` : null,
+      draws10: drawsInForm(f),
+      alts: (f.comboAlts || []).filter((a) => a.hit != null).map((a) => ({ key: a.key, p: +a.p.toFixed(3), fair: +a.fairMarket.toFixed(2), hit: a.hit })),
+    });
+  }
+  fs.writeFileSync(COMBO_HISTORY_PATH, JSON.stringify(log, null, 2));
+}
+
+// Logg over kombikuponger (alle ben må treffe). estOdds er estimert BB-pris, ikke ekte odds.
+const COUPON_HISTORY_PATH = path.join(__dirname, '..', 'data', 'coupon-history.json');
+function appendCouponHistory(day) {
+  const log = fs.existsSync(COUPON_HISTORY_PATH) ? JSON.parse(fs.readFileSync(COUPON_HISTORY_PATH, 'utf8')) : [];
+  const push = (kind, slot, cp) => {
+    if (!cp || cp.single || cp.hit == null) return;
+    log.push({
+      date: day.date, kind, slot, legs: cp.legs.length, p: cp.p, estOdds: +cp.estOdds.toFixed(2), hit: cp.hit,
+      picks: cp.legs.map((l) => `${l.match}: ${l.bb}`),
+    });
+  };
+  if (day.coupon) {
+    (day.coupon.kombikuponger || []).forEach((cp) => push('slot', cp.slot, cp));
+    push('dagens', 'dagens', day.coupon.dagensKombi);
+  }
+  fs.writeFileSync(COUPON_HISTORY_PATH, JSON.stringify(log, null, 2));
 }
 
 async function main() {
