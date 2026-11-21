@@ -124,7 +124,8 @@
         "p": 0.7036791025913047,
         "pick": "Manchester City FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.41
+        "odds": 1.41,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -157,7 +158,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 560642,
@@ -2097,7 +2116,7 @@
         "p": 0.6437742204367315,
         "pick": "Arsenal FC vinner",
         "market": "Full tid",
-        "odds": 1.62
+        "odds": 1.58
       },
       "predictedScore": {
         "home": 0,
@@ -2119,18 +2138,241 @@
       },
       "odds": {
         "dcHD": 2.61,
-        "dcAD": 1.18,
-        "pHome": 6.4,
-        "pDraw": 4.41,
-        "pAway": 1.62,
+        "dcAD": 1.15,
+        "pHome": 7.35,
+        "pDraw": 4.6,
+        "pAway": 1.58,
         "o15": null,
-        "o25": 1.84,
+        "o25": null,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.98
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-21T14:29:52.726Z",
+          "odds": {
+            "dcHD": 2.61,
+            "dcAD": 1.18,
+            "pHome": 6.4,
+            "pDraw": 4.41,
+            "pAway": 1.62,
+            "o15": null,
+            "o25": 1.84,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 2.57,
+          "dcAD": 1.15,
+          "pHome": 6.4,
+          "pDraw": 4.3,
+          "pAway": 1.57,
+          "o15": null,
+          "o25": 1.77,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.77,
+          "under": 2.07
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.017350179771512736,
+        "odds": {
+          "pHome": 6.561961842287714,
+          "pDraw": 4.489584223079428,
+          "pAway": 1.600336004721299
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.8690800640836016,
+          "under": 2.1506419734232964
+        }
+      },
+      "oddsLocked": true,
+      "combos": [
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.7440977400512658,
+          "pMarket": 0.7199069814856208,
+          "pModel": null,
+          "edge": 0.03360261698771727,
+          "fairMarket": 1.3890683459359863,
+          "estBB": 1.3473962955579066
+        },
+        {
+          "key": "X2_u3.5",
+          "result": "X2",
+          "line": 3.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 3,5 mål",
+          "bb": "X2 og Under 3,5",
+          "p": 0.6115206056683519,
+          "pMarket": 0.5751346501596429,
+          "pModel": null,
+          "edge": 0.06326510756847825,
+          "fairMarket": 1.7387232706678777,
+          "estBB": 1.6865615725478413
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 0.86,
+        "lambdaA": 1.9800000000000004,
+        "err": 0.008389317144320183,
+        "marketTotal": 2.8400000000000003,
+        "leagueAdj": -0.192,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.017350179771512736
+      },
+      "comboPick": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.7440977400512658,
+        "pMarket": 0.7199069814856208,
+        "pModel": null,
+        "edge": 0.03360261698771727,
+        "fairMarket": 1.3890683459359863,
+        "estBB": 1.3473962955579066
+      },
+      "comboOver": {
+        "key": "X2_o1.5",
+        "result": "X2",
+        "line": 1.5,
+        "over": true,
+        "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+        "bb": "X2 og Over 1,5",
+        "p": 0.6547144675045757,
+        "pMarket": 0.6834530502025619,
+        "pModel": null,
+        "edge": -0.04204909567594817,
+        "fairMarket": 1.4631582955165976,
+        "estBB": 1.4338951296062656
+      },
+      "comboUnder": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.7440977400512658,
+        "pMarket": 0.7199069814856208,
+        "pModel": null,
+        "edge": 0.03360261698771727,
+        "fairMarket": 1.3890683459359863,
+        "estBB": 1.3473962955579066
+      },
+      "comboAlts": [
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.7440977400512658,
+          "pMarket": 0.7199069814856208,
+          "pModel": null,
+          "edge": 0.03360261698771727,
+          "fairMarket": 1.3890683459359863,
+          "estBB": 1.3473962955579066
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.6547144675045757,
+          "pMarket": 0.6834530502025619,
+          "pModel": null,
+          "edge": -0.04204909567594817,
+          "fairMarket": 1.4631582955165976,
+          "estBB": 1.4338951296062656
+        },
+        {
+          "key": "X2_u3.5",
+          "result": "X2",
+          "line": 3.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 3,5 mål",
+          "bb": "X2 og Under 3,5",
+          "p": 0.6115206056683519,
+          "pMarket": 0.5751346501596429,
+          "pModel": null,
+          "edge": 0.06326510756847825,
+          "fairMarket": 1.7387232706678777,
+          "estBB": 1.6865615725478413
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Newcastle United FC eller Arsenal FC (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.59116069366648,
+          "pMarket": 0.6248797867548472,
+          "pModel": null,
+          "edge": -0.05396092785058493,
+          "fairMarket": 1.6003078051111932,
+          "estBB": 1.5683016490089694
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Newcastle United FC eller Arsenal FC (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.4477625758411505,
+          "pMarket": 0.488747959827468,
+          "pModel": null,
+          "edge": -0.0838579131886007,
+          "fairMarket": 2.0460443463600506,
+          "estBB": 2.0051234594328498
+        },
+        {
+          "key": "X2_o2.5",
+          "result": "X2",
+          "line": 2.5,
+          "over": true,
+          "label": "Arsenal FC eller uavgjort + Over 2,5 mål",
+          "bb": "X2 og Over 2,5",
+          "p": 0.4156541728485811,
+          "pMarket": 0.45650645459271505,
+          "pModel": null,
+          "edge": -0.08948894661430684,
+          "fairMarket": 2.1905495309856633,
+          "estBB": 2.14673854036595
+        }
+      ]
     },
     {
       "id": 564755,
@@ -2254,7 +2496,8 @@
         "p": 0.6292899919114001,
         "pick": "Deportivo Alavés eller uavgjort",
         "market": "Double chance",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -2287,7 +2530,25 @@
         "u45": null,
         "btts": null
       },
-      "oddsHistory": []
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564751,
@@ -2813,18 +3074,227 @@
       },
       "odds": {
         "dcHD": 1.65,
-        "dcAD": 1.47,
+        "dcAD": 1.51,
         "pHome": 3.13,
         "pDraw": 3.48,
-        "pAway": 2.54,
+        "pAway": 2.68,
         "o15": null,
         "o25": 1.97,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.73
       },
-      "oddsHistory": []
+      "oddsHistory": [
+        {
+          "at": "2026-11-21T14:29:52.726Z",
+          "odds": {
+            "dcHD": 1.65,
+            "dcAD": 1.47,
+            "pHome": 3.13,
+            "pDraw": 3.48,
+            "pAway": 2.54,
+            "o15": null,
+            "o25": 1.97,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.62,
+          "dcAD": 1.43,
+          "pHome": 3.05,
+          "pDraw": 3.45,
+          "pAway": 2.45,
+          "o15": null,
+          "o25": 1.89,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.89,
+          "under": 1.89
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.025614177725162834,
+        "odds": {
+          "pHome": 3.0328035794713126,
+          "pDraw": 3.5141249423725927,
+          "pAway": 2.5926467982592567
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.967443848030676,
+          "under": 2.0336517225631185
+        }
+      },
+      "oddsLocked": true,
+      "combos": [
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.5891689152302637,
+          "pMarket": 0.5891689152302637,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.697306110606959,
+          "estBB": 1.6463869272887501
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Sevilla FC eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.5642781733487208,
+          "pMarket": 0.5642781733487208,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.7721755815318512,
+          "estBB": 1.736732069901214
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 1.3,
+        "lambdaA": 1.4200000000000002,
+        "err": 0.002678419821808343,
+        "marketTotal": 2.72,
+        "leagueAdj": 0,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.025614177725162834
+      },
+      "comboPick": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.5891689152302637,
+        "pMarket": 0.5891689152302637,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.697306110606959,
+        "estBB": 1.6463869272887501
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Sevilla FC eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.5642781733487208,
+        "pMarket": 0.5642781733487208,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.7721755815318512,
+        "estBB": 1.736732069901214
+      },
+      "comboUnder": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.5891689152302637,
+        "pMarket": 0.5891689152302637,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.697306110606959,
+        "estBB": 1.6463869272887501
+      },
+      "comboAlts": [
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.5891689152302637,
+          "pMarket": 0.5891689152302637,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.697306110606959,
+          "estBB": 1.6463869272887501
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Sevilla FC eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.5642781733487208,
+          "pMarket": 0.5642781733487208,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.7721755815318512,
+          "estBB": 1.736732069901214
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "Real Betis Balompié eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.512209605435346,
+          "pMarket": 0.512209605435346,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.9523257459220484,
+          "estBB": 1.9132792310036075
+        },
+        {
+          "key": "X2_u3.5",
+          "result": "X2",
+          "line": 3.5,
+          "over": false,
+          "label": "Real Betis Balompié eller uavgjort + Under 3,5 mål",
+          "bb": "X2 og Under 3,5",
+          "p": 0.48102106065888384,
+          "pMarket": 0.48102106065888384,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 2.0789110535622686,
+          "estBB": 2.0165437219554003
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Sevilla FC eller Real Betis Balompié (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.44219907776452216,
+          "pMarket": 0.44219907776452216,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 2.2614248882095485,
+          "estBB": 2.2161963904453574
+        }
+      ]
     },
     {
       "id": 564754,
@@ -2981,7 +3451,9 @@
         "p": 0.9380589956313923,
         "odds": 1.3,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.3
       },
       {
         "match": "COV–CRY",
@@ -2991,7 +3463,9 @@
         "p": 0.9175269109820274,
         "odds": 1.51,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.51
       },
       {
         "match": "ALA–DEP",
@@ -3001,7 +3475,9 @@
         "p": 0.8920300877185116,
         "odds": 1.64,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.64
       },
       {
         "match": "AVL–SUN",
@@ -3011,7 +3487,9 @@
         "p": 0.881457651266978,
         "odds": 1.84,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.84
       }
     ],
     "gambler": {
@@ -3021,40 +3499,51 @@
           "pick": "Tottenham Hotspur FC vinner",
           "market": "Full tid",
           "p": 0.5999812929808002,
-          "odds": 1.6667186322290897
+          "odds": 1.6667186322290897,
+          "hit": null,
+          "realOdds": 1.58
         },
         {
           "match": "AVL–SUN",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5946519111962493,
-          "odds": 1.6816560767261644
+          "odds": 1.6816560767261644,
+          "hit": null,
+          "realOdds": 1.73
         },
         {
           "match": "CHE–LEE",
           "pick": "Chelsea FC vinner",
           "market": "Full tid",
           "p": 0.5624660108837091,
-          "odds": 1.7778852066614064
+          "odds": 1.7778852066614064,
+          "hit": null,
+          "realOdds": 2.08
         },
         {
           "match": "RAY–VAL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5162908807230088,
-          "odds": 1.9368926264969268
+          "odds": 1.9368926264969268,
+          "hit": null,
+          "realOdds": 1.9
         },
         {
           "match": "MCI–FUL",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.5123253268653563,
-          "odds": 1.951884764546901
+          "odds": 1.951884764546901,
+          "hit": true,
+          "realOdds": null
         }
       ],
       "combinedOdds": 18.83921956570331,
       "combinedProb": 0.05308075509775863,
-      "hitRate": 19
+      "hitRate": 19,
+      "comboHit": false
     },
     "kombikuponger": [
       {
@@ -3124,7 +3613,48 @@
         ],
         "p": 0.22410397374853402,
         "estOdds": 4.131431653878543,
-        "ev": -0.07412974909534042
+        "ev": -0.07412974909534042,
+        "hit": null
+      },
+      {
+        "slot": "18:30",
+        "skipped": 0,
+        "legs": [
+          {
+            "match": "NEW–ARS",
+            "home": "Newcastle United FC",
+            "away": "Arsenal FC",
+            "kickoff": "2026-11-21T17:30:00Z",
+            "key": "X2_u4.5",
+            "result": "X2",
+            "line": 4.5,
+            "over": false,
+            "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+            "bb": "X2 og Under 4,5",
+            "p": 0.7440977400512658,
+            "estBB": 1.3473962955579066,
+            "fair": 1.3890683459359863
+          },
+          {
+            "match": "SEV–BET",
+            "home": "Sevilla FC",
+            "away": "Real Betis Balompié",
+            "kickoff": "2026-11-21T17:30:00Z",
+            "key": "X2_u4.5",
+            "result": "X2",
+            "line": 4.5,
+            "over": false,
+            "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+            "bb": "X2 og Under 4,5",
+            "p": 0.5891689152302637,
+            "estBB": 1.6463869272887501,
+            "fair": 1.697306110606959
+          }
+        ],
+        "p": 0.43839925833129506,
+        "estOdds": 2.2183356468838267,
+        "ev": -0.02748329767625668,
+        "hit": null
       }
     ],
     "dagensKombi": {
@@ -3177,8 +3707,11 @@
       ],
       "p": 0.3206661827270634,
       "estOdds": 3.1459505149736096,
-      "ev": 0.008799942684826645
+      "ev": 0.008799942684826645,
+      "hit": null
     }
   },
-  "oddsUpdatedAt": "2026-11-21T14:29:52.726Z"
+  "oddsUpdatedAt": "2026-11-21T16:27:27.120Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-11-21T16:28:03.299Z"
 }
