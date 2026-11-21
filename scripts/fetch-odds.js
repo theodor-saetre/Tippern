@@ -77,7 +77,9 @@ async function main() {
   // Morgen-modus: alle dagens kamper som ikke har odds ennå, uansett hvor lenge til avspark.
   // Prekickoff-modus (standard): bare kamper ~1t unna avspark, og ikke allerede låst.
   const due = db.fixtures.filter((f) => {
-    if (MODE === 'morning') return !f.odds;
+    // Også kamper som har odds men mangler referansepriser (oddsRef/oddsUnibet) hentes på nytt - ellers
+    // får de aldri kombier hvis de ble hentet av en eldre versjon av scriptet.
+    if (MODE === 'morning') return !f.odds || (!f.oddsRef && !f.oddsUnibet);
     const mins = (new Date(f.kickoff).getTime() - now) / 60000;
     return mins <= LEAD_MINUTES && mins >= MIN_MINUTES && !f.oddsLocked;
   });
