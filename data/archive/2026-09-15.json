@@ -1,0 +1,612 @@
+{
+  "generatedAt": "2026-09-15T09:41:38.014Z",
+  "date": "2026-09-15",
+  "fixtures": [
+    {
+      "id": 564678,
+      "label": "RAY–ESP",
+      "homeName": "Rayo Vallecano de Madrid",
+      "awayName": "RCD Espanyol de Barcelona",
+      "kickoff": "2026-09-15T17:00:00Z",
+      "competition": "PD",
+      "lambdaH": 1.4329056617263893,
+      "lambdaA": 1.7547056837579407,
+      "blendH": {
+        "atk": 1.2474286257845022,
+        "def": 1.2164579405786653
+      },
+      "blendA": {
+        "atk": 1.202059428186527,
+        "def": 0.7410887056151552
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 4,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.6,
+          "rawGA": 2.8,
+          "adjGF": 1.624314923001671,
+          "adjGA": 2.6593834238303318
+        },
+        "away": {
+          "rawGF": 1.6,
+          "rawGA": 1,
+          "adjGF": 1.5621867036511994,
+          "adjGA": 1.060018586601762
+        }
+      },
+      "markets": {
+        "pHome": 0.3020834041731257,
+        "pDraw": 0.25863874930149244,
+        "pAway": 0.43927784652538215,
+        "dcHD": 0.5607221534746181,
+        "dcAD": 0.6979165958268746,
+        "dcHA": 0.7413612506985079,
+        "o15": 0.8406651621133509,
+        "o25": 0.6175036375971769,
+        "o35": 0.39471961288650215,
+        "o45": 0.21718239169639997,
+        "u15": 0.15933483788664915,
+        "u25": 0.38249636240282314,
+        "u35": 0.6052803871134979,
+        "u45": 0.7828176083036,
+        "btts": 0.6431869868566326,
+        "noBtts": 0.35681301314336744
+      },
+      "matchPick": {
+        "key": "dcAD",
+        "p": 0.6979165958268746,
+        "pick": "RCD Espanyol de Barcelona eller uavgjort",
+        "market": "Double chance",
+        "odds": 1.69,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 1,
+        "away": 1,
+        "p": 0.11725720260966328
+      },
+      "fairOdds": {
+        "pHome": 3.3103440512968216,
+        "pDraw": 3.866396673741685,
+        "pAway": 2.2764635364834374,
+        "dcHD": 1.7834144661546112,
+        "dcAD": 1.43283596633094,
+        "o15": 1.1895342462938476,
+        "o25": 1.6194236586057835,
+        "o35": 2.5334439114570686,
+        "u35": 1.6521268841517693,
+        "u45": 1.2774367737678305,
+        "btts": 1.5547578238284563
+      },
+      "odds": {
+        "dcHD": 1.44,
+        "dcAD": 1.69,
+        "pHome": 2.44,
+        "pDraw": 3.5,
+        "pAway": 3.25,
+        "o15": null,
+        "o25": 2.01,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
+    },
+    {
+      "id": 564680,
+      "label": "ALA–VAL",
+      "homeName": "Deportivo Alavés",
+      "awayName": "Valencia CF",
+      "kickoff": "2026-09-15T18:00:00Z",
+      "competition": "PD",
+      "lambdaH": 3.0313791521436224,
+      "lambdaA": 0.7878348647126149,
+      "blendH": {
+        "atk": 1.5071652089044945,
+        "def": 0.8622344277068922
+      },
+      "blendA": {
+        "atk": 0.7614275570893342,
+        "def": 1.297620508819667
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 5,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 2.2,
+          "rawGA": 1,
+          "adjGF": 2.1660057225381135,
+          "adjGA": 1.0243587742493352
+        },
+        "away": {
+          "rawGF": 0.2,
+          "rawGA": 2,
+          "adjGF": 0.21385767790262172,
+          "adjGA": 1.8707902756714507
+        }
+      },
+      "markets": {
+        "pHome": 0.8118766383192155,
+        "pDraw": 0.12898352110142133,
+        "pAway": 0.05913984057936286,
+        "dcHD": 0.9408601594206368,
+        "dcAD": 0.1881233616807842,
+        "dcHA": 0.8710164788985784,
+        "o15": 0.9010238630691954,
+        "o25": 0.7341078639964459,
+        "o35": 0.5302884263316535,
+        "o45": 0.3356809130223711,
+        "u15": 0.09897613693080465,
+        "u25": 0.2658921360035541,
+        "u35": 0.4697115736683465,
+        "u45": 0.664319086977629,
+        "btts": 0.5256745479839181,
+        "noBtts": 0.4743254520160819
+      },
+      "matchPick": {
+        "key": "u45",
+        "p": 0.664319086977629,
+        "pick": "Under 4,5 mål",
+        "market": "Totalt",
+        "odds": null,
+        "hit": true
+      },
+      "predictedScore": {
+        "home": 3,
+        "away": 0,
+        "p": 0.1019164741961128
+      },
+      "fairOdds": {
+        "pHome": 1.2317142196260829,
+        "pDraw": 7.752928369924772,
+        "pAway": 16.90907500262953,
+        "dcHD": 1.0628572057039596,
+        "dcAD": 5.315660910295889,
+        "o15": 1.1098485189877858,
+        "o25": 1.3621976402160452,
+        "o35": 1.8857662176744907,
+        "u35": 2.1289660635572907,
+        "u45": 1.5053007200945818,
+        "btts": 1.9023177055751097
+      },
+      "odds": {
+        "dcHD": 1.21,
+        "dcAD": 2.22,
+        "pHome": 1.82,
+        "pDraw": 3.6,
+        "pAway": 5.8,
+        "o15": null,
+        "o25": 2.23,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564681,
+      "label": "ELC–RMA",
+      "homeName": "Elche CF",
+      "awayName": "Real Madrid CF",
+      "kickoff": "2026-09-15T19:30:00Z",
+      "competition": "PD",
+      "lambdaH": 0.6788320770497401,
+      "lambdaA": 2.916769601904451,
+      "blendH": {
+        "atk": 0.7498444093058699,
+        "def": 2.1101966778324615
+      },
+      "blendA": {
+        "atk": 1.151855350951015,
+        "def": 0.5840627379581096
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD/CL"
+      },
+      "formH": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 5,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.2,
+          "rawGA": 2.6,
+          "adjGF": 1.175263795981549,
+          "adjGA": 2.5724774030091266
+        },
+        "away": {
+          "rawGF": 2.8,
+          "rawGA": 0.8,
+          "adjGF": 2.603814918111671,
+          "adjGA": 0.8173414484587782
+        }
+      },
+      "markets": {
+        "pHome": 0.05159952216079083,
+        "pDraw": 0.12955079118986562,
+        "pAway": 0.8188496866493437,
+        "dcHD": 0.18115031335065646,
+        "dcAD": 0.9484004778392092,
+        "dcHA": 0.8704492088101344,
+        "o15": 0.8809141390693146,
+        "o25": 0.6964034678984155,
+        "o35": 0.4837297154808344,
+        "o45": 0.292557190165299,
+        "u15": 0.1190858609306854,
+        "u25": 0.30359653210158455,
+        "u35": 0.5162702845191656,
+        "u45": 0.707442809834701,
+        "btts": 0.4731865271907799,
+        "noBtts": 0.5268134728092201
+      },
+      "matchPick": {
+        "key": "u45",
+        "p": 0.707442809834701,
+        "pick": "Under 4,5 mål",
+        "market": "Totalt",
+        "odds": null,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 0,
+        "away": 2,
+        "p": 0.1167682241296675
+      },
+      "fairOdds": {
+        "pHome": 19.380024428983468,
+        "pDraw": 7.718980261065569,
+        "pAway": 1.2212253558915147,
+        "dcHD": 5.52027750603047,
+        "dcAD": 1.0544068917788323,
+        "o15": 1.135184413155747,
+        "o25": 1.4359491962579805,
+        "o35": 2.067270146937294,
+        "u35": 1.9369698973307399,
+        "u45": 1.4135418242976518,
+        "btts": 2.113331514184931
+      },
+      "odds": {
+        "dcHD": 5.36,
+        "dcAD": 1.08,
+        "pHome": 15.5,
+        "pDraw": 8.2,
+        "pAway": 1.24,
+        "o15": null,
+        "o25": 1.31,
+        "o35": 1.86,
+        "u35": 2.17,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 2,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "ALA–VAL",
+        "key": "pHome",
+        "pick": "Deportivo Alavés vinner",
+        "market": "Full tid",
+        "p": 0.8118766383192155,
+        "odds": 1.82,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.82
+      },
+      {
+        "match": "RAY–ESP",
+        "key": "dcAD",
+        "pick": "RCD Espanyol de Barcelona eller uavgjort",
+        "market": "Double chance",
+        "p": 0.6979165958268746,
+        "odds": 1.69,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.69
+      },
+      {
+        "match": "ELC–RMA",
+        "key": "o25",
+        "pick": "Over 2,5 mål",
+        "market": "Totalt",
+        "p": 0.6964034678984155,
+        "odds": 1.31,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.31
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "ALA–VAL",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.5302884263316535,
+          "odds": 1.8857662176744907,
+          "hit": false,
+          "realOdds": null
+        },
+        {
+          "match": "ELC–RMA",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.4837297154808344,
+          "odds": 2.067270146937294,
+          "hit": true,
+          "realOdds": 1.86
+        },
+        {
+          "match": "RAY–ESP",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.39471961288650215,
+          "odds": 2.5334439114570686,
+          "hit": false,
+          "realOdds": null
+        }
+      ],
+      "combinedOdds": 9.87634786473677,
+      "combinedProb": 0.10125200263251892,
+      "hitRate": 10,
+      "comboHit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-09-15T09:41:38.314Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-15T23:13:50.731Z"
+}

@@ -1,0 +1,415 @@
+{
+  "generatedAt": "2026-09-17T09:44:01.691Z",
+  "date": "2026-09-17",
+  "fixtures": [
+    {
+      "id": 564686,
+      "label": "BET–GET",
+      "homeName": "Real Betis Balompié",
+      "awayName": "Getafe CF",
+      "kickoff": "2026-09-17T17:00:00Z",
+      "competition": "PD",
+      "lambdaH": 1.3944631365873017,
+      "lambdaA": 0.15246604547615975,
+      "blendH": {
+        "atk": 0.9876678776027753,
+        "def": 0.5860905276177935
+      },
+      "blendA": {
+        "atk": 0.21678398115940212,
+        "def": 0.9108868040656914
+      },
+      "formSource": {
+        "home": "PD/CL",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.8,
+          "rawGA": 1.6,
+          "adjGF": 1.7816501160266227,
+          "adjGA": 1.6066657464918337
+        },
+        "away": {
+          "rawGF": 0.6,
+          "rawGA": 1.2,
+          "adjGF": 0.621863866919695,
+          "adjGA": 1.2824301522903223
+        }
+      },
+      "markets": {
+        "pHome": 0.6946592071745374,
+        "pDraw": 0.27239754366738284,
+        "pAway": 0.032943249158080036,
+        "dcHD": 0.9670567508419203,
+        "dcAD": 0.3053407928254629,
+        "dcHA": 0.7276024563326174,
+        "o15": 0.463641099862916,
+        "o25": 0.2030219766342497,
+        "o35": 0.07166977485375724,
+        "o45": 0.020871636338124264,
+        "u15": 0.536358900137084,
+        "u25": 0.7969780233657503,
+        "u35": 0.9283302251462427,
+        "u45": 0.9791283636618757,
+        "btts": 0.11223095165578043,
+        "noBtts": 0.8877690483442195
+      },
+      "matchPick": {
+        "key": "pHome",
+        "p": 0.6946592071745374,
+        "pick": "Real Betis Balompié vinner",
+        "market": "Full tid",
+        "odds": 1.69,
+        "hit": true
+      },
+      "predictedScore": {
+        "home": 1,
+        "away": 0,
+        "p": 0.29099794738008977
+      },
+      "fairOdds": {
+        "pHome": 1.4395548056829308,
+        "pDraw": 3.6711050567367542,
+        "pAway": 30.35523287947232,
+        "dcHD": 1.0340654766428126,
+        "dcAD": 3.2750291592110137,
+        "o15": 2.156840712127696,
+        "o25": 4.925575135156578,
+        "o35": 13.952883234815628,
+        "u35": 1.0772028884898872,
+        "u45": 1.0213165475669255,
+        "btts": 8.910197991255252
+      },
+      "odds": {
+        "dcHD": 1.18,
+        "dcAD": 2.42,
+        "pHome": 1.69,
+        "pDraw": 3.9,
+        "pAway": 6.4,
+        "o15": null,
+        "o25": 2.14,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564683,
+      "label": "MAL–VIL",
+      "homeName": "Málaga CF",
+      "awayName": "Villarreal CF",
+      "kickoff": "2026-09-17T19:30:00Z",
+      "competition": "PD",
+      "lambdaH": 0.627773068879246,
+      "lambdaA": 0.8310943659111742,
+      "blendH": {
+        "atk": 0.30037106543830716,
+        "def": 0.6086585290456106
+      },
+      "blendA": {
+        "atk": 1.1378771597028137,
+        "def": 1.3483818175259166
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD/CL"
+      },
+      "formH": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 0.4,
+          "rawGA": 1.6,
+          "adjGF": 0.4573477378874369,
+          "adjGA": 1.6789654535567966
+        },
+        "away": {
+          "rawGF": 1.4,
+          "rawGA": 2.2,
+          "adjGF": 1.4644377315985178,
+          "adjGA": 2.1419647295455246
+        }
+      },
+      "markets": {
+        "pHome": 0.238843831818292,
+        "pDraw": 0.40211243740144564,
+        "pAway": 0.35904373078026247,
+        "dcHD": 0.6409562692197377,
+        "dcAD": 0.7611561681817081,
+        "dcHA": 0.5978875625985545,
+        "o15": 0.4440841950760669,
+        "o25": 0.18090107037635947,
+        "o35": 0.06058651694097276,
+        "o45": 0.01670577095641336,
+        "u15": 0.5559158049239331,
+        "u25": 0.8190989296236405,
+        "u35": 0.9394134830590273,
+        "u45": 0.9832942290435867,
+        "btts": 0.2789174418872629,
+        "noBtts": 0.7210825581127371
+      },
+      "matchPick": {
+        "key": "dcHD",
+        "p": 0.6409562692197377,
+        "pick": "Málaga CF eller uavgjort",
+        "market": "Double chance",
+        "odds": 1.98,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 0,
+        "away": 0,
+        "p": 0.24826896032988846
+      },
+      "fairOdds": {
+        "pHome": 4.186836194960989,
+        "pDraw": 2.486866624823291,
+        "pAway": 2.7851760503569625,
+        "dcHD": 1.5601688414988764,
+        "dcAD": 1.313790837941779,
+        "o15": 2.251825241897453,
+        "o25": 5.527883267465078,
+        "o35": 16.505322479162544,
+        "u35": 1.064493982717476,
+        "u45": 1.0169895952431882,
+        "btts": 3.585290303946625
+      },
+      "odds": {
+        "dcHD": 1.98,
+        "dcAD": 1.34,
+        "pHome": 3.95,
+        "pDraw": 3.97,
+        "pAway": 2.02,
+        "o15": null,
+        "o25": 1.67,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "MAL–VIL",
+        "key": "dcAD",
+        "pick": "Villarreal CF eller uavgjort",
+        "market": "Double chance",
+        "p": 0.7611561681817081,
+        "odds": 1.34,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.34
+      },
+      {
+        "match": "BET–GET",
+        "key": "pHome",
+        "pick": "Real Betis Balompié vinner",
+        "market": "Full tid",
+        "p": 0.6946592071745374,
+        "odds": 1.69,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.69
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "MAL–VIL",
+          "pick": "Begge lag scorer",
+          "market": "BTTS",
+          "p": 0.2789174418872629,
+          "odds": 3.585290303946625,
+          "hit": true,
+          "realOdds": null
+        },
+        {
+          "match": "BET–GET",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.07166977485375724,
+          "odds": 13.952883234815628,
+          "hit": false,
+          "realOdds": null
+        }
+      ],
+      "combinedOdds": 50.02513697388389,
+      "combinedProb": 0.01998995026284605,
+      "hitRate": 50,
+      "comboHit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-09-17T09:44:01.985Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-17T23:10:00.981Z"
+}

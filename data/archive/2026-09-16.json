@@ -1,0 +1,765 @@
+{
+  "generatedAt": "2026-09-16T09:36:01.217Z",
+  "date": "2026-09-16",
+  "fixtures": [
+    {
+      "id": 564679,
+      "label": "DEP–SEV",
+      "homeName": "RC Deportivo La Coruña",
+      "awayName": "Sevilla FC",
+      "kickoff": "2026-09-16T17:00:00Z",
+      "competition": "PD",
+      "lambdaH": 1.83789321454392,
+      "lambdaA": 1.585453879032913,
+      "blendH": {
+        "atk": 1.4652512443932273,
+        "def": 1.060496587227039
+      },
+      "blendA": {
+        "atk": 1.2458423551512154,
+        "def": 0.8092383898716937
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.8,
+          "rawGA": 1.2,
+          "adjGF": 1.7298268683084437,
+          "adjGA": 1.400456059161025
+        },
+        "away": {
+          "rawGF": 1.6,
+          "rawGA": 1.2,
+          "adjGF": 1.5851000561117612,
+          "adjGA": 1.2144350271681632
+        }
+      },
+      "markets": {
+        "pHome": 0.42792260401911997,
+        "pDraw": 0.2485173790551483,
+        "pAway": 0.3235600169257319,
+        "dcHD": 0.6764399830742682,
+        "dcAD": 0.5720773959808803,
+        "dcHA": 0.7514826209448519,
+        "o15": 0.8681347021884844,
+        "o25": 0.6647404716976587,
+        "o35": 0.44673727727243245,
+        "o45": 0.26016212676591643,
+        "u15": 0.13186529781151557,
+        "u25": 0.3352595283023413,
+        "u35": 0.5532627227275675,
+        "u45": 0.7398378732340836,
+        "btts": 0.680945647908383,
+        "noBtts": 0.31905435209161703
+      },
+      "matchPick": {
+        "key": "btts",
+        "p": 0.680945647908383,
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "odds": null,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 1,
+        "away": 1,
+        "p": 0.1073528639296326
+      },
+      "fairOdds": {
+        "pHome": 2.3368711785912555,
+        "pDraw": 4.0238634569620615,
+        "pAway": 3.090616725457566,
+        "dcHD": 1.478327752678403,
+        "dcAD": 1.7480152284035038,
+        "o15": 1.1518949737628226,
+        "o25": 1.5043464969811948,
+        "o35": 2.238452107926899,
+        "u35": 1.8074595647254745,
+        "u45": 1.3516474841016979,
+        "btts": 1.4685459890545387
+      },
+      "odds": {
+        "dcHD": 1.46,
+        "dcAD": 1.59,
+        "pHome": 2.68,
+        "pDraw": 3.2,
+        "pAway": 3.15,
+        "o15": null,
+        "o25": 2.34,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564684,
+      "label": "ATL–OSA",
+      "homeName": "Club Atlético de Madrid",
+      "awayName": "CA Osasuna",
+      "kickoff": "2026-09-16T17:00:00Z",
+      "competition": "PD",
+      "lambdaH": 2.766757534945298,
+      "lambdaA": 1.275263378867913,
+      "blendH": {
+        "atk": 1.1171981523749839,
+        "def": 0.8868247616866081
+      },
+      "blendA": {
+        "atk": 1.1983421396227074,
+        "def": 1.5977513545474429
+      },
+      "formSource": {
+        "home": "PD/CL",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.8,
+          "rawGA": 1.6,
+          "adjGF": 1.8027198906214612,
+          "adjGA": 1.5845089796957552
+        },
+        "away": {
+          "rawGF": 1,
+          "rawGA": 1.6,
+          "adjGF": 1.1450155413966292,
+          "adjGA": 1.5922293758593749
+        }
+      },
+      "markets": {
+        "pHome": 0.6783908158185166,
+        "pDraw": 0.17721234834699306,
+        "pAway": 0.1443968358344904,
+        "dcHD": 0.8556031641655096,
+        "dcAD": 0.32160918418148343,
+        "dcHA": 0.8227876516530069,
+        "o15": 0.9194957841376326,
+        "o25": 0.7679550097925557,
+        "o35": 0.5746329850459657,
+        "o45": 0.37928006826435773,
+        "u15": 0.08050421586236745,
+        "u25": 0.2320449902074443,
+        "u35": 0.4253670149540343,
+        "u45": 0.6207199317356422,
+        "btts": 0.6833889076703151,
+        "noBtts": 0.3166110923296849
+      },
+      "matchPick": {
+        "key": "btts",
+        "p": 0.6833889076703151,
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "odds": null,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 2,
+        "away": 1,
+        "p": 0.0857331956633844
+      },
+      "fairOdds": {
+        "pHome": 1.4740765598270134,
+        "pDraw": 5.642947623728434,
+        "pAway": 6.925359508197351,
+        "dcHD": 1.1687661311717146,
+        "dcAD": 3.109363939792534,
+        "o15": 1.0875525665817707,
+        "o25": 1.3021596151448058,
+        "o35": 1.7402412079077023,
+        "u35": 2.3509110129473987,
+        "u45": 1.6110325267046346,
+        "btts": 1.4632956268035102
+      },
+      "odds": null,
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564685,
+      "label": "LEV–ATH",
+      "homeName": "Levante UD",
+      "awayName": "Athletic Club",
+      "kickoff": "2026-09-16T19:30:00Z",
+      "competition": "PD",
+      "lambdaH": 2.7620063725938993,
+      "lambdaA": 2.2816474213504225,
+      "blendH": {
+        "atk": 1.6803378541962377,
+        "def": 1.6944512746967284
+      },
+      "blendA": {
+        "atk": 1.122117159412364,
+        "def": 1.060465067052978
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 4,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.4,
+          "rawGA": 1.8,
+          "adjGF": 1.4100140603030777,
+          "adjGA": 1.718442669116311
+        },
+        "away": {
+          "rawGF": 1.4,
+          "rawGA": 1.2,
+          "adjGF": 1.4423430384979872,
+          "adjGA": 1.1619758625681915
+        }
+      },
+      "markets": {
+        "pHome": 0.4877726102718297,
+        "pDraw": 0.1895869829111744,
+        "pAway": 0.32264040681699635,
+        "dcHD": 0.6773595931830041,
+        "dcAD": 0.5122273897281707,
+        "dcHA": 0.8104130170888261,
+        "o15": 0.9662960392211083,
+        "o25": 0.8789559012349821,
+        "o35": 0.7410036550274257,
+        "o45": 0.5670578125354553,
+        "u15": 0.033703960778891706,
+        "u25": 0.12104409876501787,
+        "u35": 0.2589963449725743,
+        "u45": 0.4329421874645447,
+        "btts": 0.8464436862456717,
+        "noBtts": 0.15355631375432832
+      },
+      "matchPick": {
+        "key": "dcHD",
+        "p": 0.6773595931830041,
+        "pick": "Levante UD eller uavgjort",
+        "market": "Double chance",
+        "odds": 1.79
+      },
+      "predictedScore": {
+        "home": 2,
+        "away": 2,
+        "p": 0.06405169878401144
+      },
+      "fairOdds": {
+        "pHome": 2.0501356143033784,
+        "pDraw": 5.274623735473029,
+        "pAway": 3.0994257968661882,
+        "dcHD": 1.4763207165943648,
+        "dcAD": 1.9522579620950782,
+        "o15": 1.034879539407053,
+        "o25": 1.1377135059847077,
+        "o35": 1.3495210087229441,
+        "u35": 3.8610583485488656,
+        "u45": 2.3097772149587383,
+        "btts": 1.1814135024568666
+      },
+      "odds": {
+        "dcHD": 1.79,
+        "dcAD": 1.39,
+        "pHome": 3.55,
+        "pDraw": 3.6,
+        "pAway": 2.26,
+        "o15": null,
+        "o25": 1.89,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": []
+    },
+    {
+      "id": 564687,
+      "label": "FCB–SAN",
+      "homeName": "FC Barcelona",
+      "awayName": "Real Racing Club de Santander",
+      "kickoff": "2026-09-16T19:30:00Z",
+      "competition": "PD",
+      "lambdaH": 5.513169433792563,
+      "lambdaA": 1.0709500198980146,
+      "blendH": {
+        "atk": 2.4808969824720517,
+        "def": 0.8185790316442623
+      },
+      "blendA": {
+        "atk": 1.0902531281828098,
+        "def": 1.4337086669872199
+      },
+      "formSource": {
+        "home": "PD/CL",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 4.2,
+          "rawGA": 1,
+          "adjGF": 3.942478758561008,
+          "adjGA": 0.9872389796020086
+        },
+        "away": {
+          "rawGF": 1.8,
+          "rawGA": 1.8,
+          "adjGF": 1.6785641837846357,
+          "adjGA": 1.8366273530883563
+        }
+      },
+      "markets": {
+        "pHome": 0.945885188598069,
+        "pDraw": 0.03627527552910838,
+        "pAway": 0.017839535872822398,
+        "dcHD": 0.9821604641271774,
+        "dcAD": 0.05411481140193078,
+        "dcHA": 0.9637247244708914,
+        "o15": 0.9903307243315465,
+        "o25": 0.9584955358877849,
+        "o35": 0.8910162084877985,
+        "o45": 0.7799432204237469,
+        "u15": 0.009669275668453547,
+        "u25": 0.04150446411221509,
+        "u35": 0.1089837915122015,
+        "u45": 0.22005677957625314,
+        "btts": 0.6556850789796461,
+        "noBtts": 0.3443149210203539
+      },
+      "matchPick": {
+        "key": "btts",
+        "p": 0.6556850789796461,
+        "pick": "Begge lag scorer",
+        "market": "BTTS",
+        "odds": null,
+        "hit": true
+      },
+      "predictedScore": {
+        "home": 5,
+        "away": 1,
+        "p": 0.06447977990198776
+      },
+      "fairOdds": {
+        "pHome": 1.0572107609403807,
+        "pDraw": 27.566985651082643,
+        "pAway": 56.055269998556845,
+        "dcHD": 1.0181635654502508,
+        "dcAD": 18.479229144358076,
+        "o15": 1.009763683414932,
+        "o25": 1.0433016770117478,
+        "o35": 1.1223140392666537,
+        "u35": 9.175676365490029,
+        "u45": 4.544281716408034,
+        "btts": 1.5251223980209594
+      },
+      "odds": {
+        "dcHD": 1.02,
+        "dcAD": 12.78,
+        "pHome": 1.08,
+        "pDraw": 19,
+        "pAway": 39,
+        "o15": null,
+        "o25": 1.11,
+        "o35": null,
+        "u35": null,
+        "u45": 2.22,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 7,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "LEV–ATH",
+        "key": "o25",
+        "pick": "Over 2,5 mål",
+        "market": "Totalt",
+        "p": 0.8789559012349821,
+        "odds": 1.89,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.89
+      },
+      {
+        "match": "DEP–SEV",
+        "key": "dcHD",
+        "pick": "RC Deportivo La Coruña eller uavgjort",
+        "market": "Double chance",
+        "p": 0.6764399830742682,
+        "odds": 1.46,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.46
+      },
+      {
+        "match": "FCB–SAN",
+        "key": "u45",
+        "pick": "Under 4,5 mål",
+        "market": "Totalt",
+        "p": 0.22005677957625314,
+        "odds": 2.22,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.22
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "ATL–OSA",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.5746329850459657,
+          "odds": 1.7402412079077023,
+          "hit": true,
+          "realOdds": null
+        },
+        {
+          "match": "LEV–ATH",
+          "pick": "Levante UD vinner",
+          "market": "Full tid",
+          "p": 0.4877726102718297,
+          "odds": 2.0501356143033784,
+          "hit": null,
+          "realOdds": 3.55
+        },
+        {
+          "match": "DEP–SEV",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.44673727727243245,
+          "odds": 2.238452107926899,
+          "hit": false,
+          "realOdds": null
+        },
+        {
+          "match": "FCB–SAN",
+          "pick": "Begge lag scorer",
+          "market": "BTTS",
+          "p": 0.6556850789796461,
+          "odds": 1.5251223980209594,
+          "hit": true,
+          "realOdds": null
+        }
+      ],
+      "combinedOdds": 12.179923052384337,
+      "combinedProb": 0.0821023249243139,
+      "hitRate": 12,
+      "comboHit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-09-16T09:36:01.477Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-11-21T13:06:38.057Z"
+}

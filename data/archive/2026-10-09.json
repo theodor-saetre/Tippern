@@ -1,0 +1,218 @@
+{
+  "generatedAt": "2026-10-09T11:34:39.307Z",
+  "date": "2026-10-09",
+  "fixtures": [
+    {
+      "id": 564706,
+      "label": "MAL–ESP",
+      "homeName": "Málaga CF",
+      "awayName": "RCD Espanyol de Barcelona",
+      "kickoff": "2026-10-09T19:00:00Z",
+      "competition": "PD",
+      "lambdaH": 0.6116761939233478,
+      "lambdaA": 1.6003909594350123,
+      "blendH": {
+        "atk": 0.4126304032083852,
+        "def": 1.3434703747718713
+      },
+      "blendA": {
+        "atk": 0.9926970909864484,
+        "def": 0.9563759709967313
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 0.4,
+          "rawGA": 1.8,
+          "adjGF": 0.4552507262110853,
+          "adjGA": 1.890736764161422
+        },
+        "away": {
+          "rawGF": 1.2,
+          "rawGA": 1.6,
+          "adjGF": 1.102406093045969,
+          "adjGA": 1.6231764471472876
+        }
+      },
+      "markets": {
+        "pHome": 0.12582757676219056,
+        "pDraw": 0.27376532508996493,
+        "pAway": 0.6004070981478445,
+        "dcHD": 0.39959290185215546,
+        "dcAD": 0.8741724232378094,
+        "dcHA": 0.7262346749100351,
+        "o15": 0.6622930921679253,
+        "o25": 0.3805195375280704,
+        "o35": 0.1830247860200396,
+        "o45": 0.07380687282714309,
+        "u15": 0.3377069078320747,
+        "u25": 0.6194804624719297,
+        "u35": 0.8169752139799604,
+        "u45": 0.926193127172857,
+        "btts": 0.3791472104879911,
+        "noBtts": 0.6208527895120088
+      },
+      "matchPick": {
+        "key": "pAway",
+        "p": 0.6004070981478445,
+        "pick": "RCD Espanyol de Barcelona vinner",
+        "market": "Full tid",
+        "odds": 2.66,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 0,
+        "away": 1,
+        "p": 0.16126990209822284
+      },
+      "fairOdds": {
+        "pHome": 7.947383441151083,
+        "pDraw": 3.652763547287734,
+        "pAway": 1.6655366052214118,
+        "dcHD": 2.502546955576273,
+        "dcAD": 1.143939082745419,
+        "o15": 1.5099055264590449,
+        "o25": 2.627985954403804,
+        "o35": 5.463740850326736,
+        "u35": 1.2240273424311365,
+        "u45": 1.0796884263786686,
+        "btts": 2.6374979752928276
+      },
+      "odds": {
+        "dcHD": 1.58,
+        "dcAD": 1.48,
+        "pHome": 3,
+        "pDraw": 3.35,
+        "pAway": 2.66,
+        "o15": null,
+        "o25": 2.1,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "MAL–ESP",
+        "key": "dcAD",
+        "pick": "RCD Espanyol de Barcelona eller uavgjort",
+        "market": "Double chance",
+        "p": 0.8741724232378094,
+        "odds": 1.48,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.48
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "MAL–ESP",
+          "pick": "Begge lag scorer",
+          "market": "BTTS",
+          "p": 0.3791472104879911,
+          "odds": 2.6374979752928276,
+          "hit": true,
+          "realOdds": null
+        }
+      ],
+      "combinedOdds": 2.6374979752928276,
+      "combinedProb": 0.3791472104879911,
+      "hitRate": 3,
+      "comboHit": true
+    }
+  },
+  "oddsUpdatedAt": "2026-10-09T11:34:39.657Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-10-10T00:06:42.712Z"
+}

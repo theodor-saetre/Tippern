@@ -1,0 +1,415 @@
+{
+  "generatedAt": "2026-09-14T10:11:34.789Z",
+  "date": "2026-09-14",
+  "fixtures": [
+    {
+      "id": 560579,
+      "label": "LEE–NEW",
+      "homeName": "Leeds United FC",
+      "awayName": "Newcastle United FC",
+      "kickoff": "2026-09-14T19:00:00Z",
+      "competition": "PL",
+      "lambdaH": 1.19276744307636,
+      "lambdaA": 0.6959145288536458,
+      "blendH": {
+        "atk": 0.9731619902330717,
+        "def": 0.5896074667684313
+      },
+      "blendA": {
+        "atk": 0.9835845146657076,
+        "def": 0.7907495261355288
+      },
+      "formSource": {
+        "home": "PL",
+        "away": "PL"
+      },
+      "formH": [
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 0.8,
+          "rawGA": 1,
+          "adjGF": 0.8442930947417487,
+          "adjGA": 0.9533144997043557
+        },
+        "away": {
+          "rawGF": 1.8,
+          "rawGA": 1.4,
+          "adjGF": 1.8014515188778208,
+          "adjGA": 1.4249943531151237
+        }
+      },
+      "markets": {
+        "pHome": 0.4625109457715127,
+        "pDraw": 0.3380713747918157,
+        "pAway": 0.19941767943667116,
+        "dcHD": 0.8005823205633285,
+        "dcAD": 0.5374890542284869,
+        "dcHA": 0.6619286252081839,
+        "o15": 0.5793494094347801,
+        "o25": 0.29322500767437487,
+        "o35": 0.12336891820131607,
+        "o45": 0.043167884698742,
+        "u15": 0.4206505905652199,
+        "u25": 0.7067749923256251,
+        "u35": 0.876631081798684,
+        "u45": 0.956832115301258,
+        "btts": 0.36559570680298403,
+        "noBtts": 0.634404293197016
+      },
+      "matchPick": {
+        "key": "dcAD",
+        "p": 0.5374890542284869,
+        "pick": "Newcastle United FC eller uavgjort",
+        "market": "Double chance",
+        "odds": 1.74,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 0,
+        "away": 0,
+        "p": 0.1675944762888307
+      },
+      "fairOdds": {
+        "pHome": 2.162110992491008,
+        "pDraw": 2.9579552560928883,
+        "pAway": 5.014600525012973,
+        "dcHD": 1.2490907859373557,
+        "dcAD": 1.8605030039828483,
+        "o15": 1.7260740819182183,
+        "o25": 3.4103503242482502,
+        "o35": 8.105769383242693,
+        "u35": 1.1407307141656282,
+        "u45": 1.0451154220352967,
+        "btts": 2.735261879152455
+      },
+      "odds": {
+        "dcHD": 1.43,
+        "dcAD": 1.74,
+        "pHome": 2.36,
+        "pDraw": 3.62,
+        "pAway": 3.35,
+        "o15": null,
+        "o25": 1.83,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 4,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
+    },
+    {
+      "id": 564671,
+      "label": "VIL–BET",
+      "homeName": "Villarreal CF",
+      "awayName": "Real Betis Balompié",
+      "kickoff": "2026-09-14T19:00:00Z",
+      "competition": "PD",
+      "lambdaH": 3.7257964958588534,
+      "lambdaA": 2.9838207505989938,
+      "blendH": {
+        "atk": 1.7378133080373863,
+        "def": 1.7078672156461123
+      },
+      "blendA": {
+        "atk": 1.4559195641126823,
+        "def": 1.383197874956045
+      },
+      "formSource": {
+        "home": "PD/CL",
+        "away": "PD/CL"
+      },
+      "formH": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.6,
+          "rawGA": 2.2,
+          "adjGF": 1.625759912986526,
+          "adjGA": 2.0821654412945887
+        },
+        "away": {
+          "rawGF": 1.6,
+          "rawGA": 1.4,
+          "adjGF": 1.5649875536570288,
+          "adjGA": 1.3977221485159776
+        }
+      },
+      "markets": {
+        "pHome": 0.5327282969736371,
+        "pDraw": 0.15514779041086788,
+        "pAway": 0.31212391261549494,
+        "dcHD": 0.687876087384505,
+        "dcAD": 0.4672717030263628,
+        "dcHA": 0.844852209589132,
+        "o15": 0.9923480600480294,
+        "o25": 0.9630874487016,
+        "o35": 0.9015931943220526,
+        "o45": 0.7984424668862836,
+        "u15": 0.007651939951970554,
+        "u25": 0.03691255129839999,
+        "u35": 0.09840680567794735,
+        "u45": 0.20155753311371638,
+        "btts": 0.9282396225663345,
+        "noBtts": 0.07176037743366548
+      },
+      "matchPick": {
+        "key": "dcHD",
+        "p": 0.687876087384505,
+        "pick": "Villarreal CF eller uavgjort",
+        "market": "Double chance",
+        "odds": 1.35,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 3,
+        "away": 2,
+        "p": 0.046872072297593485
+      },
+      "fairOdds": {
+        "pHome": 1.8771294967451044,
+        "pDraw": 6.445467237089002,
+        "pAway": 3.2038557751642016,
+        "dcHD": 1.4537502005663205,
+        "dcAD": 2.1400825120017624,
+        "o15": 1.0077109436295972,
+        "o25": 1.0383273100985422,
+        "o35": 1.1091476802372535,
+        "u35": 10.161898794608438,
+        "u45": 4.961362567559367,
+        "btts": 1.077308030910453
+      },
+      "odds": {
+        "dcHD": 1.35,
+        "dcAD": 1.94,
+        "pHome": 2.04,
+        "pDraw": 4,
+        "pAway": 3.75,
+        "o15": null,
+        "o25": 1.64,
+        "o35": 2.3,
+        "u35": 1.57,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "VIL–BET",
+        "key": "o25",
+        "pick": "Over 2,5 mål",
+        "market": "Totalt",
+        "p": 0.9630874487016,
+        "odds": 1.64,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.64
+      },
+      {
+        "match": "LEE–NEW",
+        "key": "dcHD",
+        "pick": "Leeds United FC eller uavgjort",
+        "market": "Double chance",
+        "p": 0.8005823205633285,
+        "odds": 1.43,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.43
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "VIL–BET",
+          "pick": "Villarreal CF vinner",
+          "market": "Full tid",
+          "p": 0.5327282969736371,
+          "odds": 1.8771294967451044,
+          "hit": false,
+          "realOdds": 2.04
+        },
+        {
+          "match": "LEE–NEW",
+          "pick": "Leeds United FC vinner",
+          "market": "Full tid",
+          "p": 0.4625109457715127,
+          "odds": 2.162110992491008,
+          "hit": true,
+          "realOdds": 2.36
+        }
+      ],
+      "combinedOdds": 4.0585623192417035,
+      "combinedProb": 0.24639266847252417,
+      "hitRate": 4,
+      "comboHit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-09-14T10:11:35.171Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-14T22:48:06.116Z"
+}

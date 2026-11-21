@@ -1,0 +1,415 @@
+{
+  "generatedAt": "2026-09-18T09:17:30.963Z",
+  "date": "2026-09-18",
+  "fixtures": [
+    {
+      "id": 560591,
+      "label": "BRE–CHE",
+      "homeName": "Brentford FC",
+      "awayName": "Chelsea FC",
+      "kickoff": "2026-09-18T19:00:00Z",
+      "competition": "PL",
+      "lambdaH": 2.57737410082322,
+      "lambdaA": 1.2054328841809485,
+      "blendH": {
+        "atk": 1.1986342684362992,
+        "def": 0.7719896329948372
+      },
+      "blendA": {
+        "atk": 1.301218773608637,
+        "def": 1.3872638588085549
+      },
+      "formSource": {
+        "home": "PL",
+        "away": "PL"
+      },
+      "formH": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.6,
+          "rawGA": 1,
+          "adjGF": 1.6430886476156943,
+          "adjGA": 1.0151295166174341
+        },
+        "away": {
+          "rawGF": 2.2,
+          "rawGA": 2.2,
+          "adjGF": 2.312391229346119,
+          "adjGA": 2.216469774161081
+        }
+      },
+      "markets": {
+        "pHome": 0.6602421439906606,
+        "pDraw": 0.18992538903672732,
+        "pAway": 0.14983246697261243,
+        "dcHD": 0.8501675330273879,
+        "dcAD": 0.3397578560093397,
+        "dcHA": 0.810074610963273,
+        "o15": 0.9003334596527919,
+        "o25": 0.7282931805979918,
+        "o35": 0.5229529541681621,
+        "o45": 0.32876234345788796,
+        "u15": 0.09966654034720812,
+        "u25": 0.27170681940200825,
+        "u35": 0.4770470458318379,
+        "u45": 0.6712376565421121,
+        "btts": 0.6564116604038601,
+        "noBtts": 0.3435883395961399
+      },
+      "matchPick": {
+        "key": "u45",
+        "p": 0.6712376565421121,
+        "pick": "Under 4,5 mål",
+        "market": "Totalt",
+        "odds": null,
+        "hit": true
+      },
+      "predictedScore": {
+        "home": 2,
+        "away": 1,
+        "p": 0.0911277609304767
+      },
+      "fairOdds": {
+        "pHome": 1.5145958329102744,
+        "pDraw": 5.265225492346484,
+        "pAway": 6.67412090453525,
+        "dcHD": 1.1762387543065413,
+        "dcAD": 2.943272634651046,
+        "o15": 1.1106995850022545,
+        "o25": 1.3730734086771395,
+        "o35": 1.9122179003475661,
+        "u35": 2.096229310583565,
+        "u45": 1.489785309649507,
+        "btts": 1.5234342415318243
+      },
+      "odds": {
+        "dcHD": 1.65,
+        "dcAD": 1.55,
+        "pHome": 2.82,
+        "pDraw": 3.95,
+        "pAway": 2.54,
+        "o15": null,
+        "o25": 1.49,
+        "o35": 2.23,
+        "u35": 1.76,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 3,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564692,
+      "label": "ESP–ELC",
+      "homeName": "RCD Espanyol de Barcelona",
+      "awayName": "Elche CF",
+      "kickoff": "2026-09-18T19:00:00Z",
+      "competition": "PD",
+      "lambdaH": 1.953543329583038,
+      "lambdaA": 1.0052060835870773,
+      "blendH": {
+        "atk": 0.9867454174124675,
+        "def": 0.8449215127442431
+      },
+      "blendA": {
+        "atk": 0.9914195859469457,
+        "def": 1.2772803531430301
+      },
+      "formSource": {
+        "home": "PD",
+        "away": "PD"
+      },
+      "formH": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 5,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        }
+      ],
+      "formAdj": {
+        "home": {
+          "rawGF": 1.2,
+          "rawGA": 1.4,
+          "adjGF": 1.1578092666100601,
+          "adjGA": 1.4568606500650307
+        },
+        "away": {
+          "rawGF": 1.4,
+          "rawGA": 3,
+          "adjGF": 1.3308368933909793,
+          "adjGA": 2.985134515285484
+        }
+      },
+      "markets": {
+        "pHome": 0.5812729808923695,
+        "pDraw": 0.24264257326129898,
+        "pAway": 0.1760844458463312,
+        "dcHD": 0.8239155541536685,
+        "dcAD": 0.4187270191076302,
+        "dcHA": 0.7573574267387007,
+        "o15": 0.8078489315077769,
+        "o25": 0.5675019262486933,
+        "o35": 0.34352273568576763,
+        "o45": 0.1778481610256744,
+        "u15": 0.19215106849222308,
+        "u25": 0.43249807375130667,
+        "u35": 0.6564772643142324,
+        "u45": 0.8221518389743256,
+        "btts": 0.5573882298551758,
+        "noBtts": 0.4426117701448242
+      },
+      "matchPick": {
+        "key": "u35",
+        "p": 0.6564772643142324,
+        "pick": "Under 3,5 mål",
+        "market": "Totalt",
+        "odds": null,
+        "hit": false
+      },
+      "predictedScore": {
+        "home": 1,
+        "away": 1,
+        "p": 0.11513065273677535
+      },
+      "fairOdds": {
+        "pHome": 1.7203620895380367,
+        "pDraw": 4.121288307155857,
+        "pAway": 5.679093319081115,
+        "dcHD": 1.2137166181153196,
+        "dcAD": 2.3881907647878786,
+        "o15": 1.237855199156593,
+        "o25": 1.7621085563712702,
+        "o35": 2.911015476177202,
+        "u35": 1.5232819997880924,
+        "u45": 1.21632033475416,
+        "btts": 1.794081658774579
+      },
+      "odds": {
+        "dcHD": 1.27,
+        "dcAD": 2.12,
+        "pHome": 1.91,
+        "pDraw": 3.75,
+        "pAway": 4.9,
+        "o15": null,
+        "o25": 1.89,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "dagensSpill": [
+      {
+        "match": "BRE–CHE",
+        "key": "dcHD",
+        "pick": "Brentford FC eller uavgjort",
+        "market": "Double chance",
+        "p": 0.8501675330273879,
+        "odds": 1.65,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": true,
+        "realOdds": 1.65
+      },
+      {
+        "match": "ESP–ELC",
+        "key": "pHome",
+        "pick": "RCD Espanyol de Barcelona vinner",
+        "market": "Full tid",
+        "p": 0.5812729808923695,
+        "odds": 1.91,
+        "liveOdds": true,
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 1.91
+      }
+    ],
+    "gambler": {
+      "legs": [
+        {
+          "match": "ESP–ELC",
+          "pick": "RCD Espanyol de Barcelona vinner",
+          "market": "Full tid",
+          "p": 0.5812729808923695,
+          "odds": 1.7203620895380367,
+          "hit": false,
+          "realOdds": 1.91
+        },
+        {
+          "match": "BRE–CHE",
+          "pick": "Over 3,5 mål",
+          "market": "Totalt",
+          "p": 0.5229529541681621,
+          "odds": 1.9122179003475661,
+          "hit": false,
+          "realOdds": 2.23
+        }
+      ],
+      "combinedOdds": 3.2897071826939763,
+      "combinedProb": 0.30397842253579826,
+      "hitRate": 3,
+      "comboHit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-09-18T09:17:31.310Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-09-18T21:58:48.842Z"
+}
