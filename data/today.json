@@ -287,7 +287,8 @@
         "p": 0.6554591189365819,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -371,7 +372,8 @@
           "pModel": null,
           "edge": -0.025214155865795118,
           "fairMarket": 1.4913846152489862,
-          "estBB": 1.4615569229440064
+          "estBB": 1.4615569229440064,
+          "hit": true
         },
         {
           "key": "1X_u4.5",
@@ -385,7 +387,8 @@
           "pModel": null,
           "edge": 0.040019206298015586,
           "fairMarket": 1.6479036659617685,
-          "estBB": 1.5984665559829154
+          "estBB": 1.5984665559829154,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -410,7 +413,8 @@
         "pModel": null,
         "edge": -0.025214155865795118,
         "fairMarket": 1.4913846152489862,
-        "estBB": 1.4615569229440064
+        "estBB": 1.4615569229440064,
+        "hit": true
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -453,7 +457,8 @@
           "pModel": null,
           "edge": -0.025214155865795118,
           "fairMarket": 1.4913846152489862,
-          "estBB": 1.4615569229440064
+          "estBB": 1.4615569229440064,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -467,7 +472,8 @@
           "pModel": null,
           "edge": -0.03560136442552686,
           "fairMarket": 1.5084144624849165,
-          "estBB": 1.4782461732352181
+          "estBB": 1.4782461732352181,
+          "hit": true
         },
         {
           "key": "1X_u4.5",
@@ -481,7 +487,8 @@
           "pModel": null,
           "edge": 0.040019206298015586,
           "fairMarket": 1.6479036659617685,
-          "estBB": 1.5984665559829154
+          "estBB": 1.5984665559829154,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -495,7 +502,8 @@
           "pModel": null,
           "edge": -0.05546440958840049,
           "fairMarket": 1.8014317647557672,
-          "estBB": 1.7654031294606518
+          "estBB": 1.7654031294606518,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -509,7 +517,8 @@
           "pModel": null,
           "edge": 0.06831997962110559,
           "fairMarket": 2.2053794552981514,
-          "estBB": 2.1392180716392066
+          "estBB": 2.1392180716392066,
+          "hit": false
         },
         {
           "key": "1X_o2.5",
@@ -523,9 +532,28 @@
           "pModel": null,
           "edge": -0.06070262096187218,
           "fairMarket": 2.0675221603188425,
-          "estBB": 2.0261717171124656
+          "estBB": 2.0261717171124656,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564749,
@@ -1783,7 +1811,7 @@
         "odds": 1.53,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.53
       },
       {
@@ -1819,7 +1847,7 @@
           "market": "Totalt",
           "p": 0.5394780441552036,
           "odds": 1.8536435557186601,
-          "hit": null,
+          "hit": true,
           "realOdds": 2.4
         },
         {
@@ -1902,7 +1930,8 @@
             "bb": "1X og Over 1,5",
             "p": 0.653611304667686,
             "estBB": 1.4615569229440064,
-            "fair": 1.4913846152489862
+            "fair": 1.4913846152489862,
+            "hit": true
           },
           {
             "match": "OSA–MAL",
@@ -1972,7 +2001,8 @@
           "bb": "1X og Over 1,5",
           "p": 0.653611304667686,
           "estBB": 1.4615569229440064,
-          "fair": 1.4913846152489862
+          "fair": 1.4913846152489862,
+          "hit": true
         },
         {
           "match": "OSA–MAL",
@@ -1998,5 +2028,5 @@
   },
   "oddsUpdatedAt": "2026-11-22T16:43:55.072Z",
   "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-22T16:44:30.925Z"
+  "resultsCheckedAt": "2026-11-22T22:11:39.453Z"
 }
