@@ -300,7 +300,8 @@
         "p": 0.5624660108837091,
         "pick": "Chelsea FC vinner",
         "market": "Full tid",
-        "odds": 2.08
+        "odds": 2.08,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -402,7 +403,8 @@
           "pModel": null,
           "edge": 0.03383157951226523,
           "fairMarket": 1.5315752028453078,
-          "estBB": 1.4856279467599485
+          "estBB": 1.4856279467599485,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -416,7 +418,8 @@
           "pModel": null,
           "edge": 0.06363044125501172,
           "fairMarket": 1.886127251995706,
-          "estBB": 1.8295434344358348
+          "estBB": 1.8295434344358348,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -441,7 +444,8 @@
         "pModel": null,
         "edge": 0.03383157951226523,
         "fairMarket": 1.5315752028453078,
-        "estBB": 1.4856279467599485
+        "estBB": 1.4856279467599485,
+        "hit": false
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -484,7 +488,8 @@
           "pModel": null,
           "edge": 0.03383157951226523,
           "fairMarket": 1.5315752028453078,
-          "estBB": 1.4856279467599485
+          "estBB": 1.4856279467599485,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -498,7 +503,8 @@
           "pModel": null,
           "edge": 0.06363044125501172,
           "fairMarket": 1.886127251995706,
-          "estBB": 1.8295434344358348
+          "estBB": 1.8295434344358348,
+          "hit": false
         },
         {
           "key": "1X_o1.5",
@@ -512,7 +518,8 @@
           "pModel": null,
           "edge": -0.04312000634359814,
           "fairMarket": 1.7135331968689957,
-          "estBB": 1.6792625329316158
+          "estBB": 1.6792625329316158,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -526,7 +533,8 @@
           "pModel": null,
           "edge": -0.05938452242419401,
           "fairMarket": 1.739356125964275,
-          "estBB": 1.7045690034449894
+          "estBB": 1.7045690034449894,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -540,9 +548,28 @@
           "pModel": null,
           "edge": -0.08923508854911522,
           "fairMarket": 2.2263469365268724,
-          "estBB": 2.181819997796335
+          "estBB": 2.181819997796335,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 1,
+        "away": 4
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560644,
@@ -666,7 +693,8 @@
         "p": 0.4589316106212362,
         "pick": "Under 4,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 3,
@@ -768,7 +796,8 @@
           "pModel": null,
           "edge": 0.03654315004003661,
           "fairMarket": 1.5097290512642159,
-          "estBB": 1.4644371797262894
+          "estBB": 1.4644371797262894,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -782,7 +811,8 @@
           "pModel": null,
           "edge": 0.06697255618324305,
           "fairMarket": 1.9145531596352017,
-          "estBB": 1.8571165648461456
+          "estBB": 1.8571165648461456,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -807,7 +837,8 @@
         "pModel": null,
         "edge": 0.03654315004003661,
         "fairMarket": 1.5097290512642159,
-        "estBB": 1.4644371797262894
+        "estBB": 1.4644371797262894,
+        "hit": true
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -850,7 +881,8 @@
           "pModel": null,
           "edge": 0.03654315004003661,
           "fairMarket": 1.5097290512642159,
-          "estBB": 1.4644371797262894
+          "estBB": 1.4644371797262894,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -864,7 +896,8 @@
           "pModel": null,
           "edge": -0.03787507016706382,
           "fairMarket": 1.5551745490857198,
-          "estBB": 1.5240710581040053
+          "estBB": 1.5240710581040053,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -878,7 +911,8 @@
           "pModel": null,
           "edge": -0.051238732766110795,
           "fairMarket": 1.6238881554698759,
-          "estBB": 1.5914103923604783
+          "estBB": 1.5914103923604783,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -892,7 +926,8 @@
           "pModel": null,
           "edge": 0.06697255618324305,
           "fairMarket": 1.9145531596352017,
-          "estBB": 1.8571165648461456
+          "estBB": 1.8571165648461456,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -906,9 +941,28 @@
           "pModel": null,
           "edge": -0.07844194061446896,
           "fairMarket": 2.029889782465671,
-          "estBB": 1.9892919868163577
+          "estBB": 1.9892919868163577,
+          "hit": false
         }
-      ]
+      ],
+      "result": {
+        "home": 0,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560647,
@@ -1032,7 +1086,8 @@
         "p": 0.9380589956313923,
         "pick": "AFC Bournemouth eller uavgjort",
         "market": "Double chance",
-        "odds": 1.3
+        "odds": 1.3,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -1134,7 +1189,8 @@
           "pModel": null,
           "edge": 0.03146065406861154,
           "fairMarket": 1.4907312164171722,
-          "estBB": 1.446009279924657
+          "estBB": 1.446009279924657,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -1148,7 +1204,8 @@
           "pModel": null,
           "edge": 0.0606312339686057,
           "fairMarket": 1.806307739136188,
-          "estBB": 1.7521185069621021
+          "estBB": 1.7521185069621021,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -1173,7 +1230,8 @@
         "pModel": null,
         "edge": 0.03146065406861154,
         "fairMarket": 1.4907312164171722,
-        "estBB": 1.446009279924657
+        "estBB": 1.446009279924657,
+        "hit": true
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -1216,7 +1274,8 @@
           "pModel": null,
           "edge": 0.03146065406861154,
           "fairMarket": 1.4907312164171722,
-          "estBB": 1.446009279924657
+          "estBB": 1.446009279924657,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -1230,7 +1289,8 @@
           "pModel": null,
           "edge": 0.0606312339686057,
           "fairMarket": 1.806307739136188,
-          "estBB": 1.7521185069621021
+          "estBB": 1.7521185069621021,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -1244,7 +1304,8 @@
           "pModel": null,
           "edge": -0.04778489861864499,
           "fairMarket": 1.740019500288423,
-          "estBB": 1.7052191102826544
+          "estBB": 1.7052191102826544,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -1258,9 +1319,28 @@
           "pModel": null,
           "edge": -0.06465380637078899,
           "fairMarket": 1.7955928033410768,
-          "estBB": 1.7596809472742552
+          "estBB": 1.7596809472742552,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560648,
@@ -1384,7 +1464,8 @@
         "p": 0.6215194588723071,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": 1.72
+        "odds": 1.72,
+        "hit": false
       },
       "predictedScore": {
         "home": 1,
@@ -1486,7 +1567,8 @@
           "pModel": null,
           "edge": -0.03179170412679888,
           "fairMarket": 1.4080621343199522,
-          "estBB": 1.3799008916335531
+          "estBB": 1.3799008916335531,
+          "hit": true
         },
         {
           "key": "1X_u4.5",
@@ -1500,7 +1582,8 @@
           "pModel": null,
           "edge": 0.041090707042209074,
           "fairMarket": 1.5129920101143037,
-          "estBB": 1.4676022498108745
+          "estBB": 1.4676022498108745,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -1525,7 +1608,8 @@
         "pModel": null,
         "edge": -0.03179170412679888,
         "fairMarket": 1.4080621343199522,
-        "estBB": 1.3799008916335531
+        "estBB": 1.3799008916335531,
+        "hit": true
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -1568,7 +1652,8 @@
           "pModel": null,
           "edge": 0.041090707042209074,
           "fairMarket": 1.5129920101143037,
-          "estBB": 1.4676022498108745
+          "estBB": 1.4676022498108745,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -1582,7 +1667,8 @@
           "pModel": null,
           "edge": -0.03179170412679888,
           "fairMarket": 1.4080621343199522,
-          "estBB": 1.3799008916335531
+          "estBB": 1.3799008916335531,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -1596,7 +1682,8 @@
           "pModel": null,
           "edge": -0.04234370093632567,
           "fairMarket": 1.4968267518445442,
-          "estBB": 1.4668902168076532
+          "estBB": 1.4668902168076532,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -1610,7 +1697,8 @@
           "pModel": null,
           "edge": 0.07189797715272572,
           "fairMarket": 1.9917220296347877,
-          "estBB": 1.9319703687457441
+          "estBB": 1.9319703687457441,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -1624,7 +1712,8 @@
           "pModel": null,
           "edge": -0.06653117009903697,
           "fairMarket": 1.820999909062997,
-          "estBB": 1.7845799108817368
+          "estBB": 1.7845799108817368,
+          "hit": false
         },
         {
           "key": "1X_o2.5",
@@ -1638,9 +1727,28 @@
           "pModel": null,
           "edge": -0.07175893419927726,
           "fairMarket": 1.9645349287445093,
-          "estBB": 1.925244230169619
+          "estBB": 1.925244230169619,
+          "hit": false
         }
-      ]
+      ],
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560650,
@@ -1764,7 +1872,8 @@
         "p": 0.6030189310880872,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 2,
@@ -1866,7 +1975,8 @@
           "pModel": null,
           "edge": 0.04020115441825034,
           "fairMarket": 1.776643715787536,
-          "estBB": 1.72334440431391
+          "estBB": 1.72334440431391,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -1891,7 +2001,8 @@
         "pModel": null,
         "edge": 0.04020115441825034,
         "fairMarket": 1.776643715787536,
-        "estBB": 1.72334440431391
+        "estBB": 1.72334440431391,
+        "hit": false
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -1934,7 +2045,8 @@
           "pModel": null,
           "edge": 0.04020115441825034,
           "fairMarket": 1.776643715787536,
-          "estBB": 1.72334440431391
+          "estBB": 1.72334440431391,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -1948,7 +2060,8 @@
           "pModel": null,
           "edge": -0.052629528426196504,
           "fairMarket": 1.6908558250115158,
-          "estBB": 1.6570387085112854
+          "estBB": 1.6570387085112854,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -1962,7 +2075,8 @@
           "pModel": null,
           "edge": -0.03361993571446109,
           "fairMarket": 1.9201637733994346,
-          "estBB": 1.8817604979314457
+          "estBB": 1.8817604979314457,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -1976,7 +2090,8 @@
           "pModel": null,
           "edge": 0.07089420898367016,
           "fairMarket": 2.2316937450028846,
-          "estBB": 2.164742932652798
+          "estBB": 2.164742932652798,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -1990,9 +2105,28 @@
           "pModel": null,
           "edge": -0.07918466704965832,
           "fairMarket": 2.1041140216708203,
-          "estBB": 2.0620317412374036
+          "estBB": 2.0620317412374036,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 560651,
@@ -2116,7 +2250,8 @@
         "p": 0.6437742204367315,
         "pick": "Arsenal FC vinner",
         "market": "Full tid",
-        "odds": 1.58
+        "odds": 1.58,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -2218,7 +2353,8 @@
           "pModel": null,
           "edge": 0.03360261698771727,
           "fairMarket": 1.3890683459359863,
-          "estBB": 1.3473962955579066
+          "estBB": 1.3473962955579066,
+          "hit": true
         },
         {
           "key": "X2_u3.5",
@@ -2232,7 +2368,8 @@
           "pModel": null,
           "edge": 0.06326510756847825,
           "fairMarket": 1.7387232706678777,
-          "estBB": 1.6865615725478413
+          "estBB": 1.6865615725478413,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -2257,7 +2394,8 @@
         "pModel": null,
         "edge": 0.03360261698771727,
         "fairMarket": 1.3890683459359863,
-        "estBB": 1.3473962955579066
+        "estBB": 1.3473962955579066,
+        "hit": true
       },
       "comboOver": {
         "key": "X2_o1.5",
@@ -2300,7 +2438,8 @@
           "pModel": null,
           "edge": 0.03360261698771727,
           "fairMarket": 1.3890683459359863,
-          "estBB": 1.3473962955579066
+          "estBB": 1.3473962955579066,
+          "hit": true
         },
         {
           "key": "X2_o1.5",
@@ -2314,7 +2453,8 @@
           "pModel": null,
           "edge": -0.04204909567594817,
           "fairMarket": 1.4631582955165976,
-          "estBB": 1.4338951296062656
+          "estBB": 1.4338951296062656,
+          "hit": true
         },
         {
           "key": "X2_u3.5",
@@ -2328,7 +2468,8 @@
           "pModel": null,
           "edge": 0.06326510756847825,
           "fairMarket": 1.7387232706678777,
-          "estBB": 1.6865615725478413
+          "estBB": 1.6865615725478413,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -2342,7 +2483,8 @@
           "pModel": null,
           "edge": -0.05396092785058493,
           "fairMarket": 1.6003078051111932,
-          "estBB": 1.5683016490089694
+          "estBB": 1.5683016490089694,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -2356,7 +2498,8 @@
           "pModel": null,
           "edge": -0.0838579131886007,
           "fairMarket": 2.0460443463600506,
-          "estBB": 2.0051234594328498
+          "estBB": 2.0051234594328498,
+          "hit": false
         },
         {
           "key": "X2_o2.5",
@@ -2370,9 +2513,28 @@
           "pModel": null,
           "edge": -0.08948894661430684,
           "fairMarket": 2.1905495309856633,
-          "estBB": 2.14673854036595
+          "estBB": 2.14673854036595,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564755,
@@ -2672,7 +2834,8 @@
         "p": 0.5591719298808704,
         "pick": "Valencia CF eller uavgjort",
         "market": "Double chance",
-        "odds": 1.97
+        "odds": 1.97,
+        "hit": true
       },
       "predictedScore": {
         "home": 1,
@@ -2774,7 +2937,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.4576025405992759,
-          "estBB": 1.4138744643812975
+          "estBB": 1.4138744643812975,
+          "hit": false
         },
         {
           "key": "1X_o1.5",
@@ -2788,7 +2952,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.747164573856367,
-          "estBB": 1.7122212823792398
+          "estBB": 1.7122212823792398,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -2802,7 +2967,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.748494593062506,
-          "estBB": 1.6960397552706308
+          "estBB": 1.6960397552706308,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -2827,7 +2993,8 @@
         "pModel": null,
         "edge": 0,
         "fairMarket": 1.4576025405992759,
-        "estBB": 1.4138744643812975
+        "estBB": 1.4138744643812975,
+        "hit": false
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -2870,7 +3037,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.4576025405992759,
-          "estBB": 1.4138744643812975
+          "estBB": 1.4138744643812975,
+          "hit": false
         },
         {
           "key": "1X_o1.5",
@@ -2884,7 +3052,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.747164573856367,
-          "estBB": 1.7122212823792398
+          "estBB": 1.7122212823792398,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -2898,7 +3067,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.748494593062506,
-          "estBB": 1.6960397552706308
+          "estBB": 1.6960397552706308,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -2912,7 +3082,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.8315832062793505,
-          "estBB": 1.7949515421537634
+          "estBB": 1.7949515421537634,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -2926,9 +3097,28 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.420491067115856,
-          "estBB": 2.372081245773539
+          "estBB": 2.372081245773539,
+          "hit": false
         }
-      ]
+      ],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564756,
@@ -3052,7 +3242,8 @@
         "p": 0.5793142265792479,
         "pick": "Sevilla FC eller uavgjort",
         "market": "Double chance",
-        "odds": 1.65
+        "odds": 1.65,
+        "hit": true
       },
       "predictedScore": {
         "home": 0,
@@ -3154,7 +3345,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.697306110606959,
-          "estBB": 1.6463869272887501
+          "estBB": 1.6463869272887501,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -3168,7 +3360,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7721755815318512,
-          "estBB": 1.736732069901214
+          "estBB": 1.736732069901214,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -3193,7 +3386,8 @@
         "pModel": null,
         "edge": 0,
         "fairMarket": 1.697306110606959,
-        "estBB": 1.6463869272887501
+        "estBB": 1.6463869272887501,
+        "hit": true
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -3236,7 +3430,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.697306110606959,
-          "estBB": 1.6463869272887501
+          "estBB": 1.6463869272887501,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -3250,7 +3445,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7721755815318512,
-          "estBB": 1.736732069901214
+          "estBB": 1.736732069901214,
+          "hit": false
         },
         {
           "key": "X2_o1.5",
@@ -3264,7 +3460,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.9523257459220484,
-          "estBB": 1.9132792310036075
+          "estBB": 1.9132792310036075,
+          "hit": true
         },
         {
           "key": "X2_u3.5",
@@ -3278,7 +3475,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.0789110535622686,
-          "estBB": 2.0165437219554003
+          "estBB": 2.0165437219554003,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -3292,9 +3490,28 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.2614248882095485,
-          "estBB": 2.2161963904453574
+          "estBB": 2.2161963904453574,
+          "hit": false
         }
-      ]
+      ],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     },
     {
       "id": 564754,
@@ -3418,7 +3635,8 @@
         "p": 0.6462579535628898,
         "pick": "Under 3,5 mål",
         "market": "Totalt",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 2,
@@ -3438,7 +3656,25 @@
         "u45": 1.227626358026103,
         "btts": 4.831637312189256
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -3452,7 +3688,7 @@
         "odds": 1.3,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.3
       },
       {
@@ -3464,7 +3700,7 @@
         "odds": 1.51,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": true,
         "realOdds": 1.51
       },
       {
@@ -3488,7 +3724,7 @@
         "odds": 1.84,
         "liveOdds": true,
         "modelBased": true,
-        "hit": null,
+        "hit": false,
         "realOdds": 1.84
       }
     ],
@@ -3500,7 +3736,7 @@
           "market": "Full tid",
           "p": 0.5999812929808002,
           "odds": 1.6667186322290897,
-          "hit": null,
+          "hit": true,
           "realOdds": 1.58
         },
         {
@@ -3509,7 +3745,7 @@
           "market": "BTTS",
           "p": 0.5946519111962493,
           "odds": 1.6816560767261644,
-          "hit": null,
+          "hit": false,
           "realOdds": 1.73
         },
         {
@@ -3518,7 +3754,7 @@
           "market": "Full tid",
           "p": 0.5624660108837091,
           "odds": 1.7778852066614064,
-          "hit": null,
+          "hit": false,
           "realOdds": 2.08
         },
         {
@@ -3527,7 +3763,7 @@
           "market": "BTTS",
           "p": 0.5162908807230088,
           "odds": 1.9368926264969268,
-          "hit": null,
+          "hit": false,
           "realOdds": 1.9
         },
         {
@@ -3563,7 +3799,8 @@
             "bb": "1X og Under 4,5",
             "p": 0.6919159152966738,
             "estBB": 1.446009279924657,
-            "fair": 1.4907312164171722
+            "fair": 1.4907312164171722,
+            "hit": true
           },
           {
             "match": "TOT–IPS",
@@ -3578,7 +3815,8 @@
             "bb": "1X og Over 1,5",
             "p": 0.6876175931972022,
             "estBB": 1.3799008916335531,
-            "fair": 1.4080621343199522
+            "fair": 1.4080621343199522,
+            "hit": true
           },
           {
             "match": "AVL–SUN",
@@ -3593,7 +3831,8 @@
             "bb": "1X og Under 4,5",
             "p": 0.6865756137977586,
             "estBB": 1.4644371797262894,
-            "fair": 1.5097290512642159
+            "fair": 1.5097290512642159,
+            "hit": true
           },
           {
             "match": "RAY–VAL",
@@ -3608,13 +3847,14 @@
             "bb": "1X og Under 4,5",
             "p": 0.6860580797210067,
             "estBB": 1.4138744643812975,
-            "fair": 1.4576025405992759
+            "fair": 1.4576025405992759,
+            "hit": false
           }
         ],
         "p": 0.22410397374853402,
         "estOdds": 4.131431653878543,
         "ev": -0.07412974909534042,
-        "hit": null
+        "hit": false
       },
       {
         "slot": "18:30",
@@ -3633,7 +3873,8 @@
             "bb": "X2 og Under 4,5",
             "p": 0.7440977400512658,
             "estBB": 1.3473962955579066,
-            "fair": 1.3890683459359863
+            "fair": 1.3890683459359863,
+            "hit": true
           },
           {
             "match": "SEV–BET",
@@ -3648,13 +3889,14 @@
             "bb": "X2 og Under 4,5",
             "p": 0.5891689152302637,
             "estBB": 1.6463869272887501,
-            "fair": 1.697306110606959
+            "fair": 1.697306110606959,
+            "hit": true
           }
         ],
         "p": 0.43839925833129506,
         "estOdds": 2.2183356468838267,
         "ev": -0.02748329767625668,
-        "hit": null
+        "hit": true
       }
     ],
     "dagensKombi": {
@@ -3672,7 +3914,8 @@
           "bb": "1X og Under 4,5",
           "p": 0.6750119599688272,
           "estBB": 1.4856279467599485,
-          "fair": 1.5315752028453078
+          "fair": 1.5315752028453078,
+          "hit": false
         },
         {
           "match": "AVL–SUN",
@@ -3687,7 +3930,8 @@
           "bb": "1X og Under 4,5",
           "p": 0.6865756137977586,
           "estBB": 1.4644371797262894,
-          "fair": 1.5097290512642159
+          "fair": 1.5097290512642159,
+          "hit": true
         },
         {
           "match": "BOU–NOT",
@@ -3702,16 +3946,17 @@
           "bb": "1X og Under 4,5",
           "p": 0.6919159152966738,
           "estBB": 1.446009279924657,
-          "fair": 1.4907312164171722
+          "fair": 1.4907312164171722,
+          "hit": true
         }
       ],
       "p": 0.3206661827270634,
       "estOdds": 3.1459505149736096,
       "ev": 0.008799942684826645,
-      "hit": null
+      "hit": false
     }
   },
   "oddsUpdatedAt": "2026-11-21T16:27:27.120Z",
-  "resultsChecked": false,
-  "resultsCheckedAt": "2026-11-21T21:46:12.954Z"
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-22T01:43:28.685Z"
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "date": "2026-11-21",
+    "kind": "slot",
+    "slot": "16:00",
+    "legs": 4,
+    "p": 0.22410397374853402,
+    "estOdds": 4.13,
+    "hit": false,
+    "picks": [
+      "BOU–NOT: 1X og Under 4,5",
+      "TOT–IPS: 1X og Over 1,5",
+      "AVL–SUN: 1X og Under 4,5",
+      "RAY–VAL: 1X og Under 4,5"
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "kind": "slot",
+    "slot": "18:30",
+    "legs": 2,
+    "p": 0.43839925833129506,
+    "estOdds": 2.22,
+    "hit": true,
+    "picks": [
+      "NEW–ARS: X2 og Under 4,5",
+      "SEV–BET: X2 og Under 4,5"
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "kind": "dagens",
+    "slot": "dagens",
+    "legs": 3,
+    "p": 0.3206661827270634,
+    "estOdds": 3.15,
+    "hit": false,
+    "picks": [
+      "CHE–LEE: 1X og Under 4,5",
+      "AVL–SUN: 1X og Under 4,5",
+      "BOU–NOT: 1X og Under 4,5"
+    ]
+  }
+]
