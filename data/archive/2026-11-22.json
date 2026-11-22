@@ -124,7 +124,8 @@
         "p": 0.6725014186506479,
         "pick": "Brighton & Hove Albion FC vinner",
         "market": "Full tid",
-        "odds": null
+        "odds": null,
+        "hit": false
       },
       "predictedScore": {
         "home": 0,
@@ -144,7 +145,25 @@
         "u45": 1.100832900572684,
         "btts": 2.7552819538093387
       },
-      "odds": null
+      "odds": null,
+      "result": {
+        "home": 2,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 560645,
@@ -630,7 +649,8 @@
         "p": 0.7131431086277147,
         "pick": "Begge lag scorer",
         "market": "BTTS",
-        "odds": null
+        "odds": null,
+        "hit": true
       },
       "predictedScore": {
         "home": 4,
@@ -714,7 +734,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.2540083570874154,
-          "estBB": 1.228928189945667
+          "estBB": 1.228928189945667,
+          "hit": true
         },
         {
           "key": "1X_o2.5",
@@ -728,7 +749,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.2607827493202173,
-          "estBB": 1.2355670943338128
+          "estBB": 1.2355670943338128,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -753,7 +775,8 @@
         "pModel": null,
         "edge": 0,
         "fairMarket": 1.2540083570874154,
-        "estBB": 1.228928189945667
+        "estBB": 1.228928189945667,
+        "hit": true
       },
       "comboOver": {
         "key": "12_o2.5",
@@ -783,7 +806,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.2540083570874154,
-          "estBB": 1.228928189945667
+          "estBB": 1.228928189945667,
+          "hit": true
         },
         {
           "key": "1X_o2.5",
@@ -797,7 +821,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.2607827493202173,
-          "estBB": 1.2355670943338128
+          "estBB": 1.2355670943338128,
+          "hit": true
         },
         {
           "key": "1X_u4.5",
@@ -811,9 +836,28 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.353115569939173,
-          "estBB": 2.2825221028409977
+          "estBB": 2.2825221028409977,
+          "hit": false
         }
-      ]
+      ],
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564750,
@@ -1320,28 +1364,45 @@
         "btts": 2.2085308256491345
       },
       "odds": {
-        "dcHD": 1.26,
-        "dcAD": 2.14,
-        "pHome": 1.89,
-        "pDraw": 3.8,
-        "pAway": 4.88,
+        "dcHD": 1.25,
+        "dcAD": 2.18,
+        "pHome": 1.86,
+        "pDraw": 3.85,
+        "pAway": 5,
         "o15": null,
         "o25": 2.06,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.93
       },
-      "oddsHistory": [],
+      "oddsHistory": [
+        {
+          "at": "2026-11-22T12:57:26.176Z",
+          "odds": {
+            "dcHD": 1.26,
+            "dcAD": 2.14,
+            "pHome": 1.89,
+            "pDraw": 3.8,
+            "pAway": 4.88,
+            "o15": null,
+            "o25": 2.06,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
       "oddsUnibet": {
         "bookmaker": "unibet_se",
         "dcReal": false,
         "odds": {
-          "dcHD": 1.24,
-          "dcAD": 2.1,
+          "dcHD": 1.22,
+          "dcAD": 2.09,
           "pHome": 1.83,
-          "pDraw": 3.8,
-          "pAway": 4.7,
+          "pDraw": 3.65,
+          "pAway": 4.9,
           "o15": null,
           "o25": 1.93,
           "o35": null,
@@ -1358,16 +1419,16 @@
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.021799980021246057,
+        "spread": 0.020689405217918178,
         "odds": {
-          "pHome": 1.8956177428748309,
-          "pDraw": 3.8112269569150077,
-          "pAway": 4.7599829161493235
+          "pHome": 1.8866843397821267,
+          "pDraw": 3.7738204373453406,
+          "pAway": 4.878377928577195
         },
         "totals": {
           "line": 2.5,
-          "over": 2.076804817382321,
-          "under": 1.9286734084557393
+          "over": 2.0722654145863872,
+          "under": 1.9326049188910353
         }
       },
       "combos": [
@@ -1378,12 +1439,12 @@
           "over": false,
           "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.699402929579513,
-          "pMarket": 0.699402929579513,
+          "p": 0.7024694067577856,
+          "pMarket": 0.7024694067577856,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.4297909798593615,
-          "estBB": 1.3868972504635806
+          "fairMarket": 1.42354953878412,
+          "estBB": 1.3808430526205964
         },
         {
           "key": "1X_o1.5",
@@ -1392,12 +1453,12 @@
           "over": true,
           "label": "CA Osasuna eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.6035764393321127,
-          "pMarket": 0.6035764393321127,
+          "p": 0.6066325033004154,
+          "pMarket": 0.6066325033004154,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.6567909792942708,
-          "estBB": 1.6236551597083853
+          "fairMarket": 1.648444477602912,
+          "estBB": 1.6154755880508536
         },
         {
           "key": "1X_u3.5",
@@ -1406,12 +1467,12 @@
           "over": false,
           "label": "CA Osasuna eller uavgjort + Under 3,5 mål",
           "bb": "1X og Under 3,5",
-          "p": 0.5768635934728396,
-          "pMarket": 0.5768635934728396,
+          "p": 0.5793773075524165,
+          "pMarket": 0.5793773075524165,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.7335120664831538,
-          "estBB": 1.6815067044886591
+          "fairMarket": 1.7259909681732395,
+          "estBB": 1.6742112391280424
         },
         {
           "key": "12_o1.5",
@@ -1420,23 +1481,23 @@
           "over": true,
           "label": "CA Osasuna eller Málaga CF (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.5651593122867312,
-          "pMarket": 0.5651593122867312,
+          "p": 0.5662117064022587,
+          "pMarket": 0.5662117064022587,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.7694125855483633,
-          "estBB": 1.734024333837396
+          "fairMarket": 1.766123852073029,
+          "estBB": 1.7308013750315683
         }
       ],
       "comboFit": {
-        "lambdaH": 1.6600000000000004,
-        "lambdaA": 0.96,
-        "err": 0.0077651055449273745,
+        "lambdaH": 1.6700000000000004,
+        "lambdaA": 0.95,
+        "err": 0.005522646155640772,
         "marketTotal": 2.62,
         "leagueAdj": 0,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.021799980021246057
+        "refSpread": 0.020689405217918178
       },
       "comboPick": {
         "key": "1X_u4.5",
@@ -1445,12 +1506,12 @@
         "over": false,
         "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
         "bb": "1X og Under 4,5",
-        "p": 0.699402929579513,
-        "pMarket": 0.699402929579513,
+        "p": 0.7024694067577856,
+        "pMarket": 0.7024694067577856,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.4297909798593615,
-        "estBB": 1.3868972504635806
+        "fairMarket": 1.42354953878412,
+        "estBB": 1.3808430526205964
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -1459,12 +1520,12 @@
         "over": true,
         "label": "CA Osasuna eller uavgjort + Over 1,5 mål",
         "bb": "1X og Over 1,5",
-        "p": 0.6035764393321127,
-        "pMarket": 0.6035764393321127,
+        "p": 0.6066325033004154,
+        "pMarket": 0.6066325033004154,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.6567909792942708,
-        "estBB": 1.6236551597083853
+        "fairMarket": 1.648444477602912,
+        "estBB": 1.6154755880508536
       },
       "comboUnder": {
         "key": "1X_u4.5",
@@ -1473,12 +1534,12 @@
         "over": false,
         "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
         "bb": "1X og Under 4,5",
-        "p": 0.699402929579513,
-        "pMarket": 0.699402929579513,
+        "p": 0.7024694067577856,
+        "pMarket": 0.7024694067577856,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.4297909798593615,
-        "estBB": 1.3868972504635806
+        "fairMarket": 1.42354953878412,
+        "estBB": 1.3808430526205964
       },
       "comboAlts": [
         {
@@ -1488,12 +1549,12 @@
           "over": false,
           "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.699402929579513,
-          "pMarket": 0.699402929579513,
+          "p": 0.7024694067577856,
+          "pMarket": 0.7024694067577856,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.4297909798593615,
-          "estBB": 1.3868972504635806
+          "fairMarket": 1.42354953878412,
+          "estBB": 1.3808430526205964
         },
         {
           "key": "1X_o1.5",
@@ -1502,12 +1563,12 @@
           "over": true,
           "label": "CA Osasuna eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.6035764393321127,
-          "pMarket": 0.6035764393321127,
+          "p": 0.6066325033004154,
+          "pMarket": 0.6066325033004154,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.6567909792942708,
-          "estBB": 1.6236551597083853
+          "fairMarket": 1.648444477602912,
+          "estBB": 1.6154755880508536
         },
         {
           "key": "1X_u3.5",
@@ -1516,12 +1577,12 @@
           "over": false,
           "label": "CA Osasuna eller uavgjort + Under 3,5 mål",
           "bb": "1X og Under 3,5",
-          "p": 0.5768635934728396,
-          "pMarket": 0.5768635934728396,
+          "p": 0.5793773075524165,
+          "pMarket": 0.5793773075524165,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.7335120664831538,
-          "estBB": 1.6815067044886591
+          "fairMarket": 1.7259909681732395,
+          "estBB": 1.6742112391280424
         },
         {
           "key": "12_o1.5",
@@ -1530,12 +1591,12 @@
           "over": true,
           "label": "CA Osasuna eller Málaga CF (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.5651593122867312,
-          "pMarket": 0.5651593122867312,
+          "p": 0.5662117064022587,
+          "pMarket": 0.5662117064022587,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.7694125855483633,
-          "estBB": 1.734024333837396
+          "fairMarket": 1.766123852073029,
+          "estBB": 1.7308013750315683
         },
         {
           "key": "12_o2.5",
@@ -1544,14 +1605,15 @@
           "over": true,
           "label": "CA Osasuna eller Málaga CF (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.4313039653208214,
-          "pMarket": 0.4313039653208214,
+          "p": 0.4318394588569393,
+          "pMarket": 0.4318394588569393,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 2.318550443319387,
-          "estBB": 2.2721794344529993
+          "fairMarket": 2.3156753730818336,
+          "estBB": 2.269361865620197
         }
-      ]
+      ],
+      "oddsLocked": true
     },
     {
       "id": 564753,
@@ -1708,7 +1770,9 @@
         "p": 0.9438998199015435,
         "odds": 1.39,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.39
       },
       {
         "match": "LIV–MUN",
@@ -1718,7 +1782,9 @@
         "p": 0.7412680900800281,
         "odds": 1.53,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.53
       },
       {
         "match": "OSA–MAL",
@@ -1726,9 +1792,11 @@
         "pick": "CA Osasuna vinner",
         "market": "Full tid",
         "p": 0.45448094182431076,
-        "odds": 1.89,
+        "odds": 1.86,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": null,
+        "realOdds": 1.86
       },
       {
         "match": "FCB–VIL",
@@ -1738,7 +1806,9 @@
         "p": 0.31527703081879066,
         "odds": 2.12,
         "liveOdds": true,
-        "modelBased": true
+        "modelBased": true,
+        "hit": false,
+        "realOdds": 2.12
       }
     ],
     "gambler": {
@@ -1748,26 +1818,33 @@
           "pick": "Over 3,5 mål",
           "market": "Totalt",
           "p": 0.5394780441552036,
-          "odds": 1.8536435557186601
+          "odds": 1.8536435557186601,
+          "hit": null,
+          "realOdds": 2.4
         },
         {
           "match": "OSA–MAL",
           "pick": "CA Osasuna vinner",
           "market": "Full tid",
           "p": 0.45448094182431076,
-          "odds": 2.2003122858924438
+          "odds": 2.2003122858924438,
+          "hit": null,
+          "realOdds": 1.86
         },
         {
           "match": "HUL–BHA",
           "pick": "Begge lag scorer",
           "market": "BTTS",
           "p": 0.3629392623928892,
-          "odds": 2.7552819538093387
+          "odds": 2.7552819538093387,
+          "hit": false,
+          "realOdds": null
         }
       ],
       "combinedOdds": 11.237678344367053,
       "combinedProb": 0.08898635192750959,
-      "hitRate": 11
+      "hitRate": 11,
+      "comboHit": false
     },
     "kombikuponger": [
       {
@@ -1787,9 +1864,11 @@
             "bb": "12 og Over 2,5",
             "p": 0.7974428514357111,
             "estBB": 1.228928189945667,
-            "fair": 1.2540083570874154
+            "fair": 1.2540083570874154,
+            "hit": true
           }
-        ]
+        ],
+        "hit": true
       },
       {
         "slot": "16:15",
@@ -1836,14 +1915,15 @@
             "over": false,
             "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
             "bb": "1X og Under 4,5",
-            "p": 0.699402929579513,
-            "estBB": 1.3868972504635806,
-            "fair": 1.4297909798593615
+            "p": 0.7024694067577856,
+            "estBB": 1.3808430526205964,
+            "fair": 1.42354953878412
           }
         ],
-        "p": 0.31509779612221045,
-        "estOdds": 2.88195857330938,
-        "ev": -0.09190120503470445
+        "p": 0.3164793176455956,
+        "estOdds": 2.8693780109265017,
+        "ev": -0.09190120503470434,
+        "hit": null
       }
     ],
     "dagensKombi": {
@@ -1861,7 +1941,8 @@
           "bb": "12 og Over 2,5",
           "p": 0.7974428514357111,
           "estBB": 1.228928189945667,
-          "fair": 1.2540083570874154
+          "fair": 1.2540083570874154,
+          "hit": true
         },
         {
           "match": "SAN–RSO",
@@ -1904,15 +1985,18 @@
           "over": false,
           "label": "CA Osasuna eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.699402929579513,
-          "estBB": 1.3868972504635806,
-          "fair": 1.4297909798593615
+          "p": 0.7024694067577856,
+          "estBB": 1.3808430526205964,
+          "fair": 1.42354953878412
         }
       ],
-      "p": 0.25127248502080385,
-      "estOdds": 3.5417201329954926,
-      "ev": -0.11006318093401068
+      "p": 0.2523741694837319,
+      "estOdds": 3.5262595252378035,
+      "ev": -0.11006318093401046,
+      "hit": null
     }
   },
-  "oddsUpdatedAt": "2026-11-22T12:57:26.176Z"
+  "oddsUpdatedAt": "2026-11-22T16:43:55.072Z",
+  "resultsChecked": false,
+  "resultsCheckedAt": "2026-11-22T16:44:30.925Z"
 }
