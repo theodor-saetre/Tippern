@@ -2653,5 +2653,59 @@
     "odds": 1.9,
     "hit": false,
     "source": "gambler"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "SAN–RSO",
+    "pick": "Over 2,5 mål",
+    "p": 0.9438998199015435,
+    "odds": 1.39,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "LIV–MUN",
+    "pick": "Over 2,5 mål",
+    "p": 0.7412680900800281,
+    "odds": 1.53,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "OSA–MAL",
+    "pick": "CA Osasuna vinner",
+    "p": 0.45448094182431076,
+    "odds": 1.86,
+    "hit": true,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "FCB–VIL",
+    "pick": "Under 4,5 mål",
+    "p": 0.31527703081879066,
+    "odds": 2.12,
+    "hit": false,
+    "source": "dagensSpill"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "LIV–MUN",
+    "pick": "Over 3,5 mål",
+    "p": 0.5394780441552036,
+    "odds": 2.4,
+    "hit": true,
+    "source": "gambler"
+  },
+  {
+    "date": "2026-11-22",
+    "match": "OSA–MAL",
+    "pick": "CA Osasuna vinner",
+    "p": 0.45448094182431076,
+    "odds": 1.86,
+    "hit": true,
+    "source": "gambler"
   }
 ]

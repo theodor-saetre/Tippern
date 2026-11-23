@@ -364,5 +364,179 @@
         "hit": false
       }
     ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "LIV–MUN",
+    "pick": "Liverpool FC eller uavgjort + Over 1,5 mål",
+    "bb": "1X og Over 1,5",
+    "p": 0.653611304667686,
+    "estOdds": 1.46,
+    "fair": 1.49,
+    "edge": -0.025,
+    "hit": true,
+    "score": "4-0",
+    "draws10": 1,
+    "alts": [
+      {
+        "key": "1X_o1.5",
+        "p": 0.654,
+        "fair": 1.49,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.639,
+        "fair": 1.51,
+        "hit": true
+      },
+      {
+        "key": "1X_u4.5",
+        "p": 0.631,
+        "fair": 1.65,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.524,
+        "fair": 1.8,
+        "hit": true
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.484,
+        "fair": 2.21,
+        "hit": false
+      },
+      {
+        "key": "1X_o2.5",
+        "p": 0.454,
+        "fair": 2.07,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "FCB–VIL",
+    "pick": "FC Barcelona eller Villarreal CF (ikke uavgjort) + Over 2,5 mål",
+    "bb": "12 og Over 2,5",
+    "p": 0.7974428514357111,
+    "estOdds": 1.23,
+    "fair": 1.25,
+    "edge": 0,
+    "hit": true,
+    "score": "3-2",
+    "draws10": 0,
+    "alts": [
+      {
+        "key": "12_o2.5",
+        "p": 0.797,
+        "fair": 1.25,
+        "hit": true
+      },
+      {
+        "key": "1X_o2.5",
+        "p": 0.793,
+        "fair": 1.26,
+        "hit": true
+      },
+      {
+        "key": "1X_u4.5",
+        "p": 0.425,
+        "fair": 2.35,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "SAN–RSO",
+    "pick": "Real Racing Club de Santander eller Real Sociedad de Fútbol (ikke uavgjort) + Over 1,5 mål",
+    "bb": "12 og Over 1,5",
+    "p": 0.6892842633714229,
+    "estOdds": 1.42,
+    "fair": 1.45,
+    "edge": 0,
+    "hit": true,
+    "score": "3-2",
+    "draws10": 1,
+    "alts": [
+      {
+        "key": "12_o1.5",
+        "p": 0.689,
+        "fair": 1.45,
+        "hit": true
+      },
+      {
+        "key": "X2_o1.5",
+        "p": 0.625,
+        "fair": 1.6,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.6,
+        "fair": 1.67,
+        "hit": true
+      },
+      {
+        "key": "X2_u4.5",
+        "p": 0.507,
+        "fair": 1.97,
+        "hit": false
+      },
+      {
+        "key": "X2_o2.5",
+        "p": 0.472,
+        "fair": 2.12,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "OSA–MAL",
+    "pick": "CA Osasuna eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.7024694067577856,
+    "estOdds": 1.38,
+    "fair": 1.42,
+    "edge": 0,
+    "hit": true,
+    "score": "1-0",
+    "draws10": 3,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.702,
+        "fair": 1.42,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.607,
+        "fair": 1.65,
+        "hit": false
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.579,
+        "fair": 1.73,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.566,
+        "fair": 1.77,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.432,
+        "fair": 2.32,
+        "hit": false
+      }
+    ]
   }
 ]
