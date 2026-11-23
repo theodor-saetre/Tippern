@@ -1,0 +1,542 @@
+[
+  {
+    "date": "2026-11-21",
+    "match": "CHE–LEE",
+    "pick": "Chelsea FC eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.6750119599688272,
+    "estOdds": 1.49,
+    "fair": 1.53,
+    "edge": 0.034,
+    "hit": false,
+    "score": "1-4",
+    "draws10": 2,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.675,
+        "fair": 1.53,
+        "hit": false
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.564,
+        "fair": 1.89,
+        "hit": false
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.558,
+        "fair": 1.71,
+        "hit": false
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.541,
+        "fair": 1.74,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.409,
+        "fair": 2.23,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "AVL–SUN",
+    "pick": "Aston Villa FC eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.6865756137977586,
+    "estOdds": 1.46,
+    "fair": 1.51,
+    "edge": 0.037,
+    "hit": true,
+    "score": "0-0",
+    "draws10": 3,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.687,
+        "fair": 1.51,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.619,
+        "fair": 1.56,
+        "hit": false
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.584,
+        "fair": 1.62,
+        "hit": false
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.557,
+        "fair": 1.91,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.454,
+        "fair": 2.03,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "BOU–NOT",
+    "pick": "AFC Bournemouth eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.6919159152966738,
+    "estOdds": 1.45,
+    "fair": 1.49,
+    "edge": 0.031,
+    "hit": true,
+    "score": "2-0",
+    "draws10": 1,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.692,
+        "fair": 1.49,
+        "hit": true
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.587,
+        "fair": 1.81,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.547,
+        "fair": 1.74,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.521,
+        "fair": 1.8,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "TOT–IPS",
+    "pick": "Tottenham Hotspur FC eller uavgjort + Over 1,5 mål",
+    "bb": "1X og Over 1,5",
+    "p": 0.6876175931972022,
+    "estOdds": 1.38,
+    "fair": 1.41,
+    "edge": -0.032,
+    "hit": true,
+    "score": "2-0",
+    "draws10": 3,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.688,
+        "fair": 1.51,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.688,
+        "fair": 1.41,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.64,
+        "fair": 1.5,
+        "hit": true
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.538,
+        "fair": 1.99,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.513,
+        "fair": 1.82,
+        "hit": false
+      },
+      {
+        "key": "1X_o2.5",
+        "p": 0.472,
+        "fair": 1.96,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "COV–CRY",
+    "pick": "Coventry City FC eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.585486637064516,
+    "estOdds": 1.72,
+    "fair": 1.78,
+    "edge": 0.04,
+    "hit": false,
+    "score": "3-2",
+    "draws10": 0,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.585,
+        "fair": 1.78,
+        "hit": false
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.56,
+        "fair": 1.69,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.503,
+        "fair": 1.92,
+        "hit": true
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.48,
+        "fair": 2.23,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.438,
+        "fair": 2.1,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "NEW–ARS",
+    "pick": "Arsenal FC eller uavgjort + Under 4,5 mål",
+    "bb": "X2 og Under 4,5",
+    "p": 0.7440977400512658,
+    "estOdds": 1.35,
+    "fair": 1.39,
+    "edge": 0.034,
+    "hit": true,
+    "score": "2-2",
+    "draws10": 2,
+    "alts": [
+      {
+        "key": "X2_u4.5",
+        "p": 0.744,
+        "fair": 1.39,
+        "hit": true
+      },
+      {
+        "key": "X2_o1.5",
+        "p": 0.655,
+        "fair": 1.46,
+        "hit": true
+      },
+      {
+        "key": "X2_u3.5",
+        "p": 0.612,
+        "fair": 1.74,
+        "hit": false
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.591,
+        "fair": 1.6,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.448,
+        "fair": 2.05,
+        "hit": false
+      },
+      {
+        "key": "X2_o2.5",
+        "p": 0.416,
+        "fair": 2.19,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "RAY–VAL",
+    "pick": "Rayo Vallecano de Madrid eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.6860580797210067,
+    "estOdds": 1.41,
+    "fair": 1.46,
+    "edge": 0,
+    "hit": false,
+    "score": "0-1",
+    "draws10": 4,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.686,
+        "fair": 1.46,
+        "hit": false
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.572,
+        "fair": 1.75,
+        "hit": false
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.572,
+        "fair": 1.75,
+        "hit": false
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.546,
+        "fair": 1.83,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.413,
+        "fair": 2.42,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-21",
+    "match": "SEV–BET",
+    "pick": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+    "bb": "X2 og Under 4,5",
+    "p": 0.5891689152302637,
+    "estOdds": 1.65,
+    "fair": 1.7,
+    "edge": 0,
+    "hit": true,
+    "score": "1-1",
+    "draws10": 3,
+    "alts": [
+      {
+        "key": "X2_u4.5",
+        "p": 0.589,
+        "fair": 1.7,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.564,
+        "fair": 1.77,
+        "hit": false
+      },
+      {
+        "key": "X2_o1.5",
+        "p": 0.512,
+        "fair": 1.95,
+        "hit": true
+      },
+      {
+        "key": "X2_u3.5",
+        "p": 0.481,
+        "fair": 2.08,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.442,
+        "fair": 2.26,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "LIV–MUN",
+    "pick": "Liverpool FC eller uavgjort + Over 1,5 mål",
+    "bb": "1X og Over 1,5",
+    "p": 0.653611304667686,
+    "estOdds": 1.46,
+    "fair": 1.49,
+    "edge": -0.025,
+    "hit": true,
+    "score": "4-0",
+    "draws10": 1,
+    "alts": [
+      {
+        "key": "1X_o1.5",
+        "p": 0.654,
+        "fair": 1.49,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.639,
+        "fair": 1.51,
+        "hit": true
+      },
+      {
+        "key": "1X_u4.5",
+        "p": 0.631,
+        "fair": 1.65,
+        "hit": true
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.524,
+        "fair": 1.8,
+        "hit": true
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.484,
+        "fair": 2.21,
+        "hit": false
+      },
+      {
+        "key": "1X_o2.5",
+        "p": 0.454,
+        "fair": 2.07,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "FCB–VIL",
+    "pick": "FC Barcelona eller Villarreal CF (ikke uavgjort) + Over 2,5 mål",
+    "bb": "12 og Over 2,5",
+    "p": 0.7974428514357111,
+    "estOdds": 1.23,
+    "fair": 1.25,
+    "edge": 0,
+    "hit": true,
+    "score": "3-2",
+    "draws10": 0,
+    "alts": [
+      {
+        "key": "12_o2.5",
+        "p": 0.797,
+        "fair": 1.25,
+        "hit": true
+      },
+      {
+        "key": "1X_o2.5",
+        "p": 0.793,
+        "fair": 1.26,
+        "hit": true
+      },
+      {
+        "key": "1X_u4.5",
+        "p": 0.425,
+        "fair": 2.35,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "SAN–RSO",
+    "pick": "Real Racing Club de Santander eller Real Sociedad de Fútbol (ikke uavgjort) + Over 1,5 mål",
+    "bb": "12 og Over 1,5",
+    "p": 0.6892842633714229,
+    "estOdds": 1.42,
+    "fair": 1.45,
+    "edge": 0,
+    "hit": true,
+    "score": "3-2",
+    "draws10": 1,
+    "alts": [
+      {
+        "key": "12_o1.5",
+        "p": 0.689,
+        "fair": 1.45,
+        "hit": true
+      },
+      {
+        "key": "X2_o1.5",
+        "p": 0.625,
+        "fair": 1.6,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.6,
+        "fair": 1.67,
+        "hit": true
+      },
+      {
+        "key": "X2_u4.5",
+        "p": 0.507,
+        "fair": 1.97,
+        "hit": false
+      },
+      {
+        "key": "X2_o2.5",
+        "p": 0.472,
+        "fair": 2.12,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "date": "2026-11-22",
+    "match": "OSA–MAL",
+    "pick": "CA Osasuna eller uavgjort + Under 4,5 mål",
+    "bb": "1X og Under 4,5",
+    "p": 0.7024694067577856,
+    "estOdds": 1.38,
+    "fair": 1.42,
+    "edge": 0,
+    "hit": true,
+    "score": "1-0",
+    "draws10": 3,
+    "alts": [
+      {
+        "key": "1X_u4.5",
+        "p": 0.702,
+        "fair": 1.42,
+        "hit": true
+      },
+      {
+        "key": "1X_o1.5",
+        "p": 0.607,
+        "fair": 1.65,
+        "hit": false
+      },
+      {
+        "key": "1X_u3.5",
+        "p": 0.579,
+        "fair": 1.73,
+        "hit": true
+      },
+      {
+        "key": "12_o1.5",
+        "p": 0.566,
+        "fair": 1.77,
+        "hit": false
+      },
+      {
+        "key": "12_o2.5",
+        "p": 0.432,
+        "fair": 2.32,
+        "hit": false
+      }
+    ]
+  }
+]
