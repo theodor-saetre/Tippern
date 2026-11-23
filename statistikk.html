@@ -51,11 +51,12 @@
   </header>
   <nav>
     <a href="index.html">Tips</a>
-    <a href="detaljer.html">Detaljer</a>
     <a href="statistikk.html" class="active">Statistikk</a>
     <a href="avkastning.html">Avkastning</a>
+    <a href="kuponger.html">Kuponger</a>
   </nav>
   <div class="status-tag" id="statusTag">● Laster …</div>
+  <div style="margin:26px 0 10px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:0.12em;color:var(--flare);">Enkeltspill <span style="color:var(--chalk-dim);font-weight:400;letter-spacing:0.05em;text-transform:none;">— ett hovedspill pr kamp</span></div>
   <div id="stats"></div>
   <div id="list"></div>
   <div class="disclaimer">
@@ -65,28 +66,26 @@
 <script>
 // Ny modell (markedsbasert, kombispill i samme kamp) logges fra 21. nov 2026. Eldre tips (gammel formmodell) telles ikke med.
 const TRACKING_START = '2026-11-21';
-const fmtPct = n => n.toFixed(0)+"%";
+const fmtPct = n => n.toFixed(0) + "%";
+const get = async p => { try { const r = await fetch(p, { cache: 'no-store' }); return r.ok ? await r.json() : []; } catch (e) { return []; } };
+const box = (num, cap) => '<div class="stat-box"><div class="num">' + num + '</div><div class="cap">' + cap + '</div></div>';
 
-async function load(){
+async function load() {
   const tag = document.getElementById('statusTag');
-  let log = [];
-  try { const r = await fetch('data/combo-history.json', { cache: 'no-store' }); if (r.ok) log = await r.json(); } catch(e) {}
-  log = log.filter(h => h.date >= TRACKING_START);
-  if (!log.length) {
-    tag.textContent = '● Ingen avklarte spill ennå';
-    document.getElementById('list').innerHTML = '<div class="empty">Historikken bygger seg opp dag for dag, fra og med ' + TRACKING_START + '.</div>';
-    return;
+  const singles = (await get('data/combo-history.json')).filter(h => h.date >= TRACKING_START);
+  tag.textContent = '● ' + singles.length + ' enkeltspill — fra ' + TRACKING_START;
+
+  // --- Enkeltspill ---
+  if (!singles.length) {
+    document.getElementById('list').innerHTML = '<div class="empty">Ingen avklarte enkeltspill ennå. Historikken bygger seg opp fra og med ' + TRACKING_START + '.</div>';
+  } else {
+    const hits = singles.filter(h => h.hit).length, avgP = singles.reduce((x, h) => x + h.p, 0) / singles.length * 100;
+    document.getElementById('stats').innerHTML = '<div class="stat-grid">' + box(fmtPct(hits / singles.length * 100), 'Treffprosent') + box(hits + '/' + singles.length, 'Traff') + box(fmtPct(avgP), 'Modellen sa i snitt') + '</div>';
+    document.getElementById('list').innerHTML = '<div class="card">' + [...singles].reverse().slice(0, 40).map(h =>
+      '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · sa ' + fmtPct(h.p * 100) + '</small></span>'
+      + '<span class="res ' + (h.hit ? 'hit' : 'miss') + '">' + (h.hit ? 'TRAFF' : 'BOM') + '</span></div>').join('') + '</div>';
   }
-  const hits = log.filter(h => h.hit).length;
-  const avgP = log.reduce((s,h) => s + h.p, 0) / log.length * 100;
-  tag.textContent = '● ' + log.length + ' avklarte spill — fra ' + TRACKING_START;
-  document.getElementById('stats').innerHTML = '<div class="stat-grid">'
-    + '<div class="stat-box"><div class="num">' + fmtPct(hits/log.length*100) + '</div><div class="cap">Treffprosent</div></div>'
-    + '<div class="stat-box"><div class="num">' + hits + '/' + log.length + '</div><div class="cap">Traff</div></div>'
-    + '<div class="stat-box"><div class="num">' + fmtPct(avgP) + '</div><div class="cap">Modellen sa i snitt</div></div></div>';
-  document.getElementById('list').innerHTML = '<div class="card">' + [...log].reverse().map(h =>
-    '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · sa ' + fmtPct(h.p*100) + '</small></span>'
-    + '<span class="res ' + (h.hit?'hit':'miss') + '">' + (h.hit?'TRAFF':'BOM') + '</span></div>').join('') + '</div>';
+
 }
 load();
 </script>

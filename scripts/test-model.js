@@ -1,60 +1,73 @@
 // scripts/test-model.js
-// Rask røyktest av modellen med eksempeldata — INGEN API-nøkkel nødvendig.
+// Rask røyktest av kjernen med eksempeldata — INGEN API-nøkkel nødvendig.
 // Kjør:  node scripts/test-model.js
-// Bekrefter at ratings + Poisson + kupong henger sammen og gir fornuftige tall.
+// Bekrefter at Poisson-tilpasningen mot markedspriser, kombiene og kupongene henger sammen.
 
-const { expectedGoals } = require('../lib/ratings');
-const { modelMarkets, fairOdds } = require('../lib/poisson');
-const { buildCoupon } = require('../lib/coupon');
+const { modelMarkets, jointProb, fitLambdasToMarket } = require('../lib/poisson');
+const { buildCombos, comboHit } = require('../lib/combos');
+const { buildCoupons } = require('../lib/coupons');
 
-// Eksempel-form (eldst → nyest): { gf, ga, venue }
-const LIV = [
-  {gf:3,ga:1,venue:'A'},{gf:2,ga:0,venue:'H'},{gf:1,ga:1,venue:'A'},{gf:4,ga:1,venue:'H'},{gf:0,ga:1,venue:'A'},
-  {gf:2,ga:0,venue:'H'},{gf:3,ga:1,venue:'A'},{gf:2,ga:2,venue:'H'},{gf:2,ga:0,venue:'A'},{gf:3,ga:0,venue:'H'},
-];
-const MCI = [
-  {gf:2,ga:0,venue:'H'},{gf:3,ga:1,venue:'A'},{gf:2,ga:0,venue:'H'},{gf:1,ga:1,venue:'A'},{gf:4,ga:0,venue:'H'},
-  {gf:2,ga:1,venue:'A'},{gf:1,ga:2,venue:'A'},{gf:3,ga:0,venue:'H'},{gf:2,ga:0,venue:'H'},{gf:2,ga:2,venue:'A'},
-];
-const HUL = [
-  {gf:0,ga:2,venue:'A'},{gf:1,ga:3,venue:'H'},{gf:1,ga:1,venue:'A'},{gf:0,ga:2,venue:'H'},{gf:2,ga:1,venue:'H'},
-  {gf:1,ga:2,venue:'A'},{gf:0,ga:0,venue:'H'},{gf:1,ga:4,venue:'A'},{gf:0,ga:2,venue:'A'},{gf:2,ga:0,venue:'H'},
-];
+const fail = (msg) => { console.error('✗ FEIL: ' + msg); process.exit(1); };
+const ok = (msg) => console.log('✓ ' + msg);
 
-function run(homeName, homeForm, awayName, awayForm) {
-  const eg = expectedGoals(homeForm, awayForm);
-  const m = modelMarkets(eg.lambdaH, eg.lambdaA);
-  console.log(`\n${homeName} (H) vs ${awayName} (A)`);
-  console.log(`  forventet mål: ${eg.lambdaH.toFixed(2)} – ${eg.lambdaA.toFixed(2)}`);
-  console.log(`  DC ${homeName}/uavgjort: ${(m.dcHD*100).toFixed(0)}%  (fair ${fairOdds(m.dcHD).toFixed(2)})`);
-  console.log(`  Over 2,5: ${(m.o25*100).toFixed(0)}%  |  BTTS: ${(m.btts*100).toFixed(0)}%`);
-  return { eg, m };
-}
+console.log('=== RØYKTEST ===');
 
-console.log('=== MODELL-RØYKTEST ===');
-const a = run('Liverpool', LIV, 'Man City', MCI);
-const b = run('Liverpool', LIV, 'Hull', HUL);
+// 1) Tilpasning mot markedet: kjente lambda inn -> priser -> tilbake til samme lambda
+const m = modelMarkets(1.8, 1.0);
+const fit = fitLambdasToMarket(m.pHome, m.pDraw, m.pAway, 2.5, m.o25);
+if (!fit || Math.abs(fit.lambdaH - 1.8) > 0.05 || Math.abs(fit.lambdaA - 1.0) > 0.05) fail(`tilpasning ga ${fit && fit.lambdaH.toFixed(2)}–${fit && fit.lambdaA.toFixed(2)}, ventet 1,80–1,00`);
+ok(`markedstilpasning gjenfinner forventede mål (${fit.lambdaH.toFixed(2)}–${fit.lambdaA.toFixed(2)})`);
 
-// Sjekk 1: Liverpool skal ha høyere forventet mål mot Hull enn mot City
-console.log('\n--- Sjekker ---');
-console.log(`Liverpool xG mot City: ${a.eg.lambdaH.toFixed(2)}, mot Hull: ${b.eg.lambdaH.toFixed(2)}`);
-if (b.eg.lambdaH > a.eg.lambdaH) console.log('✓ Motstandsjustering funker (mer mål forventet mot svakere lag)');
-else { console.error('✗ FEIL: forventet mål burde vært høyere mot Hull'); process.exit(1); }
+// 2) Felles sannsynlighet: 1X + over 1,5 kan ikke være større enn hver del alene
+const j = jointProb(1.8, 1.0, '1X', 1.5, true);
+if (!(j > 0 && j <= m.dcHD && j <= m.o15)) fail('felles sannsynlighet er ikke konsistent med delene');
+ok(`1X + over 1,5 = ${(j * 100).toFixed(0)}% (≤ 1X ${(m.dcHD * 100).toFixed(0)}%, ≤ over 1,5 ${(m.o15 * 100).toFixed(0)}%)`);
 
-// Sjekk 2: kupong bygges og Dagens spill lander i vinduet
+// 3) Kombier fra markedspriser (Unibet-format som fetch-odds.js leverer)
+const fx = (label, h, a, ko, pH, pD, pA, over, under) => ({
+  label, competition: 'PL', homeName: h, awayName: a, kickoff: ko,
+  oddsUnibet: { bookmaker: 'test', odds: { pHome: pH, pDraw: pD, pAway: pA }, totals: { line: 2.5, over, under } },
+});
 const fixtures = [
-  { label:'LIV–MCI', homeName:'Liverpool', awayName:'Man City', markets:a.m },
-  { label:'LIV–HUL', homeName:'Liverpool', awayName:'Hull', markets:b.m },
+  fx('A–B', 'A', 'B', '2026-11-21T15:00:00Z', 1.40, 5.2, 8.0, 1.62, 2.25),
+  fx('C–D', 'C', 'D', '2026-11-21T15:00:00Z', 1.75, 4.0, 4.6, 1.95, 1.85),
+  fx('E–F', 'E', 'F', '2026-11-21T15:00:00Z', 2.10, 3.5, 3.6, 2.10, 1.75),
+  fx('G–H', 'G', 'H', '2026-11-21T17:30:00Z', 6.0, 4.4, 1.56, 1.68, 2.20),
 ];
-const c = buildCoupon(fixtures);
-if (c.dagensSpill) {
-  const o = c.dagensSpill.odds;
-  console.log(`Dagens spill: ${c.dagensSpill.pick} (${c.dagensSpill.match}) @ fair ${o.toFixed(2)}`);
-  if (o >= 1.70 && o <= 2.50) console.log('✓ Dagens spill er i odds-vinduet 1,70–2,50');
-  else { console.error('✗ FEIL: utenfor vinduet'); process.exit(1); }
-} else {
-  console.log('(Ingen kamp i vinduet i denne lille testen — det er greit med bare 2 kamper)');
+let n = 0;
+for (const f of fixtures) {
+  const b = buildCombos(f, { leagueBias: { PL: -0.3 } });
+  if (!b) fail(`ingen kombier for ${f.label}`);
+  f.combos = b.combos; f.comboPick = b.combos[0] || null; f.comboOver = b.over; f.comboUnder = b.under; f.comboAlts = b.alts;
+  if (f.comboPick) {
+    n++;
+    const c = f.comboPick;
+    if (!(c.p > 0 && c.p < 1 && c.estBB > 1 && c.pMarket > 0)) fail(`urimelige tall for ${f.label}`);
+    console.log(`  ${f.label}: ${c.bb}  ${(c.p * 100).toFixed(0)}%  BB ca. ${c.estBB.toFixed(2)}  (må ha ≥ ${(1.03 / c.pMarket).toFixed(2)})`);
+  }
 }
+if (n === 0) fail('ingen kamp fikk et hovedspill');
+ok(`${n} av ${fixtures.length} kamper fikk et hovedspill`);
 
-console.log(`The Gambler: ${c.gambler.legs.length} bein, samlet odds ${c.gambler.combinedOdds.toFixed(1)}, ekte sjanse ${(c.gambler.combinedProb*100).toFixed(0)}% (1 av ${c.gambler.hitRate})`);
+// 4) Treffsjekk
+const pick = fixtures[0].comboPick;
+const hitScore = pick.over ? [2, 1] : [1, 0], missScore = [0, 3];
+comboHit(pick, ...hitScore); comboHit(pick, ...missScore);
+if (comboHit({ result: '1X', line: 1.5, over: true }, 2, 0) !== true || comboHit({ result: '1X', line: 1.5, over: true }, 1, 0) !== false || comboHit({ result: '1X', line: 4.5, over: false }, 0, 1) !== false) fail('comboHit gir feil svar');
+ok('comboHit avgjør treff/bom riktig');
+
+// 5) Kuponger
+const cp = buildCoupons(fixtures);
+if (!cp.kombikuponger.length) fail('ingen kuponger pr avspark-tid');
+const dk = cp.dagensKombi;
+if (dk) {
+  if (dk.legs.length < 3 || dk.legs.length > 4) fail('Dagens kupong skal ha 3-4 ben');
+  if (new Set(dk.legs.map((l) => l.match)).size !== dk.legs.length) fail('Dagens kupong har to ben fra samme kamp');
+  console.log(`  Dagens kupong: ${dk.legs.length} ben, ${(dk.p * 100).toFixed(0)}%, est. ${dk.estOdds.toFixed(2)}`);
+  ok('Dagens kupong har 3-4 ben, ett pr kamp');
+} else {
+  console.log('  (ingen Dagens kupong i denne lille testen - trenger minst 3 kamper med 65 %+)');
+}
+ok(`${cp.kombikuponger.length} kuponger pr avspark-tid`);
+
 console.log('\n✓ Alle kjernedeler kjører.');

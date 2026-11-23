@@ -47,22 +47,6 @@ function actualOutcomes(hg, ag) {
   };
 }
 
-// lib/coupon.js (testet, rørt ikke) gir oss bare lesbar tekst tilbake — ikke
-// hvilken markedsnøkkel spillet kom fra. Tolker det heller her, ut fra de
-// faste tekstmalene buildCoupon() alltid bruker.
-function inferKey(pick, market, homeName) {
-  if (market === 'Double chance') return pick.startsWith(homeName) ? 'dcHD' : 'dcAD';
-  if (market === 'BTTS') return 'btts';
-  if (market === 'Full tid') return pick.startsWith(homeName) ? 'pHome' : 'pAway';
-  if (market === 'Totalt') {
-    if (pick.includes('1,5')) return 'o15';
-    if (pick.includes('2,5')) return 'o25';
-    if (pick.includes('3,5')) return pick.startsWith('Over') ? 'o35' : 'u35';
-    if (pick.includes('4,5')) return 'u45';
-  }
-  return null;
-}
-
 // Hvor lenge etter avspark vi tidligst forsøker å sjekke resultatet - en kamp
 // varer ~105 min (2×45 + pause), pluss overtid og litt tid før tellende
 // datakilder har oppdatert seg. 140 min = 2t20min gir god margin.
@@ -103,7 +87,6 @@ async function processDay(file, now) {
     const hg = mt.score.fullTime.home, ag = mt.score.fullTime.away;
     f.result = { home: hg, away: ag };
     f.outcomes = actualOutcomes(hg, ag);
-    if (f.matchPick) f.matchPick.hit = f.outcomes[f.matchPick.key]; // for visning i tips.html
     if (f.combos) for (const c of f.combos) c.hit = comboHit(c, hg, ag);
     if (f.comboPick) f.comboPick.hit = comboHit(f.comboPick, hg, ag);
     if (f.comboAlts) for (const c of f.comboAlts) c.hit = comboHit(c, hg, ag);
@@ -125,40 +108,6 @@ async function processDay(file, now) {
     markCoupon(day.coupon.dagensKombi);
   }
 
-  // Merk av treff i "Dagens spill" og "The Gambler". `.odds` på gambler-bein er
-  // ALLTID modellens egen fair-odds (lib/coupon.js, urørt) - aldri overskrevet
-  // med ekte pris. Slår derfor opp ekte odds separat (realOdds) via samme
-  // fixture.odds som frontend allerede bruker til "bookmaker akkurat nå" -
-  // slik at historikken kun bruker ekte, faktiske priser, aldri modelltall.
-  const byLabel = new Map(day.fixtures.map((f) => [f.label, f]));
-  function realOddsFor(pick, market, f) {
-    if (!f || !f.odds) return null;
-    const key = inferKey(pick, market, f.homeName);
-    return key ? (f.odds[key] ?? null) : null;
-  }
-  // dagensSpill er en LISTE (3-4 spill) - se scripts/fetch-odds.js.
-  if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
-    for (const ds of day.coupon.dagensSpill) {
-      const f = byLabel.get(ds.match);
-      const key = f && inferKey(ds.pick, ds.market, f.homeName);
-      ds.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
-      // Var ds.odds allerede ekte pris (liveOdds:true, se fetch-odds.js)? Behold
-      // den. Ellers, forsøk å slå opp ekte odds nå (kan ha kommet inn senere).
-      ds.realOdds = ds.liveOdds ? ds.odds : realOddsFor(ds.pick, ds.market, f);
-    }
-  }
-  if (day.coupon && day.coupon.gambler && day.coupon.gambler.legs) {
-    for (const leg of day.coupon.gambler.legs) {
-      const f = byLabel.get(leg.match);
-      const key = f && inferKey(leg.pick, leg.market, f.homeName);
-      leg.hit = (f && f.outcomes && key) ? f.outcomes[key] : null;
-      leg.realOdds = realOddsFor(leg.pick, leg.market, f);
-    }
-    if (day.coupon.gambler.legs.length) {
-      day.coupon.gambler.comboHit = day.coupon.gambler.legs.every((l) => l.hit === true);
-    }
-  }
-
   const allResolved = resolvedCount === day.fixtures.length;
   day.resultsChecked = allResolved;
   day.resultsCheckedAt = new Date().toISOString();
@@ -173,57 +122,14 @@ async function processDay(file, now) {
     if (liveDb.date === day.date) fs.writeFileSync(todayPath, JSON.stringify(day, null, 2));
   }
 
-  // Dagen er ferdig sjekket → legg "ett spill pr kamp"-tipsene inn i den
-  // varige historikk-loggen (kun de som faktisk hadde ekte odds - se
-  // scripts/build-model.js sin pickMatchPick og scripts/fetch-odds.js).
-  if (allResolved) { appendToHistory(day); appendComboHistory(day); appendCouponHistory(day); }
+  // Dagen er ferdig sjekket → legg kombispill og kuponger inn i de varige loggene (combo-history.json, coupon-history.json).
 
   console.log(`${day.date}: ${resolvedCount}/${day.fixtures.length} kamper avklart` +
     (allResolved ? ' — dagen er ferdig sjekket' : ' — noen gjenstår, prøver igjen neste kjøring'));
   return true;
 }
 
-const HISTORY_PATH = path.join(__dirname, '..', 'data', 'history.json');
-
-// Varig, alltid-voksende logg over ekte, avklarte tips — datagrunnlaget for
-// statistikk.html (treffprosent) og avkastning.html (100 kr pr spill). Kun bein
-// som faktisk har en EKTE, hentet odds telles med (aldri modellens egen
-// fair-odds) - kombi-spill kan derfor aldri havne her (se tips.html). The
-// Gambler-beina telles nå med NÅR de har ekte odds registrert (leg.realOdds) -
-// resten av The Gambler er fortsatt "for gøy, ikke smart" og vises kun i
-// selve dagens kupong, ikke her.
-function appendToHistory(day) {
-  const history = fs.existsSync(HISTORY_PATH) ? JSON.parse(fs.readFileSync(HISTORY_PATH, 'utf8')) : [];
-  const push = (source, match, pick, p, odds, hit) => {
-    if (odds == null || hit == null) return; // ingen ekte odds → ikke en reell "innsats"
-    history.push({ date: day.date, match, pick, p, odds, hit, source });
-  };
-
-  const dagensMatches = new Set();
-  if (day.coupon && Array.isArray(day.coupon.dagensSpill)) {
-    for (const ds of day.coupon.dagensSpill) {
-      push('dagensSpill', ds.match, ds.pick, ds.p, ds.realOdds, ds.hit);
-      dagensMatches.add(ds.match);
-    }
-  }
-  // Modellens beste spill for HVER kamp - ikke bare de 3-4 som ble Dagens
-  // spill. Uten dette forsvant tipset for enhver kamp som ikke ble plukket ut,
-  // selv om den var synlig og sporbar (ekte odds) på tips.html/i dag hele dagen.
-  // Hopper over kamper som allerede er dekket via Dagens spill, slik at samme
-  // kamp aldri telles to ganger i regnskapet.
-  for (const f of day.fixtures) {
-    if (!f.matchPick || dagensMatches.has(f.label)) continue;
-    push('matchPick', f.label, f.matchPick.pick, f.matchPick.p, f.matchPick.odds, f.matchPick.hit);
-  }
-  if (day.coupon && day.coupon.gambler && Array.isArray(day.coupon.gambler.legs)) {
-    for (const leg of day.coupon.gambler.legs) push('gambler', leg.match, leg.pick, leg.p, leg.realOdds, leg.hit);
-  }
-
-  fs.writeFileSync(HISTORY_PATH, JSON.stringify(history, null, 2));
-}
-
-// Egen logg for kombispillene (resultat/dobbel sjanse + mål). Holdes ADSKILT fra
-// history.json: kombipriser finnes ikke i odds-feeden, så `estOdds` er et markedsestimat
+// Egen logg for kombispillene (resultat/dobbel sjanse + mål). Kombipriser finnes ikke i odds-feeden, så `estOdds` er et markedsestimat
 // (estimert BB Gold-pris: marginfri Unibet-pris minus ~2-3 %) - ikke en ekte odds. Her måler vi derfor
 // treffprosent og estimert avkastning, aldri ekte avkastning.
 const COMBO_HISTORY_PATH = path.join(__dirname, '..', 'data', 'combo-history.json');

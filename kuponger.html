@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuponger — Tippern</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Spline+Sans+Mono:wght@400;500;600&display=swap');
+  :root {
+    --pitch:#0a1f14; --pitch-line:#16311f; --panel:#11271a; --panel-hi:#163420;
+    --chalk:#eef4ec; --chalk-dim:#8ba894; --flare:#d3f85a; --flare-dim:#a4c73f;
+    --warn:#f5a623; --cool:#4aa3d4; --edge:#23492f; --bad:#d4574a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Archivo',sans-serif; background:var(--pitch);
+    background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);
+    background-size:44px 44px; color:var(--chalk); min-height:100vh; padding:20px; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; }
+  header { display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid var(--edge); padding-bottom:16px; margin-bottom:6px; flex-wrap:wrap; gap:8px; }
+  header h1 { font-size:clamp(24px,5vw,36px); font-weight:900; letter-spacing:-0.03em; text-transform:uppercase; line-height:0.9; }
+  header h1 .accent { color:var(--flare); }
+  header .sub { font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); text-transform:uppercase; letter-spacing:0.08em; }
+  nav { display:flex; gap:8px; margin:16px 0 24px; flex-wrap:wrap; }
+  nav a { font-family:'Spline Sans Mono',monospace; font-size:12px; background:var(--panel); color:var(--chalk-dim); border:1px solid var(--edge); border-radius:4px; padding:8px 12px; text-decoration:none; transition:all 0.15s; }
+  nav a:hover { border-color:var(--flare-dim); color:var(--chalk); }
+  nav a.active { background:var(--flare); color:var(--pitch); border-color:var(--flare); font-weight:600; }
+  .status-tag { display:inline-block; font-family:'Spline Sans Mono',monospace; font-size:11px; color:var(--warn); border:1px solid var(--warn); border-radius:3px; padding:3px 8px; margin-bottom:20px; letter-spacing:0.05em; }
+  .headline { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:24px; text-align:center; margin-bottom:14px; }
+  .headline .num { font-family:'Spline Sans Mono',monospace; font-size:44px; font-weight:700; line-height:1; }
+  .headline .num.pos { color:var(--flare); }
+  .headline .num.neg { color:var(--bad); }
+  .headline .cap { font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:var(--chalk-dim); margin-top:8px; }
+  .stat-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:20px; }
+  @media (max-width:520px){ .stat-grid{ grid-template-columns:1fr 1fr; } }
+  .stat-box { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:16px; text-align:center; }
+  .stat-box .num { font-family:'Spline Sans Mono',monospace; font-size:22px; font-weight:600; color:var(--chalk); line-height:1; }
+  .stat-box .cap { font-size:11px; text-transform:uppercase; letter-spacing:0.06em; color:var(--chalk-dim); margin-top:6px; }
+  .card { background:var(--panel); border:1px solid var(--edge); border-radius:10px; padding:0 18px; margin-bottom:20px; }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 0; border-bottom:1px solid var(--pitch-line); font-size:14px; }
+  .row:last-child { border-bottom:none; }
+  .row .lbl { font-weight:600; }
+  .row .lbl small { display:block; font-family:'Spline Sans Mono',monospace; font-weight:400; font-size:11px; color:var(--chalk-dim); margin-top:2px; }
+  .row .pl { font-family:'Spline Sans Mono',monospace; font-weight:700; font-size:14px; white-space:nowrap; }
+  .row .pl.pos { color:var(--flare); }
+  .row .pl.neg { color:var(--bad); }
+  .empty { font-family:'Spline Sans Mono',monospace; font-size:13px; color:var(--chalk-dim); padding:30px 0; text-align:center; }
+  .disclaimer { margin-top:22px; padding:14px 16px; background:rgba(245,166,35,0.06); border:1px solid rgba(245,166,35,0.25); border-radius:8px; font-size:12px; line-height:1.55; color:#d8c9a8; }
+  .disclaimer b { color:var(--warn); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kupon<span class="accent">ger</span></h1>
+    <div class="sub">250 kr pr kupong</div>
+  </header>
+  <nav>
+    <a href="index.html">Tips</a>
+    <a href="statistikk.html">Statistikk</a>
+    <a href="avkastning.html">Avkastning</a>
+    <a href="kuponger.html" class="active">Kuponger</a>
+  </nav>
+  <div class="status-tag" id="statusTag">● Laster …</div>
+  <div id="stats"></div>
+  <div id="split"></div>
+  <div id="list"></div>
+  <div class="disclaimer">
+    <b>Til underholdning — ikke investeringsråd.</b> Her telles kun <b>kuponger</b> (Dagens kupong og kuponger pr avspark-tid): alle ben må treffe, og vi regner med <b>250 kr</b> på hver kupong. Prisen er et <b>estimat</b> av BB Golds pris (markedets marginfrie pris minus 2–3 % pr ben), ikke ekte odds. En kupong gir høyere gevinst, men prisen er produktet av alle bena og dermed også av marginene: forventet avkastning er ikke bedre enn for enkeltspill. Treffsjansen er lav (ca. 25–35 %), så de fleste kuponger bommer. Få kuponger = ikke statistisk pålitelig ennå.
+  </div>
+</div>
+<script>
+// Kuponger fra den nye modellen logges fra 21. nov 2026. Prisene er ESTIMAT av BB Golds pris (ikke ekte odds).
+const TRACKING_START = '2026-11-21';
+const STAKE = 250;
+const nok = n => (n >= 0 ? '+' : '−') + Math.abs(n).toFixed(0) + ' kr';
+const pct = n => n.toFixed(0) + '%';
+const box = (num, cap) => '<div class="stat-box"><div class="num">' + num + '</div><div class="cap">' + cap + '</div></div>';
+const get = async p => { try { const r = await fetch(p, { cache: 'no-store' }); return r.ok ? await r.json() : []; } catch (e) { return []; } };
+const plOf = h => h.hit ? STAKE * (h.estOdds - 1) : -STAKE;
+
+function summary(items) {
+  const pl = items.reduce((s, h) => s + plOf(h), 0), staked = STAKE * items.length;
+  const hits = items.filter(h => h.hit).length;
+  return { n: items.length, hits, pl, staked, roi: staked ? pl / staked * 100 : 0, avgP: items.length ? items.reduce((s, h) => s + h.p, 0) / items.length * 100 : 0 };
+}
+
+async function load() {
+  const tag = document.getElementById('statusTag');
+  const all = (await get('data/coupon-history.json')).filter(h => h.date >= TRACKING_START);
+  tag.textContent = '● ' + all.length + ' avklarte kuponger — fra ' + TRACKING_START + ' — 250 kr pr kupong, estimert pris';
+  if (!all.length) {
+    document.getElementById('list').innerHTML = '<div class="empty">Ingen avklarte kuponger ennå. Logges når alle kampene i en kupong er ferdige.</div>';
+    return;
+  }
+  const t = summary(all);
+  document.getElementById('stats').innerHTML =
+    '<div class="headline"><div class="num ' + (t.pl >= 0 ? 'pos' : 'neg') + '">' + nok(t.pl) + '</div><div class="cap">Estimert gevinst/tap (250 kr pr kupong)</div></div>'
+    + '<div class="stat-grid">' + box(t.staked + ' kr', 'Satset totalt') + box((t.roi >= 0 ? '+' : '') + t.roi.toFixed(1) + '%', 'ROI') + box(t.hits + '/' + t.n, 'Traff (' + pct(t.hits / t.n * 100) + ')') + '</div>'
+    + '<div class="disclaimer" style="margin-top:0;margin-bottom:14px;">Modellen sa i snitt <b>' + pct(t.avgP) + '</b> treffsjanse pr kupong.</div>';
+
+  const row = (name, items) => {
+    if (!items.length) return '';
+    const s = summary(items);
+    return '<div class="row"><span class="lbl">' + name + '<small>' + s.n + ' kuponger · ' + s.hits + ' traff (' + pct(s.hits / s.n * 100) + ') · modellen sa ' + pct(s.avgP) + ' · satset ' + s.staked + ' kr</small></span>'
+      + '<span class="pl ' + (s.pl >= 0 ? 'pos' : 'neg') + '">' + nok(s.pl) + '</span></div>';
+  };
+  document.getElementById('split').innerHTML = '<div class="card">'
+    + row('Dagens kupong', all.filter(h => h.kind === 'dagens'))
+    + row('Kuponger pr avspark-tid', all.filter(h => h.kind === 'slot')) + '</div>';
+
+  let balance = 0;
+  const rows = all.map(h => { const pl = plOf(h); balance += pl; return { ...h, pl, balance }; });
+  document.getElementById('list').innerHTML = '<div class="card">' + [...rows].reverse().slice(0, 50).map(h =>
+    '<div class="row"><span class="lbl">' + (h.kind === 'dagens' ? 'Dagens kupong' : 'Kl. ' + h.slot) + ' · ' + h.legs + ' ben · est. odds ' + h.estOdds.toFixed(2)
+    + '<small>' + h.date + ' · sa ' + pct(h.p * 100) + ' · ' + (h.hit ? 'TRAFF' : 'BOM') + ' · saldo ' + nok(h.balance) + '</small>'
+    + '<small>' + (h.picks || []).join(' · ') + '</small></span>'
+    + '<span class="pl ' + (h.pl >= 0 ? 'pos' : 'neg') + '">' + nok(h.pl) + '</span></div>').join('') + '</div>';
+}
+load();
+</script>
+</body>
+</html>

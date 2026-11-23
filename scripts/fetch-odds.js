@@ -12,7 +12,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { impliedProb } = require('../lib/poisson');
 const { buildCombos } = require('../lib/combos');
 const { buildCoupons } = require('../lib/coupons');
 
@@ -134,14 +133,6 @@ async function main() {
     }
   }
 
-  // Fyll inn ekte odds på "modellens beste spill" for HVER kamp - ikke bare de
-  // 3-4 som havner i Dagens spill. Uten dette kan ikke check-results.js spore
-  // treff/bom for kamper som vises på tips.html/i dag men ikke ble valgt inn i
-  // den daglige kupongen (se appendToHistory).
-  for (const f of db.fixtures) {
-    if (f.matchPick && f.odds) f.matchPick.odds = f.odds[f.matchPick.key] ?? f.matchPick.odds;
-  }
-
   // Kombispill (resultat/dobbel sjanse + mål) for alle kamper vi har Unibet-priser på.
   // Pris-estimatene er markedsbaserte (se lib/combos.js) - aldri ekte kombi-odds.
   const LB = leagueBias();
@@ -155,11 +146,6 @@ async function main() {
   db.coupon = db.coupon || {};
   db.coupon.kombikuponger = cps.kombikuponger;
   db.coupon.dagensKombi = cps.dagensKombi;
-
-  // "Dagens spill" fra build-model.js er valgt ut fra modellens EGEN rimelige odds
-  // (sirkulært — forteller ingenting om ekte verdi). Nå som vi har ferske bookmaker-
-  // odds, plukker vi heller det beste spillet basert på EKTE priser i vinduet.
-  recomputeDagensSpillFromLiveOdds(db);
 
   db.oddsUpdatedAt = new Date().toISOString();
   fs.writeFileSync(dataPath, JSON.stringify(db, null, 2));
@@ -181,73 +167,6 @@ function applyFreshOdds(db, f, fresh) {
   f.oddsHistory = f.oddsHistory || [];
   if (f.odds) f.oddsHistory.push({ at: db.oddsUpdatedAt, odds: f.odds });
   f.odds = fresh;
-}
-
-// Markedsnøkkel → hvordan lage samme lesbare tekst som lib/coupon.js bruker,
-// og hvilket felt i f.markets som har modellens sannsynlighet for det spillet.
-const DAGENS_SPILL_MARKETS = {
-  dcHD:  (f) => ({ pick: `${f.homeName} eller uavgjort`, market: 'Double chance' }),
-  dcAD:  (f) => ({ pick: `${f.awayName} eller uavgjort`, market: 'Double chance' }),
-  pHome: (f) => ({ pick: `${f.homeName} vinner`, market: 'Full tid' }),
-  pAway: (f) => ({ pick: `${f.awayName} vinner`, market: 'Full tid' }),
-  o15:   () => ({ pick: 'Over 1,5 mål', market: 'Totalt' }),
-  o25:   () => ({ pick: 'Over 2,5 mål', market: 'Totalt' }),
-  o35:   () => ({ pick: 'Over 3,5 mål', market: 'Totalt' }),
-  u35:   () => ({ pick: 'Under 3,5 mål', market: 'Totalt' }),
-  u45:   () => ({ pick: 'Under 4,5 mål', market: 'Totalt' }),
-  btts:  () => ({ pick: 'Begge lag scorer', market: 'BTTS' }),
-};
-
-// To spill er direkte MOTSTRIDENDE hvis de er hverandres logiske komplement -
-// nøyaktig ett av dem kan være sant (f.eks. "Levante eller uavgjort" (dcAD) og
-// "Espanyol vinner" (pHome): skjer det ene, skjedde definitivt ikke det andre).
-// Slikt skal aldri havne sammen i samme liste - forvirrende og misvisende.
-const COMPLEMENTS = { dcHD: 'pAway', pAway: 'dcHD', dcAD: 'pHome', pHome: 'dcAD' };
-
-// Plukker de 3-4 beste spillene i odds-vinduet 1,30-2,50 basert på EKTE, hentede
-// bookmakerodds (ikke modellens egne). Lar forrige (modell-baserte) forslag stå
-// urørt hvis ingen kamper med ferske odds havner i vinduet ennå.
-const DAGENS_SPILL_MIN_ODDS = 1.30;
-const DAGENS_SPILL_MAX_ODDS = 2.50;
-const DAGENS_SPILL_COUNT = 4;
-function recomputeDagensSpillFromLiveOdds(db) {
-  const candidates = [];
-  for (const f of db.fixtures) {
-    if (!f.odds) continue;
-    for (const key of Object.keys(DAGENS_SPILL_MARKETS)) {
-      const odds = f.odds[key];
-      if (odds == null || odds < DAGENS_SPILL_MIN_ODDS || odds > DAGENS_SPILL_MAX_ODDS) continue;
-      // Kamper uten modell (noModel, f.eks. nyopprykket lag uten historikk) har ikke
-      // f.markets - bruk da bookmakerens egen implisitte sannsynlighet (1/odds) i
-      // stedet for å utelate en kamp som faktisk HAR ekte, spillbar odds.
-      const p = f.markets ? f.markets[key] : impliedProb(odds);
-      candidates.push({ match: f.label, key, ...DAGENS_SPILL_MARKETS[key](f), p, odds, liveOdds: true, modelBased: !!f.markets });
-    }
-  }
-  if (candidates.length === 0) return;
-  candidates.sort((a, b) => b.p - a.p);
-
-  // Gambler-beina (lib/coupon.js, urørt) har ikke en key lagret - "X vinner"
-  // er den eneste av deres markeder som har et komplement i COMPLEMENTS-tabellen.
-  const byLabel = new Map(db.fixtures.map((f) => [f.label, f]));
-  const gamblerKeys = ((db.coupon && db.coupon.gambler && db.coupon.gambler.legs) || [])
-    .filter((l) => l.market === 'Full tid')
-    .map((l) => {
-      const f = byLabel.get(l.match);
-      return { match: l.match, key: (f && l.pick.startsWith(f.homeName)) ? 'pHome' : 'pAway' };
-    });
-
-  const chosen = [];
-  for (const c of candidates) {
-    if (chosen.some((x) => x.match === c.match)) continue; // maks ett spill pr kamp
-    const contradictsGambler = gamblerKeys.some((g) => g.match === c.match && COMPLEMENTS[g.key] === c.key);
-    if (contradictsGambler) continue;
-    chosen.push(c);
-    if (chosen.length >= DAGENS_SPILL_COUNT) break;
-  }
-
-  db.coupon = db.coupon || {};
-  db.coupon.dagensSpill = chosen;
 }
 
 // Gjør lagnavn sammenlignbare: små bokstaver, uten aksenter/klubbtillegg/tegnsetting.
