@@ -137,7 +137,8 @@
           "pModel": null,
           "edge": 0.03167551570740201,
           "fairMarket": 1.644724383760643,
-          "estBB": 1.5953826522478236
+          "estBB": 1.5953826522478236,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -162,7 +163,8 @@
         "pModel": null,
         "edge": 0.03167551570740201,
         "fairMarket": 1.644724383760643,
-        "estBB": 1.5953826522478236
+        "estBB": 1.5953826522478236,
+        "hit": true
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -205,7 +207,8 @@
           "pModel": null,
           "edge": 0.03167551570740201,
           "fairMarket": 1.644724383760643,
-          "estBB": 1.5953826522478236
+          "estBB": 1.5953826522478236,
+          "hit": true
         },
         {
           "key": "12_o1.5",
@@ -219,7 +222,8 @@
           "pModel": null,
           "edge": -0.05023041658402472,
           "fairMarket": 1.745627446602011,
-          "estBB": 1.7107148976699706
+          "estBB": 1.7107148976699706,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -233,7 +237,8 @@
           "pModel": null,
           "edge": -0.03435805232300926,
           "fairMarket": 1.8447881903644558,
-          "estBB": 1.8078924265571668
+          "estBB": 1.8078924265571668,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -247,7 +252,8 @@
           "pModel": null,
           "edge": 0.057697543441112664,
           "fairMarket": 2.030355069872993,
-          "estBB": 1.9694444177768031
+          "estBB": 1.9694444177768031,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -261,9 +267,28 @@
           "pModel": null,
           "edge": -0.0753693711610266,
           "fairMarket": 2.2160299222801205,
-          "estBB": 2.171709323834518
+          "estBB": 2.171709323834518,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
     },
     {
       "id": 564757,
@@ -400,7 +425,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.6400256914014082,
-          "estBB": 1.60722517757338
+          "estBB": 1.60722517757338,
+          "hit": false
         },
         {
           "key": "1X_u4.5",
@@ -414,7 +440,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.703062734242552,
-          "estBB": 1.6519708522152754
+          "estBB": 1.6519708522152754,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -428,7 +455,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7452395374984226,
-          "estBB": 1.7103347467484542
+          "estBB": 1.7103347467484542,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -453,7 +481,8 @@
         "pModel": null,
         "edge": 0,
         "fairMarket": 1.6400256914014082,
-        "estBB": 1.60722517757338
+        "estBB": 1.60722517757338,
+        "hit": false
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -496,7 +525,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.6400256914014082,
-          "estBB": 1.60722517757338
+          "estBB": 1.60722517757338,
+          "hit": false
         },
         {
           "key": "1X_u4.5",
@@ -510,7 +540,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.703062734242552,
-          "estBB": 1.6519708522152754
+          "estBB": 1.6519708522152754,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -524,7 +555,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7452395374984226,
-          "estBB": 1.7103347467484542
+          "estBB": 1.7103347467484542,
+          "hit": true
         },
         {
           "key": "12_o2.5",
@@ -538,7 +570,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.0161949294058688,
-          "estBB": 1.9758710308177514
+          "estBB": 1.9758710308177514,
+          "hit": false
         },
         {
           "key": "1X_u3.5",
@@ -552,9 +585,28 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.178662926423225,
-          "estBB": 2.1133030386305283
+          "estBB": 2.1133030386305283,
+          "hit": true
         }
-      ]
+      ],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -576,7 +628,8 @@
             "bb": "1X og Under 4,5",
             "p": 0.6272634648660634,
             "estBB": 1.5953826522478236,
-            "fair": 1.644724383760643
+            "fair": 1.644724383760643,
+            "hit": true
           },
           {
             "match": "LEV–ELC",
@@ -591,15 +644,19 @@
             "bb": "12 og Over 1,5",
             "p": 0.6097465455833782,
             "estBB": 1.60722517757338,
-            "fair": 1.6400256914014082
+            "fair": 1.6400256914014082,
+            "hit": false
           }
         ],
         "p": 0.3824717308727429,
         "estOdds": 2.5641391665564983,
-        "ev": -0.019289254768543707
+        "ev": -0.019289254768543707,
+        "hit": false
       }
     ],
     "dagensKombi": null
   },
-  "oddsUpdatedAt": "2026-11-23T15:29:59.416Z"
+  "oddsUpdatedAt": "2026-11-23T15:29:59.416Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-24T05:02:18.324Z"
 }
