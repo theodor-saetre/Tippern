@@ -602,54 +602,71 @@
         }
       ],
       "odds": {
-        "dcHD": 1.18,
-        "dcAD": 2.83,
-        "pHome": 1.54,
+        "dcHD": 1.19,
+        "dcAD": 2.84,
+        "pHome": 1.56,
         "pDraw": 5.1,
-        "pAway": 6.35,
+        "pAway": 6.4,
         "o15": null,
-        "o25": 1.33,
-        "o35": 1.93,
-        "u35": 2.08,
+        "o25": 1.36,
+        "o35": 2,
+        "u35": 2,
         "u45": null,
-        "btts": null
+        "btts": 1.51
       },
-      "oddsHistory": [],
+      "oddsHistory": [
+        {
+          "at": "2026-11-25T15:06:55.858Z",
+          "odds": {
+            "dcHD": 1.18,
+            "dcAD": 2.83,
+            "pHome": 1.54,
+            "pDraw": 5.1,
+            "pAway": 6.35,
+            "o15": null,
+            "o25": 1.33,
+            "o35": 1.93,
+            "u35": 2.08,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
       "oddsUnibet": {
         "bookmaker": "unibet_se",
         "dcReal": false,
         "odds": {
           "dcHD": 1.15,
-          "dcAD": 2.75,
-          "pHome": 1.51,
+          "dcAD": 2.65,
+          "pHome": 1.5,
           "pDraw": 4.9,
-          "pAway": 6.25,
+          "pAway": 5.75,
           "o15": null,
           "o25": null,
-          "o35": 1.88,
-          "u35": 1.93,
+          "o35": 1.91,
+          "u35": 1.91,
           "u45": null,
           "btts": null
         },
         "totals": {
           "line": 3.5,
-          "over": 1.88,
-          "under": 1.93
+          "over": 1.91,
+          "under": 1.91
         }
       },
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.035654263826580546,
+        "spread": 0.03799727313311152,
         "odds": {
-          "pHome": 1.5625783516209695,
-          "pDraw": 5.129583329792126,
-          "pAway": 6.0575044989970355
+          "pHome": 1.5675441950473914,
+          "pDraw": 5.079139230994569,
+          "pAway": 6.054159314053727
         },
         "totals": {
           "line": 3.5,
-          "over": 1.942305408627493,
-          "under": 2.061227061676895
+          "over": 1.9846926604288706,
+          "under": 2.0155452967065504
         }
       },
       "combos": [
@@ -660,12 +677,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.7657191002365177,
-          "pMarket": 0.7534548550223709,
+          "p": 0.7632535657417114,
+          "pMarket": 0.7505545343163175,
           "pModel": null,
-          "edge": 0.01627734579238016,
-          "fairMarket": 1.327219531912511,
-          "estBB": 1.3006751412742608
+          "edge": 0.016919531952413802,
+          "fairMarket": 1.3323482229188093,
+          "estBB": 1.305701258460433
         },
         {
           "key": "12_o1.5",
@@ -674,12 +691,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller AS Roma (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.749675013083369,
-          "pMarket": 0.7327165690883783,
+          "p": 0.7453635659860108,
+          "pMarket": 0.7279148086583707,
           "pModel": null,
-          "edge": 0.023144616500333504,
-          "fairMarket": 1.3647842046811727,
-          "estBB": 1.3374885205875493
+          "edge": 0.023970878350174196,
+          "fairMarket": 1.3737871356719795,
+          "estBB": 1.34631139295854
         },
         {
           "key": "12_o2.5",
@@ -688,12 +705,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller AS Roma (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.664572745295973,
-          "pMarket": 0.6402226217145424,
+          "p": 0.6580708071080407,
+          "pMarket": 0.633154602551731,
           "pModel": null,
-          "edge": 0.03803383816120087,
-          "fairMarket": 1.5619566789470187,
-          "estBB": 1.5307175453680784
+          "edge": 0.03935248114108747,
+          "fairMarket": 1.5793930834109295,
+          "estBB": 1.547805221742711
         },
         {
           "key": "1X_o2.5",
@@ -702,23 +719,23 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller uavgjort + Over 2,5 mål",
           "bb": "1X og Over 2,5",
-          "p": 0.6208585961287411,
-          "pMarket": 0.5960122839622791,
+          "p": 0.614748055122668,
+          "pMarket": 0.5893451399162083,
           "pModel": null,
-          "edge": 0.041687584023074375,
-          "fairMarket": 1.677817768036621,
-          "estBB": 1.6442614126758885
+          "edge": 0.04310363059933153,
+          "fairMarket": 1.696798585871392,
+          "estBB": 1.6628626141539642
         }
       ],
       "comboFit": {
-        "lambdaH": 2.4999999999999987,
-        "lambdaA": 1.24,
-        "err": 0.001681347563173474,
-        "marketTotal": 3.7399999999999984,
+        "lambdaH": 2.4699999999999993,
+        "lambdaA": 1.22,
+        "err": 0.0017775961394735048,
+        "marketTotal": 3.6899999999999995,
         "leagueAdj": 0.17448979591836736,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.035654263826580546
+        "refSpread": 0.03799727313311152
       },
       "comboPick": {
         "key": "1X_o1.5",
@@ -727,12 +744,12 @@
         "over": true,
         "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
         "bb": "1X og Over 1,5",
-        "p": 0.7657191002365177,
-        "pMarket": 0.7534548550223709,
+        "p": 0.7632535657417114,
+        "pMarket": 0.7505545343163175,
         "pModel": null,
-        "edge": 0.01627734579238016,
-        "fairMarket": 1.327219531912511,
-        "estBB": 1.3006751412742608
+        "edge": 0.016919531952413802,
+        "fairMarket": 1.3323482229188093,
+        "estBB": 1.305701258460433
       },
       "comboOver": {
         "key": "1X_o1.5",
@@ -741,12 +758,12 @@
         "over": true,
         "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
         "bb": "1X og Over 1,5",
-        "p": 0.7657191002365177,
-        "pMarket": 0.7534548550223709,
+        "p": 0.7632535657417114,
+        "pMarket": 0.7505545343163175,
         "pModel": null,
-        "edge": 0.01627734579238016,
-        "fairMarket": 1.327219531912511,
-        "estBB": 1.3006751412742608
+        "edge": 0.016919531952413802,
+        "fairMarket": 1.3323482229188093,
+        "estBB": 1.305701258460433
       },
       "comboUnder": {
         "key": "1X_u4.5",
@@ -755,12 +772,12 @@
         "over": false,
         "label": "Paris Saint-Germain FC eller uavgjort + Under 4,5 mål",
         "bb": "1X og Under 4,5",
-        "p": 0.5390368014482715,
-        "pMarket": 0.5669271698921223,
+        "p": 0.5476205254767812,
+        "pMarket": 0.5754503422160197,
         "pModel": null,
-        "edge": -0.049195681429693994,
-        "fairMarket": 1.7638949994058053,
-        "estBB": 1.7109781494236311
+        "edge": -0.048361804134250286,
+        "fairMarket": 1.7377694070857077,
+        "estBB": 1.6856363248731365
       },
       "comboAlts": [
         {
@@ -770,12 +787,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.7657191002365177,
-          "pMarket": 0.7534548550223709,
+          "p": 0.7632535657417114,
+          "pMarket": 0.7505545343163175,
           "pModel": null,
-          "edge": 0.01627734579238016,
-          "fairMarket": 1.327219531912511,
-          "estBB": 1.3006751412742608
+          "edge": 0.016919531952413802,
+          "fairMarket": 1.3323482229188093,
+          "estBB": 1.305701258460433
         },
         {
           "key": "12_o1.5",
@@ -784,12 +801,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller AS Roma (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.749675013083369,
-          "pMarket": 0.7327165690883783,
+          "p": 0.7453635659860108,
+          "pMarket": 0.7279148086583707,
           "pModel": null,
-          "edge": 0.023144616500333504,
-          "fairMarket": 1.3647842046811727,
-          "estBB": 1.3374885205875493
+          "edge": 0.023970878350174196,
+          "fairMarket": 1.3737871356719795,
+          "estBB": 1.34631139295854
         },
         {
           "key": "12_o2.5",
@@ -798,12 +815,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller AS Roma (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.664572745295973,
-          "pMarket": 0.6402226217145424,
+          "p": 0.6580708071080407,
+          "pMarket": 0.633154602551731,
           "pModel": null,
-          "edge": 0.03803383816120087,
-          "fairMarket": 1.5619566789470187,
-          "estBB": 1.5307175453680784
+          "edge": 0.03935248114108747,
+          "fairMarket": 1.5793930834109295,
+          "estBB": 1.547805221742711
         },
         {
           "key": "1X_o2.5",
@@ -812,12 +829,12 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller uavgjort + Over 2,5 mål",
           "bb": "1X og Over 2,5",
-          "p": 0.6208585961287411,
-          "pMarket": 0.5960122839622791,
+          "p": 0.614748055122668,
+          "pMarket": 0.5893451399162083,
           "pModel": null,
-          "edge": 0.041687584023074375,
-          "fairMarket": 1.677817768036621,
-          "estBB": 1.6442614126758885
+          "edge": 0.04310363059933153,
+          "fairMarket": 1.696798585871392,
+          "estBB": 1.6628626141539642
         },
         {
           "key": "1X_u4.5",
@@ -826,14 +843,15 @@
           "over": false,
           "label": "Paris Saint-Germain FC eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.5390368014482715,
-          "pMarket": 0.5669271698921223,
+          "p": 0.5476205254767812,
+          "pMarket": 0.5754503422160197,
           "pModel": null,
-          "edge": -0.049195681429693994,
-          "fairMarket": 1.7638949994058053,
-          "estBB": 1.7109781494236311
+          "edge": -0.048361804134250286,
+          "fairMarket": 1.7377694070857077,
+          "estBB": 1.6856363248731365
         }
-      ]
+      ],
+      "oddsLocked": true
     },
     {
       "id": 575409,
@@ -902,18 +920,35 @@
       ],
       "odds": {
         "dcHD": 2.42,
-        "dcAD": 1.28,
-        "pHome": 4.8,
-        "pDraw": 4.9,
-        "pAway": 1.73,
+        "dcAD": 1.26,
+        "pHome": 4.9,
+        "pDraw": 4.8,
+        "pAway": 1.7,
         "o15": null,
-        "o25": 1.31,
+        "o25": 1.32,
         "o35": 1.9,
-        "u35": 2.14,
+        "u35": 2.16,
         "u45": null,
-        "btts": null
+        "btts": 1.42
       },
-      "oddsHistory": [],
+      "oddsHistory": [
+        {
+          "at": "2026-11-25T15:06:55.858Z",
+          "odds": {
+            "dcHD": 2.42,
+            "dcAD": 1.28,
+            "pHome": 4.8,
+            "pDraw": 4.9,
+            "pAway": 1.73,
+            "o15": null,
+            "o25": 1.31,
+            "o35": 1.9,
+            "u35": 2.14,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
       "oddsUnibet": {
         "bookmaker": "unibet_se",
         "dcReal": false,
@@ -939,16 +974,16 @@
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.008836138082493561,
+        "spread": 0.015102678345007448,
         "odds": {
-          "pHome": 4.859042606879516,
-          "pDraw": 4.751924460776342,
-          "pAway": 1.7130413054002358
+          "pHome": 4.785654024486331,
+          "pDraw": 4.816847787742253,
+          "pAway": 1.713979661909436
         },
         "totals": {
           "line": 3.5,
-          "over": 1.869939648742117,
-          "under": 2.1495050276716814
+          "over": 1.8475066682857586,
+          "under": 2.1799317190302325
         }
       },
       "combos": [
@@ -959,12 +994,12 @@
           "over": true,
           "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.7429826587644334,
-          "pMarket": 0.7271658808803539,
+          "p": 0.7459403888362688,
+          "pMarket": 0.7304888814877263,
           "pModel": null,
-          "edge": 0.021751265151399357,
-          "fairMarket": 1.3752020361424762,
-          "estBB": 1.3476979954196266
+          "edge": 0.021152282724787863,
+          "fairMarket": 1.3689462294941201,
+          "estBB": 1.3415673049042378
         },
         {
           "key": "X2_o1.5",
@@ -973,12 +1008,12 @@
           "over": true,
           "label": "Liverpool FC eller uavgjort + Over 1,5 mål",
           "bb": "X2 og Over 1,5",
-          "p": 0.7295563862890965,
-          "pMarket": 0.7191256945726822,
+          "p": 0.7302446077137872,
+          "pMarket": 0.7201348894957473,
           "pModel": null,
-          "edge": 0.014504685057335376,
-          "fairMarket": 1.3905774853368555,
-          "estBB": 1.3627659356301185
+          "edge": 0.014038645211480905,
+          "fairMarket": 1.38862873412538,
+          "estBB": 1.3608561594428723
         },
         {
           "key": "12_o2.5",
@@ -987,12 +1022,12 @@
           "over": true,
           "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.6650002326486483,
-          "pMarket": 0.642232300251689,
+          "p": 0.6696098304290229,
+          "pMarket": 0.6472794846284662,
           "pModel": null,
-          "edge": 0.03545124153368895,
-          "fairMarket": 1.5570689914040494,
-          "estBB": 1.5259276115759683
+          "edge": 0.03449876959003917,
+          "fairMarket": 1.5449276915890404,
+          "estBB": 1.5140291377572597
         },
         {
           "key": "X2_o2.5",
@@ -1001,23 +1036,23 @@
           "over": true,
           "label": "Liverpool FC eller uavgjort + Over 2,5 mål",
           "bb": "X2 og Over 2,5",
-          "p": 0.5945881166642173,
-          "pMarket": 0.5721266977284992,
+          "p": 0.5980943256193256,
+          "pMarket": 0.5760753477170333,
           "pModel": null,
-          "edge": 0.03925951895776958,
-          "fairMarket": 1.7478645970731235,
-          "estBB": 1.712907305131661
+          "edge": 0.0382223922435716,
+          "fairMarket": 1.7358840366333423,
+          "estBB": 1.7011663559006756
         }
       ],
       "comboFit": {
-        "lambdaH": 1.4200000000000002,
-        "lambdaA": 2.4099999999999984,
-        "err": 0.0014119991133126227,
-        "marketTotal": 3.8299999999999983,
+        "lambdaH": 1.4400000000000002,
+        "lambdaA": 2.429999999999998,
+        "err": 0.0004871491674474272,
+        "marketTotal": 3.8699999999999983,
         "leagueAdj": 0.17448979591836736,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.008836138082493561
+        "refSpread": 0.015102678345007448
       },
       "comboPick": {
         "key": "12_o1.5",
@@ -1026,12 +1061,12 @@
         "over": true,
         "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.7429826587644334,
-        "pMarket": 0.7271658808803539,
+        "p": 0.7459403888362688,
+        "pMarket": 0.7304888814877263,
         "pModel": null,
-        "edge": 0.021751265151399357,
-        "fairMarket": 1.3752020361424762,
-        "estBB": 1.3476979954196266
+        "edge": 0.021152282724787863,
+        "fairMarket": 1.3689462294941201,
+        "estBB": 1.3415673049042378
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -1040,27 +1075,14 @@
         "over": true,
         "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.7429826587644334,
-        "pMarket": 0.7271658808803539,
+        "p": 0.7459403888362688,
+        "pMarket": 0.7304888814877263,
         "pModel": null,
-        "edge": 0.021751265151399357,
-        "fairMarket": 1.3752020361424762,
-        "estBB": 1.3476979954196266
+        "edge": 0.021152282724787863,
+        "fairMarket": 1.3689462294941201,
+        "estBB": 1.3415673049042378
       },
-      "comboUnder": {
-        "key": "X2_u4.5",
-        "result": "X2",
-        "line": 4.5,
-        "over": false,
-        "label": "Liverpool FC eller uavgjort + Under 4,5 mål",
-        "bb": "X2 og Under 4,5",
-        "p": 0.5003247592125685,
-        "pMarket": 0.5271971862895632,
-        "pModel": null,
-        "edge": -0.05097225056553145,
-        "fairMarket": 1.896823477071347,
-        "estBB": 1.8399187727592066
-      },
+      "comboUnder": null,
       "comboAlts": [
         {
           "key": "12_o1.5",
@@ -1069,12 +1091,12 @@
           "over": true,
           "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.7429826587644334,
-          "pMarket": 0.7271658808803539,
+          "p": 0.7459403888362688,
+          "pMarket": 0.7304888814877263,
           "pModel": null,
-          "edge": 0.021751265151399357,
-          "fairMarket": 1.3752020361424762,
-          "estBB": 1.3476979954196266
+          "edge": 0.021152282724787863,
+          "fairMarket": 1.3689462294941201,
+          "estBB": 1.3415673049042378
         },
         {
           "key": "X2_o1.5",
@@ -1083,12 +1105,12 @@
           "over": true,
           "label": "Liverpool FC eller uavgjort + Over 1,5 mål",
           "bb": "X2 og Over 1,5",
-          "p": 0.7295563862890965,
-          "pMarket": 0.7191256945726822,
+          "p": 0.7302446077137872,
+          "pMarket": 0.7201348894957473,
           "pModel": null,
-          "edge": 0.014504685057335376,
-          "fairMarket": 1.3905774853368555,
-          "estBB": 1.3627659356301185
+          "edge": 0.014038645211480905,
+          "fairMarket": 1.38862873412538,
+          "estBB": 1.3608561594428723
         },
         {
           "key": "12_o2.5",
@@ -1097,12 +1119,12 @@
           "over": true,
           "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.6650002326486483,
-          "pMarket": 0.642232300251689,
+          "p": 0.6696098304290229,
+          "pMarket": 0.6472794846284662,
           "pModel": null,
-          "edge": 0.03545124153368895,
-          "fairMarket": 1.5570689914040494,
-          "estBB": 1.5259276115759683
+          "edge": 0.03449876959003917,
+          "fairMarket": 1.5449276915890404,
+          "estBB": 1.5140291377572597
         },
         {
           "key": "X2_o2.5",
@@ -1111,12 +1133,12 @@
           "over": true,
           "label": "Liverpool FC eller uavgjort + Over 2,5 mål",
           "bb": "X2 og Over 2,5",
-          "p": 0.5945881166642173,
-          "pMarket": 0.5721266977284992,
+          "p": 0.5980943256193256,
+          "pMarket": 0.5760753477170333,
           "pModel": null,
-          "edge": 0.03925951895776958,
-          "fairMarket": 1.7478645970731235,
-          "estBB": 1.712907305131661
+          "edge": 0.0382223922435716,
+          "fairMarket": 1.7358840366333423,
+          "estBB": 1.7011663559006756
         },
         {
           "key": "X2_u4.5",
@@ -1125,14 +1147,15 @@
           "over": false,
           "label": "Liverpool FC eller uavgjort + Under 4,5 mål",
           "bb": "X2 og Under 4,5",
-          "p": 0.5003247592125685,
-          "pMarket": 0.5271971862895632,
+          "p": 0.4932999701252754,
+          "pMarket": 0.5201507299949869,
           "pModel": null,
-          "edge": -0.05097225056553145,
-          "fairMarket": 1.896823477071347,
-          "estBB": 1.8399187727592066
+          "edge": -0.051621113499101146,
+          "fairMarket": 1.9225196511973324,
+          "estBB": 1.8648440616614124
         }
-      ]
+      ],
+      "oddsLocked": true
     },
     {
       "id": 575410,
@@ -1340,28 +1363,45 @@
         }
       ],
       "odds": {
-        "dcHD": 1.59,
-        "dcAD": 1.56,
-        "pHome": 2.84,
+        "dcHD": 1.55,
+        "dcAD": 1.6,
+        "pHome": 2.72,
         "pDraw": 3.6,
-        "pAway": 2.76,
+        "pAway": 2.88,
         "o15": null,
-        "o25": 1.86,
+        "o25": 1.88,
         "o35": null,
         "u35": null,
         "u45": null,
-        "btts": null
+        "btts": 1.71
       },
-      "oddsHistory": [],
+      "oddsHistory": [
+        {
+          "at": "2026-11-25T15:06:55.858Z",
+          "odds": {
+            "dcHD": 1.59,
+            "dcAD": 1.56,
+            "pHome": 2.84,
+            "pDraw": 3.6,
+            "pAway": 2.76,
+            "o15": null,
+            "o25": 1.86,
+            "o35": null,
+            "u35": null,
+            "u45": null,
+            "btts": null
+          }
+        }
+      ],
       "oddsUnibet": {
         "bookmaker": "unibet_se",
         "dcReal": false,
         "odds": {
-          "dcHD": 1.57,
-          "dcAD": 1.5,
-          "pHome": 2.8,
-          "pDraw": 3.55,
-          "pAway": 2.6,
+          "dcHD": 1.52,
+          "dcAD": 1.52,
+          "pHome": 2.7,
+          "pDraw": 3.5,
+          "pAway": 2.7,
           "o15": null,
           "o25": 1.76,
           "o35": null,
@@ -1378,16 +1418,16 @@
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.013196871055829229,
+        "spread": 0.025732016861317153,
         "odds": {
-          "pHome": 2.828953106500504,
-          "pDraw": 3.599019527116977,
-          "pAway": 2.7125345941409322
+          "pHome": 2.7228584006622993,
+          "pDraw": 3.6229297087060406,
+          "pAway": 2.8033255615840895
         },
         "totals": {
           "line": 2.5,
-          "over": 1.8575607390230222,
-          "under": 2.1660981601597715
+          "over": 1.8755436615241208,
+          "under": 2.142147495259379
         }
       },
       "combos": [
@@ -1398,23 +1438,23 @@
           "over": true,
           "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.6098010306095855,
-          "pMarket": 0.583379001202206,
+          "p": 0.6068490031020864,
+          "pMarket": 0.5801548295994916,
           "pModel": null,
-          "edge": 0.04529136179555637,
-          "fairMarket": 1.7141515171770612,
-          "estBB": 1.6798684868335199
+          "edge": 0.04601215423996918,
+          "fairMarket": 1.7236777994080432,
+          "estBB": 1.6892042434198824
         }
       ],
       "comboFit": {
-        "lambdaH": 1.4000000000000001,
-        "lambdaA": 1.4400000000000002,
-        "err": 0.002495482164608356,
-        "marketTotal": 2.8400000000000003,
+        "lambdaH": 1.4200000000000002,
+        "lambdaA": 1.4000000000000001,
+        "err": 0.004180278543530855,
+        "marketTotal": 2.8200000000000003,
         "leagueAdj": 0.17448979591836736,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.013196871055829229
+        "refSpread": 0.025732016861317153
       },
       "comboPick": {
         "key": "12_o1.5",
@@ -1423,12 +1463,12 @@
         "over": true,
         "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.6098010306095855,
-        "pMarket": 0.583379001202206,
+        "p": 0.6068490031020864,
+        "pMarket": 0.5801548295994916,
         "pModel": null,
-        "edge": 0.04529136179555637,
-        "fairMarket": 1.7141515171770612,
-        "estBB": 1.6798684868335199
+        "edge": 0.04601215423996918,
+        "fairMarket": 1.7236777994080432,
+        "estBB": 1.6892042434198824
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -1437,26 +1477,26 @@
         "over": true,
         "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.6098010306095855,
-        "pMarket": 0.583379001202206,
+        "p": 0.6068490031020864,
+        "pMarket": 0.5801548295994916,
         "pModel": null,
-        "edge": 0.04529136179555637,
-        "fairMarket": 1.7141515171770612,
-        "estBB": 1.6798684868335199
+        "edge": 0.04601215423996918,
+        "fairMarket": 1.7236777994080432,
+        "estBB": 1.6892042434198824
       },
       "comboUnder": {
-        "key": "X2_u4.5",
-        "result": "X2",
+        "key": "1X_u4.5",
+        "result": "1X",
         "line": 4.5,
         "over": false,
-        "label": "Fenerbahçe SK eller uavgjort + Under 4,5 mål",
-        "bb": "X2 og Under 4,5",
-        "p": 0.5395703263702678,
-        "pMarket": 0.5606536674745587,
+        "label": "FK Shakhtar Donetsk eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.538680374156455,
+        "pMarket": 0.5596331910911535,
         "pModel": null,
-        "edge": -0.037604928545745375,
-        "fairMarket": 1.7836323170852673,
-        "estBB": 1.7301233475727091
+        "edge": -0.03744026849773763,
+        "fairMarket": 1.7868847236351983,
+        "estBB": 1.7332781819261422
       },
       "comboAlts": [
         {
@@ -1466,40 +1506,40 @@
           "over": true,
           "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.6098010306095855,
-          "pMarket": 0.583379001202206,
+          "p": 0.6068490031020864,
+          "pMarket": 0.5801548295994916,
           "pModel": null,
-          "edge": 0.04529136179555637,
-          "fairMarket": 1.7141515171770612,
-          "estBB": 1.6798684868335199
+          "edge": 0.04601215423996918,
+          "fairMarket": 1.7236777994080432,
+          "estBB": 1.6892042434198824
         },
         {
-          "key": "X2_u4.5",
-          "result": "X2",
+          "key": "1X_u4.5",
+          "result": "1X",
           "line": 4.5,
           "over": false,
-          "label": "Fenerbahçe SK eller uavgjort + Under 4,5 mål",
-          "bb": "X2 og Under 4,5",
-          "p": 0.5395703263702678,
-          "pMarket": 0.5606536674745587,
+          "label": "FK Shakhtar Donetsk eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.538680374156455,
+          "pMarket": 0.5596331910911535,
           "pModel": null,
-          "edge": -0.037604928545745375,
-          "fairMarket": 1.7836323170852673,
-          "estBB": 1.7301233475727091
+          "edge": -0.03744026849773763,
+          "fairMarket": 1.7868847236351983,
+          "estBB": 1.7332781819261422
         },
         {
-          "key": "X2_o1.5",
-          "result": "X2",
+          "key": "1X_o1.5",
+          "result": "1X",
           "line": 1.5,
           "over": true,
-          "label": "Fenerbahçe SK eller uavgjort + Over 1,5 mål",
-          "bb": "X2 og Over 1,5",
-          "p": 0.5208688456258728,
-          "pMarket": 0.5071130652480172,
+          "label": "FK Shakhtar Donetsk eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.5153339850486728,
+          "pMarket": 0.5015574652456734,
           "pModel": null,
-          "edge": 0.02712566747048384,
-          "fairMarket": 1.971946827106344,
-          "estBB": 1.9325078905642172
+          "edge": 0.02746748031404822,
+          "fairMarket": 1.993789484341897,
+          "estBB": 1.953913694655059
         },
         {
           "key": "12_o2.5",
@@ -1508,28 +1548,29 @@
           "over": true,
           "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.49830035165087067,
-          "pMarket": 0.46554611710221633,
+          "p": 0.4946168899627095,
+          "pMarket": 0.4616462934038131,
           "pModel": null,
-          "edge": 0.0703565841178797,
-          "fairMarket": 2.1480149082210858,
-          "estBB": 2.105054610056664
+          "edge": 0.07141960637395672,
+          "fairMarket": 2.166160574206703,
+          "estBB": 2.122837362722569
         },
         {
-          "key": "X2_u3.5",
-          "result": "X2",
+          "key": "1X_u3.5",
+          "result": "1X",
           "line": 3.5,
           "over": false,
-          "label": "Fenerbahçe SK eller uavgjort + Under 3,5 mål",
-          "bb": "X2 og Under 3,5",
-          "p": 0.42172404140742686,
-          "pMarket": 0.450115073587317,
+          "label": "FK Shakhtar Donetsk eller uavgjort + Under 3,5 mål",
+          "bb": "1X og Under 3,5",
+          "p": 0.42248262282368926,
+          "pMarket": 0.4508196962602863,
           "pModel": null,
-          "edge": -0.06307505312723682,
-          "fairMarket": 2.2216541028724555,
-          "estBB": 2.1550044797862817
+          "edge": -0.0628567777132707,
+          "fairMarket": 2.2181816994584853,
+          "estBB": 2.151636248474731
         }
-      ]
+      ],
+      "oddsLocked": true
     }
   ],
   "coupon": {
@@ -1570,9 +1611,9 @@
             "over": true,
             "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
             "bb": "1X og Over 1,5",
-            "p": 0.7657191002365177,
-            "estBB": 1.3006751412742608,
-            "fair": 1.327219531912511
+            "p": 0.7632535657417114,
+            "estBB": 1.305701258460433,
+            "fair": 1.3323482229188093
           },
           {
             "match": "BRU–LIV",
@@ -1585,9 +1626,9 @@
             "over": true,
             "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
             "bb": "12 og Over 1,5",
-            "p": 0.7429826587644334,
-            "estBB": 1.3476979954196266,
-            "fair": 1.3752020361424762
+            "p": 0.7459403888362688,
+            "estBB": 1.3415673049042378,
+            "fair": 1.3689462294941201
           },
           {
             "match": "SHD–FEN",
@@ -1600,14 +1641,14 @@
             "over": true,
             "label": "FK Shakhtar Donetsk eller Fenerbahçe SK (ikke uavgjort) + Over 1,5 mål",
             "bb": "12 og Over 1,5",
-            "p": 0.6098010306095855,
-            "estBB": 1.6798684868335199,
-            "fair": 1.7141515171770612
+            "p": 0.6068490031020864,
+            "estBB": 1.6892042434198824,
+            "fair": 1.7236777994080432
           }
         ],
-        "p": 0.34692557103357113,
-        "estOdds": 2.9446704996847863,
-        "ev": 0.021581494608855722
+        "p": 0.3455044197725387,
+        "estOdds": 2.9589556242106347,
+        "ev": 0.022332246075585482
       }
     ],
     "dagensKombi": {
@@ -1638,9 +1679,9 @@
           "over": true,
           "label": "Paris Saint-Germain FC eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.7657191002365177,
-          "estBB": 1.3006751412742608,
-          "fair": 1.327219531912511
+          "p": 0.7632535657417114,
+          "estBB": 1.305701258460433,
+          "fair": 1.3323482229188093
         },
         {
           "match": "BRU–LIV",
@@ -1653,15 +1694,15 @@
           "over": true,
           "label": "Club Brugge KV eller Liverpool FC (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.7429826587644334,
-          "estBB": 1.3476979954196266,
-          "fair": 1.3752020361424762
+          "p": 0.7459403888362688,
+          "estBB": 1.3415673049042378,
+          "fair": 1.3689462294941201
         }
       ],
-      "p": 0.3719163126209317,
-      "estOdds": 2.7214341637941373,
-      "ev": 0.012145759238944231
+      "p": 0.3721945710503417,
+      "estOdds": 2.719522763247612,
+      "ev": 0.012191608328584902
     }
   },
-  "oddsUpdatedAt": "2026-11-25T15:06:55.858Z"
+  "oddsUpdatedAt": "2026-11-25T18:52:01.545Z"
 }
