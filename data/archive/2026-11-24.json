@@ -1,0 +1,2446 @@
+{
+  "generatedAt": "2026-11-24T15:25:18.840Z",
+  "date": "2026-11-24",
+  "fixtures": [
+    {
+      "id": 575395,
+      "label": "GAL–AVL",
+      "homeName": "Galatasaray SK",
+      "awayName": "Aston Villa FC",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 4,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 4,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.75,
+        "dcAD": 1.47,
+        "pHome": 3.15,
+        "pDraw": 3.95,
+        "pAway": 2.34,
+        "o15": null,
+        "o25": 1.5,
+        "o35": 2.29,
+        "u35": 1.73,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.71,
+          "dcAD": 1.45,
+          "pHome": 3,
+          "pDraw": 3.95,
+          "pAway": 2.28,
+          "o15": null,
+          "o25": null,
+          "o35": 2.25,
+          "u35": 1.66,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 2.25,
+          "under": 1.66
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.014292481209759289,
+        "odds": {
+          "pHome": 3.1532591986087994,
+          "pDraw": 3.9544600635993374,
+          "pAway": 2.325642052185558
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 2.3406654996957816,
+          "under": 1.7458982126614848
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6900699067127809,
+          "pMarket": 0.6538052422332068,
+          "pModel": null,
+          "edge": 0.055467075112008324,
+          "fairMarket": 1.5295074670620468,
+          "estBB": 1.4989173177208057,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.603091606127751,
+          "pMarket": 0.5539263648898749,
+          "pModel": null,
+          "edge": 0.08875772007647731,
+          "fairMarket": 1.8052941029423797,
+          "estBB": 1.7691882208835321,
+          "hit": false
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "Aston Villa FC eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.6012103570056297,
+          "pMarket": 0.5825932614679388,
+          "pModel": null,
+          "edge": 0.031955562772528756,
+          "fairMarket": 1.7164633821550508,
+          "estBB": 1.6821341145119497,
+          "hit": false
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 1.5300000000000002,
+        "lambdaA": 1.8000000000000005,
+        "err": 0.0005010629902952427,
+        "marketTotal": 3.330000000000001,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.014292481209759289
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6900699067127809,
+        "pMarket": 0.6538052422332068,
+        "pModel": null,
+        "edge": 0.055467075112008324,
+        "fairMarket": 1.5295074670620468,
+        "estBB": 1.4989173177208057,
+        "hit": false
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6900699067127809,
+        "pMarket": 0.6538052422332068,
+        "pModel": null,
+        "edge": 0.055467075112008324,
+        "fairMarket": 1.5295074670620468,
+        "estBB": 1.4989173177208057
+      },
+      "comboUnder": null,
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6900699067127809,
+          "pMarket": 0.6538052422332068,
+          "pModel": null,
+          "edge": 0.055467075112008324,
+          "fairMarket": 1.5295074670620468,
+          "estBB": 1.4989173177208057,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.603091606127751,
+          "pMarket": 0.5539263648898749,
+          "pModel": null,
+          "edge": 0.08875772007647731,
+          "fairMarket": 1.8052941029423797,
+          "estBB": 1.7691882208835321,
+          "hit": false
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "Aston Villa FC eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.6012103570056297,
+          "pMarket": 0.5825932614679388,
+          "pModel": null,
+          "edge": 0.031955562772528756,
+          "fairMarket": 1.7164633821550508,
+          "estBB": 1.6821341145119497,
+          "hit": false
+        },
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Aston Villa FC eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.4859281419814805,
+          "pMarket": 0.5298564331510827,
+          "pModel": null,
+          "edge": -0.0829060258990505,
+          "fairMarket": 1.8873036872515638,
+          "estBB": 1.830684576634017,
+          "hit": false
+        },
+        {
+          "key": "X2_o2.5",
+          "result": "X2",
+          "line": 2.5,
+          "over": true,
+          "label": "Aston Villa FC eller uavgjort + Over 2,5 mål",
+          "bb": "X2 og Over 2,5",
+          "p": 0.45371333755200277,
+          "pMarket": 0.4132195600340513,
+          "pModel": null,
+          "edge": 0.09799579069929454,
+          "fairMarket": 2.4200209687982706,
+          "estBB": 2.371620549422305,
+          "hit": false
+        }
+      ],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 575396,
+      "label": "FK–LIN",
+      "homeName": "FK Bodø/Glimt",
+      "awayName": "LASK Linz",
+      "kickoff": "2026-11-24T17:45:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 3,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 3,
+          "ga": 6,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.16,
+        "dcAD": 3.41,
+        "pHome": 1.43,
+        "pDraw": 6.2,
+        "pAway": 7.6,
+        "o15": null,
+        "o25": 1.23,
+        "o35": 1.71,
+        "u35": 2.32,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.14,
+          "dcAD": 3.16,
+          "pHome": 1.42,
+          "pDraw": 5.75,
+          "pAway": 7,
+          "o15": null,
+          "o25": null,
+          "o35": 1.64,
+          "u35": 2.28,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 1.64,
+          "under": 2.28
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.021134550660876217,
+        "odds": {
+          "pHome": 1.4358148423488133,
+          "pDraw": 5.982204276448995,
+          "pAway": 7.3330500349080046
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 1.7239393530390967,
+          "under": 2.381331178919893
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.8006175327384409,
+          "pMarket": 0.7752200382948997,
+          "pModel": null,
+          "edge": 0.03276165886965865,
+          "fairMarket": 1.289956335751466,
+          "estBB": 1.2641572090364368,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7319005676404766,
+          "pMarket": 0.693704673308892,
+          "pModel": null,
+          "edge": 0.055060742418520325,
+          "fairMarket": 1.441535625282895,
+          "estBB": 1.412704912777237,
+          "hit": false
+        },
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.7050259033560939,
+          "pMarket": 0.6651471249983572,
+          "pModel": null,
+          "edge": 0.05995482331497004,
+          "fairMarket": 1.5034267794549512,
+          "estBB": 1.4733582438658521,
+          "hit": false
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 2.8299999999999983,
+        "lambdaA": 1.24,
+        "err": 0.0024190914318650523,
+        "marketTotal": 4.0699999999999985,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.021134550660876217
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.8006175327384409,
+        "pMarket": 0.7752200382948997,
+        "pModel": null,
+        "edge": 0.03276165886965865,
+        "fairMarket": 1.289956335751466,
+        "estBB": 1.2641572090364368,
+        "hit": false
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.8006175327384409,
+        "pMarket": 0.7752200382948997,
+        "pModel": null,
+        "edge": 0.03276165886965865,
+        "fairMarket": 1.289956335751466,
+        "estBB": 1.2641572090364368
+      },
+      "comboUnder": null,
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.8006175327384409,
+          "pMarket": 0.7752200382948997,
+          "pModel": null,
+          "edge": 0.03276165886965865,
+          "fairMarket": 1.289956335751466,
+          "estBB": 1.2641572090364368,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7319005676404766,
+          "pMarket": 0.693704673308892,
+          "pModel": null,
+          "edge": 0.055060742418520325,
+          "fairMarket": 1.441535625282895,
+          "estBB": 1.412704912777237,
+          "hit": false
+        },
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "FK Bodø/Glimt eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.7050259033560939,
+          "pMarket": 0.6651471249983572,
+          "pModel": null,
+          "edge": 0.05995482331497004,
+          "fairMarket": 1.5034267794549512,
+          "estBB": 1.4733582438658521,
+          "hit": false
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "FK Bodø/Glimt eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.47581289291629136,
+          "pMarket": 0.5290324265051174,
+          "pModel": null,
+          "edge": -0.10059786682718819,
+          "fairMarket": 1.89024330059724,
+          "estBB": 1.833536001579323,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 575397,
+      "label": "RMA–PSV",
+      "homeName": "Real Madrid CF",
+      "awayName": "PSV",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 7,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.07,
+        "dcAD": 6.9,
+        "pHome": 1.19,
+        "pDraw": 11,
+        "pAway": 18.5,
+        "o15": null,
+        "o25": 1.14,
+        "o35": null,
+        "u35": null,
+        "u45": 1.98,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.04,
+          "dcAD": 6.52,
+          "pHome": 1.15,
+          "pDraw": 11,
+          "pAway": 16,
+          "o15": null,
+          "o25": null,
+          "o35": null,
+          "u35": null,
+          "u45": 1.88,
+          "btts": null
+        },
+        "totals": {
+          "line": 4.5,
+          "over": 1.93,
+          "under": 1.88
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.007694104263637369,
+        "odds": {
+          "pHome": 1.1805975863484401,
+          "pDraw": 10.521156815153878,
+          "pAway": 17.263777489755405
+        },
+        "totals": {
+          "line": 4.5,
+          "over": 2.037395226667781,
+          "under": 1.9639527677528474
+        }
+      },
+      "combos": [
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Madrid CF eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.8293720277989037,
+          "pMarket": 0.7975091316499533,
+          "pModel": null,
+          "edge": 0.03995301731909939,
+          "fairMarket": 1.2539041376631221,
+          "estBB": 1.2288260549098597,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Madrid CF eller PSV (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.8251316499789603,
+          "pMarket": 0.7945259459316468,
+          "pModel": null,
+          "edge": 0.03852071062503293,
+          "fairMarket": 1.2586121386223807,
+          "estBB": 1.233439895849933,
+          "hit": true
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 3.6599999999999984,
+        "lambdaA": 0.97,
+        "err": 0.003516912982271212,
+        "marketTotal": 4.629999999999998,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.007694104263637369
+      },
+      "comboPick": {
+        "key": "1X_o2.5",
+        "result": "1X",
+        "line": 2.5,
+        "over": true,
+        "label": "Real Madrid CF eller uavgjort + Over 2,5 mål",
+        "bb": "1X og Over 2,5",
+        "p": 0.8293720277989037,
+        "pMarket": 0.7975091316499533,
+        "pModel": null,
+        "edge": 0.03995301731909939,
+        "fairMarket": 1.2539041376631221,
+        "estBB": 1.2288260549098597,
+        "hit": true
+      },
+      "comboOver": {
+        "key": "1X_o2.5",
+        "result": "1X",
+        "line": 2.5,
+        "over": true,
+        "label": "Real Madrid CF eller uavgjort + Over 2,5 mål",
+        "bb": "1X og Over 2,5",
+        "p": 0.8293720277989037,
+        "pMarket": 0.7975091316499533,
+        "pModel": null,
+        "edge": 0.03995301731909939,
+        "fairMarket": 1.2539041376631221,
+        "estBB": 1.2288260549098597
+      },
+      "comboUnder": null,
+      "comboAlts": [
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Madrid CF eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.8293720277989037,
+          "pMarket": 0.7975091316499533,
+          "pModel": null,
+          "edge": 0.03995301731909939,
+          "fairMarket": 1.2539041376631221,
+          "estBB": 1.2288260549098597,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Madrid CF eller PSV (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.8251316499789603,
+          "pMarket": 0.7945259459316468,
+          "pModel": null,
+          "edge": 0.03852071062503293,
+          "fairMarket": 1.2586121386223807,
+          "estBB": 1.233439895849933,
+          "hit": true
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Real Madrid CF eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.41961661351602264,
+          "pMarket": 0.4740552018101719,
+          "pModel": null,
+          "edge": -0.11483596865149126,
+          "fairMarket": 2.10945897478082,
+          "estBB": 2.0461752055373954,
+          "hit": false
+        }
+      ],
+      "result": {
+        "home": 5,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
+    },
+    {
+      "id": 575398,
+      "label": "MCI–NAP",
+      "homeName": "Manchester City FC",
+      "awayName": "SSC Napoli",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.12,
+        "dcAD": 4.12,
+        "pHome": 1.33,
+        "pDraw": 7,
+        "pAway": 10,
+        "o15": null,
+        "o25": 1.29,
+        "o35": 1.84,
+        "u35": 2.24,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.08,
+          "dcAD": 3.86,
+          "pHome": 1.3,
+          "pDraw": 6.5,
+          "pAway": 9.5,
+          "o15": null,
+          "o25": null,
+          "o35": 1.76,
+          "u35": 2.1,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 1.76,
+          "under": 2.1
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.018543277308391226,
+        "odds": {
+          "pHome": 1.337391181614049,
+          "pDraw": 6.736557560279928,
+          "pAway": 9.630956738552147
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 1.846151117358922,
+          "under": 2.1818219931225573
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.8078534543152625,
+          "pMarket": 0.7791603795031985,
+          "pModel": null,
+          "edge": 0.036825633806430114,
+          "fairMarket": 1.2834328160238477,
+          "estBB": 1.2577641597033709,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7266941436796636,
+          "pMarket": 0.6835770579554793,
+          "pModel": null,
+          "edge": 0.06307567701751693,
+          "fairMarket": 1.4628928638870864,
+          "estBB": 1.4336350066093446,
+          "hit": false
+        },
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "Manchester City FC eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.7164869572895354,
+          "pMarket": 0.6712860656905584,
+          "pModel": null,
+          "edge": 0.06733476815503159,
+          "fairMarket": 1.4896778752159714,
+          "estBB": 1.4598843177116518,
+          "hit": true
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 2.8699999999999997,
+        "lambdaA": 1.01,
+        "err": 0.005529584741881514,
+        "marketTotal": 3.88,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.018543277308391226
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.8078534543152625,
+        "pMarket": 0.7791603795031985,
+        "pModel": null,
+        "edge": 0.036825633806430114,
+        "fairMarket": 1.2834328160238477,
+        "estBB": 1.2577641597033709,
+        "hit": false
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.8078534543152625,
+        "pMarket": 0.7791603795031985,
+        "pModel": null,
+        "edge": 0.036825633806430114,
+        "fairMarket": 1.2834328160238477,
+        "estBB": 1.2577641597033709
+      },
+      "comboUnder": {
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Manchester City FC eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.5282705312354605,
+        "pMarket": 0.5838158824563892,
+        "pModel": null,
+        "edge": -0.09514189813956941,
+        "fairMarket": 1.7128687828644327,
+        "estBB": 1.6614827193784996
+      },
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.8078534543152625,
+          "pMarket": 0.7791603795031985,
+          "pModel": null,
+          "edge": 0.036825633806430114,
+          "fairMarket": 1.2834328160238477,
+          "estBB": 1.2577641597033709,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7266941436796636,
+          "pMarket": 0.6835770579554793,
+          "pModel": null,
+          "edge": 0.06307567701751693,
+          "fairMarket": 1.4628928638870864,
+          "estBB": 1.4336350066093446,
+          "hit": false
+        },
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "Manchester City FC eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.7164869572895354,
+          "pMarket": 0.6712860656905584,
+          "pModel": null,
+          "edge": 0.06733476815503159,
+          "fairMarket": 1.4896778752159714,
+          "estBB": 1.4598843177116518,
+          "hit": true
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Manchester City FC eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.5282705312354605,
+          "pMarket": 0.5838158824563892,
+          "pModel": null,
+          "edge": -0.09514189813956941,
+          "fairMarket": 1.7128687828644327,
+          "estBB": 1.6614827193784996,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 2,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
+    },
+    {
+      "id": 575399,
+      "label": "ARS–BVB",
+      "homeName": "Arsenal FC",
+      "awayName": "Borussia Dortmund",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.15,
+        "dcAD": 3.08,
+        "pHome": 1.49,
+        "pDraw": 5.1,
+        "pAway": 7.8,
+        "o15": null,
+        "o25": 1.81,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.13,
+          "dcAD": 2.88,
+          "pHome": 1.47,
+          "pDraw": 4.9,
+          "pAway": 7,
+          "o15": null,
+          "o25": 1.74,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.74,
+          "under": 2.12
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.009925386032732852,
+        "odds": {
+          "pHome": 1.5161224646631501,
+          "pDraw": 4.90059647370228,
+          "pAway": 7.333212581333887
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.8112695573223792,
+          "under": 2.232635923503073
+        }
+      },
+      "combos": [
+        {
+          "key": "1X_o1.5",
+          "result": "1X",
+          "line": 1.5,
+          "over": true,
+          "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.7501020812781046,
+          "pMarket": 0.7097092407176453,
+          "pModel": null,
+          "edge": 0.05691463241991168,
+          "fairMarket": 1.4090277294245428,
+          "estBB": 1.380847174836052,
+          "hit": true
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Arsenal FC eller Borussia Dortmund (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6955881350162806,
+          "pMarket": 0.6471910685610207,
+          "pModel": null,
+          "edge": 0.07478018286449317,
+          "fairMarket": 1.5451387520279332,
+          "estBB": 1.5142359769873746,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Arsenal FC eller Borussia Dortmund (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.5732437543529476,
+          "pMarket": 0.5101347335080282,
+          "pModel": null,
+          "edge": 0.12371049587417726,
+          "fairMarket": 1.9602664439712427,
+          "estBB": 1.9210611150918178,
+          "hit": false
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 2.0999999999999983,
+        "lambdaA": 0.8200000000000001,
+        "err": 0.010737044168518292,
+        "marketTotal": 2.919999999999998,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.009925386032732852
+      },
+      "comboPick": {
+        "key": "1X_o1.5",
+        "result": "1X",
+        "line": 1.5,
+        "over": true,
+        "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+        "bb": "1X og Over 1,5",
+        "p": 0.7501020812781046,
+        "pMarket": 0.7097092407176453,
+        "pModel": null,
+        "edge": 0.05691463241991168,
+        "fairMarket": 1.4090277294245428,
+        "estBB": 1.380847174836052,
+        "hit": true
+      },
+      "comboOver": {
+        "key": "1X_o1.5",
+        "result": "1X",
+        "line": 1.5,
+        "over": true,
+        "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+        "bb": "1X og Over 1,5",
+        "p": 0.7501020812781046,
+        "pMarket": 0.7097092407176453,
+        "pModel": null,
+        "edge": 0.05691463241991168,
+        "fairMarket": 1.4090277294245428,
+        "estBB": 1.380847174836052
+      },
+      "comboUnder": {
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.676527124652225,
+        "pMarket": 0.7237789347537764,
+        "pModel": null,
+        "edge": -0.0652848650777963,
+        "fairMarket": 1.3816373370139485,
+        "estBB": 1.34018821690353
+      },
+      "comboAlts": [
+        {
+          "key": "1X_o1.5",
+          "result": "1X",
+          "line": 1.5,
+          "over": true,
+          "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.7501020812781046,
+          "pMarket": 0.7097092407176453,
+          "pModel": null,
+          "edge": 0.05691463241991168,
+          "fairMarket": 1.4090277294245428,
+          "estBB": 1.380847174836052,
+          "hit": true
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Arsenal FC eller Borussia Dortmund (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6955881350162806,
+          "pMarket": 0.6471910685610207,
+          "pModel": null,
+          "edge": 0.07478018286449317,
+          "fairMarket": 1.5451387520279332,
+          "estBB": 1.5142359769873746,
+          "hit": false
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.676527124652225,
+          "pMarket": 0.7237789347537764,
+          "pModel": null,
+          "edge": -0.0652848650777963,
+          "fairMarket": 1.3816373370139485,
+          "estBB": 1.34018821690353,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Arsenal FC eller Borussia Dortmund (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.5732437543529476,
+          "pMarket": 0.5101347335080282,
+          "pModel": null,
+          "edge": 0.12371049587417726,
+          "fairMarket": 1.9602664439712427,
+          "estBB": 1.9210611150918178,
+          "hit": false
+        },
+        {
+          "key": "1X_o2.5",
+          "result": "1X",
+          "line": 2.5,
+          "over": true,
+          "label": "Arsenal FC eller uavgjort + Over 2,5 mål",
+          "bb": "1X og Over 2,5",
+          "p": 0.55026169251681,
+          "pMarket": 0.4858379755995652,
+          "pModel": null,
+          "edge": 0.13260329606334387,
+          "fairMarket": 2.0582993718552265,
+          "estBB": 2.017133384418122,
+          "hit": false
+        },
+        {
+          "key": "1X_u3.5",
+          "result": "1X",
+          "line": 3.5,
+          "over": false,
+          "label": "Arsenal FC eller uavgjort + Under 3,5 mål",
+          "bb": "1X og Under 3,5",
+          "p": 0.5091181806576104,
+          "pMarket": 0.5718299662151551,
+          "pModel": null,
+          "edge": -0.10966858902590104,
+          "fairMarket": 1.748771591350536,
+          "estBB": 1.6963084436100198,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
+    },
+    {
+      "id": 575400,
+      "label": "FEY–FCP",
+      "homeName": "Feyenoord Rotterdam",
+      "awayName": "FC Porto",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 3,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.81,
+        "dcAD": 1.4,
+        "pHome": 3.45,
+        "pDraw": 3.8,
+        "pAway": 2.22,
+        "o15": null,
+        "o25": 1.75,
+        "o35": 2.69,
+        "u35": 1.48,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.76,
+          "dcAD": 1.37,
+          "pHome": 3.35,
+          "pDraw": 3.7,
+          "pAway": 2.18,
+          "o15": null,
+          "o25": 1.67,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.67,
+          "under": 2.23
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.011173528152942813,
+        "odds": {
+          "pHome": 3.442167700824468,
+          "pDraw": 3.8023566082192173,
+          "pAway": 2.239688827685027
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.7608097054948384,
+          "under": 2.31438912092951
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6516358640281404,
+          "pMarket": 0.6072789900750422,
+          "pModel": null,
+          "edge": 0.0730420032275727,
+          "fairMarket": 1.6466896045200392,
+          "estBB": 1.6137558124296385,
+          "hit": false
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "FC Porto eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.601948722380197,
+          "pMarket": 0.5751576489857781,
+          "pModel": null,
+          "edge": 0.04658040007233111,
+          "fairMarket": 1.7386537443488417,
+          "estBB": 1.703880669461865,
+          "hit": false
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 1.31,
+        "lambdaA": 1.6600000000000004,
+        "err": 0.0041063728921307725,
+        "marketTotal": 2.9700000000000006,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.011173528152942813
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6516358640281404,
+        "pMarket": 0.6072789900750422,
+        "pModel": null,
+        "edge": 0.0730420032275727,
+        "fairMarket": 1.6466896045200392,
+        "estBB": 1.6137558124296385,
+        "hit": false
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6516358640281404,
+        "pMarket": 0.6072789900750422,
+        "pModel": null,
+        "edge": 0.0730420032275727,
+        "fairMarket": 1.6466896045200392,
+        "estBB": 1.6137558124296385
+      },
+      "comboUnder": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "FC Porto eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.550632743642807,
+        "pMarket": 0.5930524343123873,
+        "pModel": null,
+        "edge": -0.07152772371428451,
+        "fairMarket": 1.686191544191951,
+        "estBB": 1.6356057978661924
+      },
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6516358640281404,
+          "pMarket": 0.6072789900750422,
+          "pModel": null,
+          "edge": 0.0730420032275727,
+          "fairMarket": 1.6466896045200392,
+          "estBB": 1.6137558124296385,
+          "hit": false
+        },
+        {
+          "key": "X2_o1.5",
+          "result": "X2",
+          "line": 1.5,
+          "over": true,
+          "label": "FC Porto eller uavgjort + Over 1,5 mål",
+          "bb": "X2 og Over 1,5",
+          "p": 0.601948722380197,
+          "pMarket": 0.5751576489857781,
+          "pModel": null,
+          "edge": 0.04658040007233111,
+          "fairMarket": 1.7386537443488417,
+          "estBB": 1.703880669461865,
+          "hit": false
+        },
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "FC Porto eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.550632743642807,
+          "pMarket": 0.5930524343123873,
+          "pModel": null,
+          "edge": -0.07152772371428451,
+          "fairMarket": 1.686191544191951,
+          "estBB": 1.6356057978661924,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.5495863432795027,
+          "pMarket": 0.4925724806014378,
+          "pModel": null,
+          "edge": 0.11574715381673406,
+          "fairMarket": 2.0301580769981022,
+          "estBB": 1.9895549154581402,
+          "hit": false
+        },
+        {
+          "key": "X2_u3.5",
+          "result": "X2",
+          "line": 3.5,
+          "over": false,
+          "label": "FC Porto eller uavgjort + Under 3,5 mål",
+          "bb": "X2 og Under 3,5",
+          "p": 0.4104228136161419,
+          "pMarket": 0.4649310635827918,
+          "pModel": null,
+          "edge": -0.11723942372575713,
+          "fairMarket": 2.1508564996580977,
+          "estBB": 2.086330804668355,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 0,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 575401,
+      "label": "SBA–BET",
+      "homeName": "ŠK Slovan Bratislava",
+      "awayName": "Real Betis Balompié",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 6,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 4,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 4,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "odds": {
+        "dcHD": 4.33,
+        "dcAD": 1.09,
+        "pHome": 11.6,
+        "pDraw": 6.9,
+        "pAway": 1.3,
+        "o15": null,
+        "o25": 1.36,
+        "o35": 2.02,
+        "u35": 1.97,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 4.25,
+          "dcAD": 1.07,
+          "pHome": 11.5,
+          "pDraw": 6.75,
+          "pAway": 1.27,
+          "o15": null,
+          "o25": null,
+          "o35": 1.96,
+          "u35": 1.85,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 1.96,
+          "under": 1.85
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.01954993880290315,
+        "odds": {
+          "pHome": 11.040532020081839,
+          "pDraw": 6.716522740899017,
+          "pAway": 1.3148585371494155
+        },
+        "totals": {
+          "line": 3.5,
+          "over": 2.037422818607423,
+          "under": 1.9639271298681695
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.7966544990486658,
+          "pMarket": 0.7634511177844062,
+          "pModel": null,
+          "edge": 0.043491168577522554,
+          "fairMarket": 1.3098415559362553,
+          "estBB": 1.2836447248175302,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7013758135293695,
+          "pMarket": 0.6524204694291703,
+          "pModel": null,
+          "edge": 0.07503649317292616,
+          "fairMarket": 1.5327538709429847,
+          "estBB": 1.502098793524125,
+          "hit": false
+        },
+        {
+          "key": "X2_o2.5",
+          "result": "X2",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Betis Balompié eller uavgjort + Over 2,5 mål",
+          "bb": "X2 og Over 2,5",
+          "p": 0.6951569552618139,
+          "pMarket": 0.6440382432352036,
+          "pModel": null,
+          "edge": 0.07937216859953078,
+          "fairMarket": 1.552702825497893,
+          "estBB": 1.521648768987935,
+          "hit": false
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 0.87,
+        "lambdaA": 2.76,
+        "err": 0.0054054887426006806,
+        "marketTotal": 3.63,
+        "leagueAdj": 0.324,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.01954993880290315
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.7966544990486658,
+        "pMarket": 0.7634511177844062,
+        "pModel": null,
+        "edge": 0.043491168577522554,
+        "fairMarket": 1.3098415559362553,
+        "estBB": 1.2836447248175302,
+        "hit": true
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.7966544990486658,
+        "pMarket": 0.7634511177844062,
+        "pModel": null,
+        "edge": 0.043491168577522554,
+        "fairMarket": 1.3098415559362553,
+        "estBB": 1.2836447248175302
+      },
+      "comboUnder": {
+        "key": "X2_u4.5",
+        "result": "X2",
+        "line": 4.5,
+        "over": false,
+        "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+        "bb": "X2 og Under 4,5",
+        "p": 0.5807192813683363,
+        "pMarket": 0.6365979411323206,
+        "pModel": null,
+        "edge": -0.08777700358972673,
+        "fairMarket": 1.5708501950560725,
+        "estBB": 1.5237246892043903
+      },
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.7966544990486658,
+          "pMarket": 0.7634511177844062,
+          "pModel": null,
+          "edge": 0.043491168577522554,
+          "fairMarket": 1.3098415559362553,
+          "estBB": 1.2836447248175302,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.7013758135293695,
+          "pMarket": 0.6524204694291703,
+          "pModel": null,
+          "edge": 0.07503649317292616,
+          "fairMarket": 1.5327538709429847,
+          "estBB": 1.502098793524125,
+          "hit": false
+        },
+        {
+          "key": "X2_o2.5",
+          "result": "X2",
+          "line": 2.5,
+          "over": true,
+          "label": "Real Betis Balompié eller uavgjort + Over 2,5 mål",
+          "bb": "X2 og Over 2,5",
+          "p": 0.6951569552618139,
+          "pMarket": 0.6440382432352036,
+          "pModel": null,
+          "edge": 0.07937216859953078,
+          "fairMarket": 1.552702825497893,
+          "estBB": 1.521648768987935,
+          "hit": false
+        },
+        {
+          "key": "X2_u4.5",
+          "result": "X2",
+          "line": 4.5,
+          "over": false,
+          "label": "Real Betis Balompié eller uavgjort + Under 4,5 mål",
+          "bb": "X2 og Under 4,5",
+          "p": 0.5807192813683363,
+          "pMarket": 0.6365979411323206,
+          "pModel": null,
+          "edge": -0.08777700358972673,
+          "fairMarket": 1.5708501950560725,
+          "estBB": 1.5237246892043903,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 0,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 575402,
+      "label": "RBL–RCL",
+      "homeName": "RB Leipzig",
+      "awayName": "Racing Club de Lens",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "W",
+          "gf": 4,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 5,
+          "ga": 1,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 9,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "odds": null,
+      "result": {
+        "home": 3,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
+    },
+    {
+      "id": 575403,
+      "label": "COM–AEK",
+      "homeName": "Como 1907",
+      "awayName": "PAE AEK",
+      "kickoff": "2026-11-24T20:00:00Z",
+      "competition": "CL",
+      "formH": [
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "W",
+          "gf": 9,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "H"
+        }
+      ],
+      "formA": [
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 3,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 5,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 2,
+          "ga": 3,
+          "venue": "H"
+        }
+      ],
+      "odds": null,
+      "result": {
+        "home": 1,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": false,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": false
+      }
+    }
+  ],
+  "coupon": {
+    "kombikuponger": [
+      {
+        "slot": "18:45",
+        "skipped": 0,
+        "legs": [
+          {
+            "match": "FK–LIN",
+            "home": "FK Bodø/Glimt",
+            "away": "LASK Linz",
+            "kickoff": "2026-11-24T17:45:00Z",
+            "key": "12_o1.5",
+            "result": "12",
+            "line": 1.5,
+            "over": true,
+            "label": "FK Bodø/Glimt eller LASK Linz (ikke uavgjort) + Over 1,5 mål",
+            "bb": "12 og Over 1,5",
+            "p": 0.8006175327384409,
+            "estBB": 1.2641572090364368,
+            "fair": 1.289956335751466,
+            "hit": false
+          },
+          {
+            "match": "GAL–AVL",
+            "home": "Galatasaray SK",
+            "away": "Aston Villa FC",
+            "kickoff": "2026-11-24T17:45:00Z",
+            "key": "12_o1.5",
+            "result": "12",
+            "line": 1.5,
+            "over": true,
+            "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+            "bb": "12 og Over 1,5",
+            "p": 0.6900699067127809,
+            "estBB": 1.4989173177208057,
+            "fair": 1.5295074670620468,
+            "hit": false
+          }
+        ],
+        "p": 0.5524820661294327,
+        "estOdds": 1.8948671329463158,
+        "ev": 0.04688010865093517,
+        "hit": false
+      },
+      {
+        "slot": "21:00",
+        "skipped": 1,
+        "legs": [
+          {
+            "match": "RMA–PSV",
+            "home": "Real Madrid CF",
+            "away": "PSV",
+            "kickoff": "2026-11-24T20:00:00Z",
+            "key": "1X_o2.5",
+            "result": "1X",
+            "line": 2.5,
+            "over": true,
+            "label": "Real Madrid CF eller uavgjort + Over 2,5 mål",
+            "bb": "1X og Over 2,5",
+            "p": 0.8293720277989037,
+            "estBB": 1.2288260549098597,
+            "fair": 1.2539041376631221,
+            "hit": true
+          },
+          {
+            "match": "MCI–NAP",
+            "home": "Manchester City FC",
+            "away": "SSC Napoli",
+            "kickoff": "2026-11-24T20:00:00Z",
+            "key": "12_o1.5",
+            "result": "12",
+            "line": 1.5,
+            "over": true,
+            "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+            "bb": "12 og Over 1,5",
+            "p": 0.8078534543152625,
+            "estBB": 1.2577641597033709,
+            "fair": 1.2834328160238477,
+            "hit": false
+          },
+          {
+            "match": "SBA–BET",
+            "home": "ŠK Slovan Bratislava",
+            "away": "Real Betis Balompié",
+            "kickoff": "2026-11-24T20:00:00Z",
+            "key": "12_o1.5",
+            "result": "12",
+            "line": 1.5,
+            "over": true,
+            "label": "ŠK Slovan Bratislava eller Real Betis Balompié (ikke uavgjort) + Over 1,5 mål",
+            "bb": "12 og Over 1,5",
+            "p": 0.7966544990486658,
+            "estBB": 1.2836447248175302,
+            "fair": 1.3098415559362553,
+            "hit": true
+          },
+          {
+            "match": "ARS–BVB",
+            "home": "Arsenal FC",
+            "away": "Borussia Dortmund",
+            "kickoff": "2026-11-24T20:00:00Z",
+            "key": "1X_o1.5",
+            "result": "1X",
+            "line": 1.5,
+            "over": true,
+            "label": "Arsenal FC eller uavgjort + Over 1,5 mål",
+            "bb": "1X og Over 1,5",
+            "p": 0.7501020812781046,
+            "estBB": 1.380847174836052,
+            "fair": 1.4090277294245428,
+            "hit": true
+          }
+        ],
+        "p": 0.40037998021958654,
+        "estOdds": 2.739555370112797,
+        "ev": 0.09686312489622373,
+        "hit": false
+      }
+    ],
+    "dagensKombi": {
+      "legs": [
+        {
+          "match": "GAL–AVL",
+          "home": "Galatasaray SK",
+          "away": "Aston Villa FC",
+          "kickoff": "2026-11-24T17:45:00Z",
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Galatasaray SK eller Aston Villa FC (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6900699067127809,
+          "estBB": 1.4989173177208057,
+          "fair": 1.5295074670620468,
+          "hit": false
+        },
+        {
+          "match": "MCI–NAP",
+          "home": "Manchester City FC",
+          "away": "SSC Napoli",
+          "kickoff": "2026-11-24T20:00:00Z",
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Manchester City FC eller SSC Napoli (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.8078534543152625,
+          "estBB": 1.2577641597033709,
+          "fair": 1.2834328160238477,
+          "hit": false
+        },
+        {
+          "match": "FEY–FCP",
+          "home": "Feyenoord Rotterdam",
+          "away": "FC Porto",
+          "kickoff": "2026-11-24T20:00:00Z",
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Feyenoord Rotterdam eller FC Porto (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6516358640281404,
+          "estBB": 1.6137558124296385,
+          "fair": 1.6466896045200392,
+          "hit": false
+        }
+      ],
+      "p": 0.363270936491498,
+      "estOdds": 3.04238878863218,
+      "ev": 0.10521142441764608,
+      "hit": false
+    }
+  },
+  "oddsUpdatedAt": "2026-11-24T15:25:19.455Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-25T03:12:39.986Z"
+}

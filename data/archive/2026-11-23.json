@@ -1,0 +1,662 @@
+{
+  "generatedAt": "2026-11-23T15:29:58.947Z",
+  "date": "2026-11-23",
+  "fixtures": [
+    {
+      "id": 560649,
+      "label": "BRE–EVE",
+      "homeName": "Brentford FC",
+      "awayName": "Everton FC",
+      "kickoff": "2026-11-23T20:00:00Z",
+      "competition": "PL",
+      "formH": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 2,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 2,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 1,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "H"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.44,
+        "dcAD": 1.73,
+        "pHome": 2.38,
+        "pDraw": 3.66,
+        "pAway": 3.28,
+        "o15": null,
+        "o25": 1.95,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.4,
+          "dcAD": 1.71,
+          "pHome": 2.28,
+          "pDraw": 3.6,
+          "pAway": 3.25,
+          "o15": null,
+          "o25": 1.83,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.83,
+          "under": 2
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.023101099046468898,
+        "odds": {
+          "pHome": 2.3819214640441206,
+          "pDraw": 3.6132000148580703,
+          "pAway": 3.2958931118954857
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.926852860096346,
+          "under": 2.0789199052544873
+        }
+      },
+      "combos": [
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Brentford FC eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.6272634648660634,
+          "pMarket": 0.6080046054363903,
+          "pModel": null,
+          "edge": 0.03211604910760468,
+          "fairMarket": 1.65119886393938,
+          "estBB": 1.6016628980211984,
+          "hit": true
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 1.5100000000000002,
+        "lambdaA": 1.25,
+        "err": 0.004305427433680853,
+        "marketTotal": 2.7600000000000002,
+        "leagueAdj": -0.16694505494505493,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.023101099046468898
+      },
+      "comboPick": {
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Brentford FC eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.6272634648660634,
+        "pMarket": 0.6080046054363903,
+        "pModel": null,
+        "edge": 0.03211604910760468,
+        "fairMarket": 1.65119886393938,
+        "estBB": 1.6016628980211984,
+        "hit": true
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Brentford FC eller Everton FC (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.5440849278949926,
+        "pMarket": 0.5728599203378543,
+        "pModel": null,
+        "edge": -0.05023041658402472,
+        "fairMarket": 1.745627446602011,
+        "estBB": 1.7107148976699706
+      },
+      "comboUnder": {
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Brentford FC eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.6272634648660634,
+        "pMarket": 0.6080046054363903,
+        "pModel": null,
+        "edge": 0.03167551570740201,
+        "fairMarket": 1.644724383760643,
+        "estBB": 1.5953826522478236
+      },
+      "comboAlts": [
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Brentford FC eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.6272634648660634,
+          "pMarket": 0.6080046054363903,
+          "pModel": null,
+          "edge": 0.03211604910760468,
+          "fairMarket": 1.65119886393938,
+          "estBB": 1.6016628980211984,
+          "hit": true
+        },
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Brentford FC eller Everton FC (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.5440849278949926,
+          "pMarket": 0.5728599203378543,
+          "pModel": null,
+          "edge": -0.049079652665202755,
+          "fairMarket": 1.7303350465041503,
+          "estBB": 1.6957283455740673,
+          "hit": true
+        },
+        {
+          "key": "1X_o1.5",
+          "result": "1X",
+          "line": 1.5,
+          "over": true,
+          "label": "Brentford FC eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.5234432617905141,
+          "pMarket": 0.5420676504886126,
+          "pModel": null,
+          "edge": -0.03347358216427976,
+          "fairMarket": 1.8298374115244653,
+          "estBB": 1.793240663293976,
+          "hit": true
+        },
+        {
+          "key": "1X_u3.5",
+          "result": "1X",
+          "line": 3.5,
+          "over": false,
+          "label": "Brentford FC eller uavgjort + Under 3,5 mål",
+          "bb": "1X og Under 3,5",
+          "p": 0.5209421539786516,
+          "pMarket": 0.4925246893207473,
+          "pModel": null,
+          "edge": 0.05826508535524266,
+          "fairMarket": 2.047782621802512,
+          "estBB": 1.9863491431484366,
+          "hit": false
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Brentford FC eller Everton FC (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.41724645481663947,
+          "pMarket": 0.45125744465177553,
+          "pModel": null,
+          "edge": -0.07377026596470182,
+          "fairMarket": 2.1868624261628384,
+          "estBB": 2.1431251776395817,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 4,
+        "away": 0
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": false
+      }
+    },
+    {
+      "id": 564757,
+      "label": "LEV–ELC",
+      "homeName": "Levante UD",
+      "awayName": "Elche CF",
+      "kickoff": "2026-11-23T20:00:00Z",
+      "competition": "PD",
+      "formH": [
+        {
+          "r": "D",
+          "gf": 1,
+          "ga": 1,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 1,
+          "ga": 2,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "A"
+        }
+      ],
+      "formA": [
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "H"
+        },
+        {
+          "r": "D",
+          "gf": 0,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "W",
+          "gf": 3,
+          "ga": 0,
+          "venue": "A"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 1,
+          "venue": "H"
+        },
+        {
+          "r": "L",
+          "gf": 0,
+          "ga": 2,
+          "venue": "H"
+        }
+      ],
+      "odds": {
+        "dcHD": 1.43,
+        "dcAD": 1.81,
+        "pHome": 2.29,
+        "pDraw": 3.8,
+        "pAway": 3.45,
+        "o15": null,
+        "o25": 1.74,
+        "o35": null,
+        "u35": null,
+        "u45": null,
+        "btts": null
+      },
+      "oddsHistory": [],
+      "oddsUnibet": {
+        "bookmaker": "unibet_se",
+        "dcReal": false,
+        "odds": {
+          "dcHD": 1.39,
+          "dcAD": 1.77,
+          "pHome": 2.2,
+          "pDraw": 3.8,
+          "pAway": 3.3,
+          "o15": null,
+          "o25": 1.65,
+          "o35": null,
+          "u35": null,
+          "u45": null,
+          "btts": null
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.65,
+          "under": 2.25
+        }
+      },
+      "oddsRef": {
+        "bookmaker": "konsensus",
+        "n": 7,
+        "spread": 0.017686205329854487,
+        "odds": {
+          "pHome": 2.2682074276239494,
+          "pDraw": 3.7984209030231924,
+          "pAway": 3.380023646552671
+        },
+        "totals": {
+          "line": 2.5,
+          "over": 1.7518029452213078,
+          "under": 2.3301357840592534
+        }
+      },
+      "combos": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6097465455833782,
+          "pMarket": 0.6097465455833782,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.6400256914014082,
+          "estBB": 1.60722517757338,
+          "hit": false
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Levante UD eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.587177430339791,
+          "pMarket": 0.587177430339791,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.703062734242552,
+          "estBB": 1.6519708522152754,
+          "hit": true
+        },
+        {
+          "key": "1X_o1.5",
+          "result": "1X",
+          "line": 1.5,
+          "over": true,
+          "label": "Levante UD eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.5729872481764721,
+          "pMarket": 0.5729872481764721,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.7452395374984226,
+          "estBB": 1.7103347467484542,
+          "hit": true
+        }
+      ],
+      "comboFit": {
+        "lambdaH": 1.6600000000000004,
+        "lambdaA": 1.33,
+        "err": 0.0038464325839479203,
+        "marketTotal": 2.99,
+        "leagueAdj": 0,
+        "h2hAdj": 0,
+        "refBooks": 7,
+        "refSpread": 0.017686205329854487
+      },
+      "comboPick": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6097465455833782,
+        "pMarket": 0.6097465455833782,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.6400256914014082,
+        "estBB": 1.60722517757338,
+        "hit": false
+      },
+      "comboOver": {
+        "key": "12_o1.5",
+        "result": "12",
+        "line": 1.5,
+        "over": true,
+        "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 1,5 mål",
+        "bb": "12 og Over 1,5",
+        "p": 0.6097465455833782,
+        "pMarket": 0.6097465455833782,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.6400256914014082,
+        "estBB": 1.60722517757338
+      },
+      "comboUnder": {
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Levante UD eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.587177430339791,
+        "pMarket": 0.587177430339791,
+        "pModel": null,
+        "edge": 0,
+        "fairMarket": 1.703062734242552,
+        "estBB": 1.6519708522152754
+      },
+      "comboAlts": [
+        {
+          "key": "12_o1.5",
+          "result": "12",
+          "line": 1.5,
+          "over": true,
+          "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 1,5 mål",
+          "bb": "12 og Over 1,5",
+          "p": 0.6097465455833782,
+          "pMarket": 0.6097465455833782,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.6400256914014082,
+          "estBB": 1.60722517757338,
+          "hit": false
+        },
+        {
+          "key": "1X_u4.5",
+          "result": "1X",
+          "line": 4.5,
+          "over": false,
+          "label": "Levante UD eller uavgjort + Under 4,5 mål",
+          "bb": "1X og Under 4,5",
+          "p": 0.587177430339791,
+          "pMarket": 0.587177430339791,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.703062734242552,
+          "estBB": 1.6519708522152754,
+          "hit": true
+        },
+        {
+          "key": "1X_o1.5",
+          "result": "1X",
+          "line": 1.5,
+          "over": true,
+          "label": "Levante UD eller uavgjort + Over 1,5 mål",
+          "bb": "1X og Over 1,5",
+          "p": 0.5729872481764721,
+          "pMarket": 0.5729872481764721,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 1.7452395374984226,
+          "estBB": 1.7103347467484542,
+          "hit": true
+        },
+        {
+          "key": "12_o2.5",
+          "result": "12",
+          "line": 2.5,
+          "over": true,
+          "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 2,5 mål",
+          "bb": "12 og Over 2,5",
+          "p": 0.4959837887771494,
+          "pMarket": 0.4959837887771494,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 2.0161949294058688,
+          "estBB": 1.9758710308177514,
+          "hit": false
+        },
+        {
+          "key": "1X_u3.5",
+          "result": "1X",
+          "line": 3.5,
+          "over": false,
+          "label": "Levante UD eller uavgjort + Under 3,5 mål",
+          "bb": "1X og Under 3,5",
+          "p": 0.45899711601634924,
+          "pMarket": 0.45899711601634924,
+          "pModel": null,
+          "edge": 0,
+          "fairMarket": 2.178662926423225,
+          "estBB": 2.1133030386305283,
+          "hit": true
+        }
+      ],
+      "result": {
+        "home": 1,
+        "away": 1
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": true,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": true,
+        "o15": true,
+        "o25": false,
+        "o35": false,
+        "o45": false,
+        "u35": true,
+        "u45": true,
+        "btts": true
+      }
+    }
+  ],
+  "coupon": {
+    "kombikuponger": [
+      {
+        "slot": "21:00",
+        "skipped": 0,
+        "legs": [
+          {
+            "match": "BRE–EVE",
+            "home": "Brentford FC",
+            "away": "Everton FC",
+            "kickoff": "2026-11-23T20:00:00Z",
+            "key": "1X_u4.5",
+            "result": "1X",
+            "line": 4.5,
+            "over": false,
+            "label": "Brentford FC eller uavgjort + Under 4,5 mål",
+            "bb": "1X og Under 4,5",
+            "p": 0.6250707117404464,
+            "estBB": 1.6016628980211984,
+            "fair": 1.65119886393938,
+            "hit": true
+          },
+          {
+            "match": "LEV–ELC",
+            "home": "Levante UD",
+            "away": "Elche CF",
+            "kickoff": "2026-11-23T20:00:00Z",
+            "key": "12_o1.5",
+            "result": "12",
+            "line": 1.5,
+            "over": true,
+            "label": "Levante UD eller Elche CF (ikke uavgjort) + Over 1,5 mål",
+            "bb": "12 og Over 1,5",
+            "p": 0.6097465455833782,
+            "estBB": 1.60722517757338,
+            "fair": 1.6400256914014082,
+            "hit": false
+          }
+        ],
+        "p": 0.3811347072290807,
+        "estOdds": 2.574232935684815,
+        "ev": -0.018870483718311126,
+        "hit": false
+      }
+    ],
+    "dagensKombi": null
+  },
+  "oddsUpdatedAt": "2026-11-23T13:50:38.233Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-24T13:26:36.165Z"
+}
