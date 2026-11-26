@@ -16,7 +16,7 @@ Sjekker markedstilpasning, felles sannsynlighet, kombier, treffsjekk og kuponger
 
 ```
 lib/poisson.js      Poisson/Dixon-Coles: markedstilpasning (fitLambdasToMarket) og jointProb
-lib/combos.js       Hovedspill pr kamp: resultat/dobbel sjanse + over/under, regler og "andre alternativ"
+lib/combos.js       Hovedspill pr kamp: resultat/dobbel sjanse + over/under, regler, reservespill og "andre alternativ"
 lib/coupons.js      Kuponger pr avspark-tid + Dagens kupong (3-4 ben, estimert pris ca. 3-4)
 scripts/build-model.js   Henter dagens kamper + lagform (football-data.org) -> data/today.json
 scripts/fetch-odds.js    Henter markedspriser (The Odds API), bygger kombier og kuponger

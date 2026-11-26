@@ -169,14 +169,28 @@ function applyFreshOdds(db, f, fresh) {
   f.odds = fresh;
 }
 
+// Lag som skrives så ulikt hos football-data og The Odds API at navnet må oversettes
+// (nøkkel = football-data, verdi = The Odds API, begge etter vasken under).
+const TEAM_ALIASES = {
+  atleticodemadrid: 'atleticomadrid',
+  rcceltadevigo: 'celtavigo',
+  racingdelens: 'rclens',
+  paeaek: 'aekathens',
+  internazionalemilano: 'intermilan',
+  bayernmunchen: 'bayernmunich',
+  sportingclubedeportugal: 'sportinglisbon',
+};
+
 // Gjør lagnavn sammenlignbare: små bokstaver, uten aksenter/klubbtillegg/tegnsetting.
 function normalizeName(name) {
-  return name
+  const n = name
     .toLowerCase()
     .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/&/g, ' and ')
     .replace(/\b(fc|cf|afc|sc|ac|cd|calcio|club)\b/g, '')
     .replace(/[^a-z0-9]/g, '')
     .trim();
+  return TEAM_ALIASES[n] || n;
 }
 
 function matchEvent(events, fixture) {

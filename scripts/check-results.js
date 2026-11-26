@@ -147,6 +147,7 @@ function appendComboHistory(day) {
     log.push({
       date: day.date, match: f.label, pick: c.label, bb: c.bb,
       p: c.p, estOdds: +c.estBB.toFixed(2), fair: +c.fairMarket.toFixed(2), edge: +(c.edge ?? 0).toFixed(3), hit: c.hit,
+      reserve: c.reserve || undefined, // reservespill (ingen kombi passerte de vanlige kravene)
       // Til fremtidig test (ikke brukt i valget): lite-uavgjort-hypotesen (<=1 uavgjort i lagenes siste 5+5)
       // og treff for alle linjer/12-spill, så de kan evalueres på nye kamper.
       score: f.result ? `${f.result.home}-${f.result.away}` : null,

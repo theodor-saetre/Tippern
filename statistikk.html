@@ -82,7 +82,7 @@ async function load() {
     const hits = singles.filter(h => h.hit).length, avgP = singles.reduce((x, h) => x + h.p, 0) / singles.length * 100;
     document.getElementById('stats').innerHTML = '<div class="stat-grid">' + box(fmtPct(hits / singles.length * 100), 'Treffprosent') + box(hits + '/' + singles.length, 'Traff') + box(fmtPct(avgP), 'Modellen sa i snitt') + '</div>';
     document.getElementById('list').innerHTML = '<div class="card">' + [...singles].reverse().slice(0, 40).map(h =>
-      '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · sa ' + fmtPct(h.p * 100) + '</small></span>'
+      '<div class="row"><span class="lbl">' + h.pick + '<small>' + h.date + ' · ' + h.match + ' · sa ' + fmtPct(h.p * 100) + (h.reserve ? ' · reserve' : '') + '</small></span>'
       + '<span class="res ' + (h.hit ? 'hit' : 'miss') + '">' + (h.hit ? 'TRAFF' : 'BOM') + '</span></div>').join('') + '</div>';
   }
 

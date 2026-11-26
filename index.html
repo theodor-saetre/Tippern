@@ -55,6 +55,7 @@
   .vin { font-family:'Spline Sans Mono',monospace; font-size:12px; color:var(--chalk-dim); margin-top:8px; }
   .vin input { width:80px; background:var(--pitch); color:var(--chalk); border:1px solid var(--edge); border-radius:4px; padding:4px 6px; font-family:inherit; margin:0 8px 0 4px; }
   .tagsafe { font-family:'Spline Sans Mono',monospace; font-size:10px; color:var(--pitch); background:var(--flare); border-radius:3px; padding:2px 6px; margin-left:8px; vertical-align:middle; }
+  .tagres { font-family:'Spline Sans Mono',monospace; font-size:10px; color:var(--warn); border:1px solid var(--warn); border-radius:3px; padding:2px 6px; margin-left:8px; vertical-align:middle; }
   .badge { font-family:'Spline Sans Mono',monospace; font-weight:700; font-size:12px; padding:3px 9px; border-radius:4px; margin-left:8px; }
   .badge.hit { background:rgba(211,248,90,0.15); color:var(--flare); }
   .badge.miss { background:rgba(212,87,74,0.15); color:#d4574a; }
@@ -150,7 +151,7 @@ async function load() {
     const alts = [f.comboOver, f.comboUnder].filter(Boolean).map(a => a.bb + ' ' + fmtPct(a.p));
     if (alts.length) s += ' Beste over/under: ' + alts.join(' · ') + '.';
     if (c.over && c.line === 1.5 && fit.marketTotal >= 2.8) s += ' Over 1,5 valgt fordi mye mål er ventet og sjansen er nær det sikreste alternativet.';
-    else if (!c.over && fit.marketTotal >= 2.8) s += ' Under valgt fordi den er klart sikrere enn over 1,5 her.';
+    else if (!c.over && !c.reserve && fit.marketTotal >= 2.8) s +=' Under valgt fordi den er klart sikrere enn over 1,5 her.';
     if (fit.leagueAdj && Math.abs(fit.leagueAdj) >= 0.05) s += ' Ligajustering: ' + (fit.leagueAdj > 0 ? '+' : '−') + fmt1(Math.abs(fit.leagueAdj)) + ' mål.';
     return '<div class="why">' + s + '</div>';
   };
@@ -158,7 +159,12 @@ async function load() {
   const card = f => {
     const head = '<div class="match">' + f.homeName + ' – ' + f.awayName + ' · ' + hhmm(f.kickoff) + (f.competition ? ' · ' + f.competition : '') + '</div>';
     const c = f.comboPick;
-    if (!c) return '<div class="card">' + head + '<div class="empty" style="padding:8px 0;">Ingen spill med nok sikkerhet og rimelig pris i denne kampen.</div></div>';
+    if (!c) {
+      const reason = f.comboFit ? 'Ingen spill med nok sikkerhet og rimelig pris i denne kampen.'
+        : (f.oddsRef || f.oddsUnibet) ? 'Klarte ikke å beregne spill ut fra oddsen i denne kampen.'
+        : 'Mangler odds — kampen er ikke vurdert ennå.';
+      return '<div class="card">' + head + '<div class="empty" style="padding:8px 0;">' + reason + '</div></div>';
+    }
     // Hypotese (ikke bevist, ikke brukt i valget): lag som sjelden spiller uavgjort (<=1 i lagenes siste 5+5)
     const form = [f.formH, f.formA];
     const fewDraws = form.every(a => Array.isArray(a) && a.length >= 4) && form.flat().filter(m => m.r === 'D').length <= 1;
@@ -168,7 +174,8 @@ async function load() {
     const alts = (f.comboAlts && f.comboAlts.length ? f.comboAlts : [f.comboOver, f.comboUnder].filter(Boolean))
       .filter(a => a.key !== c.key).slice(0, 6).map(a => [a.edge != null && a.edge >= -0.03 ? 'OK pris' : 'dyr', a]);
     return '<div class="card">' + head
-      + '<div class="top"><span class="pick">' + c.label + (c.p >= 0.70 ? '<span class="tagsafe">SIKKER</span>' : '') + badge + '</span><span class="prob">' + fmtPct(c.p) + '</span></div>'
+      + '<div class="top"><span class="pick">' + c.label + (c.reserve ? '<span class="tagres">RESERVE</span>' : c.p >= 0.70 ? '<span class="tagsafe">SIKKER</span>' : '') + badge + '</span><span class="prob">' + fmtPct(c.p) + '</span></div>'
+      + (c.reserve ? '<div class="why">Reservespill: ingen spill passerte de vanlige kravene til sjanse og pris. Ikke med i kupongene.</div>' : '')
       + '<div class="need"><span>BB må ha ≥ <b>' + fmtOdds(need(c)) + '</b></span><span>BB ca. ' + fmtOdds(c.estBB) + ' (estimat) · marked ' + fmtOdds(c.fairMarket) + '</span></div>'
       + inputRow(f, c, 0)
       + why(f, c)
