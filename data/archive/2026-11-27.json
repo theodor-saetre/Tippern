@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T14:34:47.060Z",
+  "generatedAt": "2026-11-27T14:29:31.347Z",
   "date": "2026-11-27",
   "fixtures": [
     {
@@ -74,13 +74,13 @@
         }
       ],
       "odds": {
-        "dcHD": 1.54,
-        "dcAD": 1.64,
-        "pHome": 2.63,
-        "pDraw": 3.69,
-        "pAway": 2.96,
+        "dcHD": 1.5,
+        "dcAD": 1.67,
+        "pHome": 2.52,
+        "pDraw": 3.7,
+        "pAway": 3.06,
         "o15": null,
-        "o25": 1.87,
+        "o25": 1.92,
         "o35": null,
         "u35": null,
         "u45": null,
@@ -91,13 +91,13 @@
         "bookmaker": "unibet_se",
         "dcReal": false,
         "odds": {
-          "dcHD": 1.5,
-          "dcAD": 1.56,
-          "pHome": 2.63,
-          "pDraw": 3.5,
-          "pAway": 2.8,
+          "dcHD": 1.45,
+          "dcAD": 1.6,
+          "pHome": 2.5,
+          "pDraw": 3.45,
+          "pAway": 3,
           "o15": null,
-          "o25": 1.8,
+          "o25": 1.79,
           "o35": null,
           "u35": null,
           "u45": null,
@@ -105,40 +105,26 @@
         },
         "totals": {
           "line": 2.5,
-          "over": 1.8,
-          "under": 2.04
+          "over": 1.79,
+          "under": 2.05
         }
       },
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.02155374623336187,
+        "spread": 0.01221087065636961,
         "odds": {
-          "pHome": 2.6310750752515504,
-          "pDraw": 3.60701204128415,
-          "pAway": 2.9180939192836335
+          "pHome": 2.534413137979622,
+          "pDraw": 3.6110988239302872,
+          "pAway": 3.0440722070955952
         },
         "totals": {
           "line": 2.5,
-          "over": 1.88745768397863,
-          "under": 2.1268142899127573
+          "over": 1.8998507817056414,
+          "under": 2.1112953617760146
         }
       },
       "combos": [
-        {
-          "key": "12_o1.5",
-          "result": "12",
-          "line": 1.5,
-          "over": true,
-          "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 1,5 mål",
-          "bb": "12 og Over 1,5",
-          "p": 0.5507673575218985,
-          "pMarket": 0.5771556305827106,
-          "pModel": null,
-          "edge": -0.045721243391786404,
-          "fairMarket": 1.7326349203080205,
-          "estBB": 1.69798222190186
-        },
         {
           "key": "1X_u4.5",
           "result": "1X",
@@ -146,37 +132,37 @@
           "over": false,
           "label": "Nottingham Forest FC eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.5905321535033461,
-          "pMarket": 0.5723636950098698,
+          "p": 0.6037483315223693,
+          "pMarket": 0.5855531057202338,
           "pModel": null,
-          "edge": 0.0317428562501032,
-          "fairMarket": 1.7471408629136689,
-          "estBB": 1.6947266370262588
+          "edge": 0.031073570653775695,
+          "fairMarket": 1.7077870311523564,
+          "estBB": 1.6565534202177856
         }
       ],
       "comboFit": {
-        "lambdaH": 1.4400000000000002,
-        "lambdaA": 1.36,
-        "err": 0.0038963779339162355,
-        "marketTotal": 2.8000000000000003,
+        "lambdaH": 1.4700000000000002,
+        "lambdaA": 1.32,
+        "err": 0.00419103494148655,
+        "marketTotal": 2.79,
         "leagueAdj": -0.1570434782608696,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.02155374623336187
+        "refSpread": 0.01221087065636961
       },
       "comboPick": {
-        "key": "12_o1.5",
-        "result": "12",
-        "line": 1.5,
-        "over": true,
-        "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 1,5 mål",
-        "bb": "12 og Over 1,5",
-        "p": 0.5507673575218985,
-        "pMarket": 0.5771556305827106,
+        "key": "1X_u4.5",
+        "result": "1X",
+        "line": 4.5,
+        "over": false,
+        "label": "Nottingham Forest FC eller uavgjort + Under 4,5 mål",
+        "bb": "1X og Under 4,5",
+        "p": 0.6037483315223693,
+        "pMarket": 0.5855531057202338,
         "pModel": null,
-        "edge": -0.045721243391786404,
-        "fairMarket": 1.7326349203080205,
-        "estBB": 1.69798222190186
+        "edge": 0.031073570653775695,
+        "fairMarket": 1.7077870311523564,
+        "estBB": 1.6565534202177856
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -185,12 +171,12 @@
         "over": true,
         "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.5507673575218985,
-        "pMarket": 0.5771556305827106,
+        "p": 0.549574035052124,
+        "pMarket": 0.576116295649166,
         "pModel": null,
-        "edge": -0.045721243391786404,
-        "fairMarket": 1.7326349203080205,
-        "estBB": 1.69798222190186
+        "edge": -0.046071011699355346,
+        "fairMarket": 1.7357606572700799,
+        "estBB": 1.7010454441246783
       },
       "comboUnder": {
         "key": "1X_u4.5",
@@ -199,12 +185,12 @@
         "over": false,
         "label": "Nottingham Forest FC eller uavgjort + Under 4,5 mål",
         "bb": "1X og Under 4,5",
-        "p": 0.5905321535033461,
-        "pMarket": 0.5723636950098698,
+        "p": 0.6037483315223693,
+        "pMarket": 0.5855531057202338,
         "pModel": null,
-        "edge": 0.0317428562501032,
-        "fairMarket": 1.7471408629136689,
-        "estBB": 1.6947266370262588
+        "edge": 0.031073570653775695,
+        "fairMarket": 1.7077870311523564,
+        "estBB": 1.6565534202177856
       },
       "comboAlts": [
         {
@@ -214,12 +200,12 @@
           "over": false,
           "label": "Nottingham Forest FC eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.5905321535033461,
-          "pMarket": 0.5723636950098698,
+          "p": 0.6037483315223693,
+          "pMarket": 0.5855531057202338,
           "pModel": null,
-          "edge": 0.0317428562501032,
-          "fairMarket": 1.7471408629136689,
-          "estBB": 1.6947266370262588
+          "edge": 0.031073570653775695,
+          "fairMarket": 1.7077870311523564,
+          "estBB": 1.6565534202177856
         },
         {
           "key": "12_o1.5",
@@ -228,12 +214,12 @@
           "over": true,
           "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.5507673575218985,
-          "pMarket": 0.5771556305827106,
+          "p": 0.549574035052124,
+          "pMarket": 0.576116295649166,
           "pModel": null,
-          "edge": -0.045721243391786404,
-          "fairMarket": 1.7326349203080205,
-          "estBB": 1.69798222190186
+          "edge": -0.046071011699355346,
+          "fairMarket": 1.7357606572700799,
+          "estBB": 1.7010454441246783
         },
         {
           "key": "1X_o1.5",
@@ -242,12 +228,12 @@
           "over": true,
           "label": "Nottingham Forest FC eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.49643162374602245,
-          "pMarket": 0.5115302894123538,
+          "p": 0.5081407551505204,
+          "pMarket": 0.5240808393963964,
           "pModel": null,
-          "edge": -0.029516660066555733,
-          "fairMarket": 1.9549184490107134,
-          "estBB": 1.9158200800304992
+          "edge": -0.03041531582080892,
+          "fairMarket": 1.9081025766019946,
+          "estBB": 1.8699405250699546
         },
         {
           "key": "1X_u3.5",
@@ -256,12 +242,12 @@
           "over": false,
           "label": "Nottingham Forest FC eller uavgjort + Under 3,5 mål",
           "bb": "1X og Under 3,5",
-          "p": 0.48802862599780006,
-          "pMarket": 0.4620046974240441,
+          "p": 0.49917017243464185,
+          "pMarket": 0.47286451676130264,
           "pModel": null,
-          "edge": 0.05632827700422771,
-          "fairMarket": 2.164480156967246,
-          "estBB": 2.0995457522582286
+          "edge": 0.05563042846502708,
+          "fairMarket": 2.114770646884444,
+          "estBB": 2.0513275274779104
         },
         {
           "key": "12_o2.5",
@@ -270,12 +256,12 @@
           "over": true,
           "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.4264152941153168,
-          "pMarket": 0.4578706108621547,
+          "p": 0.42466253670245147,
+          "pMarket": 0.4562435825628746,
           "pModel": null,
-          "edge": -0.06869913901573332,
-          "fairMarket": 2.1840231198002296,
-          "estBB": 2.140342657404225
+          "edge": -0.06921970427073565,
+          "fairMarket": 2.191811651097998,
+          "estBB": 2.147975418076038
         }
       ]
     },
@@ -351,15 +337,15 @@
         }
       ],
       "odds": {
-        "dcHD": 1.42,
-        "dcAD": 1.84,
-        "pHome": 2.18,
-        "pDraw": 4.1,
-        "pAway": 3.35,
+        "dcHD": 1.4,
+        "dcAD": 1.88,
+        "pHome": 2.12,
+        "pDraw": 4.11,
+        "pAway": 3.46,
         "o15": null,
-        "o25": 1.47,
-        "o35": 2.28,
-        "u35": 1.78,
+        "o25": 1.42,
+        "o35": 2.14,
+        "u35": 1.87,
         "u45": null,
         "btts": null
       },
@@ -368,37 +354,37 @@
         "bookmaker": "unibet_se",
         "dcReal": false,
         "odds": {
-          "dcHD": 1.37,
-          "dcAD": 1.8,
+          "dcHD": 1.38,
+          "dcAD": 1.82,
           "pHome": 2.1,
-          "pDraw": 3.95,
-          "pAway": 3.3,
+          "pDraw": 4,
+          "pAway": 3.35,
           "o15": null,
           "o25": null,
-          "o35": 2.28,
-          "u35": 1.63,
+          "o35": 2.1,
+          "u35": 1.74,
           "u45": null,
           "btts": null
         },
         "totals": {
           "line": 3.5,
-          "over": 2.28,
-          "under": 1.63
+          "over": 2.1,
+          "under": 1.74
         }
       },
       "oddsRef": {
         "bookmaker": "konsensus",
         "n": 7,
-        "spread": 0.013766994256055709,
+        "spread": 0.011433255708202472,
         "odds": {
-          "pHome": 2.1767571061747653,
-          "pDraw": 4.094075331294108,
-          "pAway": 3.3744382742491883
+          "pHome": 2.1351691301068727,
+          "pDraw": 4.113351147925667,
+          "pAway": 3.4656969892366027
         },
         "totals": {
           "line": 3.5,
-          "over": 2.3582633219871854,
-          "under": 1.7362342660751273
+          "over": 2.174644679174463,
+          "under": 1.8513212699373884
         }
       },
       "combos": [
@@ -409,12 +395,12 @@
           "over": true,
           "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.6560480466700417,
-          "pMarket": 0.6560480466700417,
+          "p": 0.6744545119857931,
+          "pMarket": 0.6744545119857931,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.5242786028794448,
-          "estBB": 1.4937930308218559
+          "fairMarket": 1.48267967999162,
+          "estBB": 1.4530260863917877
         },
         {
           "key": "1X_o1.5",
@@ -423,12 +409,12 @@
           "over": true,
           "label": "Levante UD eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.6041075305287312,
-          "pMarket": 0.6041075305287312,
+          "p": 0.619774508807548,
+          "pMarket": 0.619774508807548,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.655334438762538,
-          "estBB": 1.6222277499872872
+          "fairMarket": 1.6134900448293839,
+          "estBB": 1.5812202439327963
         },
         {
           "key": "12_o2.5",
@@ -437,23 +423,23 @@
           "over": true,
           "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.5554604632988903,
-          "pMarket": 0.5554604632988903,
+          "p": 0.579690899110523,
+          "pMarket": 0.579690899110523,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.800308151656701,
-          "estBB": 1.764301988623567
+          "fairMarket": 1.7250572702355667,
+          "estBB": 1.6905561248308554
         }
       ],
       "comboFit": {
-        "lambdaH": 1.8600000000000005,
-        "lambdaA": 1.4700000000000002,
-        "err": 0.0038138952589659965,
-        "marketTotal": 3.330000000000001,
+        "lambdaH": 1.9600000000000004,
+        "lambdaA": 1.5200000000000002,
+        "err": 0.0006877070328522934,
+        "marketTotal": 3.4800000000000004,
         "leagueAdj": 0,
         "h2hAdj": 0,
         "refBooks": 7,
-        "refSpread": 0.013766994256055709
+        "refSpread": 0.011433255708202472
       },
       "comboPick": {
         "key": "12_o1.5",
@@ -462,12 +448,12 @@
         "over": true,
         "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.6560480466700417,
-        "pMarket": 0.6560480466700417,
+        "p": 0.6744545119857931,
+        "pMarket": 0.6744545119857931,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.5242786028794448,
-        "estBB": 1.4937930308218559
+        "fairMarket": 1.48267967999162,
+        "estBB": 1.4530260863917877
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -476,12 +462,12 @@
         "over": true,
         "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 1,5 mål",
         "bb": "12 og Over 1,5",
-        "p": 0.6560480466700417,
-        "pMarket": 0.6560480466700417,
+        "p": 0.6744545119857931,
+        "pMarket": 0.6744545119857931,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.5242786028794448,
-        "estBB": 1.4937930308218559
+        "fairMarket": 1.48267967999162,
+        "estBB": 1.4530260863917877
       },
       "comboUnder": {
         "key": "1X_u4.5",
@@ -490,12 +476,12 @@
         "over": false,
         "label": "Levante UD eller uavgjort + Under 4,5 mål",
         "bb": "1X og Under 4,5",
-        "p": 0.5454487286632467,
-        "pMarket": 0.5454487286632467,
+        "p": 0.5287519203625333,
+        "pMarket": 0.5287519203625333,
         "pModel": null,
         "edge": 0,
-        "fairMarket": 1.8333528844236937,
-        "estBB": 1.778352297890983
+        "fairMarket": 1.8912460862825053,
+        "estBB": 1.8345087036940302
       },
       "comboAlts": [
         {
@@ -505,12 +491,12 @@
           "over": true,
           "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 1,5 mål",
           "bb": "12 og Over 1,5",
-          "p": 0.6560480466700417,
-          "pMarket": 0.6560480466700417,
+          "p": 0.6744545119857931,
+          "pMarket": 0.6744545119857931,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.5242786028794448,
-          "estBB": 1.4937930308218559
+          "fairMarket": 1.48267967999162,
+          "estBB": 1.4530260863917877
         },
         {
           "key": "1X_o1.5",
@@ -519,12 +505,12 @@
           "over": true,
           "label": "Levante UD eller uavgjort + Over 1,5 mål",
           "bb": "1X og Over 1,5",
-          "p": 0.6041075305287312,
-          "pMarket": 0.6041075305287312,
+          "p": 0.619774508807548,
+          "pMarket": 0.619774508807548,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.655334438762538,
-          "estBB": 1.6222277499872872
+          "fairMarket": 1.6134900448293839,
+          "estBB": 1.5812202439327963
         },
         {
           "key": "12_o2.5",
@@ -533,12 +519,12 @@
           "over": true,
           "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 2,5 mål",
           "bb": "12 og Over 2,5",
-          "p": 0.5554604632988903,
-          "pMarket": 0.5554604632988903,
+          "p": 0.579690899110523,
+          "pMarket": 0.579690899110523,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.800308151656701,
-          "estBB": 1.764301988623567
+          "fairMarket": 1.7250572702355667,
+          "estBB": 1.6905561248308554
         },
         {
           "key": "1X_u4.5",
@@ -547,12 +533,12 @@
           "over": false,
           "label": "Levante UD eller uavgjort + Under 4,5 mål",
           "bb": "1X og Under 4,5",
-          "p": 0.5454487286632467,
-          "pMarket": 0.5454487286632467,
+          "p": 0.5287519203625333,
+          "pMarket": 0.5287519203625333,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 1.8333528844236937,
-          "estBB": 1.778352297890983
+          "fairMarket": 1.8912460862825053,
+          "estBB": 1.8345087036940302
         },
         {
           "key": "1X_o2.5",
@@ -561,26 +547,12 @@
           "over": true,
           "label": "Levante UD eller uavgjort + Over 2,5 mål",
           "bb": "1X og Over 2,5",
-          "p": 0.43160457658236984,
-          "pMarket": 0.43160457658236984,
+          "p": 0.4568865792558688,
+          "pMarket": 0.4568865792558688,
           "pModel": null,
           "edge": 0,
-          "fairMarket": 2.316935580059018,
-          "estBB": 2.270596868457838
-        },
-        {
-          "key": "1X_u3.5",
-          "result": "1X",
-          "line": 3.5,
-          "over": false,
-          "label": "Levante UD eller uavgjort + Under 3,5 mål",
-          "bb": "1X og Under 3,5",
-          "p": 0.4042734256220902,
-          "pMarket": 0.4042734256220902,
-          "pModel": null,
-          "edge": 0,
-          "fairMarket": 2.47357341992295,
-          "estBB": 2.3993662173252615
+          "fairMarket": 2.1887270176083966,
+          "estBB": 2.1449524772562287
         }
       ]
     }
@@ -602,32 +574,32 @@
             "over": true,
             "label": "Levante UD eller Real Racing Club de Santander (ikke uavgjort) + Over 1,5 mål",
             "bb": "12 og Over 1,5",
-            "p": 0.6560480466700417,
-            "estBB": 1.4937930308218559,
-            "fair": 1.5242786028794448
+            "p": 0.6744545119857931,
+            "estBB": 1.4530260863917877,
+            "fair": 1.48267967999162
           },
           {
             "match": "NOT–CHE",
             "home": "Nottingham Forest FC",
             "away": "Chelsea FC",
             "kickoff": "2026-11-27T20:00:00Z",
-            "key": "12_o1.5",
-            "result": "12",
-            "line": 1.5,
-            "over": true,
-            "label": "Nottingham Forest FC eller Chelsea FC (ikke uavgjort) + Over 1,5 mål",
-            "bb": "12 og Over 1,5",
-            "p": 0.5507673575218985,
-            "estBB": 1.69798222190186,
-            "fair": 1.7326349203080205
+            "key": "1X_u4.5",
+            "result": "1X",
+            "line": 4.5,
+            "over": false,
+            "label": "Nottingham Forest FC eller uavgjort + Under 4,5 mål",
+            "bb": "1X og Under 4,5",
+            "p": 0.6037483315223693,
+            "estBB": 1.6565534202177856,
+            "fair": 1.7077870311523564
           }
         ],
-        "p": 0.36132984907186205,
-        "estOdds": 2.536434009536409,
-        "ev": -0.08351068215347146
+        "p": 0.4072007862991564,
+        "estOdds": 2.4070153330779793,
+        "ev": -0.01986146373652098
       }
     ],
     "dagensKombi": null
   },
-  "oddsUpdatedAt": "2026-11-26T14:34:47.579Z"
+  "oddsUpdatedAt": "2026-11-27T14:29:31.838Z"
 }
