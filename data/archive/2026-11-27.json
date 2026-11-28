@@ -154,7 +154,8 @@
           "pModel": null,
           "edge": 0.03166853265011338,
           "fairMarket": 1.7353857497019665,
-          "estBB": 1.6833241772109073
+          "estBB": 1.6833241772109073,
+          "hit": false
         }
       ],
       "comboFit": {
@@ -179,7 +180,8 @@
         "pModel": null,
         "edge": 0.03166853265011338,
         "fairMarket": 1.7353857497019665,
-        "estBB": 1.6833241772109073
+        "estBB": 1.6833241772109073,
+        "hit": false
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -222,7 +224,8 @@
           "pModel": null,
           "edge": 0.03166853265011338,
           "fairMarket": 1.7353857497019665,
-          "estBB": 1.6833241772109073
+          "estBB": 1.6833241772109073,
+          "hit": false
         },
         {
           "key": "12_o1.5",
@@ -236,7 +239,8 @@
           "pModel": null,
           "edge": -0.04536876006784485,
           "fairMarket": 1.7272081477169539,
-          "estBB": 1.6926639847626148
+          "estBB": 1.6926639847626148,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -250,7 +254,8 @@
           "pModel": null,
           "edge": -0.02949162146608919,
           "fairMarket": 1.9299698712994506,
-          "estBB": 1.8913704738734616
+          "estBB": 1.8913704738734616,
+          "hit": true
         },
         {
           "key": "1X_u3.5",
@@ -264,7 +269,8 @@
           "pModel": null,
           "edge": 0.05629924625236238,
           "fairMarket": 2.1541808979179207,
-          "estBB": 2.089555470980383
+          "estBB": 2.089555470980383,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -278,10 +284,29 @@
           "pModel": null,
           "edge": -0.06821689095463546,
           "fairMarket": 2.174193165340029,
-          "estBB": 2.1307093020332286
+          "estBB": 2.1307093020332286,
+          "hit": true
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 3,
+        "away": 2
+      },
+      "outcomes": {
+        "pHome": true,
+        "pDraw": false,
+        "pAway": false,
+        "dcHD": true,
+        "dcAD": false,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": true,
+        "u35": false,
+        "u45": false,
+        "btts": true
+      }
     },
     {
       "id": 564765,
@@ -435,7 +460,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.4805409662209064,
-          "estBB": 1.4509301468964881
+          "estBB": 1.4509301468964881,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -449,7 +475,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.5957186014815163,
-          "estBB": 1.563804229451886
+          "estBB": 1.563804229451886,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -463,7 +490,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7230038629324673,
-          "estBB": 1.688543785673818
+          "estBB": 1.688543785673818,
+          "hit": true
         }
       ],
       "comboFit": {
@@ -488,7 +516,8 @@
         "pModel": null,
         "edge": 0,
         "fairMarket": 1.4805409662209064,
-        "estBB": 1.4509301468964881
+        "estBB": 1.4509301468964881,
+        "hit": true
       },
       "comboOver": {
         "key": "12_o1.5",
@@ -531,7 +560,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.4805409662209064,
-          "estBB": 1.4509301468964881
+          "estBB": 1.4509301468964881,
+          "hit": true
         },
         {
           "key": "1X_o1.5",
@@ -545,7 +575,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.5957186014815163,
-          "estBB": 1.563804229451886
+          "estBB": 1.563804229451886,
+          "hit": false
         },
         {
           "key": "12_o2.5",
@@ -559,7 +590,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.7230038629324673,
-          "estBB": 1.688543785673818
+          "estBB": 1.688543785673818,
+          "hit": true
         },
         {
           "key": "1X_u4.5",
@@ -573,7 +605,8 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 1.8744906705231132,
-          "estBB": 1.8182559504074198
+          "estBB": 1.8182559504074198,
+          "hit": false
         },
         {
           "key": "1X_o2.5",
@@ -587,10 +620,29 @@
           "pModel": null,
           "edge": 0,
           "fairMarket": 2.1603150923476253,
-          "estBB": 2.117108790500673
+          "estBB": 2.117108790500673,
+          "hit": false
         }
       ],
-      "oddsLocked": true
+      "oddsLocked": true,
+      "result": {
+        "home": 1,
+        "away": 3
+      },
+      "outcomes": {
+        "pHome": false,
+        "pDraw": false,
+        "pAway": true,
+        "dcHD": false,
+        "dcAD": true,
+        "o15": true,
+        "o25": true,
+        "o35": true,
+        "o45": false,
+        "u35": false,
+        "u45": true,
+        "btts": true
+      }
     }
   ],
   "coupon": {
@@ -612,7 +664,8 @@
             "bb": "12 og Over 1,5",
             "p": 0.6754287944848353,
             "estBB": 1.4509301468964881,
-            "fair": 1.4805409662209064
+            "fair": 1.4805409662209064,
+            "hit": true
           },
           {
             "match": "NOT–CHE",
@@ -627,15 +680,19 @@
             "bb": "1X og Under 4,5",
             "p": 0.5944894573597203,
             "estBB": 1.6833241772109073,
-            "fair": 1.7353857497019665
+            "fair": 1.7353857497019665,
+            "hit": false
           }
         ],
         "p": 0.40153529751841976,
         "estOdds": 2.442385795715032,
-        "ev": -0.01929589286280231
+        "ev": -0.01929589286280231,
+        "hit": false
       }
     ],
     "dagensKombi": null
   },
-  "oddsUpdatedAt": "2026-11-27T18:31:18.331Z"
+  "oddsUpdatedAt": "2026-11-27T18:31:18.331Z",
+  "resultsChecked": true,
+  "resultsCheckedAt": "2026-11-28T01:42:25.574Z"
 }
